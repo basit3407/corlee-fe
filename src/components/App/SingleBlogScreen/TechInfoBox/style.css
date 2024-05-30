@@ -1,0 +1,87 @@
+.technology-card {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 104px;
+}
+.technology-card2 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 1097px;
+}
+.tech-title-bold {
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  font: 600 20px Inter, sans-serif;
+  color: #6a6a45;
+  white-space: pre-wrap;
+}
+.tech-lauda-bold {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 56px/67px Artnoova;
+  color: black;
+  text-align: center;
+  text-transform: capitalize;
+  white-space: pre-wrap;
+}
+.technology-card1 {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: flex-start;
+}
+.profile-image-container {
+  box-sizing: border-box;
+  display: block;
+  width: 40px;
+  max-width: initial;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.fisher-info-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 15px;
+}
+.ice-fisher-paragraph {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 400 18px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.ice-fisher-style {
+  box-sizing: border-box;
+  display: block;
+  width: 7px;
+  max-width: initial;
+  height: 7px;
+  margin-left: 7px;
+}
+.event-date-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-left: 7px;
+  font: 400 18px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
