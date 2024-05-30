@@ -8,6 +8,7 @@ import Continiewithgoogle from "../Screens/Continiewithgoogle";
 import AboutUs from "../Screens/AboutUs";
 import Product from "../Screens/Product";
 import Favourites from "../Screens/Favourites";
+import SingleBlog from "../Screens/SingleBlog";
 
 function Approuter() {
   return (
@@ -22,6 +23,7 @@ function Approuter() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/product" element={<Product />} />
         <Route path="/favourite" element={<Favourites />} />
+        <Route path="/blog" element={<SingleBlog />} />
       </Routes>
     </Router>
   );
