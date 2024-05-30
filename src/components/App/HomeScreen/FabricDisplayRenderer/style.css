@@ -1,0 +1,16 @@
+.fabric-design-description-list {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  justify-content: flex-start;
+  max-width: 628px;
+}
+.fabric-design-description-container:nth-child(odd) {
+  align-items: center;
+}
+.fabric-design-description-container:nth-child(even) {
+  align-items: stretch;
+}

@@ -1,0 +1,37 @@
+.fashion-text-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.global-fashion-styles-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1064px;
+}
+.fashion-statement-text-style {
+  flex: 0 0 auto;
+  align-self: stretch;
+  padding: 0;
+  margin: 0;
+  font: 600 64px/77px Artnoova;
+  color: black;
+  text-align: center;
+  white-space: pre-wrap;
+}
+.global-fashion-text-styles {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  max-width: 765px;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  font: 400 18px/25px Inter, sans-serif;
+  color: #666666;
+  text-align: center;
+  white-space: pre-wrap;
+}

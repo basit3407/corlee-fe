@@ -1,0 +1,31 @@
+.newsletter-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.hero-text-block {
+  flex: 0 0 auto;
+  align-self: stretch;
+  padding: 0;
+  margin: 0;
+  font: 600 48px Artnoova;
+  color: white;
+  text-align: center;
+  white-space: pre-wrap;
+}
+.corlee-text-snippet {
+  flex: 0 0 auto;
+  align-self: stretch;
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+  margin-right: 42px;
+  margin-left: 42px;
+  font: 400 18px/25px Inter, sans-serif;
+  color: #8a8a8a;
+  text-align: center;
+  white-space: pre-wrap;
+}

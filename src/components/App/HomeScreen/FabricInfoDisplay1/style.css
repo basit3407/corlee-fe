@@ -1,0 +1,176 @@
+.global-fashion-fabric-styles {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 88px;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-top: 104px;
+}
+.fabric-gallery-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+  align-self: center;
+  justify-content: space-between;
+  min-width: 1280px;
+  margin-top: -40px;
+}
+.image-container-with-clipping-path {
+  box-sizing: border-box;
+  display: block;
+  width: 403px;
+  max-width: initial;
+  height: 387px;
+  clip-path: path(
+    "M0,48c0,-22.6274 0,-33.9411 7.02944,-40.97056c7.02946,-7.02944 18.34316,-7.02944 40.97056,-7.02944h307c22.627,0 33.941,0 40.971,7.02944c7.029,7.02946 7.029,18.34316 7.029,40.97056v291c0,22.627 0,33.941 -7.029,40.971c-7.03,7.029 -18.344,7.029 -40.971,7.029h-307c-22.6274,0 -33.9411,0 -40.97056,-7.029c-7.02944,-7.03 -7.02944,-18.344 -7.02944,-40.971z"
+  );
+  object-fit: cover;
+}
+.fashion-text-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.button-with-icon {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 3.75px;
+  align-items: center;
+  justify-content: center;
+  width: 276px;
+  min-width: 276px;
+  height: 64px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: black;
+  border: none;
+  border-radius: 110px;
+}
+.svg-container3 {
+  display: flex;
+  width: 32px;
+  height: 32px;
+}
+.fabric-range-section {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-end;
+  align-self: center;
+  justify-content: space-between;
+  min-width: 1282px;
+}
+.fabric-types-section {
+  flex: 0 0 auto;
+}
+.fabric-type-heading {
+  padding: 0;
+  margin: 0;
+  font: 600 56px/67px Artnoova;
+  color: black;
+  white-space: pre-wrap;
+}
+.fabric-type-description {
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+  font: 400 18px Inter, sans-serif;
+  color: #666666;
+  white-space: pre-wrap;
+}
+.fabric-type-range-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 38px;
+}
+.center-box-with-svg {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 7px;
+  padding-left: 7px;
+  border: 1px solid black;
+  border-radius: 78px;
+}
+.svg-container4 {
+  display: flex;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+}
+.black-rounded-box-with-text {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: 12.5px;
+  background: black;
+  border-radius: 78px;
+}
+.custom-fabric-features-section {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  align-self: center;
+  justify-content: space-between;
+  min-width: 1281px;
+}
+.custom-fabric-description-container {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  max-width: 520px;
+}
+.majestic-heading1 {
+  padding: 0;
+  margin: 0;
+  font: 600 80px/96px Artnoova;
+  color: black;
+  text-align: left;
+  white-space: pre-wrap;
+}
+.custom-fabric-description-style {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  font: 400 18px/25px Inter, sans-serif;
+  color: #666666;
+  text-align: left;
+  letter-spacing: 0.9px;
+  white-space: pre-wrap;
+}
+.hero-text-underline {
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  font: 700 18px Inter, sans-serif;
+  color: black;
+  text-decoration-line: underline;
+  letter-spacing: 0.9px;
+  white-space: pre-wrap;
+}

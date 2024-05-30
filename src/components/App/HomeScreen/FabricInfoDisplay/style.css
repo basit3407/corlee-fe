@@ -1,0 +1,29 @@
+.fabric-design-description-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 51px 21.5px 51px 23px;
+  background: black;
+  border-radius: 24px;
+}
+.art-noova-heading {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 700 32px Artnoova;
+  color: white;
+  letter-spacing: 1.6px;
+  white-space: pre-wrap;
+}
+.fabric-crafting-description-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: 22px;
+  font: 400 18px/25px Inter, sans-serif;
+  color: #dedede;
+  text-align: center;
+  white-space: pre-wrap;
+}

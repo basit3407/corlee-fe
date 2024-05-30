@@ -1,0 +1,13 @@
+.vertical-margin-top-24px {
+  margin-top: 24px;
+}
+.image-container-styles {
+  box-sizing: border-box;
+  display: block;
+  width: 249px;
+  max-width: initial;
+  height: 369px;
+  border: none;
+  border-radius: 24px;
+  object-fit: cover;
+}

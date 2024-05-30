@@ -1,0 +1,57 @@
+.material-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: initial;
+  height: 500px;
+  padding-left: 2.5px;
+  margin-top: -56px;
+  background: url("/assets/div__1ku4mui_253c17.png") 50% / cover no-repeat;
+  border: none;
+  border-radius: 24px;
+}
+.material-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding-top: 199px;
+  padding-bottom: 199px;
+}
+.material-heading {
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  font: 600 48px/20px Artnoova;
+  color: white;
+  letter-spacing: 2.4px;
+  white-space: pre-wrap;
+}
+.material-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 5.75px;
+  align-items: center;
+  justify-content: center;
+  min-width: 194px;
+  height: 48px;
+  margin-top: 34px;
+  margin-right: 23px;
+  margin-left: 20.5px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: #6a6a45;
+  border: none;
+  border-radius: 110px;
+}
+.svg-container5 {
+  display: flex;
+  width: 14px;
+  height: 14px;
+}

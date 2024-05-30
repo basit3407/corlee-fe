@@ -1,0 +1,38 @@
+.main-navigation-container-nav {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 47px;
+}
+.horizontal-menu-with-icons {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 55px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.product-card-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contact-info-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 500 18px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.svg-container {
+  display: flex;
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  margin-left: 7.25px;
+}
