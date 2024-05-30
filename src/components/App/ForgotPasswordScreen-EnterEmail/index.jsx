@@ -5,13 +5,13 @@ import messages from "./messages.json";
 
 function FPEnterEmail() {
   return (
-    <div className="password-reset-form-container1">
-      <div className="password-reset-section">
-        <div className="password-reset-container">
-          <div className="password-reset-form-container">
+    <div className="password-reset-form-container1-email">
+      <div className="password-reset-section-email">
+        <div className="password-reset-container-email">
+          <div className="password-reset-form-container-email">
             <PasswordRecoveryMessage />
             <EmailSenderWidget />
-            <p className="forgot-password-link">{messages["lt_login"]}</p>
+            <p className="forgot-password-link-email">{messages["lt_login"]}</p>
           </div>
         </div>
       </div>

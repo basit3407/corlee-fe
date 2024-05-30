@@ -1,11 +1,10 @@
-.password-reset-info-box-email {
+.password-reset-message-container {
   display: flex;
-  flex: 0 0 auto;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
 }
-.password-reset-message-email {
+.password-reset-heading-style {
   flex: 0 0 auto;
   padding: 0;
   margin: 0;
@@ -14,7 +13,7 @@
   text-align: center;
   white-space: pre-wrap;
 }
-.password-reset-message1-email {
+.password-reset-message {
   flex: 0 0 auto;
   align-self: center;
   padding: 0;
