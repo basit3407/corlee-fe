@@ -1,0 +1,120 @@
+.success-message-container1 {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 32px;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: white;
+  border-radius: 32px;
+}
+.flex-column-centered {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.success-message-container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.image-container {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  align-self: center;
+  width: 74px;
+  max-width: initial;
+  height: 80px;
+}
+.success-message-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2.5px;
+}
+.vertical-centered-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+.gratitude-message1 {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 48px/58px Artnoova;
+  color: #252525;
+  white-space: pre-wrap;
+}
+.gratitude-message {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: -33px;
+  font: 600 48px/58px Artnoova;
+  color: rgba(37, 37, 37, 0.3);
+  white-space: pre-wrap;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.5px;
+}
+.success-message {
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  font: 600 20px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.request-info-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-width: 296px;
+}
+.request-number-heading {
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  font: 500 16px Inter, sans-serif;
+  color: #666666;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+}
+.message-text {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 500 14px Inter, sans-serif;
+  color: #666666;
+  text-align: center;
+  white-space: pre-wrap;
+}
+.success-button {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  align-self: center;
+  width: 292px;
+  min-width: 292px;
+  height: 48px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: black;
+  border: none;
+  border-radius: 110px;
+}
