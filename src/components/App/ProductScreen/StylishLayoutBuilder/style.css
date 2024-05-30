@@ -1,0 +1,24 @@
+.vertical-centered-flex-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+.product-card-container2 {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.product-card-container4 {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 29px;
+}

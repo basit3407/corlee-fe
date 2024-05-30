@@ -1,0 +1,77 @@
+.product-related-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+}
+.product-info-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 48px;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-card-divider {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 100%;
+  border-top: 1px solid #bfbfbf;
+}
+.related-products-heading {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 500 24px/29px Inter, sans-serif;
+  color: #bfbfbf;
+  white-space: pre-wrap;
+}
+.product-grid-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 23px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.vertical-text-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  justify-content: center;
+  width: 303px;
+}
+.image-container-with-text {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  max-width: initial;
+  height: 305px;
+  border: none;
+  border-radius: 16px 16px 0px 0px;
+  object-fit: cover;
+}
+.art-noova-title {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 24px Artnoova;
+  color: black;
+  white-space: pre-wrap;
+}
+.text-description-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: -8px;
+  font: 400 18px Inter, sans-serif;
+  color: #666666;
+  white-space: pre-wrap;
+}

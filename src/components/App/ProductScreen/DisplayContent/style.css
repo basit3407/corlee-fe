@@ -1,0 +1,73 @@
+.card-container-with-text-and-images {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 24px 24px 32px 23px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 79.28%, rgba(0, 0, 0, 0.6) 95.65%), url("/assets/div_1ad94io_f8bba4.jpeg") 50%, #d9d9d9;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: auto, cover, auto;
+  border-radius: 16px;
+}
+.info-card {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.unique-header-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  padding-top: 7.5px;
+  margin: 0;
+  font: 600 32px Artnoova;
+  color: white;
+  white-space: pre-wrap;
+}
+.card-with-code-snippet {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 53px;
+  padding-right: 11.5px;
+  padding-left: 11.5px;
+  background: white;
+  border-radius: 96px;
+}
+.svg-container5 {
+  display: flex;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  color: #f76767;
+}
+.product-gallery-row {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: 333px;
+}
+.text-block-container {
+  box-sizing: border-box;
+  display: block;
+  width: 139px;
+  max-width: initial;
+  height: 29px;
+}
+.image-container-with-margin {
+  box-sizing: border-box;
+  display: block;
+  width: 54px;
+  max-width: initial;
+  height: 54px;
+  margin-left: 170px;
+}

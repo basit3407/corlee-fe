@@ -1,0 +1,25 @@
+.material-card-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+}
+.primary-button-style {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  align-self: center;
+  width: 194px;
+  min-width: 194px;
+  height: 48px;
+  margin-top: 8px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: #6a6a45;
+  border: none;
+  border-radius: 110px;
+}

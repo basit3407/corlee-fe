@@ -1,0 +1,70 @@
+.product-card {
+  flex: 0 0 auto;
+}
+.product-card-container1 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+.unique-header-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  padding-top: 7.5px;
+  margin: 0;
+  font: 600 32px Artnoova;
+  color: white;
+  white-space: pre-wrap;
+}
+.card-with-code-snippet {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 53px;
+  padding-right: 11.5px;
+  padding-left: 11.5px;
+  background: white;
+  border-radius: 96px;
+}
+.svg-container2 {
+  display: flex;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+}
+.hot-selling-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding-right: 9px;
+  padding-left: 9px;
+  margin-top: 0.25px;
+  background: white;
+  border-radius: 80px;
+}
+.hot-selling-text-emoji {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 18px Artnoova;
+  color: white;
+  white-space: pre-wrap;
+}
+.hot-selling-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-left: 1px;
+  font: 500 18px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
