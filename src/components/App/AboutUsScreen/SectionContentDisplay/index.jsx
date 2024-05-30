@@ -8,7 +8,7 @@ function SectionContentDisplay({ possibleSectionTitles }) {
       style={{
         display: "inline-block",
         width: "100%",
-        background: "whitesmoke",
+        background: "white",
       }}
       data-ignore="used only for top most containter width"
     >
