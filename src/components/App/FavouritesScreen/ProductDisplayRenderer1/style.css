@@ -1,0 +1,15 @@
+.product-card-container1 {
+  flex: 0 0 auto;
+}
+.product-card-container:first-child {
+  margin-top: 0px;
+}
+.product-card-container:nth-child(1) {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 79.28%, rgba(0, 0, 0, 0.6) 95.65%), url("/assets/img_1091_3968_ef4585.jpeg") 50%, #d9d9d9;
+}
+.product-card-container:nth-child(2) {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 79.28%, rgba(0, 0, 0, 0.6) 95.65%), url("/assets/img_1091_3958_3d7261.jpeg") 50%, #d9d9d9;
+}
+.product-card-container:nth-child(3) {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 79.28%, rgba(0, 0, 0, 0.6) 95.65%), url("/assets/img_1091_3983_bb41cf.jpeg") 50%, #d9d9d9;
+}
