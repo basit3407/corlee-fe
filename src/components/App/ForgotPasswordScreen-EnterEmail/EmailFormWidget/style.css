@@ -1,0 +1,21 @@
+.center-aligned-button-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+.reset-link-button {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  min-width: 462px;
+  height: 48px;
+  margin-top: 40px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: black;
+  border: none;
+  border-radius: 110px;
+}
