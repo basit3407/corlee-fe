@@ -1,0 +1,19 @@
+.center-box {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  align-self: center;
+  min-width: 462px;
+  margin-left: -65px;
+}
+.input-with-border-radius {
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding-left: 15px;
+  font: 400 16px Inter, sans-serif;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+}
+.input-style-f62::placeholder {
+  color: #666666;
+}
