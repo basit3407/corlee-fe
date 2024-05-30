@@ -1,0 +1,59 @@
+.vertical-form-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 24px;
+}
+.button-with-icon-and-text {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 3.5px;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  width: 276px;
+  min-width: 276px;
+  height: 48px;
+  font: 600 16px Inter, sans-serif;
+  color: black;
+  cursor: pointer;
+  background: white;
+  border: 2px solid #ebebeb;
+  border-radius: 110px;
+}
+.svg-container {
+  display: flex;
+  width: 32px;
+  height: 32px;
+}
+.account-actions-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: flex-start;
+  margin-top: -8px;
+}
+.login-prompt-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 400 14px/17px Inter, sans-serif;
+  color: #666666;
+  white-space: pre-wrap;
+}
+.login-link-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-left: 6px;
+  font: 600 14px/17px Inter, sans-serif;
+  color: black;
+  text-decoration-line: underline;
+  white-space: pre-wrap;
+}

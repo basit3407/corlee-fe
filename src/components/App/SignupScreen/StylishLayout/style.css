@@ -1,0 +1,26 @@
+.vertical-centered-text-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+.subtle-text {
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  font: 500 14px/17px Inter, sans-serif;
+  color: #bfbfbf;
+  white-space: pre-wrap;
+}
+.inner-divider-line {
+  flex: 0 0 auto;
+  margin-top: -5.5px;
+  border-top: 1px solid #bfbfbf;
+}
+.border-or-separator {
+  flex: 0 0 auto;
+  margin-top: -1px;
+  border-top: 1px solid #bfbfbf;
+}
