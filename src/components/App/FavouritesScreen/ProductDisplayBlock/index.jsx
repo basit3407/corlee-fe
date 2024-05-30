@@ -7,36 +7,58 @@ import messages from "./messages.json";
 
 function ProductDisplayBlock() {
   return (
-    <div className="product-related-container">
-      <div className="product-info-container">
-        <div className="product-card-divider" />
-        <p className="product-title-text-style">{messages["related_products"]}</p>
-        <div className="product-card-divider" />
+    <div className="product-related-container-fav">
+      <div className="product-info-container-fav">
+        <div className="product-card-divider-fav" />
+        <p className="product-title-text-style-fav">
+          {messages["related_products"]}
+        </p>
+        <div className="product-card-divider-fav" />
       </div>
-      <div className="product-grid-container">
-        <div className="vertical-text-container">
+      <div className="product-grid-container-fav">
+        <div className="vertical-text-container-fav">
           <ImageContentBlock2 />
-          <img src="/assets/img_1091_3968_ef4585.jpeg" className="image-container" />
-          <p className="art-noova-text">{messages["12s396_1"]}</p>
-          <p className="text-description-style">{messages["woven_gt_plain_1"]}</p>
+          <img
+            src="/assets/img_1091_3968_ef4585.jpeg"
+            className="image-container-fav"
+          />
+          <p className="art-noova-text-fav">{messages["12s396_1"]}</p>
+          <p className="text-description-style-fav">
+            {messages["woven_gt_plain_1"]}
+          </p>
         </div>
-        <div className="vertical-text-container">
+        <div className="vertical-text-container-fav">
           <ImageContentBlock />
-          <img src="/assets/img_1091_3973_5fd7b9.jpeg" className="image-container" />
-          <p className="art-noova-text">{messages["12s396_3"]}</p>
-          <p className="text-description-style">{messages["woven_gt_plain_3"]}</p>
+          <img
+            src="/assets/img_1091_3973_5fd7b9.jpeg"
+            className="image-container-fav"
+          />
+          <p className="art-noova-text-fav">{messages["12s396_3"]}</p>
+          <p className="text-description-style-fav">
+            {messages["woven_gt_plain_3"]}
+          </p>
         </div>
-        <div className="vertical-text-container">
+        <div className="vertical-text-container-fav">
           <ImageContentBlock1 />
-          <img src="/assets/img_1091_3978_f3ce90.jpeg" className="image-container" />
-          <p className="art-noova-text">{messages["12s396_5"]}</p>
-          <p className="text-description-style">{messages["woven_gt_plain_5"]}</p>
+          <img
+            src="/assets/img_1091_3978_f3ce90.jpeg"
+            className="image-container-fav"
+          />
+          <p className="art-noova-text-fav">{messages["12s396_5"]}</p>
+          <p className="text-description-style-fav">
+            {messages["woven_gt_plain_5"]}
+          </p>
         </div>
-        <div className="vertical-text-container">
+        <div className="vertical-text-container-fav">
           <ImageContentBlock3 />
-          <img src="/assets/img_1091_3983_bb41cf.jpeg" className="image-container" />
-          <p className="art-noova-text">{messages["12s396_7"]}</p>
-          <p className="text-description-style">{messages["woven_gt_plain_7"]}</p>
+          <img
+            src="/assets/img_1091_3983_bb41cf.jpeg"
+            className="image-container-fav"
+          />
+          <p className="art-noova-text-fav">{messages["12s396_7"]}</p>
+          <p className="text-description-style-fav">
+            {messages["woven_gt_plain_7"]}
+          </p>
         </div>
       </div>
     </div>
