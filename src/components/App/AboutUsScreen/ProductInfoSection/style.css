@@ -1,0 +1,26 @@
+.vertical-flow-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 66px;
+}
+.process-steps-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 152px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 23.5px;
+}
+.hierarchical-text-block {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 24px Artnoova;
+  color: black;
+  text-align: center;
+  white-space: pre-wrap;
+}

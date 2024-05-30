@@ -5,6 +5,7 @@ import ForgotPasswordEnterEmail from "../Screens/ForgotPassword-EnterEmail";
 import ForgotPasswordReset from "../Screens/ForgotPasswordReset";
 import Signup from "../Screens/Signup";
 import Continiewithgoogle from "../Screens/Continiewithgoogle";
+import AboutUs from "../Screens/AboutUs";
 
 function Approuter() {
   return (
@@ -16,6 +17,7 @@ function Approuter() {
         <Route path="/reset" element={<ForgotPasswordReset />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/google" element={<Continiewithgoogle />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
     </Router>
   );

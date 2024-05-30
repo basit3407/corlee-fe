@@ -1,0 +1,22 @@
+.story-box {
+  box-sizing: border-box;
+  width: 100%;
+}
+.golden-heading {
+  padding: 0;
+  margin: 0;
+  font: 600 24px/29px Artnoova;
+  color: #6a6a45;
+  white-space: pre-wrap;
+}
+.hero-title {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+  font: 600 56px/67px Artnoova;
+  color: black;
+  text-align: left;
+  white-space: pre-wrap;
+}

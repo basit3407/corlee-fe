@@ -1,0 +1,7 @@
+.dark-box {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  background: black;
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+}

@@ -1,0 +1,9 @@
+.statistic-card {
+  flex: 0 0 auto;
+}
+.vision-section-style {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1279px;
+  background: black;
+}

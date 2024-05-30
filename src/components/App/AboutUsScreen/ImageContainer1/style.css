@@ -1,0 +1,13 @@
+.vertical-align-centered-image {
+  flex: 0 0 auto;
+  align-self: center;
+  margin-top: 41px;
+  margin-left: 50px;
+}
+.hero-image-container {
+  box-sizing: border-box;
+  display: block;
+  width: 1390px;
+  max-width: initial;
+  height: 77px;
+}

@@ -1,0 +1,31 @@
+.text-container-flex-box {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: 32px;
+}
+.central-text-styler {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  align-self: center;
+  max-width: 848px;
+  padding: 0;
+  margin: 0;
+  font: 400 18px/25px Inter, sans-serif;
+  color: #8a8a8a;
+  text-align: center;
+  white-space: pre-wrap;
+}
+.content-wrapper {
+  flex: 0 0 auto;
+  margin-top: 3px;
+}
+.image-container1 {
+  box-sizing: border-box;
+  display: block;
+  width: 59px;
+  max-width: initial;
+  height: 59px;
+}

@@ -11,7 +11,7 @@ function Home() {
         }}
         data-ignore="used only for top most containter width"
       >
-        <FabricInfoLayout {...mockData} />
+        <FabricInfoLayout fabricInfoOptions={mockData.fabricInfoOptions} />
       </div>
       <BottomBar />
     </>

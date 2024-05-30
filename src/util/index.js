@@ -16,6 +16,11 @@ const mockData = {
         "By implementing textile testing & quality control measures, we ensure a production defective rate below 10% & prompt delivery.",
     },
   ],
+  possibleSectionTitles: [
+    { sectionTitleOrLabel: "History" },
+    { sectionTitleOrLabel: "Favourite" },
+    { sectionTitleOrLabel: "Logout" },
+  ],
 };
 
 const theme = {

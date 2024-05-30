@@ -1,0 +1,50 @@
+.order-process-section {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 88px;
+}
+.order-process-flow-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-width: 1282px;
+}
+.vertical-centered-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.order-process-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 846px;
+}
+.order-process-title {
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  font: 600 48px/58px Artnoova;
+  color: black;
+  white-space: pre-wrap;
+}
+.order-process-description {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+  font: 400 18px Inter, sans-serif;
+  color: #666666;
+  text-align: center;
+  white-space: pre-wrap;
+}

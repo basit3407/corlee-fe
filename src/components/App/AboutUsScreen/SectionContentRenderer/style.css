@@ -1,0 +1,21 @@
+.section-title-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: 45px;
+  padding-right: 17px;
+  padding-left: 17px;
+  border-bottom: 1px solid #2c2c2c;
+}
+.section-title-label-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 400 18px Inter, sans-serif;
+  color: white;
+  letter-spacing: -0.35px;
+  white-space: pre-wrap;
+}

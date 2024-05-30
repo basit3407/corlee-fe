@@ -1,0 +1,73 @@
+.vertical-centered-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.vertical-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.hero-section {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.story-section-container {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  max-width: 630px;
+  padding-top: 84px;
+}
+.narrative-text-style {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 48px;
+  font: 400 18px/25px Inter, sans-serif;
+  color: #666666;
+  text-align: left;
+  white-space: pre-wrap;
+}
+.statistic-cards-group {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 48px;
+}
+.statistic-card {
+  flex: 0 0 auto;
+}
+.standout-text {
+  padding: 0;
+  margin: 0;
+  font: 600 56px/67px Artnoova;
+  color: black;
+  white-space: pre-wrap;
+}
+.info-card-text-style {
+  padding: 0;
+  margin: 0;
+  margin-top: 16px;
+  font: 600 16px/19px Inter, sans-serif;
+  color: #666666;
+  white-space: pre-wrap;
+}
+.vertical-section-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
