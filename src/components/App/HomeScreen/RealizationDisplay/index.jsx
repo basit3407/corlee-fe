@@ -8,27 +8,42 @@ import messages from "./messages.json";
 
 function RealizationDisplay() {
   return (
-    <div className="realization-container">
-      <p className="majestic-heading">{messages["realizations"]}</p>
-      <div className="realization-container1">
-        <div className="image-container-with-text1">
-          <img src="/assets/img_1091_2307_617c48.jpeg" className="hero-image-container1" />
+    <div className="realization-container-home">
+      <p className="majestic-heading-home">{messages["realizations"]}</p>
+      <div className="realization-container1-home">
+        <div className="image-container-with-text1-home">
+          <img
+            src="/assets/img_1091_2307_617c48.jpeg"
+            className="hero-image-container1-home"
+          />
           <ImageContainer5 />
         </div>
-        <div className="nested-content-container">
-          <img src="/assets/img_1091_2310_cc486c.jpeg" className="image-container-fullscreen" />
+        <div className="nested-content-container-home">
+          <img
+            src="/assets/img_1091_2310_cc486c.jpeg"
+            className="image-container-fullscreen-home"
+          />
           <ImageContainer />
         </div>
-        <div className="realization-container">
-          <img src="/assets/img_1091_2313_9e3b38.jpeg" className="profile-image-container1" />
+        <div className="realization-container-home">
+          <img
+            src="/assets/img_1091_2313_9e3b38.jpeg"
+            className="profile-image-container1-home"
+          />
           <ImageContainer2 />
         </div>
-        <div className="image-container-with-text">
-          <img src="/assets/img_1091_2316_b5b829.jpeg" className="hero-image-container" />
+        <div className="image-container-with-text-home">
+          <img
+            src="/assets/img_1091_2316_b5b829.jpeg"
+            className="hero-image-container-home"
+          />
           <ImageContainer1 />
         </div>
-        <div className="vertical-image-container">
-          <img src="/assets/img_1091_2319_e848c6.jpeg" className="profile-image-container" />
+        <div className="vertical-image-container-home">
+          <img
+            src="/assets/img_1091_2319_e848c6.jpeg"
+            className="profile-image-container-home"
+          />
           <ImageContainer4 />
         </div>
       </div>

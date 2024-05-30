@@ -1,15 +1,16 @@
-import ProductSection from "../ProductSection";
+import Container from "../../UI/Container";
+import ProductSection from "./ProductSection";
 import "./style.css";
 
 function Productcomponent() {
   return (
-    <div>
+    <Container>
       <div className="main-content-container">
         <div className="main-content-section">
           <ProductSection />
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
 
