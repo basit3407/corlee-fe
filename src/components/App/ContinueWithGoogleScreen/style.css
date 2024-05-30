@@ -1,0 +1,14 @@
+.company-details-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 1440px;
+}
+.company-details-container1 {
+  box-sizing: border-box;
+  width: 641px;
+  padding-top: 119px;
+  padding-bottom: 208px;
+}

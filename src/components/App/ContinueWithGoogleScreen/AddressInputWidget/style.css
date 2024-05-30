@@ -1,0 +1,16 @@
+.vertical-spacing-container {
+  flex: 0 0 auto;
+  margin-top: 16px;
+}
+.input-field-with-border {
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding-left: 15px;
+  font: 400 16px Inter, sans-serif;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+}
+.input-style-f62::placeholder {
+  color: #666666;
+}
