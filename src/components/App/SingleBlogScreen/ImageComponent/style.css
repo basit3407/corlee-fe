@@ -1,0 +1,9 @@
+.image-container-sb {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  max-width: initial;
+  height: 562px;
+  border: none;
+  object-fit: cover;
+}

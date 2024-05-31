@@ -1,0 +1,19 @@
+.content-container {
+  box-sizing: border-box;
+  max-width: 1099px;
+  padding: 60px 171px 56px;
+}
+.hiero-text-block {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font: 400 16px/24px Inter, sans-serif;
+  color: #666666;
+  text-align: left;
+  white-space: pre-wrap;
+}
+.hierarchical-text-block {
+  display: block;
+  line-height: 40px;
+}
