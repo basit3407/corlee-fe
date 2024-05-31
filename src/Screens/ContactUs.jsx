@@ -1,12 +1,12 @@
 import BottomBar from "../components/App/BottomBar";
-import ContactUsComponent from "../components/App/ContactUsScreen";
+import ComponentYouSelected from "../components/App/ContactUsScreen";
 import Navbar from "../components/App/Navbar";
 
 function ContactUs() {
   return (
     <>
       <Navbar />
-      <ContactUsComponent />
+      <ComponentYouSelected />
       <BottomBar />
     </>
   );
