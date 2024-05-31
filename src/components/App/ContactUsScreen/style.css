@@ -1,0 +1,16 @@
+.vertical-centered-layout-c {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 1440px;
+}
+.main-content-section-c {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 58px;
+}
