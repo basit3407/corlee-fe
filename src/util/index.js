@@ -328,6 +328,47 @@ const mockData = {
       imgContent1: "/assets/img_1091_2931_97e43b.png",
     },
   ],
+  productCardViewArguments: [
+    {
+      productHighlightText: "Best Selling",
+      brProductDescriptionComponentTitle:
+        "Lorem ipsum dolor sit amet consectetur elit",
+      renderSvgOrText: undefined,
+      dynamicIconEmoji: "🔥",
+    },
+    {
+      productHighlightText: "Material",
+      brProductDescriptionComponentTitle:
+        "Lorem ipsum dolor sit amet consectetur elit",
+      renderSvgOrText:
+        '<svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Chevron Down" data-node-id="1091:3536" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_4" data-node-id="1091:3537" fill-rule="evenodd" clip-rule="evenodd" d="M15.398,11.867c0.219,0.22 0.219,0.576 0,0.796l-5.735,5.735c-0.22,0.219 -0.576,0.219 -0.796,0l-0.265,-0.265c-0.219,-0.22 -0.219,-0.576 0,-0.796l5.072,-5.072l-5.072,-5.072c-0.219,-0.219 -0.219,-0.576 0,-0.795l0.265,-0.265c0.22,-0.22 0.576,-0.22 0.796,0z" fill="black"/>\n</g></svg>',
+      dynamicIconEmoji: undefined,
+    },
+    {
+      productHighlightText: "Woven",
+      brProductDescriptionComponentTitle:
+        "Lorem ipsum dolor sit amet consectetur elit",
+      renderSvgOrText:
+        '<svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Chevron Down_2" data-node-id="1091:3542" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_5" data-node-id="1091:3543" fill-rule="evenodd" clip-rule="evenodd" d="M15.398,11.867c0.219,0.22 0.219,0.576 0,0.796l-5.735,5.735c-0.22,0.219 -0.576,0.219 -0.796,0l-0.265,-0.265c-0.219,-0.22 -0.219,-0.576 0,-0.796l5.072,-5.072l-5.072,-5.072c-0.219,-0.219 -0.219,-0.576 0,-0.795l0.265,-0.265c0.22,-0.22 0.576,-0.22 0.796,0z" fill="black"/>\n</g></svg>',
+      dynamicIconEmoji: undefined,
+    },
+    {
+      productHighlightText: "Functional",
+      brProductDescriptionComponentTitle:
+        "Lorem ipsum dolor sit amet consectetur elit",
+      renderSvgOrText:
+        '<svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Chevron Down_3" data-node-id="1091:3548" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_6" data-node-id="1091:3549" fill-rule="evenodd" clip-rule="evenodd" d="M15.398,11.867c0.219,0.22 0.219,0.576 0,0.796l-5.735,5.735c-0.22,0.219 -0.576,0.219 -0.796,0l-0.265,-0.265c-0.219,-0.22 -0.219,-0.576 0,-0.796l5.072,-5.072l-5.072,-5.072c-0.219,-0.219 -0.219,-0.576 0,-0.795l0.265,-0.265c0.22,-0.22 0.576,-0.22 0.796,0z" fill="black"/>\n</g></svg>',
+      dynamicIconEmoji: undefined,
+    },
+    {
+      productHighlightText: "Sustainable",
+      brProductDescriptionComponentTitle:
+        "Lorem ipsum dolor sit amet consectetur elit",
+      renderSvgOrText:
+        '<svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Chevron Down_4" data-node-id="1091:3554" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_7" data-node-id="1091:3555" fill-rule="evenodd" clip-rule="evenodd" d="M15.398,11.867c0.219,0.22 0.219,0.576 0,0.796l-5.735,5.735c-0.22,0.219 -0.576,0.219 -0.796,0l-0.265,-0.265c-0.219,-0.22 -0.219,-0.576 0,-0.796l5.072,-5.072l-5.072,-5.072c-0.219,-0.219 -0.219,-0.576 0,-0.795l0.265,-0.265c0.22,-0.22 0.576,-0.22 0.796,0z" fill="black"/>\n</g></svg>',
+      dynamicIconEmoji: undefined,
+    },
+  ],
 };
 
 const theme = {

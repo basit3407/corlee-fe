@@ -1,0 +1,29 @@
+.product-highlight-section3 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 1440px;
+  padding-right: 38px;
+  background: white;
+  box-shadow: inset 0px -1px 0px black;
+}
+.product-highlights-section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 1243px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.vertical-divider-styles {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 1px;
+  height: 504px;
+  background: black;
+}

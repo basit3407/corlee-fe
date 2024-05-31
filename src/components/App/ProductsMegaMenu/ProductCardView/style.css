@@ -1,0 +1,49 @@
+.product-highlight-section {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding-right: 14px;
+  padding-left: 15px;
+}
+.product-highlight-section1 {
+  flex: 0 0 auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.product-highlight-text-style {
+  padding: 0;
+  margin: 0;
+  font: 600 18px Artnoova;
+  color: black;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+}
+.product-description-title-style {
+  padding: 0;
+  margin: 0;
+  font: 400 14px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.svg-container {
+  display: flex;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+}
+.art-nova-heading {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 18px Artnoova;
+  color: black;
+  white-space: pre-wrap;
+}
+.functional-section-with-dynamic-icon {
+  background: #f1f1f1;
+}

@@ -1,0 +1,11 @@
+.product-highlight-section2 {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.functional-section-with-dynamic-icon {
+  background: #f1f1f1;
+}

@@ -1,0 +1,28 @@
+.odor-blocker-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.image-with-text-overlay {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  width: 182px;
+  max-width: initial;
+  height: 182px;
+  border: none;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.anti-odor-heading {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+  font: 600 18px Inter, sans-serif;
+  color: black;
+  text-transform: capitalize;
+  white-space: pre-wrap;
+}
