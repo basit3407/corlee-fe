@@ -88,6 +88,7 @@
   background: black;
   border: none;
   border-radius: 156px;
+  z-index: 1;
 }
 .vertical-center-with-icon-nav {
   box-sizing: border-box;

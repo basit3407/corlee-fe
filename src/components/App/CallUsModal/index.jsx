@@ -1,23 +1,15 @@
-import RenderContactOptions from "./RenderContactOptions";
-import "./style.css";
-import messages from "./messages.json";
+import { mockData } from "../../../util";
+import MainComp from "./CallUsModalMainComp";
 
-function ContactInformationSection({ contactOptionsArray }) {
+function CallUsModal() {
   return (
-    <div className="contact-section">
-      <div className="message-container">
-        <div className="message-box">
-          <p className="call-to-action-text-style">{messages["call_us"]}</p>
-          <p className="contact-message-text-style">
-            {messages["we_just_one_message_away"]}
-          </p>
-        </div>
-      </div>
-      <RenderContactOptions contactOptionsArray={contactOptionsArray} />
-      <p className="call-to-action-heading">{messages["need_help"]}</p>
-      <p className="contact-link-text-style">{messages["contact_us"]}</p>
+    <div
+      style={{ display: "inline-block", width: "636px" }}
+      data-ignore="used only for top most containter width"
+    >
+      <MainComp contactOptionsArray={mockData.contactOptionsArray} />
     </div>
   );
 }
 
-export default ContactInformationSection;
+export default CallUsModal;

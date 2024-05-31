@@ -1,0 +1,29 @@
+.flex-box-container-with-text {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 16px;
+  padding-left: 15px;
+  margin-left: 8px;
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+.text-styler {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 500 16px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.text-icon-container {
+  box-sizing: border-box;
+  display: block;
+  width: 14px;
+  max-width: initial;
+  height: 14px;
+}

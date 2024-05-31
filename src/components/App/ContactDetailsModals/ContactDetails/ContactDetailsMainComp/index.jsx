@@ -2,7 +2,7 @@ import ContactFormWidget from "../ContactFormWidget";
 import "./style.css";
 import messages from "./messages.json";
 
-function ContactDetailsModal() {
+function ContactDetailsMainComp() {
   return (
     <div className="contact-details-section2">
       <div className="contact-details-section">
@@ -18,4 +18,4 @@ function ContactDetailsModal() {
   );
 }
 
-export default ContactDetailsModal;
+export default ContactDetailsMainComp;

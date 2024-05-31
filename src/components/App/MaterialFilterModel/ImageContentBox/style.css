@@ -1,0 +1,12 @@
+.color-option-container-flex-box-layout {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: 40px;
+}
+.color-option-container {
+  margin-top: 8px;
+}

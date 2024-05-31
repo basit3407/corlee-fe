@@ -2,7 +2,7 @@ import AddressUpdateSection from "../AddressUpdateSection";
 import "./style.css";
 import messages from "./messages.json";
 
-function ShippingAddressUpdateModal() {
+function ShippingAddressMainComp() {
   return (
     <div className="shipping-details-container1">
       <div className="shipping-details-container2">
@@ -20,4 +20,4 @@ function ShippingAddressUpdateModal() {
   );
 }
 
-export default ShippingAddressUpdateModal;
+export default ShippingAddressMainComp;

@@ -1,11 +1,13 @@
-import Container from "../../UI/Container";
 import ThankYouMessageWidget from "./ThankYouMessageWidget";
 
 function ThankYouModal() {
   return (
-    <Container style={{ width: "822" }}>
+    <div
+      style={{ display: "inline-block", width: "822" }}
+      data-ignore="used only for top most containter width"
+    >
       <ThankYouMessageWidget />
-    </Container>
+    </div>
   );
 }
 

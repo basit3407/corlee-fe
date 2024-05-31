@@ -2,7 +2,7 @@ import PersonalInfoForm from "../PersonalInfoForm";
 import "./style.css";
 import messages from "./messages.json";
 
-function PersonalDetailsModal() {
+function PersonalDetailsMainComp() {
   return (
     <div className="personal-details-container">
       <div className="personal-details-container1">
@@ -20,4 +20,4 @@ function PersonalDetailsModal() {
   );
 }
 
-export default PersonalDetailsModal;
+export default PersonalDetailsMainComp;

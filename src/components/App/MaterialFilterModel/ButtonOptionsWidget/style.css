@@ -1,0 +1,36 @@
+.vertical-button-group {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  margin-top: 338px;
+}
+.primary-button-style {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  min-width: 316px;
+  height: 48px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: black;
+  border: none;
+  border-radius: 110px;
+}
+.primary-button {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  min-width: 316px;
+  height: 48px;
+  margin-top: 8px;
+  font: 600 16px Inter, sans-serif;
+  color: black;
+  cursor: pointer;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 110px;
+}

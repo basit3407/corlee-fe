@@ -1,0 +1,69 @@
+.container-sort-options {
+  box-sizing: border-box;
+  width: 100%;
+}
+.sort-container-with-icon {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.sort-title-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 18px Artnoova;
+  color: black;
+  white-space: pre-wrap;
+}
+.sort-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.highlighted-text-badge {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  padding: 0 5.5px;
+  font: 500 14px Inter, sans-serif;
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 90px;
+}
+.svg-container {
+  display: flex;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+.oldest-title-with-style {
+  padding: 0;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin: 0;
+  margin-top: 16px;
+  font: 500 16px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.most-requested-text-style {
+  padding: 0;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin: 0;
+  margin-top: 24px;
+  font: 500 16px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}

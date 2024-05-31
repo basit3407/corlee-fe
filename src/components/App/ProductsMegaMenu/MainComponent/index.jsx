@@ -1,8 +1,8 @@
-import ProductCardSelector from "./ProductCardSelector";
-import OutdoorGearSection from "./OutdoorGearSection";
+import ProductCardSelector from "../ProductCardSelector";
+import OutdoorGearSection from "../OutdoorGearSection";
 import "./style.css";
 
-function ProductsMegaMenu({ productCardViewArguments }) {
+function ProductsMegaMenuMainComp({ productCardViewArguments }) {
   return (
     <div className="product-highlight-section3">
       <div className="product-highlights-section">
@@ -16,4 +16,4 @@ function ProductsMegaMenu({ productCardViewArguments }) {
   );
 }
 
-export default ProductsMegaMenu;
+export default ProductsMegaMenuMainComp;
