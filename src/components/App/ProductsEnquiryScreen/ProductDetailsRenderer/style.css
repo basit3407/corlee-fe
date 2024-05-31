@@ -1,0 +1,101 @@
+.product-details-container4 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #bfbfbf;
+}
+.product-details-layout {
+  margin-top: -2px;
+}
+.product-details-container2 {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 29.42%;
+}
+.product-image-container1 {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: initial;
+  height: 311px;
+  border: none;
+  border-radius: 32px;
+  object-fit: cover;
+}
+.product-details-container1 {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 32px;
+}
+.product-details-title-style {
+  padding: 0;
+  margin: 0;
+  font: 600 40px/48px Artnoova;
+  color: black;
+  white-space: pre-wrap;
+}
+.product-type-description-text-style {
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+  font: 400 24px Inter, sans-serif;
+  color: #666666;
+  white-space: pre-wrap;
+}
+.product-details-container3 {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 70.58%;
+  padding-right: 15px;
+  padding-bottom: 258px;
+  padding-left: 15px;
+}
+.product-details-section-widget-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.product-details-section-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 24px/29px Artnoova;
+  color: black;
+  white-space: pre-wrap;
+}
+.product-image-container {
+  box-sizing: border-box;
+  display: block;
+  width: 50px;
+  max-width: initial;
+  height: 50px;
+  margin-left: 23px;
+}
+.product-details-container {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 40px;
+}
+.product-length-description-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-left: 6px;
+  font: 500 14px/17px Inter, sans-serif;
+  color: #979797;
+  white-space: pre-wrap;
+}
+.product-quantity-heading-text-style {
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+  font: 600 32px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}

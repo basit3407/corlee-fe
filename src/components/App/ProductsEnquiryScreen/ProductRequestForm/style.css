@@ -1,0 +1,15 @@
+.fullwidth-container {
+  box-sizing: border-box;
+  width: 100%;
+}
+.input-with-underline {
+  box-sizing: border-box;
+  width: 100%;
+  height: 49px;
+  padding-left: -1px;
+  font: 600 24px/29px Artnoova;
+  border-bottom: 1px solid #bfbfbf;
+}
+.input-style-f62::placeholder {
+  color: black;
+}

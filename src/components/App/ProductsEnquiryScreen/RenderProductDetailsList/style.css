@@ -1,0 +1,8 @@
+.product-details-container5 {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 39px;
+}
+.product-details-container4:first-child {
+  margin-top: 0px;
+}

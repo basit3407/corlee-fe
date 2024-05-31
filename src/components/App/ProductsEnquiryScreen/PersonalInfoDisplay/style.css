@@ -1,0 +1,11 @@
+.personal-details-card {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-left: -371px;
+  background: #f7f7f7;
+  border-radius: 16px;
+}

@@ -1,0 +1,29 @@
+.personal-details-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  height: 119px;
+  padding-right: 23px;
+  padding-left: 23px;
+  border-bottom: 1px solid #bfbfbf;
+}
+.personal-details-heading1 {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 24px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.personal-details-heading {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: 4px;
+  font: 500 18px Inter, sans-serif;
+  color: #666666;
+  white-space: pre-wrap;
+}
