@@ -1,0 +1,13 @@
+.image-container-rectangle {
+  box-sizing: border-box;
+  display: block;
+  width: 518px;
+  max-width: initial;
+  height: 490px;
+  border: none;
+  border-radius: 24px;
+  object-fit: cover;
+  position: absolute;
+  top: 172px;
+  left: 841px;
+}

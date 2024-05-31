@@ -10,6 +10,7 @@ import Product from "../Screens/Product";
 import Favourites from "../Screens/Favourites";
 import SingleBlog from "../Screens/SingleBlog";
 import Blogs from "../Screens/Blogs";
+import Events from "../Screens/Events";
 
 function Approuter() {
   return (
@@ -26,6 +27,7 @@ function Approuter() {
         <Route path="/favourite" element={<Favourites />} />
         <Route path="/blog" element={<SingleBlog />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/events" element={<Events />} />
       </Routes>
     </Router>
   );

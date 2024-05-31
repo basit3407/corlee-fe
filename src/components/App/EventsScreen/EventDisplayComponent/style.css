@@ -1,0 +1,11 @@
+.event-card1 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.event-card {
+  margin-top: 16px;
+}

@@ -1,0 +1,31 @@
+.event-details-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background: black;
+  border-radius: 12px;
+  z-index: 1;
+}
+.event-date-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 24px Inter, sans-serif;
+  color: white;
+  white-space: pre-wrap;
+}
+.event-year-label {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+  margin-left: 4.75px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  letter-spacing: 4.8px;
+  white-space: pre-wrap;
+}

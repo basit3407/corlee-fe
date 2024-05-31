@@ -1,0 +1,7 @@
+.event-card-container1 {
+  flex: 0 0 auto;
+  margin-top: 8px;
+}
+.event-card1:first-child {
+  margin-top: 0px;
+}

@@ -186,6 +186,48 @@ const mockData = {
       imgContent8: "/assets/img_1091_9011_252dd4.png",
     },
   ],
+  eventDisplayWidgetArgs: [
+    {
+      eventYear5: "2024",
+      eventDate5: "25 NOV",
+      eventDescription7: "nulla maxime voluptatem",
+      dynamicContentWithShowMoreButton7:
+        '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
+      imgContent9: "/assets/img_1091_8740_5e534f.png",
+    },
+    {
+      eventYear5: "2024",
+      eventDate5: "10 DEC",
+      eventDescription7: "Tempore reprehenderit.",
+      dynamicContentWithShowMoreButton7:
+        '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
+      imgContent9: "/assets/img_1091_8766_dd24db.png",
+    },
+    {
+      eventYear5: "2024",
+      eventDate5: "10 DEC",
+      eventDescription7: "Tempore reprehenderit.",
+      dynamicContentWithShowMoreButton7:
+        '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
+      imgContent9: "/assets/img_1091_8792_50fc66.png",
+    },
+    {
+      eventYear5: "2024",
+      eventDate5: "10 DEC",
+      eventDescription7: "Tempore reprehenderit.",
+      dynamicContentWithShowMoreButton7:
+        '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
+      imgContent9: "/assets/img_1091_8818_3fb63a.png",
+    },
+    {
+      eventYear5: "2024",
+      eventDate5: "10 DEC",
+      eventDescription7: "Tempore reprehenderit.",
+      dynamicContentWithShowMoreButton7:
+        '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
+      imgContent9: "/assets/img_1091_8844_8e01e9.png",
+    },
+  ],
 };
 
 const theme = {

@@ -1,0 +1,78 @@
+.event-list-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 1440px;
+}
+.event-card-list {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: stretch;
+  justify-content: flex-start;
+  max-width: 1281px;
+  padding-top: 39px;
+  padding-bottom: 58px;
+}
+.content-text-area {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  max-width: 630px;
+  padding: 0;
+  margin: 0;
+  font: 400 18px/25px Inter, sans-serif;
+  color: #666666;
+  text-align: left;
+  white-space: pre-wrap;
+}
+.event-card-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 3.75px;
+  align-items: center;
+  justify-content: center;
+  width: 303px;
+  min-width: 303px;
+  height: 64px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: black;
+  border: none;
+  border-radius: 110px;
+}
+.svg-container {
+  display: flex;
+  width: 32px;
+  height: 32px;
+}
+.upcoming-events-heading {
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 93px;
+  font: 600 48px/53px Artnoova;
+  color: black;
+  white-space: pre-wrap;
+}
+.btn-load-more {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  align-self: center;
+  width: 194px;
+  min-width: 194px;
+  height: 48px;
+  margin-top: 8px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: #6a6a45;
+  border: none;
+  border-radius: 110px;
+}
