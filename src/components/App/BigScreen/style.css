@@ -1,0 +1,59 @@
+.main-content-container1 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 1440px;
+  background: white;
+}
+.main-content-container {
+  padding-top: 14px;
+}
+.shopping-cart-details-section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 93px;
+}
+.shopping-bag-details-section {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  min-width: 821px;
+  padding-bottom: 58px;
+}
+.shopping-bag-header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 52px;
+  border-bottom: 1px solid #8a8a8a;
+}
+.shopping-bag-title {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 40px/48px Artnoova;
+  color: #252525;
+  white-space: pre-wrap;
+}
+.shopping-bag-info {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 24px/29px Artnoova;
+  color: #252525;
+  white-space: pre-wrap;
+}
+.personal-details-section3 {
+  flex: 0 0 auto;
+  padding-top: 5px;
+}
