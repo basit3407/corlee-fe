@@ -12,6 +12,7 @@ function ProductNavigation() {
           <SvgIcon1 className="svg-container-nav" />
         </div>
         <p className="contact-info-text-style-nav">{messages["events"]}</p>
+        <p className="contact-info-text-style-nav">{messages["Blogs"]}</p>
         <p className="contact-info-text-style-nav">{messages["about_us"]}</p>
       </div>
       <DynamicContentDisplay />

@@ -1,0 +1,12 @@
+.main-content-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 1440px;
+}
+.product-details-section {
+  padding-top: 20px;
+  padding-bottom: 32px;
+}
