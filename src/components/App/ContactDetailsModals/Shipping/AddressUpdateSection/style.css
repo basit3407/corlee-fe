@@ -1,0 +1,24 @@
+.address-section-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 32px;
+}
+.update-button {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  align-self: center;
+  width: 292px;
+  min-width: 292px;
+  height: 48px;
+  margin-top: 32px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: black;
+  border: none;
+  border-radius: 110px;
+}
