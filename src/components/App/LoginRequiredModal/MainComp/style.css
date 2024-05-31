@@ -1,0 +1,55 @@
+.login-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: white;
+  border-radius: 32px;
+}
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.login-container1 {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+.login-button-style {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  width: 220px;
+  min-width: 220px;
+  height: 48px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: black;
+  border: none;
+  border-radius: 110px;
+}
+.button-with-border-radius {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  width: 220px;
+  min-width: 220px;
+  height: 48px;
+  margin-left: 8px;
+  font: 600 16px Inter, sans-serif;
+  color: black;
+  cursor: pointer;
+  background: transparent;
+  border: 1.5px solid black;
+  border-radius: 110px;
+}
