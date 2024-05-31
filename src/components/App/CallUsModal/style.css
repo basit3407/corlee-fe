@@ -1,0 +1,60 @@
+.contact-section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-width: 636px;
+  padding: 40px 48px 1073px 63px;
+  background: white;
+}
+.message-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 15px;
+}
+.message-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.call-to-action-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 24px Inter, sans-serif;
+  color: black;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+}
+.contact-message-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: 16px;
+  font: 500 14px Inter, sans-serif;
+  color: #666666;
+  white-space: pre-wrap;
+}
+.call-to-action-heading {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 500 18px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.contact-link-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 400 16px Inter, sans-serif;
+  color: black;
+  text-decoration-line: underline;
+  white-space: pre-wrap;
+}

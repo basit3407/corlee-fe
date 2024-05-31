@@ -1,5 +1,5 @@
 import FabricInfoDisplay from "../FabricInfoDisplay";
-import { theme } from "../../../../util";
+import { theme } from "../../CallUsModal";
 import "./style.css";
 
 function FabricDisplayRenderer({ fabricInfoOptions }) {

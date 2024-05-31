@@ -1,0 +1,8 @@
+.contact-info-container1 {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 32px;
+  align-items: stretch;
+  justify-content: center;
+}

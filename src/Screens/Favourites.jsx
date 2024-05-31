@@ -1,7 +1,7 @@
 import BottomBar from "../components/App/BottomBar";
 import FavouriteComponent from "../components/App/FavouritesScreen";
 import Navbar from "../components/App/Navbar";
-import { mockData } from "../util";
+import { mockData } from "../components/App/CallUsModal";
 
 function Favourites() {
   return (

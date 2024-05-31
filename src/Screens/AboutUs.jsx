@@ -1,7 +1,7 @@
 import SectionContentDisplay from "../components/App/AboutUsScreen/SectionContentDisplay";
 import BottomBar from "../components/App/BottomBar";
 import Navbar from "../components/App/Navbar";
-import { mockData } from "../util";
+import { mockData } from "../components/App/CallUsModal";
 
 function AboutUs() {
   return (
