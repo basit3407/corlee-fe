@@ -1,0 +1,136 @@
+.ticket-details-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #bfbfbf;
+}
+.ticket-info-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+.ticket-info-paragraph {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: italic 600 18px/21.5px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.product-inquiry-button {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  width: 187px;
+  min-width: 187px;
+  height: 33px;
+  font: italic 600 18px/21.5px Inter, sans-serif;
+  color: #6a6a45;
+  cursor: pointer;
+  background: rgba(106, 106, 69, 0.2);
+  border: none;
+  border-radius: 64px;
+}
+.product-grid-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.card-container {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 193px;
+}
+.image-container-with-text {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: initial;
+  height: 192px;
+  border: none;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.info-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 16px;
+}
+.unique-text-block {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 500 20px/24px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.circular-text-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  height: 20px;
+  padding-right: 7px;
+  padding-left: 7px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 200px;
+}
+.italic-black-text {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: italic 400 16px/19px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.center-content-box {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: initial;
+  height: 192px;
+  padding-right: 61px;
+  padding-left: 60px;
+  background: url("/assets/div_1091_2636_1091_2637_d2cf6e.png") 50% / cover no-repeat;
+  border: none;
+  border-radius: 8px;
+}
+.large-text-with-background {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 400 56px/67px Inter, sans-serif;
+  color: white;
+  white-space: pre-wrap;
+}
+.ticket-info-text-style {
+  flex: 0 0 auto;
+  align-self: flex-end;
+  padding: 0;
+  margin: 0;
+  font: italic 600 18px/21.5px Inter, sans-serif;
+  color: #666666;
+  white-space: pre-wrap;
+}

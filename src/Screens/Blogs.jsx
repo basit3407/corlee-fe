@@ -1,7 +1,7 @@
 import BlogsComponent from "../components/App/BlogsScreen";
 import BottomBar from "../components/App/BottomBar";
 import Navbar from "../components/App/Navbar";
-import { mockData } from "../components/App/CallUsModal";
+import { mockData } from "../util";
 
 function Blogs() {
   return (

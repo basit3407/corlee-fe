@@ -12,6 +12,7 @@ import SingleBlog from "../Screens/SingleBlog";
 import Blogs from "../Screens/Blogs";
 import Events from "../Screens/Events";
 import ContactUs from "../Screens/ContactUs";
+import RequestHistory from "../Screens/RequestHistory";
 
 function Approuter() {
   return (
@@ -30,6 +31,7 @@ function Approuter() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/history" element={<RequestHistory />} />
       </Routes>
     </Router>
   );

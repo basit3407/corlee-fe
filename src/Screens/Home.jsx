@@ -1,6 +1,6 @@
 import FabricInfoLayout from "../components/App/HomeScreen/FabricInfoLayout";
-import { mockData } from "../components/App/CallUsModal";
 import BottomBar from "../components/App/BottomBar";
+import { mockData } from "../util";
 
 function Home() {
   return (

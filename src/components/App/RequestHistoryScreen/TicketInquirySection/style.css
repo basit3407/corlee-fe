@@ -1,0 +1,9 @@
+.request-history-container2 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 104px;
+}

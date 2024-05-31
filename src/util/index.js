@@ -250,6 +250,22 @@ const mockData = {
         '<svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="clip1_1135_5521" xmlns="http://www.w3.org/2000/svg">\n<rect width="24" height="24" fill="white" transform="translate(0, 0)"/>\n</clipPath><clipPath id="clip2_1135_5521" xmlns="http://www.w3.org/2000/svg">\n<rect width="24" height="24" fill="white" transform="translate(0, 0)"/>\n</clipPath></defs><g id="Line" data-node-id="1135:5537" clip-path="url(#clip1_1135_5521)" xmlns="http://www.w3.org/2000/svg">\n<g id="hugeicons:line" data-node-id="I1135:5537;1022:13794" clip-path="url(#clip2_1135_5521)">\n<path id="Vector_5" data-node-id="I1135:5537;1022:13805" fill-rule="evenodd" clip-rule="evenodd" d="M12,0c-6.4949,0 -12,4.501 -12,10.326c0,5.824 5.5051,10.325 12,10.325h0.0008c0.4717,0 0.9366,-0.023 1.3945,-0.068v2.58c0,0.337 0.2021,0.641 0.5128,0.772c0.3106,0.13 0.6693,0.062 0.9102,-0.174c1.8641,-1.825 5.0554,-5.054 7.051,-7.557c1.3352,-1.658 2.1307,-3.683 2.1307,-5.878c0,-5.825 -5.5051,-10.326 -12,-10.326zM1.6744,10.326c0,-4.655 4.4901,-8.652 10.3256,-8.652c5.8355,0 10.3256,3.997 10.3256,8.652c0,1.778 -0.6418,3.44 -1.7615,4.829l-0.0028,0.004c-1.4914,1.871 -3.7038,4.193 -5.4915,5.993v-1.528c0,-0.247 -0.1093,-0.482 -0.2984,-0.641c-0.1892,-0.159 -0.439,-0.226 -0.6825,-0.184c-0.6726,0.118 -1.3689,0.177 -2.0897,0.178c-5.8352,-0.001 -10.3248,-3.997 -10.3248,-8.651zM11.7133,7.662c-0.1937,-0.322 -0.5788,-0.476 -0.9414,-0.376c-0.3627,0.101 -0.6138,0.431 -0.6138,0.807v4.465c0,0.463 0.3749,0.837 0.8372,0.837c0.4624,0 0.8373,-0.374 0.8373,-0.837v-1.442l1.1239,1.873c0.1936,0.323 0.5787,0.476 0.9414,0.376c0.3627,-0.1 0.6137,-0.431 0.6137,-0.807v-4.465c0,-0.462 -0.3748,-0.837 -0.8372,-0.837c-0.4624,0 -0.8372,0.375 -0.8372,0.837v1.443zM6.1395,8.093c0,-0.462 -0.3748,-0.837 -0.8372,-0.837c-0.4624,0 -0.8372,0.375 -0.8372,0.837v4.465c0,0.463 0.3748,0.837 0.8372,0.837h1.1163c0.4624,0 0.8372,-0.374 0.8372,-0.837c0,-0.462 -0.3748,-0.837 -0.8372,-0.837h-0.2791zM9.4884,8.093c0,-0.462 -0.3749,-0.837 -0.8372,-0.837c-0.4624,0 -0.8372,0.375 -0.8372,0.837v4.465c0,0.463 0.3748,0.837 0.8372,0.837c0.4623,0 0.8372,-0.374 0.8372,-0.837zM16.0186,7.256c-0.4624,0 -0.8372,0.375 -0.8372,0.837v4.465c0,0.463 0.3748,0.837 0.8372,0.837h2.1209c0.4624,0 0.8372,-0.374 0.8372,-0.837c0,-0.462 -0.3748,-0.837 -0.8372,-0.837h-1.2837v-0.558h0.7702c0.4624,0 0.8373,-0.375 0.8373,-0.837c0,-0.463 -0.3749,-0.838 -0.8373,-0.838h-0.7702v-0.558h1.2837c0.4624,0 0.8372,-0.375 0.8372,-0.837c0,-0.462 -0.3748,-0.837 -0.8372,-0.837z" fill="black"/>\n</g>\n</g></svg>',
     },
   ],
+  ticketInquiriesData: [
+    {
+      date1: "Sat Nov 23 2023",
+      ticketType1: "Ticket Number : AB9825",
+      inquiryTitle2: "Placeat voluptas eius non iusto vitae. ",
+      requestDescription2:
+        "Labore ut molestias asperiores nihil reiciendis debitis qui distinctio modi. Ea ab beatae nisi unde molestias. Distinctio omnis non et officiis deserunt possimus aspernatur. Sit molestiae deleniti culpa nemo placeat nesciunt. Ipsum esse quia. Ut deserunt consequatur at.Voluptatem nostrum non ea voluptatem repellat. Consectetur tenetur qui voluptatem tempora quam. Provident quam dignissimos voluptatum corrupti quisquam rerum. Optio quae maxime modi laudantium nam molestias.Qui rem aliquid dolores fugit laudantium natus ea qui eos. Eos qui fugit. Nobis alias quam libero nesciunt aut.",
+    },
+    {
+      date1: "Sat Nov 23 2023",
+      ticketType1: "Ticket Number : AB9825",
+      inquiryTitle2: "Placeat voluptas eius non iusto vitae. ",
+      requestDescription2:
+        "Labore ut molestias asperiores nihil reiciendis debitis qui distinctio modi. Ea ab beatae nisi unde molestias. Distinctio omnis non et officiis deserunt possimus aspernatur. Sit molestiae deleniti culpa nemo placeat nesciunt. Ipsum esse quia. Ut deserunt consequatur at.Voluptatem nostrum non ea voluptatem repellat. Consectetur tenetur qui voluptatem tempora quam. Provident quam dignissimos voluptatum corrupti quisquam rerum. Optio quae maxime modi laudantium nam molestias.Qui rem aliquid dolores fugit laudantium natus ea qui eos. Eos qui fugit. Nobis alias quam libero nesciunt aut.",
+    },
+  ],
 };
 
 const theme = {

@@ -1,0 +1,52 @@
+.ticket-inquiry-section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #bfbfbf;
+}
+.ticket-info-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+.ticket-info-paragraph {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: italic 600 18px/21.5px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.product-inquiry-button {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  width: 187px;
+  min-width: 187px;
+  height: 33px;
+  font: italic 600 18px/21.5px Inter, sans-serif;
+  color: #6a6a45;
+  cursor: pointer;
+  background: rgba(106, 106, 69, 0.2);
+  border: none;
+  border-radius: 64px;
+}
+.ticket-date-info {
+  flex: 0 0 auto;
+  align-self: flex-end;
+  padding: 0;
+  margin: 0;
+  margin-top: 1.5px;
+  font: italic 600 18px/21.5px Inter, sans-serif;
+  color: #666666;
+  white-space: pre-wrap;
+}
