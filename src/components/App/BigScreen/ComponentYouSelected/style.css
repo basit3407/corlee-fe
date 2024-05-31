@@ -1,0 +1,212 @@
+.main-content-container1 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 1440px;
+  background: white;
+}
+.main-content-container {
+  padding-top: 14px;
+}
+.product-info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.product-image-placeholder {
+  box-sizing: border-box;
+  display: block;
+  width: 147px;
+  max-width: initial;
+  height: 18.5px;
+  border: none;
+  object-fit: cover;
+}
+.navigation-bar {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 47px;
+}
+.hierarchical-content-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.primary-text-block {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 500 18px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.svg-container {
+  display: flex;
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  margin-left: 7.25px;
+}
+.navigation-menu {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 38px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 39px;
+}
+.vertical-menu-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  height: 40px;
+  padding-right: 282px;
+  padding-left: 10px;
+  margin-left: 69px;
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+.svg-container1 {
+  display: flex;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  color: #999999;
+}
+.contact-info-section {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 19px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 15px;
+}
+.callout-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding-right: 8px;
+  padding-left: 8px;
+  background: #f0f0f0;
+  border-radius: 120px;
+}
+.svg-container2 {
+  display: flex;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+}
+.contact-info-container1 {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 51px;
+}
+.highlighted-text-badge {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  align-self: flex-end;
+  justify-content: center;
+  height: 20px;
+  padding: 0 4px;
+  font: 600 15.5px Inter, sans-serif;
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 156px;
+}
+.centered-text-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  margin-top: -14px;
+  background: #f0f0f0;
+  border-radius: 120px;
+}
+.vertical-divider-with-text {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 1px;
+  height: 48px;
+  background: #d9d9d9;
+}
+.svg-container3 {
+  display: flex;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  color: #323232;
+}
+.shopping-cart-details-section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 93px;
+}
+.shopping-bag-details-section {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  min-width: 821px;
+  padding-bottom: 58px;
+}
+.shopping-bag-header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 52px;
+  border-bottom: 1px solid #8a8a8a;
+}
+.shopping-bag-title {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 40px/48px Artnoova;
+  color: #252525;
+  white-space: pre-wrap;
+}
+.shopping-bag-info {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 24px/29px Artnoova;
+  color: #252525;
+  white-space: pre-wrap;
+}
+.personal-details-section3 {
+  flex: 0 0 auto;
+  padding-top: 5px;
+}

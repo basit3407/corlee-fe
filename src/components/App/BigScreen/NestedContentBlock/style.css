@@ -1,0 +1,39 @@
+.parent-container-flex-row {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.vertical-spacing-container {
+  flex: 0 0 auto;
+  padding-top: 22.5px;
+}
+.vertical-divider {
+  box-sizing: border-box;
+  width: 1px;
+  height: 293px;
+  border-left: 1px solid black;
+}
+.image-container-nested {
+  flex: 0 0 auto;
+  padding-bottom: 125px;
+  margin-left: -16.5px;
+}
+.boxy-image {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: initial;
+  height: 33px;
+}
+.vertical-spacer {
+  margin-top: 126px;
+}
+.image-wrapper {
+  box-sizing: border-box;
+  display: block;
+  width: 33px;
+  max-width: initial;
+  height: 33px;
+}

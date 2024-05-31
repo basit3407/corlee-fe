@@ -1,0 +1,25 @@
+.personal-details-section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 371px;
+  padding: 32px 23px 608px 24px;
+  background: #f7f7f7;
+  border-radius: 16px;
+}
+.submit-button-style {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  min-width: 323px;
+  height: 56px;
+  margin-top: 115px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: black;
+  border: none;
+  border-radius: 110px;
+}

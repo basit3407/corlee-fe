@@ -1,0 +1,99 @@
+.profile-card {
+  flex: 0 0 auto;
+}
+.personal-details-section1 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.personal-details-section2 {
+  flex: 1 0 auto;
+  margin-left: 7px;
+}
+.flex-container-with-items {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+.personal-details-heading {
+  padding: 0;
+  margin: 0;
+  font: 600 14px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.personal-details-text {
+  padding: 0;
+  margin: 0;
+  margin-top: 4px;
+  font: 500 14px Inter, sans-serif;
+  color: #666666;
+  white-space: pre-wrap;
+}
+.personal-details-link {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 14px Inter, sans-serif;
+  color: black;
+  text-decoration-line: underline;
+  white-space: pre-wrap;
+}
+.contact-info-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 100px;
+}
+.shipping-details-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1.5px;
+}
+.address-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 206px;
+}
+.image-wrapper {
+  box-sizing: border-box;
+  display: block;
+  width: 33px;
+  max-width: initial;
+  height: 33px;
+}
+.address-block {
+  flex: 0 1 auto;
+  margin-left: 7px;
+}
+.shipping-address-info {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 4px;
+  font: 500 14px Inter, sans-serif;
+  color: #666666;
+  text-align: left;
+  white-space: pre-wrap;
+}
