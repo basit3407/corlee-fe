@@ -1,0 +1,27 @@
+.article-card-layout-blogs {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 22px;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-container-blogs {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 413px;
+}
+.card-container1-blogs {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  max-width: initial;
+  height: 313px;
+  border: none;
+  border-radius: 16px;
+  object-fit: cover;
+}

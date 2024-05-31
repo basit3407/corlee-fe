@@ -9,6 +9,7 @@ import AboutUs from "../Screens/AboutUs";
 import Product from "../Screens/Product";
 import Favourites from "../Screens/Favourites";
 import SingleBlog from "../Screens/SingleBlog";
+import Blogs from "../Screens/Blogs";
 
 function Approuter() {
   return (
@@ -24,6 +25,7 @@ function Approuter() {
         <Route path="/product" element={<Product />} />
         <Route path="/favourite" element={<Favourites />} />
         <Route path="/blog" element={<SingleBlog />} />
+        <Route path="/blogs" element={<Blogs />} />
       </Routes>
     </Router>
   );

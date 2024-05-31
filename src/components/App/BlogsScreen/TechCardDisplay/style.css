@@ -1,0 +1,86 @@
+.tech-card-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 28px;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 32px;
+}
+.tech-category-subtitle-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 18px Inter, sans-serif;
+  color: #6a6a45;
+  white-space: pre-wrap;
+}
+.tech-card-subtitle-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 24px Artnoova;
+  color: black;
+  text-transform: capitalize;
+  white-space: pre-wrap;
+}
+.tech-category-card-text {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: -8px;
+  font: 400 14px/19.5px Inter, sans-serif;
+  color: #666666;
+  text-align: left;
+  white-space: pre-wrap;
+}
+.article-meta-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.profile-image-circle {
+  box-sizing: border-box;
+  display: block;
+  width: 40px;
+  max-width: initial;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.author-info-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 15px;
+}
+.author-info-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 400 14px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.mini-icon {
+  box-sizing: border-box;
+  display: block;
+  width: 7px;
+  max-width: initial;
+  height: 7px;
+  margin-left: 7px;
+}
+.publication-info-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-left: 7px;
+  font: 400 14px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}

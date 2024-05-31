@@ -1,0 +1,18 @@
+.main-content-container-b {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 1440px;
+}
+.main-content-section-b {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-width: 1283px;
+  padding-top: 20px;
+  padding-bottom: 56px;
+}
