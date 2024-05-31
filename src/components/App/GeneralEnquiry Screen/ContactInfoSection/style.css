@@ -1,0 +1,12 @@
+.contact-details-container {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding: 32px 23px 154px;
+}
+.contact-details-heading {
+  padding: 0;
+  margin: 0;
+  font: 600 24px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}

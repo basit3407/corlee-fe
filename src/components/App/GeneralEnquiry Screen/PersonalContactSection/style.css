@@ -1,0 +1,10 @@
+.personal-details-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  background: #f7f7f7;
+  border-radius: 16px;
+}

@@ -13,6 +13,8 @@ import Blogs from "../Screens/Blogs";
 import Events from "../Screens/Events";
 import ContactUs from "../Screens/ContactUs";
 import RequestHistory from "../Screens/RequestHistory";
+import GeneralEnquiry from "../Screens/GeneralEnquiry";
+import ProductEnquiry from "../Screens/ProductEnquiry";
 
 function Approuter() {
   return (
@@ -32,6 +34,8 @@ function Approuter() {
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/history" element={<RequestHistory />} />
+        <Route path="/generalenquiry" element={<GeneralEnquiry />} />
+        <Route path="/productenquiry" element={<ProductEnquiry />} />
       </Routes>
     </Router>
   );
