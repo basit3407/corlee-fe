@@ -1,9 +1,9 @@
-.subject-container1 {
+.container-with-label {
   box-sizing: border-box;
   width: 100%;
   margin-top: 24px;
 }
-.horizontal-centered-label-container {
+.form-field-container {
   box-sizing: border-box;
   flex-direction: row;
   align-items: center;
@@ -18,7 +18,7 @@
   font: 600 18px Inter, sans-serif;
   color: black;
 }
-.input-with-label-style {
+.input-with-label {
   box-sizing: border-box;
   width: 100%;
   height: 48px;

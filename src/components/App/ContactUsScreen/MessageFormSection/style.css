@@ -1,12 +1,13 @@
-.contact-form-container2 {
+.contact-section1 {
   display: flex;
   flex: 0 0 auto;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  padding-right: 3px;
   margin-top: 104px;
 }
-.contact-form-container1 {
+.contact-section-style {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
