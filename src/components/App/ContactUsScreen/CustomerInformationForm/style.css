@@ -1,0 +1,79 @@
+.fullwidth-container {
+  box-sizing: border-box;
+  width: 100%;
+}
+.flex-row-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 24px;
+}
+.email-field-container {
+  flex: 1 1 0;
+}
+.horizontal-centered-label-container {
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: 77px;
+  border: none;
+}
+.bold-black-label {
+  display: block;
+  margin-bottom: 16px;
+  font: 600 18px Inter, sans-serif;
+  color: black;
+}
+.input-with-label-style {
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding-left: 15px;
+  font: 500 16px Inter, sans-serif;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+}
+.input-style-f62::placeholder {
+  color: #666666;
+}
+.contact-info-label-container {
+  flex: 1 1 0;
+  margin-left: 23px;
+}
+.sample-request-button1 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 34px;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-top: 24px;
+  background: #6a6a45;
+  border-radius: 8px;
+}
+.sample-request-button {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  background: #6a6a45;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+.sample-request-button-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-left: 7px;
+  font: 600 12px Inter, sans-serif;
+  color: white;
+  white-space: pre-wrap;
+}

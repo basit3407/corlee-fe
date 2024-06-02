@@ -1,0 +1,17 @@
+.contact-section3 {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 5px;
+  margin-top: 104px;
+}
+.contact-section1 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 1064px;
+}

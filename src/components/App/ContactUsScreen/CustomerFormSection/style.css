@@ -1,0 +1,18 @@
+.contact-form-container {
+  flex: 0 0 auto;
+  margin-top: 32px;
+}
+.submit-button-style {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-width: 719px;
+  height: 64px;
+  margin-top: 32px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: black;
+  border: none;
+  border-radius: 110px;
+}

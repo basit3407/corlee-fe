@@ -1,0 +1,39 @@
+.contact-info-section2 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+}
+.contact-info-container2 {
+  flex: 0 0 auto;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+.image-container {
+  box-sizing: border-box;
+  display: block;
+  width: 25.5px;
+  max-width: initial;
+  height: 34px;
+}
+.hero-title {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  padding: 0;
+  margin: 0;
+  margin-top: -7.5px;
+  font: 600 40px/44px Artnoova;
+  color: black;
+  white-space: pre-wrap;
+}
+.contact-info-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: 3.5px;
+  font: 600 32px Artnoova;
+  color: #6a6a45;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,17 @@
+.main-content-container-cu {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 1440px;
+  padding-left: 3px;
+}
+.vertical-layout-container-cu {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding-top: 14px;
+  padding-bottom: 58px;
+}

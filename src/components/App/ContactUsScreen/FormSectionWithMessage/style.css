@@ -1,0 +1,24 @@
+.form-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  align-self: center;
+  justify-content: flex-start;
+  width: 847px;
+  padding: 48px 63px;
+  margin-top: 40px;
+  background: white;
+  border: 1px solid #dadada;
+  border-radius: 32px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
+}
+.header-title-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 24px/29px Artnoova;
+  color: #6a6a45;
+  white-space: pre-wrap;
+}

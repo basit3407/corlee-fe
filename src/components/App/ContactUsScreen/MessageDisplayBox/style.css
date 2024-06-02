@@ -1,0 +1,24 @@
+.subject-container {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 24px;
+}
+.bold-title {
+  padding: 0;
+  margin: 0;
+  font: 600 18px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}
+.message-box-style {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 16px;
+  font: 500 16px Inter, sans-serif;
+  color: #666666;
+  white-space: pre-wrap;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+}

@@ -1,0 +1,49 @@
+.contact-section4 {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.contact-section {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 99px;
+}
+.contact-info-container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contact-heading {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-left: -99px;
+  font: 600 24px/29px Artnoova;
+  color: #6a6a45;
+  white-space: pre-wrap;
+}
+.contact-heading-text-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+  font: 600 56px/67px Artnoova;
+  color: black;
+  white-space: pre-wrap;
+}
+.contact-message {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  font: 400 18px Inter, sans-serif;
+  color: #666666;
+  text-align: center;
+  white-space: pre-wrap;
+}
