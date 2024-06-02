@@ -16,6 +16,7 @@ import RequestHistory from "../Screens/RequestHistory";
 import GeneralEnquiry from "../Screens/GeneralEnquiry";
 import ProductEnquiry from "../Screens/ProductEnquiry";
 import BagScreen from "../Screens/BagScreen";
+import EmailSent from "../Screens/EmailSent";
 
 function Approuter() {
   return (
@@ -38,6 +39,7 @@ function Approuter() {
         <Route path="/generalenquiry" element={<GeneralEnquiry />} />
         <Route path="/productenquiry" element={<ProductEnquiry />} />
         <Route path="/bag" element={<BagScreen />} />
+        <Route path="/emailsent" element={<EmailSent />} />
       </Routes>
     </Router>
   );
