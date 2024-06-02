@@ -1,0 +1,20 @@
+.inquiry-type-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: 44px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.inquiry-type-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 400 16px/19px Inter, sans-serif;
+  color: black;
+  white-space: pre-wrap;
+}

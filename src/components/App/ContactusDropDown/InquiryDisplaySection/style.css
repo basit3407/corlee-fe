@@ -1,0 +1,9 @@
+.inquiry-type-container2 {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: -7px;
+  background: white;
+  border: 1px solid #e2e2e2;
+  border-radius: 0px 0px 24px 24px;
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.09);
+}
