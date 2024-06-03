@@ -40,6 +40,7 @@ function Approuter() {
         <Route path="/productenquiry" element={<ProductEnquiry />} />
         <Route path="/bag" element={<BagScreen />} />
         <Route path="/emailsent" element={<EmailSent />} />
+        <Route path="/noemail" element={<EmailSent />} />
       </Routes>
     </Router>
   );
