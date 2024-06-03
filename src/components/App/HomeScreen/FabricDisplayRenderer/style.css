@@ -1,3 +1,4 @@
+/* Base styles for large screens (keep existing design) */
 .fabric-design-description-list {
   box-sizing: border-box;
   display: flex;
@@ -8,9 +9,38 @@
   justify-content: flex-start;
   max-width: 628px;
 }
+
 .fabric-design-description-container:nth-child(odd) {
   align-items: center;
 }
+
 .fabric-design-description-container:nth-child(even) {
   align-items: stretch;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .fabric-design-description-list {
+    max-width: 90%; /* Adjust max width */
+    gap: 20px; /* Adjust gap */
+  }
+
+  .fabric-design-description-container:nth-child(odd),
+  .fabric-design-description-container:nth-child(even) {
+    align-items: center; /* Center align all items for better uniformity */
+  }
+}
+
+/* Small devices (mobile, 767px and down) */
+@media (max-width: 767px) {
+  .fabric-design-description-list {
+    max-width: 95%; /* Adjust max width */
+    gap: 16px; /* Adjust gap */
+    padding: 10px; /* Add padding */
+  }
+
+  .fabric-design-description-container:nth-child(odd),
+  .fabric-design-description-container:nth-child(even) {
+    align-items: center; /* Center align all items for better uniformity */
+  }
 }

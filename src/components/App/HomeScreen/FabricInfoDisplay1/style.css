@@ -1,3 +1,4 @@
+/* Base styles for large screens (keep existing design) */
 .global-fashion-fabric-styles {
   display: flex;
   flex: 0 0 auto;
@@ -7,6 +8,7 @@
   justify-content: flex-start;
   margin-top: 104px;
 }
+
 .fabric-gallery-container {
   box-sizing: border-box;
   display: flex;
@@ -19,6 +21,7 @@
   min-width: 1280px;
   margin-top: -40px;
 }
+
 .image-container-with-clipping-path {
   box-sizing: border-box;
   display: block;
@@ -30,6 +33,7 @@
   );
   object-fit: cover;
 }
+
 .fashion-text-container {
   display: flex;
   flex: 0 0 auto;
@@ -37,6 +41,7 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .button-with-icon {
   box-sizing: border-box;
   display: inline-flex;
@@ -54,11 +59,13 @@
   border: none;
   border-radius: 110px;
 }
+
 .svg-container3 {
   display: flex;
   width: 32px;
   height: 32px;
 }
+
 .fabric-range-section {
   box-sizing: border-box;
   display: flex;
@@ -70,9 +77,11 @@
   justify-content: space-between;
   min-width: 1282px;
 }
+
 .fabric-types-section {
   flex: 0 0 auto;
 }
+
 .fabric-type-heading {
   padding: 0;
   margin: 0;
@@ -80,6 +89,7 @@
   color: black;
   white-space: pre-wrap;
 }
+
 .fabric-type-description {
   padding: 0;
   margin: 0;
@@ -88,6 +98,7 @@
   color: #666666;
   white-space: pre-wrap;
 }
+
 .fabric-type-range-container {
   box-sizing: border-box;
   display: flex;
@@ -97,6 +108,7 @@
   justify-content: flex-start;
   height: 38px;
 }
+
 .center-box-with-svg {
   box-sizing: border-box;
   display: flex;
@@ -109,12 +121,14 @@
   border: 1px solid black;
   border-radius: 78px;
 }
+
 .svg-container4 {
   display: flex;
   flex: 0 0 auto;
   width: 24px;
   height: 24px;
 }
+
 .black-rounded-box-with-text {
   box-sizing: border-box;
   display: flex;
@@ -128,6 +142,7 @@
   background: black;
   border-radius: 78px;
 }
+
 .custom-fabric-features-section {
   box-sizing: border-box;
   display: flex;
@@ -139,11 +154,13 @@
   justify-content: space-between;
   min-width: 1281px;
 }
+
 .custom-fabric-description-container {
   box-sizing: border-box;
   flex: 0 0 auto;
   max-width: 520px;
 }
+
 .majestic-heading1 {
   padding: 0;
   margin: 0;
@@ -152,6 +169,7 @@
   text-align: left;
   white-space: pre-wrap;
 }
+
 .custom-fabric-description-style {
   box-sizing: border-box;
   width: 100%;
@@ -164,6 +182,7 @@
   letter-spacing: 0.9px;
   white-space: pre-wrap;
 }
+
 .hero-text-underline {
   padding: 0;
   margin: 0;
@@ -173,4 +192,90 @@
   text-decoration-line: underline;
   letter-spacing: 0.9px;
   white-space: pre-wrap;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .global-fashion-fabric-styles {
+    gap: 48px; /* Adjust gap */
+    margin-top: 64px; /* Adjust margin */
+  }
+
+  .fabric-gallery-container {
+    flex-direction: column;
+    min-width: 90%; /* Adjust width */
+    gap: 24px; /* Adjust gap */
+    margin-top: 0; /* Adjust margin */
+  }
+
+  .image-container-with-clipping-path {
+    width: 90%; /* Adjust width */
+    height: auto; /* Adjust height */
+  }
+
+  .fabric-range-section {
+    flex-direction: column;
+    min-width: 90%; /* Adjust width */
+    gap: 16px; /* Adjust gap */
+  }
+
+  .custom-fabric-features-section {
+    flex-direction: column;
+    min-width: 90%; /* Adjust width */
+    gap: 16px; /* Adjust gap */
+  }
+
+  .majestic-heading1 {
+    font-size: 48px; /* Adjust font size */
+    line-height: 56px; /* Adjust line height */
+  }
+}
+
+/* Small devices (mobile, 767px and down) */
+@media (max-width: 767px) {
+  .global-fashion-fabric-styles {
+    gap: 32px; /* Adjust gap */
+    margin-top: 48px; /* Adjust margin */
+  }
+
+  .fabric-gallery-container {
+    flex-direction: column;
+    min-width: 95%; /* Adjust width */
+    gap: 16px; /* Adjust gap */
+    margin-top: 0; /* Adjust margin */
+  }
+
+  .image-container-with-clipping-path {
+    width: 95%; /* Adjust width */
+    height: auto; /* Adjust height */
+  }
+
+  .button-with-icon {
+    width: 100%; /* Adjust width */
+    min-width: auto; /* Remove min width */
+    height: 48px; /* Adjust height */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .svg-container3 {
+    width: 24px; /* Adjust icon size */
+    height: 24px; /* Adjust icon size */
+  }
+
+  .fabric-range-section {
+    flex-direction: column;
+    min-width: 95%; /* Adjust width */
+    gap: 12px; /* Adjust gap */
+  }
+
+  .custom-fabric-features-section {
+    flex-direction: column;
+    min-width: 95%; /* Adjust width */
+    gap: 12px; /* Adjust gap */
+  }
+
+  .majestic-heading1 {
+    font-size: 36px; /* Adjust font size */
+    line-height: 44px; /* Adjust line height */
+  }
 }

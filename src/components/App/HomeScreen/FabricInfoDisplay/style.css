@@ -1,3 +1,4 @@
+/* Base styles for large screens (keep existing design) */
 .fabric-design-description-container {
   box-sizing: border-box;
   display: flex;
@@ -8,6 +9,7 @@
   background: black;
   border-radius: 24px;
 }
+
 .art-noova-heading {
   flex: 0 0 auto;
   padding: 0;
@@ -17,6 +19,7 @@
   letter-spacing: 1.6px;
   white-space: pre-wrap;
 }
+
 .fabric-crafting-description-style {
   flex: 0 0 auto;
   padding: 0;
@@ -26,4 +29,40 @@
   color: #dedede;
   text-align: center;
   white-space: pre-wrap;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .fabric-design-description-container {
+    padding: 40px 18px 40px 20px; /* Adjust padding */
+    border-radius: 20px; /* Adjust border radius */
+  }
+
+  .art-noova-heading {
+    font-size: 28px; /* Adjust font size */
+    letter-spacing: 1.4px; /* Adjust letter spacing */
+  }
+
+  .fabric-crafting-description-style {
+    font-size: 16px; /* Adjust font size */
+    margin-top: 18px; /* Adjust margin */
+  }
+}
+
+/* Small devices (mobile, 767px and down) */
+@media (max-width: 767px) {
+  .fabric-design-description-container {
+    padding: 30px 15px 30px 15px; /* Adjust padding */
+    border-radius: 16px; /* Adjust border radius */
+  }
+
+  .art-noova-heading {
+    font-size: 24px; /* Adjust font size */
+    letter-spacing: 1.2px; /* Adjust letter spacing */
+  }
+
+  .fabric-crafting-description-style {
+    font-size: 14px; /* Adjust font size */
+    margin-top: 15px; /* Adjust margin */
+  }
 }

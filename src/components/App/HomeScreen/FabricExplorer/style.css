@@ -1,3 +1,4 @@
+/* Base styles for large screens (keep existing design) */
 .material-container {
   box-sizing: border-box;
   display: flex;
@@ -13,6 +14,7 @@
   border: none;
   border-radius: 24px;
 }
+
 .material-button-container {
   display: flex;
   flex-direction: column;
@@ -21,6 +23,7 @@
   padding-top: 199px;
   padding-bottom: 199px;
 }
+
 .material-heading {
   flex: 0 0 auto;
   align-self: center;
@@ -31,6 +34,7 @@
   letter-spacing: 2.4px;
   white-space: pre-wrap;
 }
+
 .material-button {
   box-sizing: border-box;
   display: inline-flex;
@@ -50,8 +54,72 @@
   border: none;
   border-radius: 110px;
 }
+
 .svg-container5 {
   display: flex;
   width: 14px;
   height: 14px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .material-container {
+    height: auto; /* Adjust height */
+    margin-top: -30px; /* Adjust margin */
+    padding: 20px; /* Add padding */
+    background-size: contain; /* Adjust background size */
+  }
+
+  .material-button-container {
+    padding-top: 100px; /* Adjust padding */
+    padding-bottom: 100px; /* Adjust padding */
+  }
+
+  .material-heading {
+    font-size: 36px; /* Adjust font size */
+    line-height: 24px; /* Adjust line height */
+  }
+
+  .material-button {
+    min-width: 160px; /* Adjust button size */
+    height: 40px; /* Adjust button height */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .svg-container5 {
+    width: 12px; /* Adjust icon size */
+    height: 12px; /* Adjust icon size */
+  }
+}
+
+/* Small devices (mobile, 767px and down) */
+@media (max-width: 767px) {
+  .material-container {
+    height: auto; /* Adjust height */
+    margin-top: -20px; /* Adjust margin */
+    padding: 10px; /* Add padding */
+    background-size: cover; /* Adjust background size */
+    border-radius: 16px; /* Adjust border radius */
+  }
+
+  .material-button-container {
+    padding-top: 50px; /* Adjust padding */
+    padding-bottom: 50px; /* Adjust padding */
+  }
+
+  .material-heading {
+    font-size: 24px; /* Adjust font size */
+    line-height: 22px; /* Adjust line height */
+  }
+
+  .material-button {
+    min-width: 120px; /* Adjust button size */
+    height: 36px; /* Adjust button height */
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .svg-container5 {
+    width: 10px; /* Adjust icon size */
+    height: 10px; /* Adjust icon size */
+  }
 }

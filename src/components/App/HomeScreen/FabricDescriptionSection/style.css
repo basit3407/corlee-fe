@@ -1,3 +1,4 @@
+/* Base styles for large screens (keep existing design) */
 .fashion-text-container {
   display: flex;
   flex: 0 0 auto;
@@ -5,6 +6,7 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .global-fashion-styles-container {
   box-sizing: border-box;
   display: flex;
@@ -13,6 +15,7 @@
   justify-content: flex-start;
   max-width: 1064px;
 }
+
 .fashion-statement-text-style {
   flex: 0 0 auto;
   align-self: stretch;
@@ -23,6 +26,7 @@
   text-align: center;
   white-space: pre-wrap;
 }
+
 .global-fashion-text-styles {
   box-sizing: border-box;
   flex: 0 0 auto;
@@ -34,4 +38,40 @@
   color: #666666;
   text-align: center;
   white-space: pre-wrap;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .fashion-statement-text-style {
+    font-size: 48px; /* Adjust font size */
+  }
+
+  .global-fashion-text-styles {
+    font-size: 16px; /* Adjust font size */
+    margin-top: 30px; /* Adjust margin */
+  }
+
+  .global-fashion-styles-container {
+    max-width: 90%; /* Adjust max width */
+  }
+}
+
+/* Small devices (mobile, 767px and down) */
+@media (max-width: 767px) {
+  .fashion-statement-text-style {
+    font-size: 32px; /* Adjust font size */
+  }
+
+  .global-fashion-text-styles {
+    font-size: 14px; /* Adjust font size */
+    margin-top: 20px; /* Adjust margin */
+  }
+
+  .global-fashion-styles-container {
+    max-width: 95%; /* Adjust max width */
+  }
+
+  .fashion-text-container {
+    padding: 10px; /* Add padding */
+  }
 }
