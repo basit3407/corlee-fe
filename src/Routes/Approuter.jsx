@@ -17,6 +17,8 @@ import GeneralEnquiry from "../Screens/GeneralEnquiry";
 import ProductEnquiry from "../Screens/ProductEnquiry";
 import BagScreen from "../Screens/BagScreen";
 import EmailSent from "../Screens/EmailSent";
+import EmailNotExists from "../Screens/EmailNotExists";
+import PasswordResetSuccess from "../Screens/PasswordResetSuccess";
 
 function Approuter() {
   return (
@@ -40,7 +42,8 @@ function Approuter() {
         <Route path="/productenquiry" element={<ProductEnquiry />} />
         <Route path="/bag" element={<BagScreen />} />
         <Route path="/emailsent" element={<EmailSent />} />
-        <Route path="/noemail" element={<EmailSent />} />
+        <Route path="/noemail" element={<EmailNotExists />} />
+        <Route path="/success" element={<PasswordResetSuccess />} />
       </Routes>
     </Router>
   );

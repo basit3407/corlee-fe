@@ -1,0 +1,41 @@
+.secure-password-update-notification {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 1280px;
+  background: white;
+  border-radius: 24px;
+}
+.password-update-confirmation-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 464px;
+  padding-top: 170px;
+  padding-bottom: 170px;
+}
+.login-button-style {
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  min-width: 462px;
+  height: 48px;
+  margin-top: 40px;
+  font: 600 16px Inter, sans-serif;
+  color: white;
+  cursor: pointer;
+  background: black;
+  border: none;
+  border-radius: 110px;
+  align-self: center;
+}
+
+.success-container {
+  height: 100vh;
+  width: 100%;
+  background: whitesmoke;
+}

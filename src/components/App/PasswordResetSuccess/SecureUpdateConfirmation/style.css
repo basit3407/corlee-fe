@@ -1,0 +1,46 @@
+.success-message-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.secure-box {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+.svg-container {
+  display: flex;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+}
+.success-message-style {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  font: 600 40px/48px Artnoova;
+  color: black;
+  text-align: center;
+  white-space: pre-wrap;
+}
+.password-update-message {
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  font: 400 16px/22.5px Inter, sans-serif;
+  color: #666666;
+  text-align: center;
+  white-space: pre-wrap;
+}
