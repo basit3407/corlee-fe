@@ -1,3 +1,4 @@
+/* Base styles for large screens (keep existing design) */
 .realization-container-home {
   display: flex;
   flex: 0 0 auto;
@@ -5,6 +6,7 @@
   align-items: stretch;
   justify-content: flex-start;
 }
+
 .majestic-heading-home {
   flex: 0 0 auto;
   align-self: center;
@@ -14,6 +16,7 @@
   color: black;
   white-space: pre-wrap;
 }
+
 .realization-container1-home {
   display: flex;
   flex: 0 0 auto;
@@ -23,10 +26,12 @@
   justify-content: space-between;
   margin-top: 48px;
 }
+
 .image-container-with-text1-home {
   flex: 0 0 auto;
   padding-bottom: 8px;
 }
+
 .hero-image-container1-home {
   box-sizing: border-box;
   display: block;
@@ -37,10 +42,12 @@
   border-radius: 24px;
   object-fit: cover;
 }
+
 .nested-content-container-home {
   flex: 0 0 auto;
   padding-bottom: 5px;
 }
+
 .image-container-fullscreen-home {
   box-sizing: border-box;
   display: block;
@@ -51,6 +58,7 @@
   border-radius: 24px;
   object-fit: cover;
 }
+
 .profile-image-container1-home {
   box-sizing: border-box;
   display: block;
@@ -61,10 +69,12 @@
   border-radius: 24px;
   object-fit: cover;
 }
+
 .image-container-with-text-home {
   flex: 0 0 auto;
   padding-bottom: 4px;
 }
+
 .hero-image-container-home {
   box-sizing: border-box;
   display: block;
@@ -75,6 +85,7 @@
   border-radius: 24px;
   object-fit: cover;
 }
+
 .vertical-image-container-home {
   display: flex;
   flex: 0 0 auto;
@@ -83,6 +94,7 @@
   justify-content: flex-start;
   padding-bottom: 5px;
 }
+
 .profile-image-container-home {
   box-sizing: border-box;
   display: block;
@@ -92,4 +104,52 @@
   border: none;
   border-radius: 24px;
   object-fit: cover;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .realization-container1-home {
+    flex-direction: column;
+    gap: 16px; /* Adjust gap */
+    margin-top: 32px; /* Adjust margin */
+  }
+
+  .majestic-heading-home {
+    font-size: 48px; /* Adjust font size */
+    line-height: 56px; /* Adjust line height */
+  }
+
+  .hero-image-container1-home,
+  .image-container-fullscreen-home,
+  .profile-image-container1-home,
+  .hero-image-container-home,
+  .profile-image-container-home {
+    width: 100%; /* Adjust width */
+    height: auto; /* Adjust height */
+    border-radius: 20px; /* Adjust border radius */
+  }
+}
+
+/* Small devices (mobile, 767px and down) */
+@media (max-width: 767px) {
+  .realization-container1-home {
+    flex-direction: column;
+    gap: 12px; /* Adjust gap */
+    margin-top: 24px; /* Adjust margin */
+  }
+
+  .majestic-heading-home {
+    font-size: 36px; /* Adjust font size */
+    line-height: 44px; /* Adjust line height */
+  }
+
+  .hero-image-container1-home,
+  .image-container-fullscreen-home,
+  .profile-image-container1-home,
+  .hero-image-container-home,
+  .profile-image-container-home {
+    width: 100%; /* Adjust width */
+    height: auto; /* Adjust height */
+    border-radius: 16px; /* Adjust border radius */
+  }
 }

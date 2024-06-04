@@ -1,7 +1,9 @@
+/* Base styles for large screens (keep existing design) */
 .image-container2-home {
   flex: 0 0 auto;
   margin-top: 24px;
 }
+
 .image-container1-home {
   box-sizing: border-box;
   display: block;
@@ -11,4 +13,26 @@
   border: none;
   border-radius: 24px;
   object-fit: cover;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .image-container1-home {
+    width: 80%; /* Adjust width */
+    height: auto; /* Adjust height */
+    border-radius: 20px; /* Adjust border radius */
+  }
+}
+
+/* Small devices (mobile, 767px and down) */
+@media (max-width: 767px) {
+  .image-container1-home {
+    width: 100%; /* Adjust width */
+    height: auto; /* Adjust height */
+    border-radius: 16px; /* Adjust border radius */
+  }
+
+  .image-container2-home {
+    margin-top: 16px; /* Adjust margin */
+  }
 }
