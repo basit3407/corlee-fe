@@ -1,10 +1,16 @@
 import "./style.css";
 
-function PasswordInputWidget() {
+function PasswordInputWidget({ name, value, onChange }) {
   return (
     <div className="center-box">
-      {/* Input Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
-      <input placeholder="Password" type="text" className="input-with-border-radius input-style-f62::placeholder" />
+      <input
+        name={name}
+        value={value}
+        onChange={onChange}
+        placeholder="Password"
+        type="password"
+        className="input-with-border-radius input-style-f62::placeholder"
+      />
     </div>
   );
 }
