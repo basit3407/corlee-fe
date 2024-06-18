@@ -2,8 +2,7 @@
 
 import { create } from "zustand";
 import { api, setAuthToken } from "../config/api";
-import { getAuth, signInWithPopup } from "firebase/auth";
-import { googleProvider } from "../firebaseConfig";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 
 const useAuthStore = create((set) => ({
   user: null,
@@ -23,7 +22,7 @@ const useAuthStore = create((set) => ({
     set({ loading: true, error: null });
     try {
       const auth = getAuth();
-      const result = await signInWithPopup(auth, googleProvider);
+      const result = await signInWithPopup(auth, GoogleAuthProvider);
       const idToken = await result.user.getIdToken();
 
       // Send the ID token to your backend
