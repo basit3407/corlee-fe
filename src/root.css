@@ -348,3 +348,250 @@ body * {
   text-align: center;
   margin-top: 20px;
 }
+.login-section6 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  max-height: none !important;
+}
+.login-section6 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hero-section2 {
+  justify-content: space-between !important;
+  width: 95% !important;
+  max-width: 1500px;
+}
+.login-section2 > form > div {
+  min-width: 0px !important;
+  width: 100%;
+  margin: 10px 0;
+}
+.login-section {
+  padding: 0 10px;
+}
+.login-section2 > form > button {
+  width: 100%;
+  margin: 30px 0 20px 0;
+  min-width: 0px !important;
+}
+.subheading-text-style {
+  margin: 0 0 20px 0;
+}
+.button-with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  width: max-content;
+  margin: 0;
+}
+.hero-section1 {
+  min-width: 0px !important;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section-login {
+  min-width: 0px !important;
+  width: 100vw;
+}
+@media (max-width: 850px) {
+  .login-section6 {
+    display: none;
+  }
+  .central-content-panel {
+    width: 100%;
+  }
+}
+@media (max-width: 440px) {
+  .hero-section2 {
+    padding: 16px 15px;
+  }
+}
+.account-info-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.password-reset-form-container1-email {
+  justify-content: center;
+  min-width: 0px !important;
+  height: 100vh;
+  min-height: 750px;
+}
+.password-reset-section-email {
+  width: 90vw;
+  min-width: 0px !important;
+}
+.password-reset-form-container-email {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.hierarchical-text-container {
+  width: 90%;
+}
+.hierarchical-text-container > * {
+  width: 100%;
+}
+.password-reset-info-box-email {
+  max-width: 90%;
+}
+.center-aligned-button-container * {
+  width: 100%;
+}
+.center-aligned-button-container {
+  width: 90%;
+}
+@media (max-width: 450px) {
+  .password-reset-message-email {
+    font: 600 30px/38px Artnoova;
+  }
+}
+.resetpage {
+  min-height: 800px;
+}
+.text-content-container > div > div {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+}
+.svg-container {
+  color: #4d4d4d;
+}
+.password-reset-form-container1 {
+  min-width: 0px !important;
+  width: 90vw;
+}
+.password-reset-form {
+  width: 95% !important;
+}
+.nested-svg-container {
+  width: 100%;
+}
+.password-reset-button {
+  width: 100%;
+  min-width: 0px !important;
+}
+@media (max-width: 460px) {
+  .container2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .vertical-text-block {
+    margin: 0;
+  }
+  .flex-row-container {
+    margin: 0;
+  }
+}
+@media (max-width: 400px) {
+  .password-reset-heading-style {
+    font: 600 30px/38px Artnoova;
+  }
+  .password-reset-message {
+    width: 90%;
+  }
+}
+.password-reset-form-container {
+  width: 95%;
+}
+.nested-svg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.password-reset-form {
+  max-width: 700px;
+}
+.resetpage {
+  height: 100vh;
+}
+.reset-link-button {
+  min-width: 0px !important;
+}
+.sighupcontainer {
+  height: 100vh;
+  min-height: 800px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.account-creation-form-container2 {
+  width: 90vw;
+
+  max-width: 1000px;
+}
+.account-creation-button-style {
+  min-width: 0px !important;
+}
+.hierarchical-text-container {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .hierarchical-flex-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hierarchical-flex-container > * {
+    width: 100%;
+    margin: 0;
+  }
+  .sighupcontainer {
+    min-height: 1000px;
+  }
+  .hero-title {
+    margin: 0 0 20px 0;
+  }
+}
+.hero-title {
+  width: 100%;
+  text-align: center;
+}
+.button-with-icon-and-text {
+  padding: 25px 30px;
+  background-color: transparent;
+  border: 2px solid rgb(172, 172, 172);
+  width: max-content;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 15px;
+  min-width: 0px !important;
+  width: 100%;
+  max-width: 500px;
+}
+.vertical-centered-text-container {
+  height: 2px;
+  background-color: rgb(214, 214, 214) !important;
+  background: none;
+}
+.subtle-text {
+  margin-top: -6px;
+  background-color: white;
+  padding: 0 20px;
+  color: grey;
+}
+@media (max-width: 436px) {
+  .button-with-icon-and-text {
+    font-size: 18px;
+
+    padding: 25px 10px;
+    min-width: 270px !important;
+  }
+}
+.svg-container1 {
+  color: #c60202;
+  scale: 0.4;
+}

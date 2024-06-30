@@ -5,8 +5,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import messages from "./messages.json";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ProductNavigation() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -53,9 +55,27 @@ function ProductNavigation() {
             </p>
             <SvgIcon1 className="svg-container-nav" />
           </div>
-          <p className="contact-info-text-style-nav">{messages["events"]}</p>
-          <p className="contact-info-text-style-nav">{messages["Blogs"]}</p>
-          <p className="contact-info-text-style-nav">{messages["about_us"]}</p>
+          <p
+            className="contact-info-text-style-nav"
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/events")}
+          >
+            {messages["events"]}
+          </p>
+          <p
+            className="contact-info-text-style-nav"
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/blogs")}
+          >
+            {messages["Blogs"]}
+          </p>
+          <p
+            className="contact-info-text-style-nav"
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/about")}
+          >
+            {messages["about_us"]}
+          </p>
         </div>
         <DynamicContentDisplay />
       </div>

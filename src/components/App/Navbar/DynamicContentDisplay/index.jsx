@@ -7,9 +7,11 @@ import ClearIcon from "@mui/icons-material/Clear";
 import "./style.css";
 import messages from "./messages.json";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function DynamicContentDisplay() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
   return (
     <>
       {open ? (
@@ -31,17 +33,29 @@ function DynamicContentDisplay() {
         </div>
         <p className="contact-info-text-style-nav">{messages["call_us"]}</p>
         <div className="contact-info-section-nav">
-          <div className="card-container-nav">
+          <div
+            className="card-container-nav"
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/favourite")}
+          >
             <div className="circular-text-container-nav">
               <SvgIcon2 className="svg-container2-nav" />
             </div>
           </div>
-          <div className="card-container-nav">
+          <div
+            className="card-container-nav"
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/login")}
+          >
             <div className="circular-text-container-nav">
               <SvgIcon3 className="svg-container2-nav" />
             </div>
           </div>
-          <div className="vertical-number-container-nav">
+          <div
+            className="vertical-number-container-nav"
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/bag")}
+          >
             <span className="badge-with-icon-nav">2</span>
             <div className="vertical-center-with-icon-nav">
               <SvgIcon4 className="svg-container2-nav" />

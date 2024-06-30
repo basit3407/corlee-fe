@@ -7,7 +7,7 @@ function SecurePasswordForm() {
   return (
     <div className="password-reset-form-container">
       <PasswordInputWidget />
-      <div className="text-content-container">
+      <div className="text-content-container container2">
         <div className="text-grouping-container">
           <div className="text-content-container">
             <img
@@ -47,7 +47,9 @@ function SecurePasswordForm() {
       </div>
       <PasswordConfirmationWidget />
       {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
-      <button className="password-reset-button">{messages["reset_password"]}</button>
+      <button className="password-reset-button">
+        {messages["reset_password"]}
+      </button>
     </div>
   );
 }

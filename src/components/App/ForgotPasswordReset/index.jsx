@@ -12,6 +12,7 @@ function FPReset() {
         alignItems: "center",
         height: "100vh",
       }}
+      className="resetpage"
     >
       <div className="password-reset-form-container1">
         <div className="password-reset-form">

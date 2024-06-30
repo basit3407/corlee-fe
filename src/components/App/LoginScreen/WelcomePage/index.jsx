@@ -27,7 +27,7 @@ function WelcomePage() {
         <StylishContentBlock />
         <UserAuthenticationForm />
       </div>
-      <div className="login-section3">
+      <div className="login-section6">
         <img
           src="/assets/img_1091_3084_f96278.jpeg"
           className="image-container-full-width"
