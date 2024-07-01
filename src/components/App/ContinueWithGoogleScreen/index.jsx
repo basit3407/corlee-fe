@@ -9,6 +9,7 @@ function ContinueWithGoogleComponent() {
         width: "100%",
         background: "whitesmoke",
       }}
+      className="googlepage"
       data-ignore="used only for top most containter width"
     >
       <div className="company-details-container">

@@ -5,13 +5,54 @@ import messages from "./messages.json";
 function ProductInfoSection() {
   return (
     <div className="vertical-flow-container">
-      <ImageListContainer />
-      <div className="process-steps-container">
-        <p className="hierarchical-text-block">{messages["inquiryltbr_gtquotation"]}</p>
-        <p className="hierarchical-text-block">{messages["place_yourltbr_gtorder"]}</p>
-        <p className="hierarchical-text-block">{messages["manufacturingltbr_gtyour_product"]}</p>
-        <p className="hierarchical-text-block">{messages["inspection_ltbr_gtpackaging"]}</p>
-        <p className="hierarchical-text-block">{messages["delivery_toltbr_gtyour_address"]}</p>
+      <div className="imagesdiv">
+        <div className="onediv">
+          <img
+            src="/assets/img_1135_8915_714d59.svg"
+            alt=""
+            className="image-block"
+          />
+          <h1>
+            1<div className="line"></div>
+          </h1>
+          <p>Inquiry quotation</p>
+        </div>
+        <div className="onediv">
+          <img
+            src="/assets/img_1091_3692_458f26.svg"
+            alt=""
+            className="image-block"
+          />
+          <h1>2</h1>
+          <p>Place your order</p>
+        </div>
+        <div className="onediv">
+          <img
+            src="/assets/img_1135_8920_20e63d.svg"
+            alt=""
+            className="image-block"
+          />
+          <h1>3</h1>
+          <p>Manufacturing your product</p>
+        </div>
+        <div className="onediv">
+          <img
+            src="/assets/img_1091_3700_db0891.svg"
+            alt=""
+            className="image-block"
+          />
+          <h1>4</h1>
+          <p>Inspection & packaging</p>
+        </div>
+        <div className="onediv">
+          <img
+            src="/assets/img_1091_3702_cbd766.svg"
+            alt=""
+            className="image-block"
+          />
+          <h1>5</h1>
+          <p>Delivery to your address</p>
+        </div>
       </div>
     </div>
   );
