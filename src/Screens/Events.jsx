@@ -12,7 +12,6 @@ function Events() {
         eventDisplayWidgetArgs={mockData.eventDisplayWidgetArgs}
       />
       <BottomBar />
-      <StylishImage />
     </>
   );
 }

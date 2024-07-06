@@ -24,6 +24,7 @@ function Approuter() {
   return (
     <Router>
       <Routes>
+        {/* Fixed Pages  */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot" element={<ForgotPasswordEnterEmail />} />
@@ -31,11 +32,12 @@ function Approuter() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/google" element={<Continiewithgoogle />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/favourite" element={<Favourites />} />
-        <Route path="/blog" element={<SingleBlog />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/blog" element={<SingleBlog />} />
+        {/* Not Fixed Pages  */}
+        <Route path="/favourite" element={<Favourites />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/history" element={<RequestHistory />} />
         <Route path="/generalenquiry" element={<GeneralEnquiry />} />

@@ -6,16 +6,12 @@ function StylishDisplay() {
     <div className="product-card-container3">
       <TrendyDisplay />
       <div className="product-gallery-row">
-        <img
-          src="/assets/img_1091_3795_fdcc76.svg"
-          alt=""
-          className="text-block-container"
-        />
-        <img
-          src="/assets/img_1091_3805_219fe9.svg"
-          alt=""
-          className="image-container-with-margin"
-        />
+        <div className="circles">
+          <div className="circle1"></div>
+          <div className="circle2"></div>
+          <div className="circle3"></div>
+        </div>
+        <div className="adddiv">+</div>
       </div>
     </div>
   );

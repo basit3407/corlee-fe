@@ -9,16 +9,12 @@ import "./style.css";
 function StylishLayoutBuilder() {
   return (
     <div className="vertical-centered-flex-container">
-      <div className="product-card-container2">
-        <StylishDisplay />
-        <StylishCardGallery />
-        <DisplayContent />
-      </div>
-      <div className="product-card-container4">
-        <CreativeDesignView />
-        <StylishContentBlock />
-        <DisplayContent1 />
-      </div>
+      <StylishDisplay />
+      <StylishDisplay />
+      <StylishDisplay />
+      <StylishDisplay />
+      <StylishDisplay />
+      <StylishDisplay />
     </div>
   );
 }

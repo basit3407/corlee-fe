@@ -4,16 +4,27 @@ import SvgIcon3 from "./icons/SvgIcon3";
 import "./style.css";
 import messages from "./messages.json";
 
-function EventCardWidget3({ imgContent9, eventDescription7, dynamicContentWithShowMoreButton7 }) {
+function EventCardWidget3({
+  imgContent9,
+  eventDescription7,
+  dynamicContentWithShowMoreButton7,
+}) {
   return (
     <div className="event-card-container">
-      <img className="event-image-display-style" src={imgContent9} />
+      <div className="eventimage">
+        <img className="event-image-display-style" src={imgContent9} />
+      </div>
       <div className="event-description-container">
         <p className="event-description-text-styler">{eventDescription7}</p>
-        <p className="event-description-text-snippet" dangerouslySetInnerHTML={{ __html: dynamicContentWithShowMoreButton7 }} />
+        <p
+          className="event-description-text-snippet"
+          dangerouslySetInnerHTML={{
+            __html: dynamicContentWithShowMoreButton7,
+          }}
+        />
         <div className="event-details-container1">
           {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
-          <button className="button-with-icon1">
+          <button className="button-with-icon">
             <SvgIcon1 className="svg-container1" />
             {messages["suite_574"]}
           </button>
@@ -23,7 +34,7 @@ function EventCardWidget3({ imgContent9, eventDescription7, dynamicContentWithSh
             {messages["9886997885"]}
           </button>
           {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
-          <button className="button-with-icon-and-text">
+          <button className="button-with-icon">
             <SvgIcon3 className="svg-container1" />
             {messages["oralhowe21yahoocom"]}
           </button>

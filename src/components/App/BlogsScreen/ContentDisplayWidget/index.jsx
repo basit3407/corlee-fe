@@ -30,7 +30,7 @@ function ContentDisplayWidget({
   authorNameWidget1,
 }) {
   return (
-    <div className="article-card-layout-blogs">
+    <>
       <div className="card-container-blogs">
         <img className="card-container1-blogs" src={imgContent6} />
         <TechCardDisplay
@@ -67,7 +67,7 @@ function ContentDisplayWidget({
           authorNameWidget1={authorNameWidget1}
         />
       </div>
-    </div>
+    </>
   );
 }
 
