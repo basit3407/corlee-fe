@@ -1893,8 +1893,8 @@ body * {
 }
 .ticket-details-section {
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 40px;
   flex-direction: row;
 }
 .ticket-details-section > *:first-child {
@@ -2028,4 +2028,106 @@ body * {
   height: auto;
   width: auto;
   padding: 0 40px;
+}
+.productsSection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+.productinquiryproductsection > p {
+  width: 100%;
+  padding-bottom: 5px;
+  font-size: 30px;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.356);
+}
+.productinquiryproductdiv {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.356);
+}
+.productsimageandtextdiv {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px !important;
+}
+.imagesoftheproducts {
+  width: 100%;
+  aspect-ratio: 1/1.3;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.158),
+      rgba(0, 0, 0, 0.103),
+      rgba(0, 0, 0, 0.164)
+    ),
+    50% 50%;
+  border-radius: 30px;
+}
+.imagestext {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.imagestext > *:first-child {
+  font-size: 30px;
+  margin: 8px 0 0 0;
+  font-weight: 600;
+}
+.imagestext > *:nth-child(2) {
+  font-size: 19px;
+  margin: 0;
+  font-weight: 400;
+  color: grey;
+}
+.productdetailsdiv {
+  height: 100% !important;
+}
+.colordiv {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  font-size: 22px;
+}
+.color {
+  font-weight: 600;
+  margin: 0;
+}
+.colorcircle {
+  height: 45px;
+  width: 45px;
+  margin: 0;
+  padding: 0;
+
+  border-radius: 50%;
+  background-color: red;
+}
+.productdetailsdiv > p {
+  font-weight: 600;
+}
+.productdetailsdiv > p > span {
+  color: grey;
+  font-size: 13px;
+}
+.quantityofproduct {
+  font-size: 25px;
+  margin: 30px 0 5px 0;
+}
+.priceofproduct {
+  font-size: 35px !important;
+  margin: 0;
+}
+@media (max-width: 462px) {
+  .productinquiryproductdiv {
+    flex-direction: column;
+  }
+  .productinquiryproductdiv > * {
+    width: 100%;
+    min-width: 0px !important;
+  }
 }

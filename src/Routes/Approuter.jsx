@@ -40,8 +40,8 @@ function Approuter() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/history" element={<RequestHistory />} />
         <Route path="/generalenquiry" element={<GeneralEnquiry />} />
-        {/* Not Fixed Pages  */}
         <Route path="/productenquiry" element={<ProductEnquiry />} />
+        {/* Not Fixed Pages  */}
         <Route path="/bag" element={<BagScreen />} />
         <Route path="/emailsent" element={<EmailSent />} />
         <Route path="/noemail" element={<EmailNotExists />} />

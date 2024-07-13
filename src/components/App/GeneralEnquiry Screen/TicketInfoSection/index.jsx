@@ -2,7 +2,8 @@ import PersonalContactSection from "../PersonalContactSection";
 import "./style.css";
 import messages from "./messages.json";
 
-function TicketInfoSection() {
+function TicketInfoSection(props) {
+  let text = "(by meter)";
   return (
     <div className="ticket-details-container">
       <div className="ticket-details-container1">
@@ -35,6 +36,34 @@ function TicketInfoSection() {
               {messages["labore_ut_molestias_asperiores_nihil_reiciendis_de_1"]}
             </span>
           </p>
+          {props.product ? (
+            <div className="productinquiryproductsection">
+              <p>Product Details</p>
+
+              <div className="productinquiryproductdiv">
+                <div className="productsimageandtextdiv">
+                  <div className="imagesoftheproducts"></div>
+                  <div className="imagestext">
+                    {" "}
+                    <p>AB10476</p>
+                    <p>Functional</p>
+                  </div>
+                </div>
+                <div className="productdetailsdiv">
+                  <div className="colordiv">
+                    <p className="color">Color </p>
+                    <div className="colorcircle"></div>
+                  </div>
+                  <p className="quantityofproduct">
+                    Quantity <span>{text}</span>
+                  </p>
+                  <p className="priceofproduct">100</p>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
         <PersonalContactSection />
       </div>

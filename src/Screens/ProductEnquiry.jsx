@@ -1,15 +1,13 @@
 import BottomBar from "../components/App/BottomBar";
 import Navbar from "../components/App/Navbar";
-import ProductsEnquiryComponent from "../components/App/ProductsEnquiryScreen";
+import GeneralEnquiryComponent from "../components/App/GeneralEnquiry Screen";
 import { mockData } from "../util";
 
 function ProductEnquiry() {
   return (
     <>
       <Navbar />
-      <ProductsEnquiryComponent
-        productDetailsRendererArgsList={mockData.productDetailsRendererArgsList}
-      />
+      <GeneralEnquiryComponent product={true} />
       <BottomBar />
     </>
   );
