@@ -39,8 +39,8 @@ function Approuter() {
         <Route path="/favourite" element={<Favourites />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/history" element={<RequestHistory />} />
-        {/* Not Fixed Pages  */}
         <Route path="/generalenquiry" element={<GeneralEnquiry />} />
+        {/* Not Fixed Pages  */}
         <Route path="/productenquiry" element={<ProductEnquiry />} />
         <Route path="/bag" element={<BagScreen />} />
         <Route path="/emailsent" element={<EmailSent />} />

@@ -1878,3 +1878,154 @@ body * {
 .generalinquiry .productinqtextdiv {
   width: 100%;
 }
+.content-section {
+  width: 100%;
+}
+.ticket-info-container {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ticket-info-container > * {
+  width: 250px;
+}
+.ticket-details-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.ticket-details-section > *:first-child {
+  width: 65%;
+  margin: 0;
+}
+.ticket-details-section > *:nth-child(2) {
+  width: 34%;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: auto;
+  padding: 0;
+}
+.personal-details-container1 {
+  width: 100%;
+}
+.personal-details-title1,
+.contact-details-heading {
+  font: 600 29px Inter, sans-serif;
+}
+.personal-details-title {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.466);
+  font: 500 20px Inter, sans-;
+  font-weight: 400;
+}
+.contact-info-container2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.contact-details-container {
+  width: 100%;
+}
+.contact-info-container {
+  margin-top: 30px;
+}
+.contact-info-container3,
+.contact-info-container2 {
+  margin: 0;
+}
+.contact-info-container3 {
+  margin-top: 10px;
+}
+.contact-buttons-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.contact-buttons-container > * {
+  width: 49%;
+  padding: 12px 20px;
+  height: auto;
+}
+.ticket-details-section {
+  max-width: 4000px;
+  margin: 0 auto;
+}
+@media (max-width: 1034px) {
+  .contact-buttons-container {
+    flex-direction: column;
+  }
+  .contact-buttons-container > * {
+    width: 100%;
+    margin: 0;
+  }
+}
+.contact-info-container2 {
+  flex-wrap: wrap;
+}
+@media (max-width: 958px) {
+  .ticket-details-section {
+    flex-direction: column;
+  }
+  .ticket-details-section > * {
+    width: 100% !important;
+  }
+  .contact-buttons-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .contact-buttons-container > * {
+    width: 49%;
+    padding: 12px 20px;
+    height: auto;
+    border: none;
+  }
+}
+@media (max-width: 358px) {
+  .contact-buttons-container {
+    flex-direction: column;
+  }
+  .contact-buttons-container > * {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 837px) {
+  .emptydiv {
+    display: none;
+  }
+  .ticket-info-container {
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: center;
+  }
+  .ticket-details-container,
+  .blog-post-container-blogs {
+    margin-top: 0px;
+  }
+}
+.ticket-details-container {
+  margin-top: 0;
+}
+.ticket-details-section {
+  margin-top: 50px;
+}
+.button-with-icon {
+  height: auto;
+  width: auto;
+  padding: 0 40px;
+}
