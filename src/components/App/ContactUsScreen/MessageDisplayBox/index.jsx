@@ -4,8 +4,13 @@ import messages from "./messages.json";
 function MessageDisplayBox() {
   return (
     <div className="subject-container">
-      <p className="bold-title">{messages["description"]}</p>
-      <p className="message-box-style">{messages["write_message_here"]}</p>
+      <p className="bold-black-label">{messages["description"]}</p>
+      <input
+        id="company name"
+        placeholder="Write your message here"
+        type="text"
+        class="input-with-label-style input-style-f62::placeholder"
+      />
     </div>
   );
 }

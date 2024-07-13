@@ -13,7 +13,7 @@ function Home() {
       >
         <FabricInfoLayout fabricInfoOptions={mockData.fabricInfoOptions} />
       </div>
-      <BottomBar />
+      <BottomBar home={true} />
     </>
   );
 }

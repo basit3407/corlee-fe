@@ -6,9 +6,13 @@ import SvgIcon4 from "./icons/SvgIcon4";
 import "./style.css";
 import messages from "./messages.json";
 
-function BottomBar() {
+function BottomBar(props) {
   return (
-    <div className="newsletter-section-bb">
+    <div
+      className={
+        props.home ? "newsletter-section-bb" : "newsletter-section-bb nothome"
+      }
+    >
       <div className="hero-section-bb">
         <NewsletterSubscriptionSection />
         <div className="flex-container-with-icons-bb">

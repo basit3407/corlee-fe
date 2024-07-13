@@ -36,10 +36,10 @@ function Approuter() {
         <Route path="/events" element={<Events />} />
         <Route path="/product" element={<Product />} />
         <Route path="/blog" element={<SingleBlog />} />
-        {/* Not Fixed Pages  */}
         <Route path="/favourite" element={<Favourites />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/history" element={<RequestHistory />} />
+        {/* Not Fixed Pages  */}
         <Route path="/generalenquiry" element={<GeneralEnquiry />} />
         <Route path="/productenquiry" element={<ProductEnquiry />} />
         <Route path="/bag" element={<BagScreen />} />

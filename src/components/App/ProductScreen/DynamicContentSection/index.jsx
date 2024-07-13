@@ -3,10 +3,10 @@ import StylishLayoutBuilder from "../StylishLayoutBuilder";
 import "./style.css";
 import messages from "./messages.json";
 
-function DynamicContentSection() {
+function DynamicContentSection(props) {
   return (
     <div className="material-card-container">
-      <MessageDisplay />
+      <MessageDisplay {...props} />
       <StylishLayoutBuilder />
       {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
       <button className="primary-button-style">{messages["load_more"]}</button>

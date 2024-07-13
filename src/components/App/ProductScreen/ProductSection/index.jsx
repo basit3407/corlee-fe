@@ -2,10 +2,10 @@ import DynamicContentSection from "../DynamicContentSection";
 import StylishProductDisplay from "../StylishProductDisplay";
 import "./style.css";
 
-function ProductSection() {
+function ProductSection(props) {
   return (
     <div className="product-list-container">
-      <DynamicContentSection />
+      <DynamicContentSection {...props} />
       <StylishProductDisplay />
     </div>
   );
