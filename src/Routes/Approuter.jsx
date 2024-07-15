@@ -41,11 +41,11 @@ function Approuter() {
         <Route path="/history" element={<RequestHistory />} />
         <Route path="/generalenquiry" element={<GeneralEnquiry />} />
         <Route path="/productenquiry" element={<ProductEnquiry />} />
-        {/* Not Fixed Pages  */}
         <Route path="/bag" element={<BagScreen />} />
         <Route path="/emailsent" element={<EmailSent />} />
         <Route path="/noemail" element={<EmailNotExists />} />
         <Route path="/success" element={<PasswordResetSuccess />} />
+        {/* Not Fixed Pages  */}
       </Routes>
     </Router>
   );
