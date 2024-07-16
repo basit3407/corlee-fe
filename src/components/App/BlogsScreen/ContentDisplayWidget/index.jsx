@@ -2,6 +2,7 @@ import TechCardDisplay from "../TechCardDisplay";
 import ContentCard1 from "../ContentCard1";
 import ContentCard from "../ContentCard";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 function ContentDisplayWidget({
   imgContent10,
@@ -29,9 +30,16 @@ function ContentDisplayWidget({
   authorName1,
   authorNameWidget1,
 }) {
+  const navigate = useNavigate();
   return (
     <>
-      <div className="card-container-blogs">
+      <div
+        className="card-container-blogs"
+        onClick={() => {
+          navigate("/blog");
+        }}
+        style={{ cursor: "pointer" }}
+      >
         <img className="card-container1-blogs" src={imgContent6} />
         <TechCardDisplay
           imgContent10={imgContent10}
@@ -43,7 +51,13 @@ function ContentDisplayWidget({
           authorInfo1={authorInfo1}
         />
       </div>
-      <div className="card-container-blogs">
+      <div
+        className="card-container-blogs"
+        onClick={() => {
+          navigate("/blog");
+        }}
+        style={{ cursor: "pointer" }}
+      >
         <img className="card-container1-blogs" src={imgContent7} />
         <ContentCard1
           imgContent12={imgContent12}
@@ -55,7 +69,13 @@ function ContentDisplayWidget({
           authorName1={authorName1}
         />
       </div>
-      <div className="card-container-blogs">
+      <div
+        className="card-container-blogs"
+        onClick={() => {
+          navigate("/blog");
+        }}
+        style={{ cursor: "pointer" }}
+      >
         <img className="card-container1-blogs" src={imgContent8} />
         <ContentCard
           imgContent14={imgContent14}

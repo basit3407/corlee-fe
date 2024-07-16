@@ -9,7 +9,7 @@ import messages from "./messages.json";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function DynamicContentDisplay() {
+function DynamicContentDisplay(props) {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   return (
@@ -31,7 +31,15 @@ function DynamicContentDisplay() {
           <SvgIcon1 className="svg-container1-nav" />
           <input placeholder="Search" type="text" className="searchbar" />
         </div>
-        <p className="contact-info-text-style-nav">{messages["call_us"]}</p>
+        <p
+          className="contact-info-text-style-nav"
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            props.changeShowcall();
+          }}
+        >
+          {messages["call_us"]}
+        </p>
         <div className="contact-info-section-nav">
           <div
             className="card-container-nav"

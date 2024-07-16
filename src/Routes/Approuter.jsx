@@ -6,7 +6,7 @@ import ForgotPasswordReset from "../Screens/ForgotPasswordReset";
 import Signup from "../Screens/Signup";
 import Continiewithgoogle from "../Screens/Continiewithgoogle";
 import AboutUs from "../Screens/AboutUs";
-import Product from "../Screens/Product";
+import Products from "../Screens/Product";
 import Favourites from "../Screens/Favourites";
 import SingleBlog from "../Screens/SingleBlog";
 import Blogs from "../Screens/Blogs";
@@ -19,6 +19,7 @@ import BagScreen from "../Screens/BagScreen";
 import EmailSent from "../Screens/EmailSent";
 import EmailNotExists from "../Screens/EmailNotExists";
 import PasswordResetSuccess from "../Screens/PasswordResetSuccess";
+import Product from "../Screens/singleproduct";
 
 function Approuter() {
   return (
@@ -34,6 +35,7 @@ function Approuter() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/product" element={<Product />} />
         <Route path="/blog" element={<SingleBlog />} />
         <Route path="/favourite" element={<Favourites />} />

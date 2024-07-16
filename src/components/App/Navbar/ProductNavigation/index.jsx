@@ -7,7 +7,7 @@ import messages from "./messages.json";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function ProductNavigation() {
+function ProductNavigation(props) {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   return (
@@ -49,11 +49,21 @@ function ProductNavigation() {
         }
       >
         <div className="horizontal-menu-with-icons-nav">
-          <div className="product-card-container-nav">
+          <div
+            className="product-card-container-nav"
+            onClick={() => {
+              props.changeshowprod();
+              setOpen(false);
+            }}
+            style={{ cursor: "pointer" }}
+          >
             <p className="contact-info-text-style-nav">
               {messages["products"]}
             </p>
-            <SvgIcon1 className="svg-container-nav" />
+            <SvgIcon1
+              className="svg-container-nav"
+              style={props.showprod ? { transform: "rotate(180deg)" } : {}}
+            />
           </div>
           <p
             className="contact-info-text-style-nav"
@@ -77,7 +87,7 @@ function ProductNavigation() {
             {messages["about_us"]}
           </p>
         </div>
-        <DynamicContentDisplay />
+        <DynamicContentDisplay {...props} />
       </div>
     </>
   );

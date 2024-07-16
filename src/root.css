@@ -47,7 +47,7 @@ body * {
 @media (max-width: 1250px) {
   .contact-info-container-nav {
     position: absolute;
-    background-color: rgb(221, 221, 221);
+    background-color: rgba(0, 0, 0, 0.068);
     right: 0;
     transform: translateY(80%);
     flex-direction: column;
@@ -2033,7 +2033,7 @@ body * {
 .button-with-icon {
   height: auto;
   width: auto;
-  padding: 0 40px;
+  padding: 10px 30px;
 }
 .productsSection {
   display: flex;
@@ -2500,7 +2500,6 @@ body * {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: ;
   padding: 40px;
 }
 .svg-container {
@@ -2537,4 +2536,489 @@ body * {
 .password-update-confirmation-container button {
   width: 100%;
   min-width: 0px !important;
+}
+.svg-container {
+  margin: 0;
+}
+.narrative-text-style {
+  margin-top: 20px;
+}
+.productdetailsdiv2 {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: 20px auto 50px;
+}
+.productdetailsdiv2 > * {
+  width: 50%;
+  margin: 0;
+}
+.imagesinproductdiv {
+  display: flex;
+  gap: 20px;
+  height: 500px;
+}
+.verticalimagesinproduct {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+.verticalimagesinproduct > * {
+  width: 100%;
+  height: 150px;
+  background-color: grey;
+  border-radius: 20px;
+}
+.bigimage {
+  width: 70%;
+  height: 500px;
+  background-color: grey;
+  border-radius: 20px;
+}
+.productdetailsdic {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: auto;
+}
+.heartbutton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.123);
+  border-radius: 1000px;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.productdetailsdic > h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 500;
+}
+.functionaltext,
+.functionaltext2 {
+  margin: 10px 0 0 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  color: grey;
+}
+.functionaltext2 {
+  margin: 30px 0 0 0;
+  line-height: 22px;
+  font-size: 19px;
+  width: 90%;
+}
+.colorsinproduct {
+  margin: 10px 0 0 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+.colorsinproduct {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 50%;
+  height: auto;
+}
+.colorsinproduct > * {
+  height: 60px;
+  width: 60px;
+  border-radius: 1000px;
+  background-color: grey;
+}
+.quantitydivinproduct {
+  margin: 10px 0;
+  font-size: 22px;
+  font-weight: 400;
+}
+.quantitydivinproduct > span {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.459);
+}
+.inproduct {
+  width: max-content;
+  gap: 30px;
+  margin: 20px 0 15px 0;
+  font-size: 25px;
+  font-weight: 600;
+}
+.inproduct > button {
+  padding: 15px;
+}
+.buttonsinproduct {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttonsinproduct > * {
+  width: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  border-radius: 10000px;
+  border: none;
+  outline: none;
+  gap: 20px;
+  font-size: 17px;
+}
+.buttonsinproduct > *:first-child {
+  background-color: black;
+  color: white;
+}
+.buttonsinproduct > *:nth-child(2) {
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+}
+.productdetailsdiv2 {
+  max-width: 1500px;
+}
+.imagesinproductdiv {
+  min-width: 500px;
+}
+@media (max-width: 1000px) {
+  .productdetailsdiv2 {
+    flex-direction: column;
+    gap: 40px;
+    width: 95vw;
+  }
+  .productdetailsdiv2 > * {
+    width: 100%;
+  }
+  .functionaltext2 {
+    width: 100%;
+  }
+  .colorsinproduct {
+    width: 100%;
+  }
+  .imagesinproductdiv {
+    min-width: 0px !important;
+  }
+}
+@media (max-width: 500px) {
+  .imagesinproductdiv {
+    flex-direction: column-reverse;
+  }
+  .verticalimagesinproduct {
+    flex-direction: row;
+    width: 100%;
+  }
+  .verticalimagesinproduct > * {
+    width: 30% !important;
+  }
+  .bigimage {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .buttonsinproduct {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .buttonsinproduct > * {
+    width: 100%;
+  }
+}
+.horizontaldiv {
+  width: 95vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.041);
+  margin: 0 auto;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+}
+.horizontaldiv > * {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.lineinproducts {
+  width: 1px;
+  height: 15px;
+  background-color: black;
+}
+.mainkeytext {
+  font-size: 20px;
+  color: grey;
+}
+.maintextans {
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (max-width: 1075px) {
+  .horizontaldiv {
+    flex-direction: column;
+  }
+  .lineinproducts {
+    height: 1px;
+    width: 15px;
+  }
+  .last > .maintextans {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .productrelatddiv {
+    margin-bottom: 30vh;
+  }
+}
+@media (max-width: 750px) {
+  .productrelatddiv {
+    margin-bottom: 50vh;
+  }
+  .newsletter-container {
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 600px) {
+  .productrelatddiv {
+    margin-bottom: 60vh;
+  }
+}
+@media (max-width: 500px) {
+  .productrelatddiv {
+    margin-bottom: 70vh;
+  }
+}
+.contactScreen {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.3s all ease;
+}
+.contacttext {
+  background-color: white;
+  height: 100vh;
+  width: 500px;
+  margin: 0;
+  z-index: 10000000000;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 50px;
+}
+.maintoptext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.maintoptext > * {
+  margin: 0;
+}
+.closeicon {
+  height: 25px;
+  width: 25px;
+  border-radius: 300px;
+  border: 2px solid rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  filter: opacity(0.5);
+  cursor: pointer;
+}
+.singlecalldetail {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.calldetailsdiv {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.692);
+}
+.singlecalldetail > svg {
+  width: 25px;
+}
+.needhelp {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+.calldetailsdiv > p:not(.needhelp) {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  text-decoration: underline 2px solid black;
+}
+.opacityzero {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+.singlecalldetail {
+  cursor: pointer;
+}
+.maintoptext {
+  text-align: center;
+}
+.productsdivinnavbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  transition: all 0.5s ease-in;
+  overflow: hidden;
+  height: 500px;
+}
+.productsdivinnavbar > *:first-child {
+  width: 30%;
+}
+.productsdivinnavbar > *:nth-child(3) {
+  width: 50%;
+}
+.productsoptiondivinnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+/* when productsoptiondivinnav is hovered, move iconinproductnavdropdown 
+ */
+.productsoptiondivinnav:hover .iconinproductnavdropdown {
+  transform: translate(5px, 0);
+}
+.productsoptiondivinnav > :nth-child(1) > * {
+  margin: 0;
+  padding: 0;
+}
+.productsoptiondivinnav > :nth-child(1) {
+  width: 90%;
+}
+.textdivinnavproductdropdown > h1 {
+  font-size: 25px;
+  font-weight: 500 !important;
+}
+.textdivinnavproductdropdown > p {
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.678);
+}
+.productsdivinnavbar {
+  padding-top: 50px;
+}
+.verticallineinnavdropdownofproducts {
+  width: 1px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.432);
+  margin: 0 30px;
+}
+.iconinproductnavdropdown {
+  transition: all 0.4s ease;
+}
+.relatedproductsdivinnav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 700px;
+}
+.relatedproductdivinnav {
+  width: 30%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.imagedivinproductdropdown {
+  width: 100%;
+  height: 200px;
+  background-color: grey;
+  border-radius: 10px;
+}
+.textdropdowninnav {
+  text-wrap: nowrap;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  width: max-content;
+  margin-top: 5px;
+}
+@media (max-width: 1150px) {
+  .productsdivinnavbar {
+    flex-direction: column;
+    height: 1100px;
+  }
+  .productsdivinnavbar > * {
+    width: 90vw !important;
+  }
+  .verticallineinnavdropdownofproducts {
+    height: 1px;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .relatedproductsdivinnav {
+    min-width: 0px !important;
+  }
+}
+.relatedproductdivinnav {
+  min-width: 200px;
+}
+@media (max-width: 750px) {
+  .relatedproductsdivinnav,
+  .verticallineinnavdropdownofproducts {
+    display: none;
+  }
+  .productsdivinnavbar {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.noheight {
+  height: 0px;
+  padding: 0;
+}
+.button-with-icon2 {
+  cursor: pointer;
+}
+.material-card-container .primary-button-style {
+  width: max-content;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6a6a45;
+}
+.inproduct {
+  margin-top: 5px;
+}
+.quantitydivinproduct {
+  margin-top: 25px;
+}
+.quantitydiv > button,
+.buttonsinproduct > button {
+  cursor: pointer;
 }
