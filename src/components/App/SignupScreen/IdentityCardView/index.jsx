@@ -1,10 +1,17 @@
 import SvgIcon1 from "./icons/SvgIcon1";
 import "./style.css";
 
-function IdentityCardView() {
+function IdentityCardView(props) {
   return (
     <div className="flex-container-with-icon">
-      <p className="id-label-text-style">ID</p>
+      <input
+        type="text"
+        className="id-label-text-style"
+        placeholder="ID"
+        name="username"
+        onChange={props.onChange}
+        value={props.value}
+      />
       <div className="id-container">
         <SvgIcon1 className="svg-container1" />
       </div>

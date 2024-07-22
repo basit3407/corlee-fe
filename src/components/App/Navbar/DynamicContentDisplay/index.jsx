@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 function DynamicContentDisplay(props) {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+
   return (
     <>
       {open ? (
@@ -44,7 +45,7 @@ function DynamicContentDisplay(props) {
           <div
             className="card-container-nav"
             style={{ cursor: "pointer" }}
-            onClick={() => navigate("/favourite")}
+            onClick={() => navigate("/user/favourites")}
           >
             <div className="circular-text-container-nav">
               <SvgIcon2 className="svg-container2-nav" />
@@ -62,7 +63,7 @@ function DynamicContentDisplay(props) {
           <div
             className="vertical-number-container-nav"
             style={{ cursor: "pointer" }}
-            onClick={() => navigate("/bag")}
+            onClick={() => navigate("/user/bag")}
           >
             <span className="badge-with-icon-nav">2</span>
             <div className="vertical-center-with-icon-nav">

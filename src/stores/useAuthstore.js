@@ -43,11 +43,12 @@ const useAuthStore = create((set) => ({
     set({ loading: true, error: null });
     try {
       const response = await api.post("/register/", userData);
+      console.log(response);
       if (response.status === 201) {
-        const token = response.data.token;
         set({ user: response.data.user, token, loading: false });
+        const token = response.data.token;
         localStorage.setItem("token", token);
-        setAuthToken(token); // Set Axios headers
+        setAuthToken(token);
       }
     } catch (error) {
       set({

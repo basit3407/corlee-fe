@@ -4,25 +4,48 @@ import PasswordInputWidget from "../PasswordInputWidget";
 import "./style.css";
 import messages from "./messages.json";
 import useAuthStore from "../../../../stores/useAuthstore"; // Import the auth store
+import { useNavigate } from "react-router-dom";
+import { api, setAuthToken } from "../../../../config/api";
+import { toast } from "sonner";
 
 function UserAuthenticationForm() {
   const [formData, setFormData] = useState({ username: "", password: "" });
-  const login = useAuthStore((state) => state.login); // Get the login method from the store
-  const loading = useAuthStore((state) => state.loading); // Get the loading state
-  const error = useAuthStore((state) => state.error); // Get the error state
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    login(formData);
+    try {
+      setLoading(true);
+      const response = await api.post("/login/", formData);
+      if (response.status == 200) {
+        const token = response.data.token;
+        localStorage.setItem("token", token);
+        setAuthToken(token);
+        navigate("/");
+        toast.success("Login Successful");
+      } else {
+        setError(response.data[Object.keys(response.data)[0]]);
+      }
+      setLoading(false);
+    } catch (error) {
+      setError(
+        error.response
+          ? error.response.data[Object.keys(error.response.data)[0]]
+          : error.message
+      );
+      setLoading(false);
+    }
   };
 
   return (
     <div className="login-section2">
-      <form onSubmit={handleSubmit}>
+      <form>
         <UsernameInputWidget
           name="username"
           value={formData.username}
@@ -52,14 +75,26 @@ function UserAuthenticationForm() {
             {messages["forgot_password"]}
           </p>
         </div>
-        <button className="login-button-style" type="submit" disabled={loading}>
-          {loading ? "...loading" : messages["login"]}
+        <button
+          className="login-button-style"
+          onClick={handleSubmit}
+          disabled={loading}
+        >
+          {loading ? "loading..." : messages["login"]}
         </button>
         {error && <p className="error-message">{error}</p>}
       </form>
       <div className="account-info-container">
         <p className="account-info-text-style">{messages["dont_account"]}</p>
-        <p className="sign-up-link-style">{messages["sign_up"]}</p>
+        <p
+          className="sign-up-link-style"
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            navigate("/signup");
+          }}
+        >
+          {messages["sign_up"]}
+        </p>
       </div>
     </div>
   );

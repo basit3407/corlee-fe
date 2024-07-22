@@ -1,9 +1,4 @@
 import StylishDisplay from "../StylishDisplay";
-import StylishCardGallery from "../StylishCardGallery";
-import DisplayContent from "../DisplayContent";
-import CreativeDesignView from "../CreativeDesignView";
-import StylishContentBlock from "../StylishContentBlock";
-import DisplayContent1 from "../DisplayContent1";
 import "./style.css";
 import { useEffect, useState } from "react";
 import { TailSpin } from "react-loader-spinner";
@@ -11,38 +6,31 @@ import { api } from "../../../../config/api";
 import { toast } from "sonner";
 
 function StylishLayoutBuilder(props) {
-  const name = props.name;
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [noProducts, setNoproducts] = useState(false);
+
   const fetchFabrics = async () => {
-    setLoading(true);
+    try {
+      setLoading(true);
 
-    console.log(
-      "Request url : ",
-      `/fabrics/?${name ? `keyword=${name}` : ""}${
-        props.color.length > 0 ? `&colors=${String(props.color.join(","))}` : ""
-      }${props.sort ? `&sort_by=${props.sort}` : ""}${
-        props.page ? `&page=${props.page}` : ""
-      }`
-    );
+      const response = await api.get(
+        `/favorite_fabrics/?${
+          props.filterColor ? `&colors=${props.filterColor}` : ""
+        }${props.sortby ? `&sort_by=${props.sortby}` : ""}&page=1`
+      );
+      if (response.data.length > 0) {
+        setProducts(response.data);
+        setNoproducts(false);
+      } else {
+        setNoproducts(true);
+      }
 
-    const response = await api.get(
-      `/fabrics/?${name ? `keyword=${name}` : ""}${
-        props.color.length > 0 ? `&colors=${String(props.color.join(","))}` : ""
-      }${props.sort ? `&sort_by=${props.sort}` : ""}${
-        props.page ? `&page=${props.page}` : ""
-      }`
-    );
-    console.log("Response  :", response);
-
-    if (response.data.results.length > 0) {
-      setProducts(response.data.results);
-      setNoproducts(false);
-    } else {
-      setNoproducts(true);
+      setLoading(false);
+    } catch (e) {
+      console.log(e);
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const fetchNextPage = async () => {
@@ -51,23 +39,18 @@ function StylishLayoutBuilder(props) {
         props.setLoading(true);
 
         const response = await api.get(
-          `/fabrics/?${name ? `keyword=${name}` : ""}${
-            props.color.length > 0
-              ? `&colors=${String(props.color.join(","))}`
-              : ""
-          }${props.sort ? `&sort_by=${props.sort}` : ""}${
+          `/favorite_fabrics/?${
+            props.filterColor ? `&colors=${props.filterColor}` : ""
+          }${props.sortby ? `&sort_by=${props.sortby}` : ""}${
             props.page ? `&page=${props.page}` : ""
           }`
         );
 
-        if (response.data.results.length > 0) {
-          setProducts([...products, ...response.data.results]);
-        }
+        setProducts([...products, ...response.data]);
+
         props.setLoading(false);
       } catch (e) {
-        if (e.response.data.detail === "Invalid page.") {
-          toast.error("No more products");
-        }
+        console.log(e);
         props.setLoading(false);
       }
     }
@@ -75,7 +58,7 @@ function StylishLayoutBuilder(props) {
 
   useEffect(() => {
     fetchFabrics();
-  }, [name, props.color, props.sort]);
+  }, []);
 
   useEffect(() => {
     fetchNextPage();
@@ -85,21 +68,14 @@ function StylishLayoutBuilder(props) {
       className="vertical-centered-flex-container"
       style={
         loading || noProducts
-          ? {
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "100%",
-            }
-          : {
-              width: "100%",
-            }
+          ? { display: "flex", alignItems: "center", justifyContent: "center" }
+          : { width: "100%" }
       }
     >
       {!loading ? (
         <>
           {!noProducts ? (
-            products.map((e, i) => <StylishDisplay key={i} {...e} />)
+            products.map((e, i) => <StylishDisplay key={i} {...e.fabric} />)
           ) : (
             <p
               style={{
@@ -115,7 +91,7 @@ function StylishLayoutBuilder(props) {
                 maxWidth: "20000px !important",
               }}
             >
-              No Products
+              No products in favourites
             </p>
           )}
         </>

@@ -1,12 +1,24 @@
 import { useNavigate } from "react-router-dom";
 import ProductNavigation from "./ProductNavigation";
 import "./style.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { api } from "../../../config/api";
 
 function Navbar() {
   const navigate = useNavigate();
   const [showcall, setShowcall] = useState(false);
   const [showprod, setShowprod] = useState(false);
+  const [categs, setCategs] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const getCategories = async () => {
+    const response = await api.get("/categories/");
+    if (response.status === 200) setCategs(response.data.results);
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, []);
   const changeShowcall = () => {
     setShowcall(!showcall);
   };
@@ -26,11 +38,19 @@ function Navbar() {
         <ProductNavigation
           changeShowcall={changeShowcall}
           changeshowprod={changeshowprod}
-          showprod
+          showprod={showprod}
         />
       </div>
-      <div className={showcall ? "contactScreen" : "contactScreen opacityzero"}>
-        <div className="contacttext">
+      <div
+        className={showcall ? "contactScreen" : "contactScreen opacityzero"}
+        onClick={changeShowcall}
+      >
+        <div
+          className="contacttext"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           <div className="maintoptext">
             <h1>Call us</h1>
             <p>We are just one message away !</p>
@@ -126,121 +146,57 @@ function Navbar() {
         }
       >
         <div className="productsoptionsdivinnav">
-          <div
-            className="productsoptiondivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="textdivinnavproductdropdown">
-              <h1>Best Selling</h1>
-              <p>Lorem ipsum dolor sit amet consectetur elit</p>
-            </div>
-            <div className="iconinproductnavdropdown">🔥</div>
-          </div>
-          <div className="productsoptiondivinnav">
-            <div className="textdivinnavproductdropdown">
-              <h1>Woven</h1>
-              <p>Lorem ipsum dolor sit amet consectetur elit</p>
-            </div>
-            <div className="iconinproductnavdropdown">
-              <svg
-                width="8"
-                height="14"
-                viewBox="0 0 8 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+          {loading ? (
+            <h2>Loading Categories...</h2>
+          ) : (
+            <>
+              <div
+                className="productsoptiondivinnav"
+                onClick={() => {
+                  navigate("/products/bestselling");
+                  setShowprod(false);
+                }}
               >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.39778 6.86744C7.61746 7.08711 7.61746 7.44321 7.39778 7.66289L1.66291 13.3977C1.44323 13.6174 1.08713 13.6174 0.867456 13.3977L0.602256 13.1326C0.382581 12.9129 0.382581 12.5568 0.602256 12.3371L5.67421 7.26516L0.602256 2.19321C0.382581 1.97354 0.382581 1.61744 0.602256 1.39776L0.867456 1.13256C1.08713 0.912889 1.44323 0.912889 1.66291 1.13256L7.39778 6.86744Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="productsoptiondivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="textdivinnavproductdropdown">
-              <h1>Material</h1>
-              <p>Lorem ipsum dolor sit amet consectetur elit</p>
-            </div>
-            <div className="iconinproductnavdropdown">
-              <svg
-                width="8"
-                height="14"
-                viewBox="0 0 8 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.39778 6.86744C7.61746 7.08711 7.61746 7.44321 7.39778 7.66289L1.66291 13.3977C1.44323 13.6174 1.08713 13.6174 0.867456 13.3977L0.602256 13.1326C0.382581 12.9129 0.382581 12.5568 0.602256 12.3371L5.67421 7.26516L0.602256 2.19321C0.382581 1.97354 0.382581 1.61744 0.602256 1.39776L0.867456 1.13256C1.08713 0.912889 1.44323 0.912889 1.66291 1.13256L7.39778 6.86744Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="productsoptiondivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="textdivinnavproductdropdown">
-              <h1>Functional</h1>
-              <p>Lorem ipsum dolor sit amet consectetur elit</p>
-            </div>
-            <div className="iconinproductnavdropdown">
-              <svg
-                width="8"
-                height="14"
-                viewBox="0 0 8 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.39778 6.86744C7.61746 7.08711 7.61746 7.44321 7.39778 7.66289L1.66291 13.3977C1.44323 13.6174 1.08713 13.6174 0.867456 13.3977L0.602256 13.1326C0.382581 12.9129 0.382581 12.5568 0.602256 12.3371L5.67421 7.26516L0.602256 2.19321C0.382581 1.97354 0.382581 1.61744 0.602256 1.39776L0.867456 1.13256C1.08713 0.912889 1.44323 0.912889 1.66291 1.13256L7.39778 6.86744Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="productsoptiondivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="textdivinnavproductdropdown">
-              <h1>Sustainable</h1>
-              <p>Lorem ipsum dolor sit amet consectetur elit</p>
-            </div>
-            <div className="iconinproductnavdropdown">
-              <svg
-                width="8"
-                height="14"
-                viewBox="0 0 8 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.39778 6.86744C7.61746 7.08711 7.61746 7.44321 7.39778 7.66289L1.66291 13.3977C1.44323 13.6174 1.08713 13.6174 0.867456 13.3977L0.602256 13.1326C0.382581 12.9129 0.382581 12.5568 0.602256 12.3371L5.67421 7.26516L0.602256 2.19321C0.382581 1.97354 0.382581 1.61744 0.602256 1.39776L0.867456 1.13256C1.08713 0.912889 1.44323 0.912889 1.66291 1.13256L7.39778 6.86744Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
+                <div className="textdivinnavproductdropdown">
+                  <h1>Best Selling</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur elit</p>
+                </div>
+                <div className="iconinproductnavdropdown">🔥</div>
+              </div>
+              {categs &&
+                categs.map((categ, index) => (
+                  <div
+                    className="productsoptiondivinnav"
+                    key={index}
+                    onClick={() => {
+                      navigate(`/products/${categ.name}/${categ.description}`);
+                      setShowprod(false);
+                    }}
+                  >
+                    <div className="textdivinnavproductdropdown">
+                      <h1>{categ.name}</h1>
+                      <p>{categ.description}</p>
+                    </div>
+                    <div className="iconinproductnavdropdown">
+                      <svg
+                        width="8"
+                        height="14"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.39778 6.86744C7.61746 7.08711 7.61746 7.44321 7.39778 7.66289L1.66291 13.3977C1.44323 13.6174 1.08713 13.6174 0.867456 13.3977L0.602256 13.1326C0.382581 12.9129 0.382581 12.5568 0.602256 12.3371L5.67421 7.26516L0.602256 2.19321C0.382581 1.97354 0.382581 1.61744 0.602256 1.39776L0.867456 1.13256C1.08713 0.912889 1.44323 0.912889 1.66291 1.13256L7.39778 6.86744Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                ))}
+            </>
+          )}
         </div>
         <div className="verticallineinnavdropdownofproducts"></div>
         <div className="relatedproductsdivinnav">

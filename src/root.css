@@ -96,7 +96,8 @@ body * {
     transition: all 0.2s linear;
     height: 100vh;
   }
-  .hidden {
+  .hidden,
+  .hidden > *:not(.MuiSvgIcon-root) {
     opacity: 0;
     pointer-events: none;
   }
@@ -1315,24 +1316,20 @@ body * {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: flex-start;
+  margin-left: 20px;
 }
 .circles > * {
   height: 28px;
   width: 28px;
+  min-width: 28px !important;
   margin: 10px 4px;
   padding: 0;
   border-radius: 100000px;
   cursor: pointer;
 }
 .circles > *:first-child {
-  background-color: #c60202;
   margin-left: 0;
-}
-.circles > *:nth-child(2) {
-  background-color: #9c0101;
-}
-.circles > *:nth-child(3) {
-  background-color: #770000;
 }
 .adddiv {
   height: 37px;
@@ -2892,8 +2889,35 @@ body * {
   height: 500px;
 }
 .productsdivinnavbar > *:first-child {
-  width: 30%;
+  width: 35%;
+  max-height: 470px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
+/* Target the container with overflow */
+.productsdivinnavbar > *:first-child {
+  overflow-y: scroll; /* Or overflow-x for horizontal scrollbar */
+
+  /* Scrollbar styles */
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Set thumb and track color */
+}
+
+.productsdivinnavbar > *:first-child::-webkit-scrollbar {
+  width: 8px; /* Adjust width as needed */
+}
+
+.productsdivinnavbar > *:first-child::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.productsdivinnavbar > *:first-child::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 .productsdivinnavbar > *:nth-child(3) {
   width: 50%;
 }
@@ -3020,5 +3044,232 @@ body * {
 }
 .quantitydiv > button,
 .buttonsinproduct > button {
+  cursor: pointer;
+}
+.id-label-text-style {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 80%;
+}
+.hierarchical-flex-container {
+  outline: none !important;
+  border: none !important;
+}
+.inSignup {
+  text-align: center;
+}
+.quantitydiv > button {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.error-message {
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+.product-card-container3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.svg-container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+.filtertab {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+
+.filterpage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 350px;
+  height: 100vh;
+  background-color: white;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: scroll;
+}
+@media (max-width: 460px) {
+  .filterpage {
+    max-width: none !important;
+  }
+}
+/* Target the container with overflow */
+.filterpage {
+  overflow-y: scroll; /* Or overflow-x for horizontal scrollbar */
+
+  /* Scrollbar styles */
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Set thumb and track color */
+}
+
+.filterpage::-webkit-scrollbar {
+  width: 8px; /* Adjust width as needed */
+}
+
+.filterpage::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.filterpage::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.opacityzero,
+.opacityzero * {
+  opacity: 0;
+  pointer-events: none;
+}
+.opacityfull,
+.opacityfull * {
+  opacity: 1;
+  pointer-events: all;
+}
+.filterpage > h1 {
+  text-align: left;
+  font-size: 25px;
+  width: 85%;
+  font-weight: 600;
+}
+.sortbydiv,
+.coorsoptionsdiv {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.maintopvisiblediv,
+.maintopvisiblediv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.dropdownitems {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.dropdownitems > * {
+  cursor: pointer;
+  padding: 10px 30px;
+  margin: 0;
+}
+.dropdownitems > *:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+}
+.colordropdownitems {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px;
+  grid-auto-rows: 50px;
+  gap: 10px;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.maintopvisiblediv svg {
+  transition: 1s all ease;
+}
+.height240px {
+  height: 240px !important;
+}
+.colordropdownitems > * {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.colordropdownitems > div > div {
+  height: 20px;
+  width: 20px;
+  border-radius: 30px;
+}
+.colordropdownitems > div {
+  background-color: rgba(0, 0, 0, 0.07);
+  padding: 0 10px;
+  border-radius: 10px;
+}
+.colorcircleofred {
+  background-color: red;
+}
+.colorcircleofblue {
+  background-color: blue;
+}
+.colorcircleofgreen {
+  background-color: green;
+}
+.colorcircleofblack {
+  background-color: black;
+}
+.colorcircleofwhite {
+  background-color: white;
+}
+.colorcircleofpurple {
+  background-color: purple;
+}
+.colorcircleoforange {
+  background-color: orange;
+}
+.colorcircleofpink {
+  background-color: pink;
+}
+.dropdownitems {
+  height: 0px;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.height150px {
+  height: 150px !important;
+}
+.buttonsinfiltersidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 85%;
+  margin: 20px 0;
+}
+.buttonsinfiltersidebar > * {
+  width: 100%;
+  border-radius: 500px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: rgb(218, 218, 218);
+}
+.buttonsinfiltersidebar > *:first-child {
+  background-color: black;
+  color: white;
+}
+.svg-container-nav {
+  transition: all 0.7s ease;
+}
+.colordropdownitems > * {
   cursor: pointer;
 }

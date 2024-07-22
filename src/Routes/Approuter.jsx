@@ -20,34 +20,41 @@ import EmailSent from "../Screens/EmailSent";
 import EmailNotExists from "../Screens/EmailNotExists";
 import PasswordResetSuccess from "../Screens/PasswordResetSuccess";
 import Product from "../Screens/singleproduct";
+import Protected from "../Screens/Protected";
+import Token from "../Screens/Token";
 
 function Approuter() {
   return (
     <Router>
       <Routes>
-        {/* Fixed Pages  */}
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/forgot" element={<ForgotPasswordEnterEmail />} />
-        <Route path="/reset" element={<ForgotPasswordReset />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/google" element={<Continiewithgoogle />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/blog" element={<SingleBlog />} />
-        <Route path="/favourite" element={<Favourites />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/history" element={<RequestHistory />} />
-        <Route path="/generalenquiry" element={<GeneralEnquiry />} />
-        <Route path="/productenquiry" element={<ProductEnquiry />} />
-        <Route path="/bag" element={<BagScreen />} />
-        <Route path="/emailsent" element={<EmailSent />} />
-        <Route path="/noemail" element={<EmailNotExists />} />
-        <Route path="/success" element={<PasswordResetSuccess />} />
-        {/* Not Fixed Pages  */}
+        <Route path="/user" element={<Protected />}>
+          <Route path="/user" element={<Token />}>
+            <Route path="/user/bag" element={<BagScreen />} />
+            <Route path="/user/favourites" element={<Favourites />} />
+            <Route path="/user/generalenquiry" element={<GeneralEnquiry />} />
+            <Route path="/user/productenquiry" element={<ProductEnquiry />} />
+            <Route path="/user/history" element={<RequestHistory />} />
+          </Route>
+        </Route>
+        <Route path="/" element={<Token />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/forgot" element={<ForgotPasswordEnterEmail />} />
+          <Route path="/reset" element={<ForgotPasswordReset />} />
+          <Route path="/google" element={<Continiewithgoogle />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:name/:desc" element={<Products />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/blog" element={<SingleBlog />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/emailsent" element={<EmailSent />} />
+          <Route path="/noemail" element={<EmailNotExists />} />
+          <Route path="/success" element={<PasswordResetSuccess />} />
+        </Route>
       </Routes>
     </Router>
   );
