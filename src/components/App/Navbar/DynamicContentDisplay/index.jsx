@@ -6,12 +6,26 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import "./style.css";
 import messages from "./messages.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { api } from "../../../../config/api";
 
 function DynamicContentDisplay(props) {
   const [open, setOpen] = useState(false);
+  const [count, setCount] = useState(0);
   const navigate = useNavigate();
+
+  const getcartcount = async () => {
+    try {
+      const response = await api.get("/cart-items/");
+      setCount(response.data.cart_items.length);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  useEffect(() => {
+    getcartcount();
+  }, [props.refresh]);
 
   return (
     <>
@@ -65,7 +79,11 @@ function DynamicContentDisplay(props) {
             style={{ cursor: "pointer" }}
             onClick={() => navigate("/user/bag")}
           >
-            <span className="badge-with-icon-nav">2</span>
+            {count ? (
+              <span className="badge-with-icon-nav">{count}</span>
+            ) : (
+              <></>
+            )}
             <div className="vertical-center-with-icon-nav">
               <SvgIcon4 className="svg-container2-nav" />
             </div>

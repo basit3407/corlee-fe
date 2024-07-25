@@ -16,20 +16,27 @@ function StylishLayoutBuilder(props) {
   const [loading, setLoading] = useState(false);
   const [noProducts, setNoproducts] = useState(false);
   const fetchFabrics = async () => {
+    props.setPage(1);
     setLoading(true);
+
+    let filtercolorstring = "";
+
+    props.color.map((color) => {
+      filtercolorstring = filtercolorstring + `&colors=${color}`;
+    });
 
     console.log(
       "Request url : ",
-      `/fabrics/?${name ? `keyword=${name}` : ""}${
-        props.color.length > 0 ? `&colors=${String(props.color.join(","))}` : ""
-      }${props.sort ? `&sort_by=${props.sort}` : ""}${
-        props.page ? `&page=${props.page}` : ""
-      }`
+      `/fabrics/?${
+        name ? `keyword=${name === "Best Selling" ? "best_selling" : name}` : ""
+      }${props.color.length > 0 ? `${filtercolorstring}` : ""}${
+        props.sort ? `&sort_by=${props.sort}` : ""
+      }${props.page ? `&page=${props.page}` : ""}`
     );
 
     const response = await api.get(
       `/fabrics/?${name ? `keyword=${name}` : ""}${
-        props.color.length > 0 ? `&colors=${String(props.color.join(","))}` : ""
+        props.color.length > 0 ? `${filtercolorstring}` : ""
       }${props.sort ? `&sort_by=${props.sort}` : ""}${
         props.page ? `&page=${props.page}` : ""
       }`
@@ -50,11 +57,15 @@ function StylishLayoutBuilder(props) {
       try {
         props.setLoading(true);
 
+        let filtercolorstring = "";
+
+        props.color.map((color) => {
+          filtercolorstring = filtercolorstring + `&colors=${color}`;
+        });
+
         const response = await api.get(
           `/fabrics/?${name ? `keyword=${name}` : ""}${
-            props.color.length > 0
-              ? `&colors=${String(props.color.join(","))}`
-              : ""
+            props.color.length > 0 ? `${filtercolorstring}` : ""
           }${props.sort ? `&sort_by=${props.sort}` : ""}${
             props.page ? `&page=${props.page}` : ""
           }`
@@ -99,7 +110,9 @@ function StylishLayoutBuilder(props) {
       {!loading ? (
         <>
           {!noProducts ? (
-            products.map((e, i) => <StylishDisplay key={i} {...e} />)
+            products.map((e, i) => (
+              <StylishDisplay key={i} {...e} setRefresh={props.setRefresh} />
+            ))
           ) : (
             <p
               style={{

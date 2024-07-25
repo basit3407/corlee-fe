@@ -84,7 +84,7 @@ function ProductNavigation(props) {
             {messages["about_us"]}
           </p>
         </div>
-        <DynamicContentDisplay {...props} />
+        <DynamicContentDisplay refresh={props.refresh} {...props} />
       </div>
     </>
   );

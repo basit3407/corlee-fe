@@ -39,6 +39,7 @@ function UserAuthenticationForm() {
           ? error.response.data[Object.keys(error.response.data)[0]]
           : error.message
       );
+      navigate("/");
       setLoading(false);
     }
   };

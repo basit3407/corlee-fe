@@ -4,20 +4,46 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import { api } from "../../../config/api";
 
-function Navbar() {
+function Navbar(props) {
   const navigate = useNavigate();
   const [showcall, setShowcall] = useState(false);
   const [showprod, setShowprod] = useState(false);
   const [categs, setCategs] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [loading2, setLoading2] = useState(false);
+  const [products, setProducts] = useState([]);
 
   const getCategories = async () => {
-    const response = await api.get("/categories/");
-    if (response.status === 200) setCategs(response.data.results);
+    try {
+      setLoading(true);
+      const response = await api.get("/categories/");
+      if (response.status === 200) {
+        setCategs(response.data.results);
+        setLoading(false);
+      }
+    } catch (e) {
+      console.log(e);
+      setLoading(false);
+    }
+  };
+
+  const getProducts = async () => {
+    try {
+      setLoading2(true);
+      const response = await api.get("/fabrics/");
+      if (response.status === 200) {
+        setProducts(response.data.results.slice(0, 6));
+        setLoading2(false);
+      }
+    } catch (e) {
+      console.log(e);
+      setLoading2(false);
+    }
   };
 
   useEffect(() => {
     getCategories();
+    getProducts();
   }, []);
   const changeShowcall = () => {
     setShowcall(!showcall);
@@ -39,6 +65,7 @@ function Navbar() {
           changeShowcall={changeShowcall}
           changeshowprod={changeshowprod}
           showprod={showprod}
+          refresh={props.refresh}
         />
       </div>
       <div
@@ -147,13 +174,17 @@ function Navbar() {
       >
         <div className="productsoptionsdivinnav">
           {loading ? (
-            <h2>Loading Categories...</h2>
+            <h2 style={{ textAlign: "center", width: "100%" }}>
+              Loading Categories...
+            </h2>
           ) : (
             <>
               <div
                 className="productsoptiondivinnav"
                 onClick={() => {
-                  navigate("/products/bestselling");
+                  navigate(
+                    "/products/Best Selling/ All of Corlee's best seling products."
+                  );
                   setShowprod(false);
                 }}
               >
@@ -200,60 +231,34 @@ function Navbar() {
         </div>
         <div className="verticallineinnavdropdownofproducts"></div>
         <div className="relatedproductsdivinnav">
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Anti-Odor & Anti-bacterial</div>
-          </div>
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Wicking & waterproof</div>
-          </div>
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Anti-Abrasion</div>
-          </div>
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Thermal & UV Cut</div>
-          </div>
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Stretch</div>
-          </div>
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Comfort</div>
-          </div>
+          {loading2 ? (
+            <h2 style={{ textAlign: "center", width: "100%" }}>
+              Loading Products...
+            </h2>
+          ) : (
+            <>
+              {products &&
+                products.map((product, index) => (
+                  <div
+                    className="relatedproductdivinnav"
+                    key={index}
+                    onClick={() => {
+                      navigate(`/product/${product.id}/`);
+                      setShowprod(false);
+                    }}
+                  >
+                    <div
+                      className="imagedivinproductdropdown"
+                      style={{
+                        backgroundImage: `url(${product.photo_url})`,
+                        backgroundSize: "cover",
+                      }}
+                    ></div>
+                    <div className="textdropdowninnav">{product.finish}</div>
+                  </div>
+                ))}
+            </>
+          )}
         </div>
       </div>
     </div>

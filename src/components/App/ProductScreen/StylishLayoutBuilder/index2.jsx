@@ -13,11 +13,16 @@ function StylishLayoutBuilder(props) {
   const fetchFabrics = async () => {
     try {
       setLoading(true);
+      let filtercolorstring = "";
+
+      props.color.map((color) => {
+        filtercolorstring = filtercolorstring + `&colors=${color}`;
+      });
 
       const response = await api.get(
-        `/favorite_fabrics/?${
-          props.filterColor ? `&colors=${props.filterColor}` : ""
-        }${props.sortby ? `&sort_by=${props.sortby}` : ""}&page=1`
+        `/favorite_fabrics/?${props.color ? `${filtercolorstring}` : ""}${
+          props.sort ? `&sort_by=${props.sort}` : ""
+        }`
       );
       if (response.data.length > 0) {
         setProducts(response.data);
@@ -33,36 +38,10 @@ function StylishLayoutBuilder(props) {
     }
   };
 
-  const fetchNextPage = async () => {
-    if (props.page !== 1) {
-      try {
-        props.setLoading(true);
-
-        const response = await api.get(
-          `/favorite_fabrics/?${
-            props.filterColor ? `&colors=${props.filterColor}` : ""
-          }${props.sortby ? `&sort_by=${props.sortby}` : ""}${
-            props.page ? `&page=${props.page}` : ""
-          }`
-        );
-
-        setProducts([...products, ...response.data]);
-
-        props.setLoading(false);
-      } catch (e) {
-        console.log(e);
-        props.setLoading(false);
-      }
-    }
-  };
-
   useEffect(() => {
     fetchFabrics();
-  }, []);
+  }, [props.color, props.sort]);
 
-  useEffect(() => {
-    fetchNextPage();
-  }, [props.page]);
   return (
     <div
       className="vertical-centered-flex-container"
