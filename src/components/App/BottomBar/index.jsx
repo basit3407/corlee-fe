@@ -10,7 +10,11 @@ function BottomBar(props) {
   return (
     <div
       className={
-        props.home ? "newsletter-section-bb" : "newsletter-section-bb nothome"
+        props.home
+          ? "newsletter-section-bb"
+          : props.contact
+          ? "newsletter-section-bb contactbottombar"
+          : props.history ?  "newsletter-section-bb historybottombar" : "newsletter-section-bb nothome"
       }
     >
       <div className="hero-section-bb">

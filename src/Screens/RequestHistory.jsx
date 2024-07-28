@@ -10,7 +10,7 @@ function RequestHistory() {
       <RequestHistoryComponent
         ticketInquiriesData={mockData.ticketInquiriesData}
       />
-      <BottomBar />
+      <BottomBar history={true} />
     </>
   );
 }

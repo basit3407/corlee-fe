@@ -26,6 +26,8 @@ function UserAuthenticationForm() {
       if (response.status == 200) {
         const token = response.data.token;
         localStorage.setItem("token", token);
+        localStorage.setItem("NameLetter", response.data.user.name[0]);
+        console.log(response);
         setAuthToken(token);
         navigate("/");
         toast.success("Login Successful");
@@ -34,12 +36,11 @@ function UserAuthenticationForm() {
       }
       setLoading(false);
     } catch (error) {
-      setError(
-        error.response
-          ? error.response.data[Object.keys(error.response.data)[0]]
-          : error.message
+      toast.error(
+        `${Object.keys(error.response.data)[0]} : ${
+          error.response.data[Object.keys(error.response.data)[0]]
+        }` || "Something went wrong"
       );
-      navigate("/");
       setLoading(false);
     }
   };

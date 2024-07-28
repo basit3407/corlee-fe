@@ -163,7 +163,15 @@ function Navbar(props) {
               <p> Line</p>
             </div>
             <p className="needhelp">Need help ?</p>
-            <p>contact us</p>
+            <p
+              onClick={() => {
+                navigate("/contact/general");
+                setShowcall(false);
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              contact us
+            </p>
           </div>
         </div>
       </div>

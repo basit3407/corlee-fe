@@ -1,12 +1,12 @@
 import "./style.css";
 import messages from "./messages.json";
 
-function MessageActions() {
+function MessageActions(props) {
   return (
     <>
       <div className="contact-info-container">
-        <div className="contact-info-container2">
-          <p className="contact-info-text">{messages["2245991788"]}</p>
+        <div className="contact-info-container2 static">
+          <p className="contact-info-text">{props.user.phone}</p>
           <p className="highlighted-text">{messages["copy_1"]}</p>
         </div>
       </div>{" "}

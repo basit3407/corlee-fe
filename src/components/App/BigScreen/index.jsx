@@ -12,6 +12,7 @@ import GetPersonalDetails from "./GetPersonalDetails";
 import GetContactDetails from "./GetContactDetails";
 import GetAddress from "./GetAddress";
 import { FullscreenExit } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 function BagScreenMainComp({ productTableRowsData }) {
   const [products, setProducts] = useState([]);
@@ -20,7 +21,7 @@ function BagScreenMainComp({ productTableRowsData }) {
   const [getUserDetails, setGetUserDetails] = useState("");
   const [checkoutLoading, setCheckoutLoading] = useState(false);
   const [noProducts, setNoProducts] = useState(true);
-
+  const navigate = useNavigate();
   const loadData = async () => {
     try {
       const response = await api.get("/cart-items/");
@@ -63,11 +64,12 @@ function BagScreenMainComp({ productTableRowsData }) {
         }
         setCheckoutLoading(true);
         const response = await api.post("/checkout/");
+        console.log(response);
         if (response.status === 201) {
           setCheckoutLoading(false);
           toast.success("Order placed successfully");
           setProducts([]);
-          loadData();
+          navigate(`/thankyou/${response.data.request_number}`);
         } else {
           toast.error(response.data[Object.keys(response.data)[0]]);
           setCheckoutLoading(false);
@@ -78,7 +80,9 @@ function BagScreenMainComp({ productTableRowsData }) {
       }
     } catch (e) {
       toast.error(
-        e.data[Object.keys(response.data)[0]] || "Something went wrong"
+        `${Object.keys(e.response.data)[0]} : ${
+          e.response.data[Object.keys(e.response.data)[0]]
+        }` || "Something went wrong"
       );
       setCheckoutLoading(false);
     }

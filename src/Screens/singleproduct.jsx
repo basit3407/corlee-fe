@@ -66,7 +66,7 @@ const singleproduct = () => {
     loadFabricData();
   }, [productid]);
 
-  const addToCart = async (e) => {
+  const addToCart = async (e, go) => {
     try {
       e.stopPropagation();
 
@@ -82,7 +82,12 @@ const singleproduct = () => {
       });
       console.log(response);
       if (response.status === 201 || response.status === 200) {
-        toast.success("Item added to bag");
+        if (go) {
+          toast.success("Ready to checkout");
+          navigate("/user/bag");
+        } else {
+          toast.success("Item added to bag");
+        }
       }
     } catch (err) {
       console.log("error:", err);
@@ -206,7 +211,9 @@ const singleproduct = () => {
               <div className="buttonsinproduct">
                 <button
                   className="primbutton"
-                  onClick={addToCart}
+                  onClick={(e) => {
+                    addToCart(e, false);
+                  }}
                   style={{ cursor: "pointer" }}
                 >
                   <svg
@@ -223,7 +230,14 @@ const singleproduct = () => {
                   </svg>
                   Add to Bag
                 </button>
-                <button className="secbutton">Check out</button>
+                <button
+                  className="secbutton"
+                  onClick={(e) => {
+                    addToCart(e, true);
+                  }}
+                >
+                  Check out
+                </button>
               </div>
             </div>
           </>
@@ -253,7 +267,13 @@ const singleproduct = () => {
         <div className="onedivofproduct last">
           <div
             className="maintextans"
-            style={{ textDecoration: "underline 2px solid black" }}
+            style={{
+              textDecoration: "underline 2px solid black",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              navigate(`/contact/${product.item_code}`);
+            }}
           >
             Need Support
           </div>

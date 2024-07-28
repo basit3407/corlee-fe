@@ -17,10 +17,15 @@ const GetContactDetails = (props) => {
         return;
       }
       setLoading(true);
+      console.log({
+        email,
+        phone,
+      });
       const response = await api.patch("/edit/", {
         email,
         phone,
       });
+      console.log(response);
       if (response.status === 200) {
         toast.success("Details updated successfully");
         props.setUser({ ...user, email: email, phone: phone });

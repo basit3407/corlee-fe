@@ -25,15 +25,6 @@ function StylishLayoutBuilder(props) {
       filtercolorstring = filtercolorstring + `&colors=${color}`;
     });
 
-    console.log(
-      "Request url : ",
-      `/fabrics/?${
-        name ? `keyword=${name === "Best Selling" ? "best_selling" : name}` : ""
-      }${props.color.length > 0 ? `${filtercolorstring}` : ""}${
-        props.sort ? `&sort_by=${props.sort}` : ""
-      }${props.page ? `&page=${props.page}` : ""}`
-    );
-
     const response = await api.get(
       `/fabrics/?${name ? `keyword=${name}` : ""}${
         props.color.length > 0 ? `${filtercolorstring}` : ""

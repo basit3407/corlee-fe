@@ -44,6 +44,11 @@ body * {
   max-width: 90vw;
   margin: 0 auto;
 }
+.wrapperofelement {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 @media (max-width: 1250px) {
   .contact-info-container-nav {
     position: absolute;
@@ -52,9 +57,20 @@ body * {
     transform: translateY(80%);
     flex-direction: column;
     z-index: 1000;
+    transition: all 0.1s linear;
+  }
+  .wrapperofelement {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
     border-radius: 20px 0 0 20px;
-    transition: all 0.1s linear;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.726);
+    border: 1px solid rgb(194, 194, 194);
+    width: 100%;
+    background-color: rgb(224, 224, 224);
   }
   .callout-container-nav {
     background-color: rgb(202, 202, 202);
@@ -82,6 +98,11 @@ body * {
     transform: none;
     flex-direction: column;
     margin: 0;
+  }
+  .wrapperofelement {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
   }
   .main-navigation-container-nav {
     background-color: rgb(241, 241, 241);
@@ -150,12 +171,16 @@ body * {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
   background-color: black;
   color: white;
   border: none;
   border-radius: 500px;
   scale: 1.3;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+.event-details-container1 {
+  margin-top: 10px;
 }
 .button-with-icon2 > * {
   margin: 0 5px;
@@ -1200,6 +1225,7 @@ body * {
 }
 .eventimage {
   width: 30%;
+  max-width: 218px;
 }
 .eventimage img {
   width: 100%;
@@ -1502,6 +1528,10 @@ body * {
   .header-title-text-style {
     text-align: center;
   }
+
+  .incontact > :nth-child(2) label {
+    margin-top: 10px;
+  }
 }
 .contact-info-section1 {
   max-width: 95vw;
@@ -1737,7 +1767,7 @@ body * {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
   height: 250px;
 }
 .productimagediv {
@@ -1748,13 +1778,7 @@ body * {
 .imageofproduct {
   height: 200px;
   width: 190px;
-  background: linear-gradient(
-      to bottom right,
-      rgba(0, 0, 0, 0.219),
-      rgba(0, 0, 0, 0.103),
-      rgba(0, 0, 0, 0.219)
-    ),
-    50% 50%;
+  background-size: cover;
   border-radius: 10px;
   position: relative;
 }
@@ -1891,6 +1915,7 @@ body * {
   justify-content: center;
   gap: 40px;
   flex-direction: row;
+  width: 100%;
 }
 .ticket-details-section > *:first-child {
   width: 65%;
@@ -2036,7 +2061,6 @@ body * {
   padding-bottom: 5px;
   font-size: 30px;
   font-weight: 600;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.356);
 }
 .productinquiryproductdiv {
   display: flex;
@@ -2505,7 +2529,7 @@ body * {
 .svg-container {
   margin: 50px;
 }
-.flex-row-container {
+/* .flex-row-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2519,7 +2543,7 @@ body * {
   scale: 0.8;
   filter: grayscale(100%);
   opacity: 0.8;
-}
+} */
 .secure-password-update-notification {
   height: 100vh;
   width: 100vw;
@@ -3460,4 +3484,254 @@ body * {
 }
 .badge-with-icon-nav {
   width: 20px;
+}
+.incontact {
+  gap: 10px;
+}
+@media (max-width: 800px) {
+  .contactbottombar {
+    margin-top: 10px;
+  }
+}
+.contact-info-section2 {
+  position: relative;
+}
+.contact-info-container2 {
+  width: max-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, -100%);
+}
+.optionsincontact {
+  width: 100%;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.137);
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden;
+  margin-top: 7px;
+  border-collapse: collapse;
+  border: 1px solid rgba(94, 94, 94, 0.308);
+}
+.optionsincontact .option {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: white;
+  border-bottom: 1px solid rgba(94, 94, 94, 0.308);
+  font-size: 18px;
+}
+.optionsincontact .option p {
+  margin: 10px;
+}
+.optionsincontact .option:last-child {
+  border: none;
+}
+
+.optionsincontact .option:hover {
+  background-color: rgba(0, 0, 0, 0.055);
+}
+.svg-container3 {
+  transition: all 1s ease;
+  scale: 0.8;
+}
+.sample-request-button1 input {
+  outline: none;
+  padding: 5px;
+  height: 20px;
+  width: 20px;
+}
+.textareainput {
+  height: 150px !important;
+}
+.circlemust {
+  height: 50px !important;
+  width: 50px !important;
+  margin: 0;
+  padding: 0;
+}
+.vertical-number-container-nav {
+  height: 48px !important;
+  transform: translate(0, -2px);
+  position: relative;
+  margin: 0;
+}
+.vertical-center-with-icon-nav {
+  margin-top: 0px !important;
+}
+.badge-with-icon-nav {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+.vertical-center-with-icon-nav {
+  height: 100%;
+  width: 100%;
+}
+.circlemust {
+  position: relative;
+}
+.circlemust .dropdowndiv {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 101%);
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+  text-align: center;
+}
+.circlemust .dropdowndiv p {
+  padding: 10px 20px;
+  background-color: black;
+  margin: 0;
+}
+.circlemust .dropdowndiv p:not(.circlemust .dropdowndiv p:last-child) {
+  border-bottom: 1px solid rgb(150, 150, 150);
+}
+.circlemust .dropdowndiv p:hover {
+  background-color: rgba(0, 0, 0, 0.87);
+}
+.thankyou {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(226, 226, 226);
+}
+.thankyoucontainer {
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 50px;
+  position: relative;
+  max-width: 90vw;
+}
+.closediv {
+  position: absolute;
+  top: 30px;
+  cursor: pointer;
+  right: 30px;
+}
+.thankyoucontainer h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin: 5px 0 0 0;
+  color: rgb(44, 44, 44);
+  text-shadow: 3px 2px 0px rgb(165, 165, 165);
+}
+.thankyoucontainer h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+}
+.copydiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(221, 221, 221);
+  padding: 0;
+  height: 50px;
+  margin: 0;
+  padding: 0 0 0 30px;
+  gap: 100px;
+  border-radius: 1000px;
+  overflow: hidden;
+}
+.copybuttondiv {
+  background-color: black;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.codediv p {
+  font-size: 20px;
+}
+.thankyoucontainer > p {
+  text-align: center;
+  font-size: 17px;
+  margin: 20px 0;
+  color: rgb(82, 82, 82);
+}
+.thankyoucontainer > button {
+  padding: 10px 150px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  font-size: 22px;
+}
+.request {
+  margin: 30px 0 15px 0 !important;
+  padding: 0 !important;
+  font-size: 22px !important;
+  line-height: 22px !important;
+}
+@media (max-width: 800px) {
+  .uicontainer {
+    margin-bottom: 200px;
+  }
+  .historybottombar {
+    /* padding-top: 100px; */
+  }
+}
+@media (max-width: 750px) {
+  .uicontainer {
+    margin-bottom: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .uicontainer {
+    margin-bottom: 600px;
+  }
+  .historybottombar {
+    /* padding-top: 200px */
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 300px) {
+  .uicontainer {
+    margin-bottom: 600px;
+  }
+}
+@media (max-height: 750px) and (max-width: 850px) {
+  .dropdowndiv {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+  }
+  .dropdowndiv > * {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+  }
+}
+.main-container1-his {
+  width: 100%;
+}
+.imagestext p {
+  line-height: 35px;
+}
+.static {
+  position: static;
+}
+.contact-info-container {
+  margin-top: 10px;
+}
+.mb40 {
+  margin-bottom: 30px;
 }

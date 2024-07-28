@@ -12,7 +12,7 @@ function GeneralEnquiry() {
   return (
     <>
       <Navbar />
-      <GeneralEnquiryComponent id={id} />
+      <GeneralEnquiryComponent request={true} id={id} />
       <BottomBar />
     </>
   );

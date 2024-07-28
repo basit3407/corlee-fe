@@ -22,6 +22,8 @@ import PasswordResetSuccess from "../Screens/PasswordResetSuccess";
 import Product from "../Screens/singleproduct";
 import Protected from "../Screens/Protected";
 import Token from "../Screens/Token";
+import Thankyou from "../Screens/Thankyou";
+import ProductRequest from "../Screens/ProductRequest";
 
 function Approuter() {
   return (
@@ -31,8 +33,18 @@ function Approuter() {
           <Route path="/user" element={<Token />}>
             <Route path="/user/bag" element={<BagScreen />} />
             <Route path="/user/favourites" element={<Favourites />} />
-            <Route path="/user/generalenquiry" element={<GeneralEnquiry />} />
-            <Route path="/user/productenquiry" element={<ProductEnquiry />} />
+            <Route
+              path="/user/generalenquiry/:id"
+              element={<GeneralEnquiry />}
+            />
+            <Route
+              path="/user/productrequest/:id"
+              element={<ProductRequest />}
+            />
+            <Route
+              path="/user/productenquiry/:id"
+              element={<ProductEnquiry />}
+            />
             <Route path="/user/history" element={<RequestHistory />} />
           </Route>
         </Route>
@@ -50,7 +62,8 @@ function Approuter() {
           <Route path="/products/:name/:desc" element={<Products />} />
           <Route path="/product/:productid" element={<Product />} />
           <Route path="/blog" element={<SingleBlog />} />
-          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/contact/:value" element={<ContactUs />} />
+          <Route path="/thankyou/:id" element={<Thankyou />} />
           <Route path="/emailsent" element={<EmailSent />} />
           <Route path="/noemail" element={<EmailNotExists />} />
           <Route path="/success" element={<PasswordResetSuccess />} />

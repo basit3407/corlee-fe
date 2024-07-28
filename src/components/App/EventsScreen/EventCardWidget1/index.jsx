@@ -4,13 +4,22 @@ import SvgIcon3 from "./icons/SvgIcon3";
 import "./style.css";
 import messages from "./messages.json";
 
-function EventCardWidget1({ imgContent9, eventDescription7, dynamicContentWithShowMoreButton7 }) {
+function EventCardWidget1({
+  imgContent9,
+  eventDescription7,
+  dynamicContentWithShowMoreButton7,
+}) {
   return (
     <div className="event-card-container">
       <img className="event-image-display-style" src={imgContent9} />
       <div className="event-description-container">
         <p className="event-description-text-styler">{eventDescription7}</p>
-        <p className="event-description-text-snippet" dangerouslySetInnerHTML={{ __html: dynamicContentWithShowMoreButton7 }} />
+        <p
+          className="event-description-text-snippet"
+          dangerouslySetInnerHTML={{
+            __html: dynamicContentWithShowMoreButton7,
+          }}
+        />
         <div className="event-details-container1">
           {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
           <button className="button-with-icon1">

@@ -6,8 +6,20 @@ import SvgIcon4 from "./icons/SvgIcon4";
 import SvgIcon5 from "./icons/SvgIcon5";
 import "./style.css";
 import messages from "./messages.json";
+import { useEffect, useState } from "react";
+import { api } from "../../../../config/api";
 
-function ContentDisplayWidgetGenerator({ generateContentDisplayWidgetArgs }) {
+function ContentDisplayWidgetGenerator() {
+  const [blogs, setBlogs] = useState([]);
+  const loadBlogs = async () => {
+    try {
+      let response = await api.get("/blogs/");
+      console.log(response);
+    } catch (e) {}
+  };
+  useEffect(() => {
+    loadBlogs();
+  });
   return (
     <div className="blog-post-container-blogs">
       <p className="hero-title-text-style-blogs">{messages["blogs"]}</p>
@@ -51,9 +63,7 @@ function ContentDisplayWidgetGenerator({ generateContentDisplayWidgetArgs }) {
           </button>
         </div>
       </div>
-      <ContentRenderer
-        generateContentDisplayWidgetArgs={generateContentDisplayWidgetArgs}
-      />
+      <ContentRenderer blogs={blogs} />
       {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
       <button className="blog-load-more-button-style-blogs">
         {messages["load_more"]}

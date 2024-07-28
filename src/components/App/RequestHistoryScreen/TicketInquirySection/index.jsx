@@ -1,174 +1,141 @@
+import { useNavigate } from "react-router-dom";
+import { api } from "../../../../config/api";
 import RequestHistorySection from "../RequestHistorySection";
-import TicketInquiryDashboard from "../TicketInquiryDashboard";
 import "./style.css";
 import React, { useState, useEffect } from "react";
+import Productinquiry from "./Productinquiry";
+import ProductRequest from "./ProductRequest";
+import GeneralInquiry from "./GeneralInquiry";
+import { TailSpin } from "react-loader-spinner";
 
 function TicketInquirySection({ ticketInquiriesData }) {
-  const [counter, setCounter] = useState(0);
-  let [imagesnum, setImagesNum] = useState(5);
+  const [data, setData] = useState([]);
+  const [noData, setNoData] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const updateCounter = () => {
-    const width = window.innerWidth;
+  function formatDate(inputDate) {
+    const date = new Date(inputDate);
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const dayOfWeek = days[date.getUTCDay()];
+    const day = date.getUTCDate();
+    const month = months[date.getUTCMonth()];
+    const year = date.getUTCFullYear();
+    return `${dayOfWeek} ${month} ${day} ${year}`;
+  }
 
-    if (width < 438) {
-      setCounter(5);
-    } else if (width < 644) {
-      setCounter(4);
-    } else if (width < 870) {
-      setCounter(3);
-    } else if (width < 1100) {
-      setCounter(2);
-    } else if (width < 1320) {
-      setCounter(1);
-    } else {
-      setCounter(0);
+  const fetchData = async () => {
+    try {
+      setLoading(true);
+      const response = await api.get("/contact-requests/");
+      console.log(response);
+      if (response.status === 200) {
+        if (response.data.contact_requests.length > 0) {
+          setData(response.data.contact_requests);
+          setNoData(false);
+          setLoading(false);
+        } else {
+          setNoData(true);
+          setLoading(false);
+        }
+      } else {
+        setNoData(true);
+        setLoading(false);
+      }
+    } catch (e) {
+      console.error(e);
+      setLoading(false);
+      navigate("/");
     }
   };
-
   useEffect(() => {
-    updateCounter();
-    window.addEventListener("resize", updateCounter);
-
-    return () => window.removeEventListener("resize", updateCounter);
+    fetchData();
   }, []);
 
   return (
     <div className="request-history-container2">
       <RequestHistorySection />
       <div className="resultspage">
-        <div className="resultsfound">
-          <p onClick={() => console.log(counter)}>32 Results found</p>
-        </div>
-        <div className="productinquiry">
-          <div className="infotext">
-            <p className="ticket">Ticket Number : AB9825</p>
-            <p className="inqtext">Products Inquiry</p>
+        {loading ? (
+          <div
+            className="spinner"
+            style={{
+              margin: "30px auto",
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <TailSpin
+              visible={true}
+              height="60"
+              width="60"
+              color="#000"
+              ariaLabel="tail-spin-loading"
+              radius="1"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
           </div>
-          <div className="otherdata">
-            <div className="imgdiv">
-              <div className="image"></div>
-              <div className="textunderimg">
-                <p className="number">A21RF</p>
-                <div className="length">100m</div>
-              </div>
-            </div>
-            <div className="productinqtextdiv">
-              <div className="headingofproduct">
-                Labore ut molestias asperiores nihil reiciendis debitis
-              </div>
-              <p className="productdesc">
-                Labore ut molestias asperiores nihil reiciendis debitis qui
-                distinctio modi. Ea ab beatae nisi unde molestias. Distinctio
-                omnis non et officiis deserunt possimus aspernatur. Sit
-                molestiae deleniti culpa nemo placeat nesciunt. Ipsum esse quia.
-                Ut deserunt consequatur at.Voluptatem nostrum non ea voluptatem
-                repellat.
+        ) : noData ? (
+          <div
+            className="spinner"
+            style={{
+              margin: "30px auto",
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <h3 style={{ textAlign: "center", fontSize: "20px" }}>
+              Nothing in history
+            </h3>
+          </div>
+        ) : (
+          <>
+            {" "}
+            <div className="resultsfound">
+              <p>
+                {data.length} {data.length > 1 ? "results" : "result"} found
               </p>
             </div>
-          </div>{" "}
-          <div className="datediv">
-            <p className="datep">Sat Nov 23 2023</p>
-          </div>
-        </div>
-        <div className="productinquiry">
-          <div className="infotext">
-            <p className="ticket">Ticket Number : AB9825</p>
-            <p className="inqtext">Products Request</p>
-          </div>
-          <div className="otherdata2">
-            <div className="productimages">
-              <div className="productimagediv">
-                <div className="imageofproduct">
-                  <p className="imagetext">+{imagesnum + counter} </p>
-                </div>
-                <div className="imagedetailsdiv">
-                  <p className="ticketnumber">A12RF</p>{" "}
-                  <p className="lengthofimagediv">100m</p>{" "}
-                </div>
-              </div>
-              <div className="productimagediv">
-                <div className="imageofproduct">
-                  <p className="imagetext">+{imagesnum + counter} </p>
-                </div>
-                <div className="imagedetailsdiv">
-                  <p className="ticketnumber">A12RF</p>{" "}
-                  <p className="lengthofimagediv">100m</p>{" "}
-                </div>
-              </div>
-              <div className="productimagediv">
-                <div className="imageofproduct">
-                  <p className="imagetext">+{imagesnum + counter} </p>
-                </div>
-                <div className="imagedetailsdiv">
-                  <p className="ticketnumber">A12RF</p>{" "}
-                  <p className="lengthofimagediv">100m</p>{" "}
-                </div>
-              </div>
-              <div className="productimagediv">
-                <div className="imageofproduct">
-                  <p className="imagetext">+{imagesnum + counter} </p>
-                </div>
-                <div className="imagedetailsdiv">
-                  <p className="ticketnumber">A12RF</p>{" "}
-                  <p className="lengthofimagediv">100m</p>{" "}
-                </div>
-              </div>
-              <div className="productimagediv">
-                <div className="imageofproduct">
-                  <p className="imagetext">+{imagesnum + counter} </p>
-                </div>
-                <div className="imagedetailsdiv">
-                  <p className="ticketnumber">A12RF</p>{" "}
-                  <p className="lengthofimagediv">100m</p>{" "}
-                </div>
-              </div>
-              <div className="productimagediv">
-                <div className="imageofproduct">
-                  <p className="imagetext">+{imagesnum + counter} </p>
-                </div>
-                <div className="imagedetailsdiv">
-                  <p className="ticketnumber">A12RF</p>{" "}
-                  <p className="lengthofimagediv">100m</p>{" "}
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-          <div className="datediv">
-            <p className="datep">Sat Nov 23 2023</p>
-          </div>
-        </div>
-        <div className="productinquiry generalinquiry">
-          <div className="infotext">
-            <p className="ticket">Ticket Number : AB9825</p>
-            <p className="inqtext">General Inquiry</p>
-          </div>
-          <div className="otherdata">
-            <div className="productinqtextdiv">
-              <div className="headingofproduct">
-                Labore ut molestias asperiores nihil reiciendis debitis
-              </div>
-              <p className="productdesc">
-                Labore ut molestias asperiores nihil reiciendis debitis qui
-                distinctio modi. Ea ab beatae nisi unde molestias. Distinctio
-                omnis non et officiis deserunt possimus aspernatur. Sit
-                molestiae deleniti culpa nemo placeat nesciunt. Ipsum esse quia.
-                Ut deserunt consequatur at.Voluptatem nostrum non ea voluptatem
-                repellat. Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Ducimus autem eos sed excepturi ea magnam nulla nobis.
-                Repellat rem atque aperiam tempore, optio illo natus commodi
-                iure facere similique laudantium esse autem aliquid, accusantium
-                eius ipsa excepturi id corporis saepe? Provident veniam modi
-                voluptatum quam velit quis quos quasi assumenda praesentium
-                asperiores. Cupiditate laboriosam eum natus exercitationem ut,
-                obcaecati dolores provident. Laudantium quae eum repudiandae
-                labore saepe.
-              </p>
-            </div>
-          </div>{" "}
-          <div className="datediv">
-            <p className="datep">Sat Nov 23 2023</p>
-          </div>
-        </div>
+            {data.map((item, index) =>
+              item.request_type == "general" ? (
+                <GeneralInquiry
+                  key={index}
+                  item={item}
+                  date={formatDate(item.created_at)}
+                />
+              ) : item.request_type == "product" ? (
+                <Productinquiry
+                  key={index}
+                  item={item}
+                  date={formatDate(item.created_at)}
+                />
+              ) : (
+                <ProductRequest
+                  key={index}
+                  item={item}
+                  date={formatDate(item.created_at)}
+                />
+              )
+            )}
+          </>
+        )}
       </div>
     </div>
   );

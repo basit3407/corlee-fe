@@ -1,7 +1,7 @@
 import "./style.css";
 import messages from "./messages.json";
 
-function CompanyInputWidget() {
+function CompanyInputWidget(props) {
   return (
     <div className="subject-container">
       {/* Input with Label Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
@@ -13,6 +13,9 @@ function CompanyInputWidget() {
           id="company name"
           placeholder="i.e ABC Company"
           type="text"
+          name="company_name"
+          onChange={props.onChange}
+          value={props.company_name}
           className="input-with-label-style input-style-f62::placeholder"
         />
       </div>
