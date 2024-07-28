@@ -32,7 +32,6 @@ const Productinbag = (props) => {
         `/cart-items/${props.product.id}`,
         debouncedData
       );
-      console.log("our response", res);
       // Uncomment and implement this if necessary
       // if (res.status === 200) {
       //   props.loadDatafc();

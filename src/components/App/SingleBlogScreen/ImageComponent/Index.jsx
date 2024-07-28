@@ -1,12 +1,9 @@
 import "./style.css";
 
-function ImageComponent() {
+function ImageComponent(data) {
   return (
     <>
-      <img
-        src="/assets/img_1091_9038_ed05cf.jpeg"
-        className="image-container-sb"
-      />
+      <img src={data.photo_url} className="image-container-sb" />
     </>
   );
 }
