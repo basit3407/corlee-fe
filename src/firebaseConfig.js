@@ -37,13 +37,13 @@ const firebaseConfig = {
   measurementId: "G-G3JEN2Z8MM",
 };
 
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+const provider = new GoogleAuthProvider();
+
 export const googleLogin = async () => {
   try {
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    auth.languageCode = "en";
-    const provider = new GoogleAuthProvider();
-
     const result = await signInWithPopup(auth, provider);
     const token = await result.user.getIdToken();
 
