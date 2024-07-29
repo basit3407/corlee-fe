@@ -11,9 +11,8 @@ import { api, setAuthToken } from "../../../../config/api";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
-function UserRegistrationLayout() {
+function UserRegistrationLayout({ loading, setLoading }) {
   const [formData, setFormData] = useState({});
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const handleChange = (e) => {
@@ -35,7 +34,6 @@ function UserRegistrationLayout() {
       }
       setLoading(false);
     } catch (error) {
-      console.log(error);
       setError(
         error.response
           ? error.response.data[Object.keys(error.response.data)[0]]

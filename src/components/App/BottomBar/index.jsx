@@ -5,8 +5,10 @@ import SvgIcon3 from "./icons/SvgIcon3";
 import SvgIcon4 from "./icons/SvgIcon4";
 import "./style.css";
 import messages from "./messages.json";
+import { useNavigate } from "react-router-dom";
 
 function BottomBar(props) {
+  const navigate = useNavigate();
   return (
     <div
       className={
@@ -14,16 +16,51 @@ function BottomBar(props) {
           ? "newsletter-section-bb"
           : props.contact
           ? "newsletter-section-bb contactbottombar"
-          : props.history ?  "newsletter-section-bb historybottombar" : "newsletter-section-bb nothome"
+          : props.history
+          ? "newsletter-section-bb historybottombar"
+          : "newsletter-section-bb nothome"
       }
     >
       <div className="hero-section-bb">
         <NewsletterSubscriptionSection />
         <div className="flex-container-with-icons-bb">
           <div className="navigation-bar-bb">
-            <p className="unique-text-block-bb">{messages["products"]}</p>
-            <p className="unique-text-block-bb">{messages["events"]}</p>
-            <p className="unique-text-block-bb">{messages["about_us"]}</p>
+            <p
+              className="unique-text-block-bb"
+              onClick={() => {
+                navigate("/products");
+                window.scrollTo(0, 0);
+              }}
+              style={{
+                cursor: "pointer",
+              }}
+            >
+              {messages["products"]}
+            </p>
+            <p
+              className="unique-text-block-bb"
+              onClick={() => {
+                navigate("/events");
+                window.scrollTo(0, 0);
+              }}
+              style={{
+                cursor: "pointer",
+              }}
+            >
+              {messages["events"]}
+            </p>
+            <p
+              className="unique-text-block-bb"
+              onClick={() => {
+                navigate("/about");
+                window.scrollTo(0, 0);
+              }}
+              style={{
+                cursor: "pointer",
+              }}
+            >
+              {messages["about_us"]}
+            </p>
           </div>
           <div className="sidebar-container-bb">
             <img src="/assets/logo-white.png" className="image-container-bb" />
@@ -39,15 +76,15 @@ function BottomBar(props) {
           <div className="contact-info-container-bb">
             <div className="contact-info-container1-bb">
               <p className="unique-text-block-bb">
-                {messages["33_123456_789"]}
+                {localStorage.getItem("phone")}
               </p>
               <div className="vertical-divider-bb" />
               <p className="unique-text-block-bb">
-                {messages["infocorleecom"]}
+                {localStorage.getItem("email")}
               </p>
             </div>
             <p className="contact-info-section-bb">
-              {messages["5f_no_489_section_3_jinma_rd_changhua_city_changhu"]}
+              {localStorage.getItem("address")}
             </p>
           </div>
         </div>

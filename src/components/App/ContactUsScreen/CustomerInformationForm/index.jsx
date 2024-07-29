@@ -28,6 +28,11 @@ function CustomerInformationForm(props) {
   };
   const handlesubmit = async () => {
     try {
+      if (!localStorage.getItem("token")) {
+        toast.error("Please login to continue");
+        navigate("/login");
+        return;
+      }
       setLoading(true);
       const res = await api.post("/contact/", { ...data });
       console.log(res);

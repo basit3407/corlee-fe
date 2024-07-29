@@ -52,8 +52,6 @@ function Approuter() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/forgot" element={<ForgotPasswordEnterEmail />} />
-          <Route path="/reset" element={<ForgotPasswordReset />} />
           <Route path="/google" element={<Continiewithgoogle />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/blogs" element={<Blogs />} />
@@ -64,8 +62,13 @@ function Approuter() {
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/contact/:value" element={<ContactUs />} />
           <Route path="/thankyou/:id" element={<Thankyou />} />
+          <Route path="/forgot" element={<ForgotPasswordEnterEmail />} />
           <Route path="/emailsent" element={<EmailSent />} />
           <Route path="/noemail" element={<EmailNotExists />} />
+          <Route
+            path="/newPass/:uid/:token"
+            element={<ForgotPasswordReset />}
+          />
           <Route path="/success" element={<PasswordResetSuccess />} />
         </Route>
       </Routes>

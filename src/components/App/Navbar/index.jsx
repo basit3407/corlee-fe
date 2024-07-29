@@ -3,6 +3,7 @@ import ProductNavigation from "./ProductNavigation";
 import "./style.css";
 import { useEffect, useState } from "react";
 import { api } from "../../../config/api";
+import { toast } from "sonner";
 
 function Navbar(props) {
   const navigate = useNavigate();
@@ -109,7 +110,19 @@ function Navbar(props) {
                   fill="black"
                 />
               </svg>
-              <p> Phone Call</p>
+              <p>
+                <a
+                  href={`tel:${localStorage.getItem("phone")}`}
+                  onClick={() => {
+                    navigator.clipboard.writeText(
+                      localStorage.getItem("phone")
+                    );
+                    toast.success("Phone number copied to clipboard");
+                  }}
+                >
+                  Phone Call
+                </a>{" "}
+              </p>
             </div>
             <div className="singlecalldetail">
               <svg
@@ -124,8 +137,9 @@ function Navbar(props) {
                   fill="black"
                 />
               </svg>
-
-              <p>Email</p>
+              {/* // whatsapp, postal_code, phone, longitude, line, latitude,
+              instagram, facebook, email, country, address */}
+              <a href={`mailto:${localStorage.getItem("email")}`}>Email</a>{" "}
             </div>
             <div className="singlecalldetail">
               <svg
@@ -141,7 +155,13 @@ function Navbar(props) {
                 />
               </svg>
 
-              <p>Whatsapp</p>
+              <p
+                onClick={() => {
+                  window.open(localStorage.getItem("whatsapp"), "_blank");
+                }}
+              >
+                Whatsapp
+              </p>
             </div>
             <div className="singlecalldetail">
               <svg
@@ -159,7 +179,14 @@ function Navbar(props) {
                 />
               </svg>
 
-              <p> Line</p>
+              <p
+                onClick={() => {
+                  window.open(localStorage.getItem("line"), "_blank");
+                }}
+              >
+                {" "}
+                Line
+              </p>
             </div>
             <p className="needhelp">Need help ?</p>
             <p

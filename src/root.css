@@ -2895,12 +2895,19 @@ body {
   display: flex;
   gap: 20px;
   align-items: center;
+  height: 60px;
 }
 .calldetailsdiv {
   margin-top: 30px;
   font-size: 20px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.692);
+}
+.calldetailsdiv * {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.692);
+  text-decoration: none;
 }
 .singlecalldetail > svg {
   width: 25px;
@@ -2910,7 +2917,8 @@ body {
   font-weight: 700;
   color: black;
 }
-.calldetailsdiv > p:not(.needhelp) {
+.calldetailsdiv > p:not(.needhelp),
+.calldetailsdiv > a:not(.needhelp) {
   font-size: 20px;
   font-weight: 700;
   color: black;
@@ -3710,9 +3718,6 @@ body {
   .uicontainer {
     margin-bottom: 200px;
   }
-  .historybottombar {
-    /* padding-top: 100px; */
-  }
 }
 @media (max-width: 750px) {
   .uicontainer {
@@ -3815,4 +3820,43 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.image-container-styles {
+  width: 100%;
+}
+.event-card-button {
+  gap: 20px;
+}
+.contact-info-container2 {
+  position: relative;
+}
+.image-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, 0);
+}
+.fabric-type-description {
+  max-width: 70vw;
+}
+.fabric-range-section {
+  display: flex;
+  align-items: center;
+}
+.material-button2 {
+  width: max-content;
+  margin: 30px auto;
+  user-select: none;
+}
+.material-heading {
+  line-height: 50px;
+  text-align: center;
+  word-break: break-all;
+  user-select: none;
+}
+.email-notification-container5,
+.login-error-message-container1 {
+  padding: 30px;
+  max-width: 700px !important;
+  width: 80vw;
 }

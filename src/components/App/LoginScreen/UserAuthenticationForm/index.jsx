@@ -73,7 +73,15 @@ function UserAuthenticationForm() {
               {messages["remember_me"]}
             </label>
           </div>
-          <p className="user-prompt-text-style">
+          <p
+            className="user-prompt-text-style"
+            onClick={() => {
+              navigate("/forgot");
+            }}
+            style={{
+              cursor: "pointer",
+            }}
+          >
             {messages["forgot_password"]}
           </p>
         </div>

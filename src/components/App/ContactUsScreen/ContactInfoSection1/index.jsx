@@ -12,7 +12,7 @@ function ContactInfoSection1() {
         />
       </div>
       <p className="hero-title">{messages["call_us"]}</p>
-      <p className="contact-info-text-style">{messages["33_123456_789"]}</p>
+      <p className="contact-info-text-style">{localStorage.getItem("phone")}</p>
     </div>
   );
 }
