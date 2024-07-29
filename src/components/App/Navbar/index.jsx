@@ -1,12 +1,50 @@
 import { useNavigate } from "react-router-dom";
 import ProductNavigation from "./ProductNavigation";
 import "./style.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { api } from "../../../config/api";
+import { toast } from "sonner";
 
-function Navbar() {
+function Navbar(props) {
   const navigate = useNavigate();
   const [showcall, setShowcall] = useState(false);
   const [showprod, setShowprod] = useState(false);
+  const [categs, setCategs] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [loading2, setLoading2] = useState(false);
+  const [products, setProducts] = useState([]);
+
+  const getCategories = async () => {
+    try {
+      setLoading(true);
+      const response = await api.get("/categories/");
+      if (response.status === 200) {
+        setCategs(response.data.results);
+        setLoading(false);
+      }
+    } catch (e) {
+      setLoading(false);
+    }
+  };
+
+  const getProducts = async () => {
+    try {
+      setLoading2(true);
+      const response = await api.get("/fabrics/");
+      if (response.status === 200) {
+        setProducts(response.data.results.slice(0, 6));
+        setLoading2(false);
+      }
+    } catch (e) {
+      console.log(e);
+      setLoading2(false);
+    }
+  };
+
+  useEffect(() => {
+    getCategories();
+    getProducts();
+  }, []);
   const changeShowcall = () => {
     setShowcall(!showcall);
   };
@@ -26,11 +64,20 @@ function Navbar() {
         <ProductNavigation
           changeShowcall={changeShowcall}
           changeshowprod={changeshowprod}
-          showprod
+          showprod={showprod}
+          refresh={props.refresh}
         />
       </div>
-      <div className={showcall ? "contactScreen" : "contactScreen opacityzero"}>
-        <div className="contacttext">
+      <div
+        className={showcall ? "contactScreen" : "contactScreen opacityzero"}
+        onClick={changeShowcall}
+      >
+        <div
+          className="contacttext"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           <div className="maintoptext">
             <h1>Call us</h1>
             <p>We are just one message away !</p>
@@ -63,7 +110,19 @@ function Navbar() {
                   fill="black"
                 />
               </svg>
-              <p> Phone Call</p>
+              <p>
+                <a
+                  href={`tel:${localStorage.getItem("phone")}`}
+                  onClick={() => {
+                    navigator.clipboard.writeText(
+                      localStorage.getItem("phone")
+                    );
+                    toast.success("Phone number copied to clipboard");
+                  }}
+                >
+                  Phone Call
+                </a>{" "}
+              </p>
             </div>
             <div className="singlecalldetail">
               <svg
@@ -78,8 +137,9 @@ function Navbar() {
                   fill="black"
                 />
               </svg>
-
-              <p>Email</p>
+              {/* // whatsapp, postal_code, phone, longitude, line, latitude,
+              instagram, facebook, email, country, address */}
+              <a href={`mailto:${localStorage.getItem("email")}`}>Email</a>{" "}
             </div>
             <div className="singlecalldetail">
               <svg
@@ -95,7 +155,13 @@ function Navbar() {
                 />
               </svg>
 
-              <p>Whatsapp</p>
+              <p
+                onClick={() => {
+                  window.open(localStorage.getItem("whatsapp"), "_blank");
+                }}
+              >
+                Whatsapp
+              </p>
             </div>
             <div className="singlecalldetail">
               <svg
@@ -106,17 +172,32 @@ function Navbar() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M12 0C5.50512 0 0 4.501 0 10.3256C0 16.1502 5.50512 20.6512 12 20.6512H12.0008C12.4725 20.6507 12.9374 20.6279 13.3953 20.5825V23.1628C13.3953 23.4998 13.5974 23.8039 13.9081 23.9346C14.2187 24.0652 14.5774 23.9968 14.8183 23.761C16.6824 21.9359 19.8737 18.7072 21.8693 16.204C23.2045 14.5463 24 12.5208 24 10.3256C24 4.501 18.4949 0 12 0ZM1.67442 10.3256C1.67442 5.67053 6.16446 1.67442 12 1.67442C17.8355 1.67442 22.3256 5.67053 22.3256 10.3256C22.3256 12.1035 21.6838 13.7656 20.5641 15.155L20.5613 15.1585C19.0699 17.0296 16.8575 19.3519 15.0698 21.1517V19.6242C15.0698 19.377 14.9605 19.1425 14.7714 18.9834C14.5822 18.8243 14.3324 18.757 14.0889 18.7994C13.4163 18.9166 12.72 18.976 11.9992 18.9767C6.16404 18.9764 1.67442 14.9804 1.67442 10.3256ZM11.7133 7.66229C11.5196 7.3396 11.1345 7.18575 10.7719 7.2862C10.4092 7.38665 10.1581 7.71672 10.1581 8.09303V12.5581C10.1581 13.0205 10.533 13.3954 10.9953 13.3954C11.4577 13.3954 11.8326 13.0205 11.8326 12.5581V11.1156L12.9565 12.9889C13.1501 13.3116 13.5352 13.4654 13.8979 13.365C14.2606 13.2645 14.5116 12.9345 14.5116 12.5581V8.09303C14.5116 7.63065 14.1368 7.25582 13.6744 7.25582C13.212 7.25582 12.8372 7.63065 12.8372 8.09303V9.53555L11.7133 7.66229ZM6.13953 8.09303C6.13953 7.63065 5.7647 7.25582 5.30233 7.25582C4.83995 7.25582 4.46512 7.63065 4.46512 8.09303V12.5581C4.46512 13.0205 4.83995 13.3954 5.30233 13.3954H6.4186C6.88098 13.3954 7.25581 13.0205 7.25581 12.5581C7.25581 12.0958 6.88098 11.7209 6.4186 11.7209H6.13953V8.09303ZM9.48837 8.09303C9.48837 7.63065 9.11354 7.25582 8.65116 7.25582C8.18879 7.25582 7.81395 7.63065 7.81395 8.09303V12.5581C7.81395 13.0205 8.18879 13.3954 8.65116 13.3954C9.11354 13.3954 9.48837 13.0205 9.48837 12.5581V8.09303ZM16.0186 7.25582C15.5562 7.25582 15.1814 7.63065 15.1814 8.09303V12.5581C15.1814 13.0205 15.5562 13.3954 16.0186 13.3954H18.1395C18.6019 13.3954 18.9767 13.0205 18.9767 12.5581C18.9767 12.0958 18.6019 11.7209 18.1395 11.7209H16.8558V11.1628H17.626C18.0884 11.1628 18.4633 10.788 18.4633 10.3256C18.4633 9.86321 18.0884 9.48838 17.626 9.48838H16.8558V8.93024H18.1395C18.6019 8.93024 18.9767 8.55541 18.9767 8.09303C18.9767 7.63065 18.6019 7.25582 18.1395 7.25582H16.0186Z"
                   fill="black"
                 />
               </svg>
 
-              <p> Line</p>
+              <p
+                onClick={() => {
+                  window.open(localStorage.getItem("line"), "_blank");
+                }}
+              >
+                {" "}
+                Line
+              </p>
             </div>
             <p className="needhelp">Need help ?</p>
-            <p>contact us</p>
+            <p
+              onClick={() => {
+                navigate("/contact/general");
+                setShowcall(false);
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              contact us
+            </p>
           </div>
         </div>
       </div>
@@ -126,178 +207,92 @@ function Navbar() {
         }
       >
         <div className="productsoptionsdivinnav">
-          <div
-            className="productsoptiondivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="textdivinnavproductdropdown">
-              <h1>Best Selling</h1>
-              <p>Lorem ipsum dolor sit amet consectetur elit</p>
-            </div>
-            <div className="iconinproductnavdropdown">🔥</div>
-          </div>
-          <div className="productsoptiondivinnav">
-            <div className="textdivinnavproductdropdown">
-              <h1>Woven</h1>
-              <p>Lorem ipsum dolor sit amet consectetur elit</p>
-            </div>
-            <div className="iconinproductnavdropdown">
-              <svg
-                width="8"
-                height="14"
-                viewBox="0 0 8 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+          {loading ? (
+            <h2 style={{ textAlign: "center", width: "100%" }}>
+              Loading Categories...
+            </h2>
+          ) : (
+            <>
+              <div
+                className="productsoptiondivinnav"
+                onClick={() => {
+                  navigate(
+                    "/products/Best Selling/ All of Corlee's best seling products."
+                  );
+                  setShowprod(false);
+                }}
               >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.39778 6.86744C7.61746 7.08711 7.61746 7.44321 7.39778 7.66289L1.66291 13.3977C1.44323 13.6174 1.08713 13.6174 0.867456 13.3977L0.602256 13.1326C0.382581 12.9129 0.382581 12.5568 0.602256 12.3371L5.67421 7.26516L0.602256 2.19321C0.382581 1.97354 0.382581 1.61744 0.602256 1.39776L0.867456 1.13256C1.08713 0.912889 1.44323 0.912889 1.66291 1.13256L7.39778 6.86744Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="productsoptiondivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="textdivinnavproductdropdown">
-              <h1>Material</h1>
-              <p>Lorem ipsum dolor sit amet consectetur elit</p>
-            </div>
-            <div className="iconinproductnavdropdown">
-              <svg
-                width="8"
-                height="14"
-                viewBox="0 0 8 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.39778 6.86744C7.61746 7.08711 7.61746 7.44321 7.39778 7.66289L1.66291 13.3977C1.44323 13.6174 1.08713 13.6174 0.867456 13.3977L0.602256 13.1326C0.382581 12.9129 0.382581 12.5568 0.602256 12.3371L5.67421 7.26516L0.602256 2.19321C0.382581 1.97354 0.382581 1.61744 0.602256 1.39776L0.867456 1.13256C1.08713 0.912889 1.44323 0.912889 1.66291 1.13256L7.39778 6.86744Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="productsoptiondivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="textdivinnavproductdropdown">
-              <h1>Functional</h1>
-              <p>Lorem ipsum dolor sit amet consectetur elit</p>
-            </div>
-            <div className="iconinproductnavdropdown">
-              <svg
-                width="8"
-                height="14"
-                viewBox="0 0 8 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.39778 6.86744C7.61746 7.08711 7.61746 7.44321 7.39778 7.66289L1.66291 13.3977C1.44323 13.6174 1.08713 13.6174 0.867456 13.3977L0.602256 13.1326C0.382581 12.9129 0.382581 12.5568 0.602256 12.3371L5.67421 7.26516L0.602256 2.19321C0.382581 1.97354 0.382581 1.61744 0.602256 1.39776L0.867456 1.13256C1.08713 0.912889 1.44323 0.912889 1.66291 1.13256L7.39778 6.86744Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="productsoptiondivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="textdivinnavproductdropdown">
-              <h1>Sustainable</h1>
-              <p>Lorem ipsum dolor sit amet consectetur elit</p>
-            </div>
-            <div className="iconinproductnavdropdown">
-              <svg
-                width="8"
-                height="14"
-                viewBox="0 0 8 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.39778 6.86744C7.61746 7.08711 7.61746 7.44321 7.39778 7.66289L1.66291 13.3977C1.44323 13.6174 1.08713 13.6174 0.867456 13.3977L0.602256 13.1326C0.382581 12.9129 0.382581 12.5568 0.602256 12.3371L5.67421 7.26516L0.602256 2.19321C0.382581 1.97354 0.382581 1.61744 0.602256 1.39776L0.867456 1.13256C1.08713 0.912889 1.44323 0.912889 1.66291 1.13256L7.39778 6.86744Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </div>
+                <div className="textdivinnavproductdropdown">
+                  <h1>Best Selling</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur elit</p>
+                </div>
+                <div className="iconinproductnavdropdown">🔥</div>
+              </div>
+              {categs &&
+                categs.map((categ, index) => (
+                  <div
+                    className="productsoptiondivinnav"
+                    key={index}
+                    onClick={() => {
+                      navigate(`/products/${categ.name}/${categ.description}`);
+                      setShowprod(false);
+                    }}
+                  >
+                    <div className="textdivinnavproductdropdown">
+                      <h1>{categ.name}</h1>
+                      <p>{categ.description}</p>
+                    </div>
+                    <div className="iconinproductnavdropdown">
+                      <svg
+                        width="8"
+                        height="14"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M7.39778 6.86744C7.61746 7.08711 7.61746 7.44321 7.39778 7.66289L1.66291 13.3977C1.44323 13.6174 1.08713 13.6174 0.867456 13.3977L0.602256 13.1326C0.382581 12.9129 0.382581 12.5568 0.602256 12.3371L5.67421 7.26516L0.602256 2.19321C0.382581 1.97354 0.382581 1.61744 0.602256 1.39776L0.867456 1.13256C1.08713 0.912889 1.44323 0.912889 1.66291 1.13256L7.39778 6.86744Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                ))}
+            </>
+          )}
         </div>
         <div className="verticallineinnavdropdownofproducts"></div>
         <div className="relatedproductsdivinnav">
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Anti-Odor & Anti-bacterial</div>
-          </div>
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Wicking & waterproof</div>
-          </div>
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Anti-Abrasion</div>
-          </div>
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Thermal & UV Cut</div>
-          </div>
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Stretch</div>
-          </div>
-          <div
-            className="relatedproductdivinnav"
-            onClick={() => {
-              navigate("/products");
-            }}
-          >
-            <div className="imagedivinproductdropdown"></div>
-            <div className="textdropdowninnav">Comfort</div>
-          </div>
+          {loading2 ? (
+            <h2 style={{ textAlign: "center", width: "100%" }}>
+              Loading Products...
+            </h2>
+          ) : (
+            <>
+              {products &&
+                products.map((product, index) => (
+                  <div
+                    className="relatedproductdivinnav"
+                    key={index}
+                    onClick={() => {
+                      navigate(`/product/${product.id}/`);
+                      setShowprod(false);
+                    }}
+                  >
+                    <div
+                      className="imagedivinproductdropdown"
+                      style={{
+                        backgroundImage: `url(${product.photo_url})`,
+                        backgroundSize: "cover",
+                      }}
+                    ></div>
+                    <div className="textdropdowninnav">{product.finish}</div>
+                  </div>
+                ))}
+            </>
+          )}
         </div>
       </div>
     </div>

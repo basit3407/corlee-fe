@@ -60,10 +60,7 @@ function ProductNavigation(props) {
             <p className="contact-info-text-style-nav">
               {messages["products"]}
             </p>
-            <SvgIcon1
-              className="svg-container-nav"
-              style={props.showprod ? { transform: "rotate(180deg)" } : {}}
-            />
+            <SvgIcon1 className="svg-container-nav" showprod={props.showprod} />
           </div>
           <p
             className="contact-info-text-style-nav"
@@ -87,7 +84,7 @@ function ProductNavigation(props) {
             {messages["about_us"]}
           </p>
         </div>
-        <DynamicContentDisplay {...props} />
+        <DynamicContentDisplay refresh={props.refresh} {...props} />
       </div>
     </>
   );

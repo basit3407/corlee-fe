@@ -2,11 +2,11 @@ import PersonalDetailsSection from "../PersonalDetailsSection";
 import ContactInfoSection from "../ContactInfoSection";
 import "./style.css";
 
-function PersonalContactSection() {
+function PersonalContactSection(props) {
   return (
     <div className="personal-details-container">
-      <PersonalDetailsSection />
-      <ContactInfoSection />
+      <PersonalDetailsSection {...props} />
+      <ContactInfoSection {...props} />
     </div>
   );
 }

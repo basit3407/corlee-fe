@@ -4,12 +4,12 @@ import FabricExplorer from "../FabricExplorer";
 import FabricDisplayRenderer from "../FabricDisplayRenderer";
 import RealizationDisplay from "../RealizationDisplay";
 import SvgIcon1 from "./icons/SvgIcon1";
-import SvgIcon2 from "./icons/SvgIcon2";
-import SvgIcon3 from "./icons/SvgIcon3";
 import "./style.css";
 import messages from "./messages.json";
+import { useNavigate } from "react-router-dom";
 
 function FabricInfoDisplay1({ fabricInfoOptions }) {
+  const navigate = useNavigate();
   return (
     <div className="global-fashion-fabric-styles">
       <FabricDescriptionSection />
@@ -20,7 +20,12 @@ function FabricInfoDisplay1({ fabricInfoOptions }) {
         />
         <div className="fashion-text-container2">
           {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
-          <button className="button-with-icon2">
+          <button
+            className="button-with-icon2"
+            onClick={() => {
+              navigate("/about");
+            }}
+          >
             {messages["discover_more"]}
             <SvgIcon1 className="svg-container3" />
           </button>
@@ -31,24 +36,7 @@ function FabricInfoDisplay1({ fabricInfoOptions }) {
           className="image-container-with-clipping-path"
         />
       </div>
-      <div className="fabric-range-section">
-        <div className="fabric-types-section">
-          <p className="fabric-type-heading">
-            {messages["range_fabric_types_we_offer"]}
-          </p>
-          <p className="fabric-type-description">
-            {messages["lrem_ipsum_suledes_plankning_till_heterossade_tosn"]}
-          </p>
-        </div>
-        <div className="fabric-type-range-container">
-          <div className="center-box-with-svg">
-            <SvgIcon2 className="svg-container4" />
-          </div>
-          <div className="black-rounded-box-with-text">
-            <SvgIcon3 className="svg-container4" />
-          </div>
-        </div>
-      </div>
+
       <FabricExplorer />
       <div className="custom-fabric-features-section">
         <div className="custom-fabric-description-container">
@@ -58,7 +46,15 @@ function FabricInfoDisplay1({ fabricInfoOptions }) {
           <p className="custom-fabric-description-style">
             {messages["we_trusted_partner_offering_crafted_custom_functio"]}
           </p>
-          <p className="hero-text-underline">{messages["about_us_gt"]}</p>
+          <p
+            className="hero-text-underline"
+            style={{
+              cursor: "pointer",
+            }}
+            onClick={() => navigate("/about")}
+          >
+            {messages["about_us_gt"]}
+          </p>
         </div>
         <FabricDisplayRenderer fabricInfoOptions={fabricInfoOptions} />
       </div>

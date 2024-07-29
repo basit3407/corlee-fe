@@ -1,12 +1,24 @@
-import PasswordInputWidget from "../PasswordInputWidget";
-import PasswordConfirmationWidget from "../PasswordConfirmationWidget";
 import "./style.css";
 import messages from "./messages.json";
+import { useState } from "react";
 
-function SecurePasswordForm() {
+function SecurePasswordForm(props) {
+  const [password, setPassword] = useState("");
+  const [confirm, setConfirm] = useState("");
   return (
     <div className="password-reset-form-container">
-      <PasswordInputWidget />
+      <div className="nested-svg-container">
+        <div className="flex-row-container">
+          <input
+            placeholder="New Password"
+            type="text"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="input-with-icon input-style-f62::placeholder"
+          />
+          <SvgIcon1 className="svg-container" />
+        </div>
+      </div>
       <div className="text-content-container container2">
         <div className="text-grouping-container">
           <div className="text-content-container">
@@ -45,7 +57,19 @@ function SecurePasswordForm() {
           </div>
         </div>
       </div>
-      <PasswordConfirmationWidget />
+      <div className="nested-svg-container">
+        {/* Input Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
+        <div className="flex-row-container">
+          <input
+            placeholder="Confirm new password"
+            type="text"
+            className="input-with-icon input-style-f62::placeholder"
+            value={confirm}
+            onChange={(e) => setConfirm(e.target.value)}
+          />
+          <SvgIcon1 className="svg-container" />
+        </div>
+      </div>
       {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
       <button className="password-reset-button">
         {messages["reset_password"]}

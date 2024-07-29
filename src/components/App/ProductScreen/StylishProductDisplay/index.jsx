@@ -3,6 +3,8 @@ import "./style.css";
 
 function StylishProductDisplay(props) {
   const navigate = useNavigate();
+  const arrow = "->";
+  console.log(props);
   return (
     <div
       className={
@@ -15,90 +17,28 @@ function StylishProductDisplay(props) {
         <p>Related Products</p>
       </div>
       <div className="products">
-        <div
-          className="product"
-          onClick={() => navigate("/product")}
-          style={{ cursor: "pointer" }}
-        >
-          <div className="imagediv"></div>
-          <div className="textdiv">
-            <h2>12S396</h2>
-            <p>Woven -> Plain</p>
+        {props.products?.map((prod, index) => (
+          <div
+            className="product"
+            onClick={() => navigate(`/product/${prod.id}`)}
+            style={{ cursor: "pointer" }}
+            key={index}
+          >
+            <div
+              className="imagediv"
+              style={{
+                backgroundImage: `url(${prod.photo_url})`,
+                backgroundSize: "cover",
+              }}
+            ></div>
+            <div className="textdiv">
+              <h2>{prod.item_code}</h2>
+              <p>
+                {prod.product_category} {arrow} {prod.finish}
+              </p>
+            </div>
           </div>
-        </div>
-        <div
-          className="product"
-          onClick={() => navigate("/product")}
-          style={{ cursor: "pointer" }}
-        >
-          <div className="imagediv"></div>
-          <div className="textdiv">
-            <h2>12S396</h2>
-            <p>Woven -> Plain</p>
-          </div>
-        </div>
-        <div
-          className="product"
-          onClick={() => navigate("/product")}
-          style={{ cursor: "pointer" }}
-        >
-          <div className="imagediv"></div>
-          <div className="textdiv">
-            <h2>12S396</h2>
-            <p>Woven -> Plain</p>
-          </div>
-        </div>
-        <div
-          className="product"
-          onClick={() => navigate("/product")}
-          style={{ cursor: "pointer" }}
-        >
-          <div className="imagediv"></div>
-          <div className="textdiv">
-            <h2>12S396</h2>
-            <p>Woven -> Plain</p>
-          </div>
-        </div>
-        <div
-          className="product"
-          onClick={() => navigate("/product")}
-          style={{ cursor: "pointer" }}
-        >
-          <div className="imagediv"></div>
-          <div className="textdiv">
-            <h2>12S396</h2>
-            <p>Woven -> Plain</p>
-          </div>
-        </div>
-        <div
-          className="product"
-          onClick={() => navigate("/product")}
-          style={{ cursor: "pointer" }}
-        >
-          <div className="imagediv"></div>
-          <div className="textdiv">
-            <h2>12S396</h2>
-            <p>Woven -> Plain</p>
-          </div>
-        </div>
-        <div className="product">
-          <div className="imagediv"></div>
-          <div className="textdiv">
-            <h2>12S396</h2>
-            <p>Woven -> Plain</p>
-          </div>
-        </div>
-        <div
-          className="product"
-          onClick={() => navigate("/product")}
-          style={{ cursor: "pointer" }}
-        >
-          <div className="imagediv"></div>
-          <div className="textdiv">
-            <h2>12S396</h2>
-            <p>Woven -> Plain</p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

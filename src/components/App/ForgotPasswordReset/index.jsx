@@ -2,7 +2,7 @@ import SecurityCheckWidget from "./SecurityCheckWidget";
 import "./style.css";
 import messages from "./messages.json";
 
-function FPReset() {
+function FPReset(props) {
   return (
     <div
       style={{
@@ -20,7 +20,7 @@ function FPReset() {
             src="/assets/img_1091_3135_bcced9.png"
             className="profile-image-placeholder"
           />
-          <SecurityCheckWidget />
+          <SecurityCheckWidget {...props} />
           <p className="login-link-text-style">{messages["lt_login"]}</p>
         </div>
       </div>

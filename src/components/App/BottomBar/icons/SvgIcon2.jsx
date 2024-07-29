@@ -1,8 +1,26 @@
 function SvgIcon2({ className }) {
   return (
-    <div className={className}>
-      <svg fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" x="0" y="0">
-        <g id="Frame" xmlns="http://www.w3.org/2000/svg" data-node-id="1091:2344">
+    <div
+      className={className}
+      style={{
+        cursor: "pointer",
+      }}
+      onClick={() => {
+        window.open(localStorage.getItem("instagram"), "_blank");
+      }}
+    >
+      <svg
+        fill="none"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+        x="0"
+        y="0"
+      >
+        <g
+          id="Frame"
+          xmlns="http://www.w3.org/2000/svg"
+          data-node-id="1091:2344"
+        >
           <g id="Frame 67" data-node-id="1091:2345">
             <path
               id="Vector_5"
@@ -20,7 +38,15 @@ function SvgIcon2({ className }) {
               strokeWidth="1.5"
               data-node-id="1091:2347"
             />
-            <path id="Vector_7" d="M23.5296,8.4898l0.01,-0.02" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" data-node-id="1091:2348" />
+            <path
+              id="Vector_7"
+              d="M23.5296,8.4898l0.01,-0.02"
+              stroke="white"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              data-node-id="1091:2348"
+            />
           </g>
         </g>
       </svg>

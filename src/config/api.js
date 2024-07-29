@@ -1,5 +1,3 @@
-// src/config/api.js
-
 import axios from "axios";
 
 const api = axios.create({
@@ -13,11 +11,5 @@ const setAuthToken = (token) => {
     delete api.defaults.headers.common["Authorization"];
   }
 };
-
-// Automatically add token to headers if it exists
-const token = localStorage.getItem("token");
-if (token) {
-  setAuthToken(token);
-}
 
 export { api, setAuthToken };

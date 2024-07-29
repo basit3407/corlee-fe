@@ -1,11 +1,32 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+// const firebaseConfig = {
+//   apiKey: "AIzaSyC0BK6ojLen63-w1WuOn-bRENMtyiovWR8",
+//   authDomain: "corlee-85a80.firebaseapp.com",
+//   projectId: "corlee-85a80",
+//   storageBucket: "corlee-85a80.appspot.com",
+//   messagingSenderId: "81090684417",
+//   appId: "1:81090684417:web:61c6f5abb9414067968200",
+//   measurementId: "G-G3JEN2Z8MM",
+// };
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const app = initializeApp(firebaseConfig);
+// const auth = getAuth(app);
+// app.languageCode = "en";
+// const provider = new GoogleAuthProvider();
+
+// export const googleLogin = async () => {
+//   const result = await signInWithPopup(auth, provider);
+//   const credential = GoogleAuthProvider.credentialFromResult(result);
+//   const token = credential.accessToken;
+//   const user = result.user;
+//   return { token, user };
+// };
+
+import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+
 const firebaseConfig = {
   apiKey: "AIzaSyC0BK6ojLen63-w1WuOn-bRENMtyiovWR8",
   authDomain: "corlee-85a80.firebaseapp.com",
@@ -16,6 +37,19 @@ const firebaseConfig = {
   measurementId: "G-G3JEN2Z8MM",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const auth = getAuth(app);
+
+const provider = new GoogleAuthProvider();
+
+export const googleLogin = async () => {
+  try {
+    const result = await signInWithPopup(auth, provider);
+    const token = await result.user.getIdToken();
+
+    return { token };
+  } catch (error) {
+    console.error("Error during Google sign-in:", error);
+    throw error;
+  }
+};

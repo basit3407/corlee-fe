@@ -3,8 +3,14 @@
   overflow-x: hidden !important;
 }
 
-body * {
+body *:not(.content-container-in-single-blog *) {
   font-family: "Poppins", sans-serif !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 .menu-icon-nav,
 .menu-icon-nav2 {
@@ -44,6 +50,11 @@ body * {
   max-width: 90vw;
   margin: 0 auto;
 }
+.wrapperofelement {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 @media (max-width: 1250px) {
   .contact-info-container-nav {
     position: absolute;
@@ -52,9 +63,20 @@ body * {
     transform: translateY(80%);
     flex-direction: column;
     z-index: 1000;
+    transition: all 0.1s linear;
+  }
+  .wrapperofelement {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
     border-radius: 20px 0 0 20px;
-    transition: all 0.1s linear;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.726);
+    border: 1px solid rgb(194, 194, 194);
+    width: 100%;
+    background-color: rgb(224, 224, 224);
   }
   .callout-container-nav {
     background-color: rgb(202, 202, 202);
@@ -83,6 +105,11 @@ body * {
     flex-direction: column;
     margin: 0;
   }
+  .wrapperofelement {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+  }
   .main-navigation-container-nav {
     background-color: rgb(241, 241, 241);
     position: fixed;
@@ -96,7 +123,8 @@ body * {
     transition: all 0.2s linear;
     height: 100vh;
   }
-  .hidden {
+  .hidden,
+  .hidden > *:not(.MuiSvgIcon-root) {
     opacity: 0;
     pointer-events: none;
   }
@@ -149,12 +177,16 @@ body * {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
   background-color: black;
   color: white;
   border: none;
   border-radius: 500px;
   scale: 1.3;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+.event-details-container1 {
+  margin-top: 10px;
 }
 .button-with-icon2 > * {
   margin: 0 5px;
@@ -941,9 +973,7 @@ body * {
   .hero-section-bb {
     height: 150vh;
   }
-  .nothome {
-    height: 228vh;
-  }
+
   .nothome .newsletter-container {
     margin-top: 1090px;
   }
@@ -1000,9 +1030,19 @@ body * {
 }
 .card-container-blogs {
   width: 30%;
-  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
   margin-bottom: 30px;
   margin: 10px 15px;
+}
+.card-container-blogs > * {
+  width: 100%;
+}
+.tech-card-container {
+  height: 200px;
 }
 .article-card-layout-blogs {
   gap: 0px;
@@ -1091,6 +1131,7 @@ body * {
   }
 }
 .vertical-centered-flex-container,
+.article-card-layout-blogs,
 .products {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -1101,8 +1142,12 @@ body * {
   margin: 0 auto;
   gap: 20px;
 }
+.article-card-layout-blogs {
+  grid-template-rows: auto;
+}
 .vertical-centered-flex-container > *,
-.products > * {
+.products > *,
+.article-card-layout-blogs > * {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -1201,6 +1246,7 @@ body * {
 }
 .eventimage {
   width: 30%;
+  max-width: 218px;
 }
 .eventimage img {
   width: 100%;
@@ -1256,35 +1302,41 @@ body * {
 }
 @media (max-width: 1900px) {
   .vertical-centered-flex-container,
-  .products {
+  .products,
+  .article-card-layout-blogs {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (max-width: 1300px) {
   .vertical-centered-flex-container,
-  .products {
+  .products,
+  .article-card-layout-blogs {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 800px) {
   .vertical-centered-flex-container,
-  .products {
+  .products,
+  .article-card-layout-blogs {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 600px) {
   .vertical-centered-flex-container,
-  .products {
+  .products,
+  .article-card-layout-blogs {
     grid-template-columns: 1fr;
   }
   .vertical-centered-flex-container > *,
-  .products > * {
+  .products,
+  .article-card-layout-blogs > * {
     width: 100%;
     max-width: none !important;
   }
 }
 .vertical-centered-flex-container > *,
-.products > * {
+.products,
+.article-card-layout-blogs > * {
   position: relative;
 }
 .hot-selling-container {
@@ -1315,24 +1367,20 @@ body * {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: flex-start;
+  margin-left: 20px;
 }
 .circles > * {
   height: 28px;
   width: 28px;
+  min-width: 28px !important;
   margin: 10px 4px;
   padding: 0;
   border-radius: 100000px;
   cursor: pointer;
 }
 .circles > *:first-child {
-  background-color: #c60202;
   margin-left: 0;
-}
-.circles > *:nth-child(2) {
-  background-color: #9c0101;
-}
-.circles > *:nth-child(3) {
-  background-color: #770000;
 }
 .adddiv {
   height: 37px;
@@ -1373,7 +1421,7 @@ body * {
   grid-template-rows: 360px !important;
 }
 .product {
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   overflow: hidden;
 }
 .imagediv {
@@ -1397,10 +1445,7 @@ body * {
 .content-container {
   padding: 100px 0;
   margin: 0 auto;
-  max-width: 90vw;
-}
-.content-container p {
-  text-align: justify;
+  width: 90vw;
 }
 .technology-card2 {
   max-width: 95vw;
@@ -1506,6 +1551,10 @@ body * {
   }
   .header-title-text-style {
     text-align: center;
+  }
+
+  .incontact > :nth-child(2) label {
+    margin-top: 10px;
   }
 }
 .contact-info-section1 {
@@ -1624,13 +1673,7 @@ body * {
 .imgdiv .image {
   width: 100%;
   height: 80%;
-  background: linear-gradient(
-      to bottom right,
-      rgba(0, 0, 0, 0.219),
-      rgba(0, 0, 0, 0.103),
-      rgba(0, 0, 0, 0.219)
-    ),
-    50% 50%;
+
   border-radius: 10px;
 }
 .textunderimg {
@@ -1748,7 +1791,7 @@ body * {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
   height: 250px;
 }
 .productimagediv {
@@ -1759,13 +1802,7 @@ body * {
 .imageofproduct {
   height: 200px;
   width: 190px;
-  background: linear-gradient(
-      to bottom right,
-      rgba(0, 0, 0, 0.219),
-      rgba(0, 0, 0, 0.103),
-      rgba(0, 0, 0, 0.219)
-    ),
-    50% 50%;
+  background-size: cover;
   border-radius: 10px;
   position: relative;
 }
@@ -1902,6 +1939,7 @@ body * {
   justify-content: center;
   gap: 40px;
   flex-direction: row;
+  width: 100%;
 }
 .ticket-details-section > *:first-child {
   width: 65%;
@@ -2047,7 +2085,6 @@ body * {
   padding-bottom: 5px;
   font-size: 30px;
   font-weight: 600;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.356);
 }
 .productinquiryproductdiv {
   display: flex;
@@ -2216,7 +2253,6 @@ body * {
   height: 250px;
   border-radius: 10px;
   width: 50%;
-  background-color: grey;
 }
 .colordiv .colors {
   height: 40px;
@@ -2378,10 +2414,10 @@ body * {
 }
 .tickmark:first-child:not(.lasttick):before {
   content: "";
-  height: 115px;
+  height: 105px;
   width: 5px;
   position: absolute;
-  top: 90%;
+  top: 100%;
   right: 50%;
   border-right: 2px dashed black;
   transform: translate(2px);
@@ -2392,6 +2428,9 @@ body * {
 }
 .colordiv {
   min-width: 100px;
+}
+.detailsofimage {
+  width: 45%;
 }
 @media (max-width: 770px) {
   .bagpage {
@@ -2426,9 +2465,18 @@ body * {
     margin-bottom: 20px;
   }
   .productinbag {
-    background-color: rgba(0, 0, 0, 0.062);
     padding: 20px;
     border-radius: 10px;
+  }
+  .detailsofimage {
+    width: 100%;
+  }
+  .leftsidecontet {
+    width: 100%;
+  }
+  .tickmark {
+    min-width: 20px !important;
+    height: 20px !important;
   }
 }
 .bag {
@@ -2436,7 +2484,7 @@ body * {
   text-align: center;
   font-size: 60px;
   font-weight: 400;
-  margin-bottom: 0;
+
   display: none;
 }
 .buttoninrightsideofdetailssectioninbag {
@@ -2505,7 +2553,7 @@ body * {
 .svg-container {
   margin: 50px;
 }
-.flex-row-container {
+/* .flex-row-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2519,7 +2567,7 @@ body * {
   scale: 0.8;
   filter: grayscale(100%);
   opacity: 0.8;
-}
+} */
 .secure-password-update-notification {
   height: 100vh;
   width: 100vw;
@@ -2634,7 +2682,6 @@ body * {
   height: 60px;
   width: 60px;
   border-radius: 1000px;
-  background-color: grey;
 }
 .quantitydivinproduct {
   margin: 10px 0;
@@ -2848,12 +2895,19 @@ body * {
   display: flex;
   gap: 20px;
   align-items: center;
+  height: 60px;
 }
 .calldetailsdiv {
   margin-top: 30px;
   font-size: 20px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.692);
+}
+.calldetailsdiv * {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.692);
+  text-decoration: none;
 }
 .singlecalldetail > svg {
   width: 25px;
@@ -2863,7 +2917,8 @@ body * {
   font-weight: 700;
   color: black;
 }
-.calldetailsdiv > p:not(.needhelp) {
+.calldetailsdiv > p:not(.needhelp),
+.calldetailsdiv > a:not(.needhelp) {
   font-size: 20px;
   font-weight: 700;
   color: black;
@@ -2892,8 +2947,35 @@ body * {
   height: 500px;
 }
 .productsdivinnavbar > *:first-child {
-  width: 30%;
+  width: 35%;
+  max-height: 470px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
+/* Target the container with overflow */
+.productsdivinnavbar > *:first-child {
+  overflow-y: scroll; /* Or overflow-x for horizontal scrollbar */
+
+  /* Scrollbar styles */
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Set thumb and track color */
+}
+
+.productsdivinnavbar > *:first-child::-webkit-scrollbar {
+  width: 8px; /* Adjust width as needed */
+}
+
+.productsdivinnavbar > *:first-child::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.productsdivinnavbar > *:first-child::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 .productsdivinnavbar > *:nth-child(3) {
   width: 50%;
 }
@@ -2956,7 +3038,6 @@ body * {
 .imagedivinproductdropdown {
   width: 100%;
   height: 200px;
-  background-color: grey;
   border-radius: 10px;
 }
 .textdropdowninnav {
@@ -3021,4 +3102,761 @@ body * {
 .quantitydiv > button,
 .buttonsinproduct > button {
   cursor: pointer;
+}
+.id-label-text-style {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 80%;
+}
+.hierarchical-flex-container {
+  outline: none !important;
+  border: none !important;
+}
+.inSignup {
+  text-align: center;
+}
+.quantitydiv > button {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.error-message {
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+.product-card-container3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.svg-container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+.filtertab {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+
+.filterpage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 350px;
+  height: 100vh;
+  background-color: white;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: scroll;
+}
+@media (max-width: 460px) {
+  .filterpage {
+    max-width: none !important;
+  }
+}
+/* Target the container with overflow */
+.filterpage {
+  overflow-y: scroll; /* Or overflow-x for horizontal scrollbar */
+
+  /* Scrollbar styles */
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Set thumb and track color */
+}
+
+.filterpage::-webkit-scrollbar {
+  width: 8px; /* Adjust width as needed */
+}
+
+.filterpage::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.filterpage::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.opacityzero,
+.opacityzero * {
+  opacity: 0;
+  pointer-events: none;
+}
+.opacityfull,
+.opacityfull * {
+  opacity: 1;
+  pointer-events: all;
+}
+.filterpage > h1 {
+  text-align: left;
+  font-size: 25px;
+  width: 85%;
+  font-weight: 600;
+}
+.sortbydiv,
+.coorsoptionsdiv {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.maintopvisiblediv,
+.maintopvisiblediv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.dropdownitems {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.dropdownitems > * {
+  cursor: pointer;
+  padding: 10px 30px;
+  margin: 0;
+}
+.dropdownitems > *:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+}
+.colordropdownitems {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px;
+  grid-auto-rows: 50px;
+  gap: 10px;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.maintopvisiblediv svg {
+  transition: 1s all ease;
+}
+.height240px {
+  height: 240px !important;
+}
+.colordropdownitems > * {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.colordropdownitems > div > div {
+  height: 20px;
+  width: 20px;
+  border-radius: 30px;
+}
+.colordropdownitems > div {
+  background-color: rgba(0, 0, 0, 0.07);
+  padding: 0 10px;
+  border-radius: 10px;
+}
+.colorcircleofred {
+  background-color: red;
+}
+.colorcircleofblue {
+  background-color: blue;
+}
+.colorcircleofgreen {
+  background-color: green;
+}
+.colorcircleofblack {
+  background-color: black;
+}
+.colorcircleofwhite {
+  background-color: white;
+}
+.colorcircleofpurple {
+  background-color: purple;
+}
+.colorcircleoforange {
+  background-color: orange;
+}
+.colorcircleofpink {
+  background-color: pink;
+}
+.dropdownitems {
+  height: 0px;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.height150px {
+  height: 150px !important;
+}
+.buttonsinfiltersidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 85%;
+  margin: 20px 0;
+}
+.buttonsinfiltersidebar > * {
+  width: 100%;
+  border-radius: 500px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: rgb(218, 218, 218);
+}
+.buttonsinfiltersidebar > *:first-child {
+  background-color: black;
+  color: white;
+}
+.svg-container-nav {
+  transition: all 0.7s ease;
+}
+.colordropdownitems > * {
+  cursor: pointer;
+}
+.circles {
+  max-width: 70%;
+  width: 70%;
+  flex-wrap: wrap;
+}
+.product-gallery-row {
+  align-items: flex-end;
+  justify-content: center;
+}
+.adddiv {
+  margin-bottom: 7px;
+}
+.colorsinproduct {
+  width: 90%;
+}
+.functionaltext2 {
+  height: 118px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  font-size: 17px;
+  margin: 15px 0 0 0;
+}
+.quantitydivinproduct {
+  margin-top: 20px;
+}
+@media (max-width: 1000px) {
+  .functionaltext2 {
+    height: auto;
+  }
+}
+.textdiv {
+  border-radius: 0px;
+}
+.colorsinproduct > *,
+.colors {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.363);
+}
+.productinbag {
+  width: 100%;
+}
+.greytickmark {
+  background-color: rgba(128, 128, 128, 0) !important;
+  filter: brightness(0);
+  border: 2px solid black;
+}
+.detailsdivwrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.322);
+  z-index: 100;
+}
+.detailsdivmaincontainer {
+  height: max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 40px;
+  border-radius: 40px;
+  position: relative;
+  width: 70vw;
+  max-width: 600px;
+}
+.detailsdivmaincontainer h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 44px;
+}
+.detailsdivmaincontainer p {
+  padding: 0;
+  text-align: center;
+  color: grey;
+  margin: 0;
+}
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  margin: 30px 0;
+}
+.inputs > * {
+  width: 48% !important;
+  min-width: 0px !important;
+}
+.inputs > * > * {
+  max-width: 90%;
+}
+.oneinput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.oneinput input {
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+  border-radius: 10px;
+}
+.oneinput label {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.buttoninupdatediv {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 100px;
+  background-color: black;
+  color: white;
+  font-size: 19px;
+  cursor: pointer;
+  border: none;
+}
+.closeiconindetaisdiv {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+.addressinputs > * {
+  width: 100% !important;
+}
+.addressinputs > * > * {
+  width: 100% !important;
+  max-width: 96%;
+}
+@media (max-width: 469px) {
+  .inputs {
+    flex-direction: column;
+  }
+  .inputs > * {
+    width: 100% !important;
+  }
+  .inputs > * > * {
+    width: 100% !important;
+    max-width: 96%;
+  }
+  .detailsdivmaincontainer h1 {
+    margin-top: 50px;
+    font-size: 33px;
+  }
+}
+.textdivinbagdetails {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.textdivinbagdetails > * {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.leftsidecontet {
+  box-sizing: border-box;
+  max-width: 65%;
+}
+.buttoninupdatediv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.colordiv > * {
+  cursor: pointer;
+}
+.badge-with-icon-nav {
+  width: 20px;
+}
+.incontact {
+  gap: 10px;
+}
+@media (max-width: 800px) {
+  .contactbottombar {
+    margin-top: 10px;
+  }
+}
+.contact-info-section2 {
+  position: relative;
+}
+.contact-info-container2 {
+  width: max-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, -100%);
+}
+.optionsincontact {
+  width: 100%;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.137);
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden;
+  margin-top: 7px;
+  border-collapse: collapse;
+  border: 1px solid rgba(94, 94, 94, 0.308);
+}
+.optionsincontact .option {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: white;
+  border-bottom: 1px solid rgba(94, 94, 94, 0.308);
+  font-size: 18px;
+}
+.optionsincontact .option p {
+  margin: 10px;
+}
+.optionsincontact .option:last-child {
+  border: none;
+}
+
+.optionsincontact .option:hover {
+  background-color: rgba(0, 0, 0, 0.055);
+}
+.svg-container3 {
+  transition: all 1s ease;
+  scale: 0.8;
+}
+.sample-request-button1 input {
+  outline: none;
+  padding: 5px;
+  height: 20px;
+  width: 20px;
+}
+.textareainput {
+  height: 150px !important;
+}
+.circlemust {
+  height: 50px !important;
+  width: 50px !important;
+  margin: 0;
+  padding: 0;
+}
+.vertical-number-container-nav {
+  height: 48px !important;
+  transform: translate(0, -2px);
+  position: relative;
+  margin: 0;
+}
+.vertical-center-with-icon-nav {
+  margin-top: 0px !important;
+}
+.badge-with-icon-nav {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+.vertical-center-with-icon-nav {
+  height: 100%;
+  width: 100%;
+}
+.circlemust {
+  position: relative;
+}
+.circlemust .dropdowndiv {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 101%);
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+  text-align: center;
+}
+.circlemust .dropdowndiv p {
+  padding: 10px 20px;
+  background-color: black;
+  margin: 0;
+}
+.circlemust .dropdowndiv p:not(.circlemust .dropdowndiv p:last-child) {
+  border-bottom: 1px solid rgb(150, 150, 150);
+}
+.circlemust .dropdowndiv p:hover {
+  background-color: rgba(0, 0, 0, 0.87);
+}
+.thankyou {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(226, 226, 226);
+}
+.thankyoucontainer {
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 50px;
+  position: relative;
+  max-width: 90vw;
+}
+.closediv {
+  position: absolute;
+  top: 30px;
+  cursor: pointer;
+  right: 30px;
+}
+.thankyoucontainer h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin: 5px 0 0 0;
+  color: rgb(44, 44, 44);
+  text-shadow: 3px 2px 0px rgb(165, 165, 165);
+}
+.thankyoucontainer h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+}
+.copydiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(221, 221, 221);
+  padding: 0;
+  height: 50px;
+  margin: 0;
+  padding: 0 0 0 30px;
+  gap: 100px;
+  border-radius: 1000px;
+  overflow: hidden;
+}
+.copybuttondiv {
+  background-color: black;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.codediv p {
+  font-size: 20px;
+}
+.thankyoucontainer > p {
+  text-align: center;
+  font-size: 17px;
+  margin: 20px 0;
+  color: rgb(82, 82, 82);
+}
+.thankyoucontainer > button {
+  padding: 10px 150px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  font-size: 22px;
+}
+.request {
+  margin: 30px 0 15px 0 !important;
+  padding: 0 !important;
+  font-size: 22px !important;
+  line-height: 22px !important;
+}
+@media (max-width: 800px) {
+  .uicontainer {
+    margin-bottom: 200px;
+  }
+}
+@media (max-width: 750px) {
+  .uicontainer {
+    margin-bottom: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .uicontainer {
+    margin-bottom: 600px;
+  }
+  .historybottombar {
+    /* padding-top: 200px */
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 300px) {
+  .uicontainer {
+    margin-bottom: 600px;
+  }
+}
+@media (max-height: 750px) and (max-width: 850px) {
+  .dropdowndiv {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+  }
+  .dropdowndiv > * {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+  }
+}
+.main-container1-his {
+  width: 100%;
+}
+.imagestext p {
+  line-height: 35px;
+}
+.static {
+  position: static;
+}
+.contact-info-container {
+  margin-top: 10px;
+}
+.mb40 {
+  margin-bottom: 30px;
+}
+.circlediv {
+  height: 10px;
+  width: 10px;
+  background-color: rgba(0, 0, 0, 0.288);
+  margin-left: 10px;
+  border-radius: 100px;
+}
+.tech-card-container {
+  gap: 15px !important;
+  margin-top: 10px;
+}
+.tech-category-card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  line-height: 18px;
+  height: 70px;
+}
+.tech-card-subtitle-text-style {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 24px;
+  line-height: 28px;
+  height: 56px;
+}
+
+.button-with-icon2-blogs {
+  width: auto;
+  padding: 10px 20px;
+}
+.content-container h2 {
+  font-size: 30px;
+}
+.content-container h3 {
+  font-size: 20px;
+}
+.content-container p {
+  font-size: 17px;
+}
+.blog-load-more-button-style-blogs {
+  margin-top: 100px;
+}
+.card-container-blogs {
+  margin-bottom: 20px;
+}
+.contact-info-container2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.image-container-styles {
+  width: 100%;
+}
+.event-card-button {
+  gap: 20px;
+}
+.contact-info-container2 {
+  position: relative;
+}
+.image-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, 0);
+}
+.fabric-type-description {
+  max-width: 70vw;
+}
+.fabric-range-section {
+  display: flex;
+  align-items: center;
+}
+.material-button2 {
+  width: max-content;
+  margin: 30px auto;
+  user-select: none;
+}
+.material-heading {
+  line-height: 50px;
+  text-align: center;
+  word-break: break-all;
+  user-select: none;
+}
+.email-notification-container5,
+.login-error-message-container1 {
+  padding: 30px;
+  max-width: 700px !important;
+  width: 80vw;
 }
