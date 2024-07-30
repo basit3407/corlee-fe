@@ -12,7 +12,7 @@ function EventsComponent({ eventDisplayWidgetArgs }) {
           <div className="mainpageevents">
             <div className="leftsidecontent">
               <h1>Want to Book an Appointment with us?</h1>
-              <p>Let’s go & discuss it</p>
+              <p className="letsgoanddiscussit">Let’s go & discuss it</p>
               <p className="content-text-area">
                 {messages["lrem_ipsum_tis_kvasiposade_poment_vtirade_ding_eft"]}
               </p>

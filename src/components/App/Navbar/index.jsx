@@ -52,7 +52,13 @@ function Navbar(props) {
     setShowprod(!showprod);
   };
   return (
-    <div className="main-content-container-nav">
+    <div
+      className={
+        props.events
+          ? "main-content-container-nav eventsnavbar"
+          : "main-content-container-nav"
+      }
+    >
       <div className="header-navbar-nav">
         <img
           src="/assets/logo.png"

@@ -7,7 +7,7 @@ import { mockData } from "../util";
 function Events() {
   return (
     <>
-      <Navbar />
+      <Navbar events={true} />
       <EventsComponent
         eventDisplayWidgetArgs={mockData.eventDisplayWidgetArgs}
       />

@@ -44,8 +44,8 @@ function DynamicContentDisplay(props) {
         }
       >
         <div className="wrapperofelement">
-          <div className="callout-container-nav">
-            <SvgIcon1 className="svg-container1-nav" />
+          <div className="callout-container-nav navsearchbar">
+            <SvgIcon1 className="svg-container1-nav searchbarsvg" />
             <input placeholder="Search" type="text" className="searchbar" />
           </div>
           <p
@@ -63,7 +63,7 @@ function DynamicContentDisplay(props) {
               style={{ cursor: "pointer" }}
               onClick={() => navigate("/user/favourites")}
             >
-              <div className="circular-text-container-nav">
+              <div className="circular-text-container-nav navsearchbar">
                 <SvgIcon2 className="svg-container2-nav" />
               </div>
             </div>
@@ -76,7 +76,7 @@ function DynamicContentDisplay(props) {
                   : navigate("/login");
               }}
             >
-              <div className="circular-text-container-nav">
+              <div className="circular-text-container-nav blacknavbar navsearchbar">
                 {!localStorage.getItem("token") ? (
                   <SvgIcon3 className="svg-container2-nav" />
                 ) : (
@@ -114,7 +114,7 @@ function DynamicContentDisplay(props) {
               ) : (
                 <></>
               )}
-              <div className="vertical-center-with-icon-nav">
+              <div className="vertical-center-with-icon-nav  navsearchbar">
                 <SvgIcon4 className="svg-container2-nav" />
               </div>
             </div>

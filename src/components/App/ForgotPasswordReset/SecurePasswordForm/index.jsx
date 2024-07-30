@@ -1,10 +1,42 @@
 import "./style.css";
 import messages from "./messages.json";
 import { useState } from "react";
+import SvgIcon1 from "../PasswordInputWidget/icons/SvgIcon1";
+import { toast } from "sonner";
+import { useNavigate } from "react-router";
+import { api } from "../../../../config/api";
 
 function SecurePasswordForm(props) {
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
   const [confirm, setConfirm] = useState("");
+  const [loading, setloading] = useState(false);
+
+  const resetPass = async () => {
+    try {
+      setloading(true);
+
+      const res = await api.post("/password_reset/done/", {
+        new_password1: password,
+        new_password2: confirm,
+        token: props.token,
+        uid: props.uid,
+      });
+      if (res.status === 200) {
+        toast.success("Password reset successfully");
+        setloading(false);
+        navigate("/login");
+      } else {
+        toast.error("An error occured");
+        setloading(false);
+        navigate("/");
+      }
+    } catch (e) {
+      toast.error("An error occured");
+      setloading(false);
+      navigate("/");
+    }
+  };
   return (
     <div className="password-reset-form-container">
       <div className="nested-svg-container">
@@ -71,8 +103,12 @@ function SecurePasswordForm(props) {
         </div>
       </div>
       {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
-      <button className="password-reset-button">
-        {messages["reset_password"]}
+      <button
+        className="password-reset-button"
+        onClick={resetPass}
+        disabled={loading}
+      >
+        {loading ? "Loading..." : messages["reset_password"]}
       </button>
     </div>
   );

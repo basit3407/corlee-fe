@@ -22,6 +22,7 @@ function ProductNavigation(props) {
                   position: "fixed",
                   top: "40px",
                   right: "30px",
+                  zIndex: 40000,
                 }
               : {}
           }
@@ -36,6 +37,7 @@ function ProductNavigation(props) {
                   position: "fixed",
                   top: "40px",
                   right: "30px",
+                  zIndex: 40000,
                 }
               : {}
           }
