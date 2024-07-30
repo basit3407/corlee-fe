@@ -7,6 +7,9 @@ const Token = () => {
   if (token) {
     setAuthToken(token);
   }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const getinfo = async () => {
     const response = await api.get("/contact-details/");
     if (response.status === 200) {

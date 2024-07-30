@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "sonner";
 
 const Thankyou = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [myState, setMystate] = useState(0);
   const copyToClipboard = () => {
     navigator.clipboard.writeText(id);
     toast.success("Copied to clipboard");
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setMystate((prev) => prev + 1);
+  }, []);
   return (
     <div className="thankyou">
       <div className="thankyoucontainer">
@@ -67,8 +72,8 @@ const Thankyou = () => {
           </div>
         </div>
         <p>
-          We have recieved your email. We are looking into yor request <br />{" "}
-          and will get back to you as soon as possible.
+          We have recieved your email. We are looking into yor request and will
+          get back to you as soon as possible.
         </p>
         <button onClick={() => navigate("/")}>Great</button>
       </div>

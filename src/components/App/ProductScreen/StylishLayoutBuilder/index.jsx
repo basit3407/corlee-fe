@@ -12,6 +12,7 @@ import { toast } from "sonner";
 
 function StylishLayoutBuilder(props) {
   const name = props.name;
+  const searchterm = props.searchterm;
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [noProducts, setNoproducts] = useState(false);
@@ -24,20 +25,52 @@ function StylishLayoutBuilder(props) {
     props.color.map((color) => {
       filtercolorstring = filtercolorstring + `&colors=${color}`;
     });
-
-    const response = await api.get(
+    console.log(
       `/fabrics/?${
-        name ? `keyword=${name === "Best Selling" ? "best_selling" : name}` : ""
+        name || searchterm
+          ? `keyword=${
+              searchterm
+                ? searchterm
+                : name === "Best Selling"
+                ? "best_selling"
+                : name
+            }`
+          : ""
       }${props.color.length > 0 ? `${filtercolorstring}` : ""}${
         props.sort ? `&sort_by=${props.sort}` : ""
       }${props.page ? `&page=${props.page}` : ""}`
     );
-    console.log("Response  :", response);
+
+    const response = await api.get(
+      `/fabrics/?${
+        name || searchterm
+          ? `keyword=${
+              searchterm
+                ? searchterm
+                : name === "Best Selling"
+                ? "best_selling"
+                : name
+            }`
+          : ""
+      }${props.color.length > 0 ? `${filtercolorstring}` : ""}${
+        props.sort ? `&sort_by=${props.sort}` : ""
+      }${props.page ? `&page=${props.page}` : ""}`
+    );
 
     if (response.data.results.length > 0) {
       setProducts(response.data.results);
       setNoproducts(false);
+      response.data.results.forEach((item) => {
+        item.related_fabrics.length > 0 &&
+          item.related_fabrics.forEach((inneritem) => {
+            !props.relatedFabrics.includes(inneritem) &&
+              props.setRelatedFabrics((prev) => [...prev, inneritem]);
+          });
+      });
+      props.setRelatedLoading(false);
     } else {
+      props.setNoproducts(true);
+      props.setRelatedLoading(false);
       setNoproducts(true);
     }
     setLoading(false);
@@ -77,7 +110,7 @@ function StylishLayoutBuilder(props) {
 
   useEffect(() => {
     fetchFabrics();
-  }, [name, props.color, props.sort]);
+  }, [name, props.color, props.sort, searchterm]);
 
   useEffect(() => {
     fetchNextPage();

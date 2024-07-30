@@ -25,9 +25,19 @@ function MessageDisplay(props) {
   return (
     <div className="material-section">
       <p className="material-heading-text-style">
-        {props.fav ? "Favourites" : props.name ? props.name : "All Products"}
+        {props.fav
+          ? "Favourites"
+          : props.searchterm
+          ? "Search products"
+          : props.name
+          ? props.name
+          : "All Products"}
       </p>
-      <p className="material-description-text-style">{props.desc}</p>
+      <p className="material-description-text-style">
+        {props.searchterm
+          ? "Products matching your search : " + props.searchterm
+          : props.desc}
+      </p>
       <button
         className="material-button"
         onClick={() => setShowfilter(!showfilter)}
@@ -62,8 +72,8 @@ function MessageDisplay(props) {
                 }
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M7.13256 7.89778C6.91289 8.11746 6.55679 8.11746 6.33711 7.89778L0.602251 2.16291C0.382583 1.94323 0.382583 1.58713 0.602251 1.36746L0.867421 1.10226C1.08709 0.882581 1.44324 0.882581 1.66292 1.10226L6.73484 6.17421L11.8068 1.10226C12.0265 0.882582 12.3826 0.882582 12.6022 1.10226L12.8674 1.36746C13.0871 1.58713 13.0871 1.94323 12.8674 2.16291L7.13256 7.89778Z"
                   fill="black"
                 />
@@ -139,8 +149,8 @@ function MessageDisplay(props) {
                 }
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M7.13256 7.89778C6.91289 8.11746 6.55679 8.11746 6.33711 7.89778L0.602251 2.16291C0.382583 1.94323 0.382583 1.58713 0.602251 1.36746L0.867421 1.10226C1.08709 0.882581 1.44324 0.882581 1.66292 1.10226L6.73484 6.17421L11.8068 1.10226C12.0265 0.882582 12.3826 0.882582 12.6022 1.10226L12.8674 1.36746C13.0871 1.58713 13.0871 1.94323 12.8674 2.16291L7.13256 7.89778Z"
                   fill="black"
                 />

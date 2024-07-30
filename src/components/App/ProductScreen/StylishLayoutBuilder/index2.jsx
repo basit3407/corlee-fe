@@ -24,17 +24,28 @@ function StylishLayoutBuilder(props) {
           props.sort ? `&sort_by=${props.sort}` : ""
         }`
       );
+      console.log(response);
       if (response.data.length > 0) {
         setProducts(response.data);
         setNoproducts(false);
+        response.data.forEach((item) => {
+          item.fabric.related_fabrics.length > 0 &&
+            item.fabric.related_fabrics.forEach((inneritem) => {
+              props.setRelatedFabrics((prev) => [...prev, inneritem]);
+            });
+        });
       } else {
         setNoproducts(true);
+        props.setNoproducts(true);
       }
+      props.setRelatedLoading(false);
 
       setLoading(false);
     } catch (e) {
       console.log(e);
       setLoading(false);
+      props.setRelatedLoading(false);
+      props.setNoproducts(true);
     }
   };
 

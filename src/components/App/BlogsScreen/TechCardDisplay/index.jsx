@@ -44,7 +44,7 @@ function TechCardDisplay(blog) {
     }
 
     let plainText = getTextWithPipes(doc.body)
-      .replace(/\s*\|\s*/g, " | ")
+      ?.replace(/\s*\|\s*/g, " | ")
       .trim();
     return plainText;
   }

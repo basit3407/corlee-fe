@@ -9,12 +9,22 @@ import messages from "./messages.json";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../../../config/api";
+import { useDebounce } from "../../BigScreen/useDebounce";
 
 function DynamicContentDisplay(props) {
   const [open, setOpen] = useState(false);
   const [count, setCount] = useState(0);
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
+  const [inputState, setInputState] = useState("");
+
+  const debouncedValue = useDebounce(inputState, 500);
+
+  useEffect(() => {
+    if (debouncedValue) {
+      navigate(`/products/${debouncedValue}`);
+    }
+  }, [debouncedValue]);
 
   const getcartcount = async () => {
     try {
@@ -46,7 +56,18 @@ function DynamicContentDisplay(props) {
         <div className="wrapperofelement">
           <div className="callout-container-nav navsearchbar">
             <SvgIcon1 className="svg-container1-nav searchbarsvg" />
-            <input placeholder="Search" type="text" className="searchbar" />
+            <input
+              placeholder="Search"
+              type="text"
+              className="searchbar"
+              onChange={(e) => {
+                if (e.target.value === "") {
+                  navigate(`/products`);
+                }
+                setInputState(e.target.value);
+              }}
+              value={inputState}
+            />
           </div>
           <p
             className="contact-info-text-style-nav"
