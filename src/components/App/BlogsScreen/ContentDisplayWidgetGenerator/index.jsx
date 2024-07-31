@@ -99,9 +99,10 @@ function ContentDisplayWidgetGenerator() {
           localcateg.length > 0 ? `&category=${localcateg.join(",")}` : ""
         }&page=${page}`
       );
+      console.log(response);
       if (response.status === 200) {
         if (response.data.results.length > 0) {
-          setBlogs((prev) => [...prev, response.data.results]);
+          setBlogs((prev) => [...prev, ...response.data.results]);
           setLoading3(false);
         } else {
           toast.error("No more blogs");
@@ -113,6 +114,7 @@ function ContentDisplayWidgetGenerator() {
         setLoading3(false);
       }
     } catch (e) {
+      console.log(e);
       if (e.response.data.detail === "Invalid page.") {
         toast.error("No more blogs");
         setLoading3(false);
@@ -129,6 +131,7 @@ function ContentDisplayWidgetGenerator() {
       if (categs.length > 0) return;
       setLoading2(true);
       let response = await api.get("/blog-categories/");
+      console.log(response);
       if (response.status === 200) {
         setCategs(response.data);
         setLoading2(false);
@@ -284,7 +287,9 @@ function ContentDisplayWidgetGenerator() {
 
       <div
         className={
-          showfilter ? "filtertab pacityfull" : "filtertab opacityzero"
+          showfilter
+            ? "filtertab pacityfull blogsfilter"
+            : "filtertab opacityzero blogsfilter"
         }
         onClick={() => {
           setShowfilter(!showfilter);
@@ -292,161 +297,171 @@ function ContentDisplayWidgetGenerator() {
         }}
       >
         <div className="filterpage" onClick={(e) => e.stopPropagation()}>
-          <h1>Filter Items</h1>
-          <div className="sortbydiv">
-            <div
-              className="maintopvisiblediv"
-              onClick={() => setShowsort(!showsort)}
-            >
-              <p>Sort by</p>
-              <svg
-                width="14"
-                height="9"
-                viewBox="0 0 14 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                style={
-                  showsort
-                    ? { transform: "rotate(180deg)" }
-                    : { transform: "rotate(0deg)" }
+          <div className="wrapperoffilterelements">
+            <h1>Filter Items</h1>
+            <div className="sortbydiv">
+              <div
+                className="maintopvisiblediv"
+                onClick={() => setShowsort(!showsort)}
+              >
+                <p>Sort by</p>
+                <svg
+                  width="14"
+                  height="9"
+                  viewBox="0 0 14 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={
+                    showsort
+                      ? { transform: "rotate(180deg)" }
+                      : { transform: "rotate(0deg)" }
+                  }
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M7.13256 7.89778C6.91289 8.11746 6.55679 8.11746 6.33711 7.89778L0.602251 2.16291C0.382583 1.94323 0.382583 1.58713 0.602251 1.36746L0.867421 1.10226C1.08709 0.882581 1.44324 0.882581 1.66292 1.10226L6.73484 6.17421L11.8068 1.10226C12.0265 0.882582 12.3826 0.882582 12.6022 1.10226L12.8674 1.36746C13.0871 1.58713 13.0871 1.94323 12.8674 2.16291L7.13256 7.89778Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <div
+                className={
+                  showsort ? "dropdownitems height150px " : "dropdownitems"
                 }
               >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M7.13256 7.89778C6.91289 8.11746 6.55679 8.11746 6.33711 7.89778L0.602251 2.16291C0.382583 1.94323 0.382583 1.58713 0.602251 1.36746L0.867421 1.10226C1.08709 0.882581 1.44324 0.882581 1.66292 1.10226L6.73484 6.17421L11.8068 1.10226C12.0265 0.882582 12.3826 0.882582 12.6022 1.10226L12.8674 1.36746C13.0871 1.58713 13.0871 1.94323 12.8674 2.16291L7.13256 7.89778Z"
-                  fill="black"
-                />
-              </svg>
+                <p
+                  onClick={() => {
+                    localsort === "newest"
+                      ? setLocalsort("")
+                      : setLocalsort("newest");
+                  }}
+                  style={
+                    localsort === "newest"
+                      ? { backgroundColor: "rgba(0, 0, 0, 0.07)" }
+                      : null
+                  }
+                >
+                  Newest
+                </p>
+                <p
+                  onClick={() => {
+                    localsort === "oldest"
+                      ? setLocalsort("")
+                      : setLocalsort("oldest");
+                  }}
+                  style={
+                    localsort === "oldest"
+                      ? { backgroundColor: "rgba(0, 0, 0, 0.07)" }
+                      : null
+                  }
+                >
+                  Oldest
+                </p>
+                <p
+                  onClick={() => {
+                    localsort === "popularity"
+                      ? setLocalsort("")
+                      : setLocalsort("popularity");
+                  }}
+                  style={
+                    localsort === "popularity"
+                      ? { backgroundColor: "rgba(0, 0, 0, 0.07)" }
+                      : null
+                  }
+                >
+                  Popularity
+                </p>
+              </div>
             </div>
-            <div
-              className={
-                showsort ? "dropdownitems height150px " : "dropdownitems"
-              }
-            >
-              <p
+            <div className="coorsoptionsdiv">
+              <div
+                className="maintopvisiblediv"
                 onClick={() => {
-                  localsort === "newest"
-                    ? setLocalsort("")
-                    : setLocalsort("newest");
+                  setShowcat((prev) => !prev);
+                  loadCategs();
+                  console.log(categs);
                 }}
-                style={
-                  localsort === "newest"
-                    ? { fontWeight: "600", fontSize: "17px" }
-                    : null
-                }
               >
-                Newest
-              </p>
-              <p
-                onClick={() => {
-                  localsort === "oldest"
-                    ? setLocalsort("")
-                    : setLocalsort("oldest");
-                }}
-                style={
-                  localsort === "oldest"
-                    ? { fontWeight: "600", fontSize: "17px" }
-                    : null
-                }
-              >
-                Oldest
-              </p>
-              <p
-                onClick={() => {
-                  localsort === "popularity"
-                    ? setLocalsort("")
-                    : setLocalsort("popularity");
-                }}
-                style={
-                  localsort === "popularity"
-                    ? { fontWeight: "600", fontSize: "17px" }
-                    : null
-                }
-              >
-                Popularity
-              </p>
-            </div>
-          </div>
-          <div className="coorsoptionsdiv">
-            <div
-              className="maintopvisiblediv"
-              onClick={() => {
-                setShowcat((prev) => !prev);
-                loadCategs();
-              }}
-            >
-              <p>Categories</p>
-              <svg
-                width="14"
-                height="9"
-                viewBox="0 0 14 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                <p>Categories</p>
+                <svg
+                  width="14"
+                  height="9"
+                  viewBox="0 0 14 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={
+                    showcat
+                      ? { transform: "rotate(180deg)" }
+                      : { transform: "none" }
+                  }
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M7.13256 7.89778C6.91289 8.11746 6.55679 8.11746 6.33711 7.89778L0.602251 2.16291C0.382583 1.94323 0.382583 1.58713 0.602251 1.36746L0.867421 1.10226C1.08709 0.882581 1.44324 0.882581 1.66292 1.10226L6.73484 6.17421L11.8068 1.10226C12.0265 0.882582 12.3826 0.882582 12.6022 1.10226L12.8674 1.36746C13.0871 1.58713 13.0871 1.94323 12.8674 2.16291L7.13256 7.89778Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <div
+                className="colordropdownitems"
                 style={
                   showcat
-                    ? { transform: "rotate(180deg)" }
-                    : { transform: "none" }
+                    ? loading2
+                      ? { height: `50px` }
+                      : { height: `${categs?.length * 50}px` }
+                    : { height: "0px" }
                 }
               >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M7.13256 7.89778C6.91289 8.11746 6.55679 8.11746 6.33711 7.89778L0.602251 2.16291C0.382583 1.94323 0.382583 1.58713 0.602251 1.36746L0.867421 1.10226C1.08709 0.882581 1.44324 0.882581 1.66292 1.10226L6.73484 6.17421L11.8068 1.10226C12.0265 0.882582 12.3826 0.882582 12.6022 1.10226L12.8674 1.36746C13.0871 1.58713 13.0871 1.94323 12.8674 2.16291L7.13256 7.89778Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-            <div
-              className={
-                showcat
-                  ? "colordropdownitems height240px"
-                  : "colordropdownitems"
-              }
-            >
-              {loading2 ? (
-                <p>Loading...</p>
-              ) : (
-                categs?.map((c, i) => (
-                  <div
-                    key={i}
-                    style={
-                      localcateg.includes(c.name)
-                        ? {
-                            border: "2px solid rgba(0, 0, 0, 0.392)",
-                            textAlign: "center",
-                          }
-                        : { textAlign: "center" }
-                    }
-                    onClick={() => togglecateg(c.name)}
-                  >
+                {loading2 ? (
+                  <div style={{ textAlign: "center" }}>
                     <p style={{ textAlign: "center", width: "100%" }}>
-                      {c.name}
+                      Loading...
                     </p>
                   </div>
-                ))
-              )}
+                ) : (
+                  categs?.map((c, i) => (
+                    <div
+                      key={i}
+                      style={
+                        localcateg.includes(c.name)
+                          ? {
+                              backgroundColor: "rgba(0, 0, 0, 0.07)",
+                              textAlign: "center",
+                            }
+                          : { textAlign: "center" }
+                      }
+                      onClick={() => togglecateg(c.name)}
+                    >
+                      <p style={{ textAlign: "center", width: "100%" }}>
+                        {c.name}
+                      </p>
+                    </div>
+                  ))
+                )}
+              </div>
             </div>
-          </div>
-          <div className="buttonsinfiltersidebar">
-            <button
-              onClick={() => {
-                loadBlogs();
-                setShowfilter(false);
-              }}
-            >
-              Apply
-            </button>
-            <button
-              onClick={() => {
-                setLocalsort("");
-                setLocalcateg([]);
-                loadBlogs();
-                setShowfilter(false);
-              }}
-            >
-              Clear All
-            </button>
+            <div className="buttonsinfiltersidebar">
+              <button
+                onClick={() => {
+                  loadBlogs();
+                  setShowfilter(false);
+                }}
+              >
+                Apply
+              </button>
+              <button
+                onClick={() => {
+                  setLocalsort("");
+                  setLocalcateg([]);
+                  loadBlogs();
+                  setShowfilter(false);
+                }}
+              >
+                Clear All
+              </button>
+            </div>
           </div>
         </div>
       </div>

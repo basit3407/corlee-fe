@@ -57,6 +57,7 @@ function Approuter() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/events" element={<Events />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/:searchterm" element={<Products />} />
           <Route path="/products/:name/:desc" element={<Products />} />
           <Route path="/product/:productid" element={<Product />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
