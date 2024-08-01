@@ -57,6 +57,7 @@ function StylishLayoutBuilder(props) {
           props.sort ? `&sort_by=${props.sort}` : ""
         }${props.page ? `&page=${props.page}` : ""}`
       );
+      console.log(response);
 
       if (response.data.results.length > 0) {
         setProducts(response.data.results);
@@ -78,6 +79,7 @@ function StylishLayoutBuilder(props) {
       setLoading(false);
     } catch (e) {
       toast.error("Something went wrong");
+      setLoading(false);
     }
   };
 
@@ -114,6 +116,7 @@ function StylishLayoutBuilder(props) {
       }
     } catch (e) {
       toast.error("Something went wrong.");
+      setLoading(false);
     }
   };
 

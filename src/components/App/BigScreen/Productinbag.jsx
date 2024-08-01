@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { api } from "../../../config/api";
@@ -13,12 +13,25 @@ const Productinbag = (props) => {
   const [selectedColor, setSelectedColor] = useState(props.product.color);
 
   const debouncedData = useDebounce(
-    {
-      color: selectedColor,
-      quantity: size,
-    },
+    useMemo(
+      () => ({
+        color: selectedColor,
+        quantity: size,
+      }),
+      [selectedColor, size]
+    ),
     300
   );
+  useEffect(() => {
+    console.log("Effect triggered", { size, selectedColor, debouncedData });
+    if (
+      debouncedData.color !== prevDebouncedData.current.color ||
+      debouncedData.quantity !== prevDebouncedData.current.quantity
+    ) {
+      update();
+      prevDebouncedData.current = debouncedData;
+    }
+  }, [debouncedData]);
 
   const update = async () => {
     try {
@@ -32,26 +45,13 @@ const Productinbag = (props) => {
         `/cart-items/${props.product.id}`,
         debouncedData
       );
-      // Uncomment and implement this if necessary
-      // if (res.status === 200) {
-      //   props.loadDatafc();
-      // }
+      console.log(res);
     } catch (error) {
       console.error(error);
     }
   };
 
   const prevDebouncedData = useRef(debouncedData); // Store previous debouncedData
-
-  useEffect(() => {
-    if (
-      debouncedData.color !== prevDebouncedData.current.color ||
-      debouncedData.quantity !== prevDebouncedData.current.quantity
-    ) {
-      update();
-      prevDebouncedData.current = debouncedData; // Update reference
-    }
-  }, [debouncedData]);
 
   const deleteproduct = async () => {
     try {
@@ -73,7 +73,11 @@ const Productinbag = (props) => {
         <div
           className="image"
           style={{
-            backgroundImage: `url(${product.photo_url})`,
+            backgroundImage: `url(${
+              props.product.fabric.color_images.filter(
+                (item) => item.color == selectedColor
+              )[0].primary_image_url
+            })`,
             backgroundSize: "cover",
             cursor: "pointer",
           }}
@@ -157,26 +161,26 @@ const Productinbag = (props) => {
         </button>
       </div>
       <div className="colordiv">
-        {product.available_colors?.map((c, i) => (
+        {props.product.fabric.color_images?.map((c, i) => (
           <div
             className="colors"
             style={
-              selectedColor === c
+              selectedColor === c.color
                 ? {
-                    backgroundColor: c,
+                    backgroundColor: c.color,
                     border: "2px solid rgba(0, 0, 0, 0.747) ",
                   }
-                : { backgroundColor: c, border: "2px solid transparent" }
+                : { backgroundColor: c.color, border: "2px solid transparent" }
             }
             onClick={() => {
               const tempproduct = {
                 ...props.product,
-                color: c,
+                color: c.color,
               };
               let allProducts = props.allproducts;
               allProducts[props.index] = tempproduct;
               props.setProducts(allProducts);
-              setSelectedColor(c);
+              setSelectedColor(c.color);
             }}
             key={i}
           ></div>

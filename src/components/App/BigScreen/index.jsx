@@ -11,7 +11,6 @@ import Productinbag from "./Productinbag";
 import GetPersonalDetails from "./GetPersonalDetails";
 import GetContactDetails from "./GetContactDetails";
 import GetAddress from "./GetAddress";
-import { FullscreenExit } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
 function BagScreenMainComp(props) {
@@ -44,7 +43,6 @@ function BagScreenMainComp(props) {
       setLoading(false);
     }
   };
-
   useEffect(() => {
     loadData();
   }, []);
@@ -64,7 +62,6 @@ function BagScreenMainComp(props) {
         }
         setCheckoutLoading(true);
         const response = await api.post("/checkout/");
-        console.log(response);
         if (response.status === 201) {
           setCheckoutLoading(false);
           toast.success("Order placed successfully");

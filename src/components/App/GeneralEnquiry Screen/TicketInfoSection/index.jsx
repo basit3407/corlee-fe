@@ -144,13 +144,12 @@ function TicketInfoSection(props) {
                           <div className="productdetailsdiv">
                             <div className="colordiv">
                               <p className="color">Color </p>
-                              {e.fabric.available_colors.map((e, i) => (
-                                <div
-                                  className="colorcircle"
-                                  key={i}
-                                  style={{ backgroundColor: e }}
-                                ></div>
-                              ))}
+
+                              <div
+                                className="colorcircle"
+                                key={i}
+                                style={{ backgroundColor: e.color }}
+                              ></div>
                             </div>
                             <p className="quantityofproduct">
                               Quantity <span>{text}</span>

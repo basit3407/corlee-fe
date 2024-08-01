@@ -10,6 +10,12 @@ function StylishDisplay(props) {
   const navigate = useNavigate(props);
   const [loading, setLoading] = useState(false);
   const [showLoginPopup, setshowLoginPopup] = useState(false);
+  const [selectedColor, setSelectedColor] = useState(
+    props.color_images[0].color
+  );
+  const [selectedImage, setSelectedImage] = useState(
+    props.color_images[0].primary_image_url
+  );
   const addToCart = async (e) => {
     try {
       e.stopPropagation();
@@ -21,7 +27,7 @@ function StylishDisplay(props) {
 
       const response = await api.post("/cart-items/", {
         fabric_id: props.id,
-        color: props.available_colors[0],
+        color: selectedColor,
         quantity: "100",
       });
       if (response.status === 200) {
@@ -45,7 +51,7 @@ function StylishDisplay(props) {
         navigate(`/product/${props.id}`);
       }}
       style={{
-        backgroundImage: `url(${props.photo_url})`,
+        backgroundImage: `url(${selectedImage})`,
         cursor: "pointer",
       }}
     >
@@ -58,11 +64,28 @@ function StylishDisplay(props) {
             e.stopPropagation();
           }}
         >
-          {props.available_colors.map((e, i) => (
+          {props.color_images.map((e, i) => (
             <div
               className="circle1"
               key={i}
-              style={{ backgroundColor: e }}
+              style={
+                selectedColor === e.color
+                  ? {
+                      border: "2px solid rgb(255,255,255)",
+                      backgroundColor: e.color,
+                      cursor: "pointer",
+                    }
+                  : {
+                      border: "2px solid transparent",
+                      backgroundColor: e.color,
+                      cursor: "pointer",
+                    }
+              }
+              onClick={(ev) => {
+                ev.stopPropagation();
+                setSelectedColor(e.color);
+                setSelectedImage(e.primary_image_url);
+              }}
             ></div>
           ))}
         </div>
@@ -151,7 +174,7 @@ function StylishDisplay(props) {
               </svg>
             </div>
             <h1>Login Required</h1>
-            <p>Please login to add items to bag.</p>
+            <p>This action requires login.</p>
             <div className="buttonsinloginpopup">
               <button
                 onClick={(e) => {

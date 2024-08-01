@@ -33,7 +33,6 @@ function Navbar(props) {
   const getProducts = async () => {
     try {
       setLoading2(true);
-      console.log(category);
       const response = await api.get(
         `/fabrics/${category ? "?keyword=" + category : ""}`
       );
@@ -346,7 +345,7 @@ function Navbar(props) {
                     <div
                       className="imagedivinproductdropdown"
                       style={{
-                        backgroundImage: `url(${product.photo_url})`,
+                        backgroundImage: `url(${product.color_images[0].primary_image_url})`,
                         backgroundSize: "cover",
                       }}
                     ></div>

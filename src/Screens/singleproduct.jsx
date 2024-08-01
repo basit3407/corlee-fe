@@ -20,14 +20,8 @@ const singleproduct = () => {
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState({});
   const [refresh, setRefresh] = useState(0);
+  const [currentImages, setCurrentImages] = useState([]);
   const navigate = useNavigate();
-
-  const [images, setimages] = useState({
-    image1: "",
-    image2: "",
-    image3: "",
-    image4: "",
-  });
 
   const togglefav = async () => {
     if (localStorage.getItem("token")) {
@@ -42,15 +36,11 @@ const singleproduct = () => {
     try {
       setLoading(true);
       const response = await api.get(`/fabrics/${productid}/`);
+      console.log(response);
       if (response.status === 200) {
         setProduct(response.data);
-        setcolor(response.data.available_colors[0]);
-        setimages({
-          image1: response.data.photo_url,
-          image2: response.data.aux_photo1_url,
-          image3: response.data.aux_photo2_url,
-          image4: response.data.aux_photo3_url,
-        });
+        setcolor(response.data.color_images[0].color);
+        setCurrentImages(response.data.color_images[0]);
         setLoading(false);
       } else {
         navigate("/");
@@ -125,7 +115,11 @@ const singleproduct = () => {
           </div>
         ) : (
           <>
-            <Imagesinproduct images={images} />
+            <Imagesinproduct
+              currentImages={currentImages}
+              setCurrentImages={setCurrentImages}
+              product={product}
+            />
             <div className="productdetailsdic">
               <button
                 className="heartbutton"
@@ -172,24 +166,36 @@ const singleproduct = () => {
               <p className="functionaltext2">{product.description}</p>
               <p className="colorsinproduct">Colors</p>
               <div className="colorsinproduct">
-                {product.available_colors.map((item, index) => (
+                {product.color_images.map((item, index) => (
                   <div
                     className="color1inproduct"
                     key={index}
                     style={
-                      color === item
+                      color === item.color
                         ? {
-                            backgroundColor: item,
+                            backgroundColor: item.color,
                             border: "3px solid white",
                             cursor: "pointer",
                           }
                         : {
-                            backgroundColor: item,
+                            backgroundColor: item.color,
                             cursor: "pointer",
                             border: "3px solid transparent",
                           }
                     }
-                    onClick={() => setcolor(item)}
+                    onClick={() => {
+                      console.log(
+                        product.color_images.filter(
+                          (item2) => item2.color == item.color
+                        )
+                      );
+                      setCurrentImages(
+                        ...product.color_images.filter(
+                          (item2) => item2.color == item.color
+                        )
+                      );
+                      setcolor(item.color);
+                    }}
                   ></div>
                 ))}
               </div>

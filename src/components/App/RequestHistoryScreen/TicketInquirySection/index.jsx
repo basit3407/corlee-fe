@@ -42,7 +42,6 @@ function TicketInquirySection({ ticketInquiriesData }) {
     try {
       setLoading(true);
       const response = await api.get("/contact-requests/");
-      console.log(response);
       if (response.status === 200) {
         if (response.data.contact_requests.length > 0) {
           setData(response.data.contact_requests);

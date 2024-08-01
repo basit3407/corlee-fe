@@ -1,66 +1,71 @@
 import React, { useState } from "react";
 
-const Imagesinproduct = (props) => {
-  const [images, setimages] = useState(props.images);
+const Imagesinproduct = ({ currentImages, setCurrentImages }) => {
   return (
     <div className="imagesinproductdiv">
       <div className="verticalimagesinproduct">
         <div
+          onClick={() => {
+            const curr = currentImages.primary_image_url;
+            const previous = currentImages.aux_image1_url;
+            setCurrentImages((prev) => {
+              return {
+                ...prev,
+                primary_image_url: previous,
+                aux_image1_url: curr,
+              };
+            });
+          }}
           className="image1inproductdivverticalimages"
           style={{
-            backgroundImage: `url(${images.image2})`,
+            backgroundImage: `url(${currentImages.aux_image1_url})`,
             backgroundSize: "cover",
             cursor: "pointer",
-          }}
-          onClick={() => {
-            const url = images.image2;
-            const image1url = images.image1;
-            setimages({
-              ...images,
-              image1: url,
-              image2: image1url,
-            });
           }}
         ></div>
         <div
           className="image2inproductdivverticalimages"
           style={{
-            backgroundImage: `url(${images.image3})`,
+            backgroundImage: `url(${currentImages.aux_image2_url})`,
             backgroundSize: "cover",
             cursor: "pointer",
           }}
           onClick={() => {
-            const url = images.image3;
-            const image1url = images.image1;
-            setimages({
-              ...images,
-              image1: url,
-              image3: image1url,
+            const curr = currentImages.primary_image_url;
+            const previous = currentImages.aux_image2_url;
+            setCurrentImages((prev) => {
+              return {
+                ...prev,
+                primary_image_url: previous,
+                aux_image2_url: curr,
+              };
             });
           }}
         ></div>
         <div
-          onClick={() => {
-            const url = images.image4;
-            const image1url = images.image1;
-            setimages({
-              ...images,
-              image1: url,
-              image4: image1url,
-            });
-          }}
           className="image3inproductdivverticalimages"
           style={{
-            backgroundImage: `url(${images.image4})`,
+            backgroundImage: `url(${currentImages.aux_image3_url})`,
             backgroundSize: "cover",
             cursor: "pointer",
+          }}
+          onClick={() => {
+            const curr = currentImages.primary_image_url;
+            const previous = currentImages.aux_image3_url;
+            setCurrentImages((prev) => {
+              return {
+                ...prev,
+                primary_image_url: previous,
+                aux_image3_url: curr,
+              };
+            });
           }}
         ></div>
       </div>
       <div
         className="bigimage"
         style={{
-          backgroundImage: `url(${images.image1})`,
+          backgroundImage: `url(${currentImages.primary_image_url})`,
           backgroundSize: "cover",
         }}
       ></div>

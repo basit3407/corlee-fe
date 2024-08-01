@@ -62,7 +62,7 @@ function BottomBar(props) {
               {messages["about_us"]}
             </p>
           </div>
-          <div className="sidebar-container-bb">
+          <div className="sidebar-container-bb" onClick={() => navigate("/")}>
             <img
               src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/logo-white.png"
               className="image-container-bb"
