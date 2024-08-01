@@ -64,7 +64,7 @@ function StylishProductDisplay(props) {
             wrapperClass=""
           />
         </div>
-      ) : products?.length === 0 ? (
+      ) : !products || products.length === 0 ? (
         <h1
           style={{
             textAlign: "center",
@@ -76,7 +76,7 @@ function StylishProductDisplay(props) {
         </h1>
       ) : (
         <div className="products">
-          {products.slice(0, 8).map((prod, index) => (
+          {products?.slice(0, 8).map((prod, index) => (
             <div
               className="product"
               onClick={() => navigate(`/product/${prod.id}`)}
