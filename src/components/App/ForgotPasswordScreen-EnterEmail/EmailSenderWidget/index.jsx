@@ -8,9 +8,11 @@ import { useNavigate } from "react-router-dom";
 
 function EmailSenderWidget() {
   const [inputvalue, setInputvalue] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const sendReq = async () => {
     try {
+      setLoading(true);
       if (inputvalue === "") {
         toast.error("Enter your email address");
       } else {
@@ -18,13 +20,18 @@ function EmailSenderWidget() {
           email: inputvalue,
         });
         if (res.status === 200) {
-          navigate("/emailsent");
+          toast.success("Email sent successfully");
+          setLoading(false);
+          navigate(`/emailsent/${inputvalue}`);
         } else {
-          navigate("/noemail");
+          toast.success("Email not found !");
+          setLoading(false);
+          navigate(`/emailsent/${inputvalue}`);
         }
       }
     } catch (e) {
-      navigate("/noemail");
+      setLoading(false);
+      navigate(`/emailsent/${inputvalue}`);
     }
   };
 
@@ -32,8 +39,12 @@ function EmailSenderWidget() {
     <div className="center-aligned-button-container">
       <EmailInputBox inputvalue={inputvalue} setInputvalue={setInputvalue} />
 
-      <button className="reset-link-button" onClick={sendReq}>
-        {messages["send_reset_link"]}
+      <button
+        className="reset-link-button"
+        onClick={sendReq}
+        disabled={loading}
+      >
+        {loading ? "loading..." : messages["send_reset_link"]}
       </button>
     </div>
   );

@@ -4,7 +4,7 @@ import messages from "./messages.json";
 import Container from "../../UI/Container";
 import { useNavigate } from "react-router-dom";
 
-function ComponentYouSelected() {
+function ComponentYouSelected(props) {
   const navigate = useNavigate();
   return (
     <Container style={{ background: "whitesmoke" }}>
@@ -12,7 +12,7 @@ function ComponentYouSelected() {
         <div className="email-notification-container2">
           <div className="email-notification-container1">
             <div className="email-notification-container5">
-              <EmailNotificationView />
+              <EmailNotificationView {...props} />
               {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
               <button
                 className="primary-button-style"

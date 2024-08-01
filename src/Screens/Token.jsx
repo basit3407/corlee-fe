@@ -1,14 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Toaster } from "sonner";
 import { api, setAuthToken } from "../config/api";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 const Token = () => {
   const token = localStorage.getItem("token");
+  const navigate = useNavigate();
   if (token) {
     setAuthToken(token);
   }
   useEffect(() => {
     window.scrollTo(0, 0);
+    localStorage.getItem("Company") === "false" &&
+      navigate("/addCompanyDetails");
   }, []);
   const getinfo = async () => {
     const response = await api.get("/contact-details/");
@@ -29,9 +32,29 @@ const Token = () => {
   useEffect(() => {
     getinfo();
   }, []);
+  const [emailNotVerified, setEmailNotVerified] = useState(
+    localStorage.getItem("emailnotverified") === "true"
+  );
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setEmailNotVerified(localStorage.getItem("emailnotverified") === "true");
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
+
   return (
     <>
       <Toaster position="bottom-left" closeButton />
+      {emailNotVerified && (
+        <div className="noemailband">Verify your email address.</div>
+      )}
+
       <Outlet />
     </>
   );

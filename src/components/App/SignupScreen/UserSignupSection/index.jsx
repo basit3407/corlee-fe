@@ -5,8 +5,9 @@ import "./style.css";
 import messages from "./messages.json";
 import { useNavigate } from "react-router-dom";
 import { googleLogin } from "../../../../firebaseConfig.js";
-import { api } from "../../../../config/api.js";
+import { api, setAuthToken } from "../../../../config/api.js";
 import { useState } from "react";
+import { toast } from "sonner";
 
 function UserSignupSection() {
   const navigate = useNavigate();
@@ -16,16 +17,38 @@ function UserSignupSection() {
   async function logGoogleLoginInfo() {
     try {
       setLoading(true);
-      const { token } = await googleLogin();
-      console.log(token);
+      const { token, error } = await googleLogin();
+      if (error) {
+        toast.error("Google login failed.");
+        setLoading(false);
+        return;
+      }
       const response = await api.post("/google-login/", {
         idToken: token,
       });
-      console.log(response);
+      if (response.status == 200) {
+        localStorage.setItem(
+          "emailnotverified",
+          `${response.data.user.is_verified}`
+        );
+        const token = response.data.token;
+        localStorage.setItem("token", token);
+        localStorage.setItem("NameLetter", response.data.user.name[0]);
+        setAuthToken(token);
+        if (!response.data.user.company_name) {
+          navigate("/addCompanyDetails");
+          toast.success("Please enter your company details");
+          localStorage.setItem("Company", "false");
+        } else {
+          navigate("/");
+          toast.success("Account created successfully");
+        }
+      } else {
+        toast.error("Something went wrong");
+      }
       setLoading(false);
     } catch (error) {
       console.error(error);
-
       setLoading(false);
     }
   }

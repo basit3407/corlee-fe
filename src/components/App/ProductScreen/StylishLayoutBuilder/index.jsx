@@ -17,94 +17,103 @@ function StylishLayoutBuilder(props) {
   const [loading, setLoading] = useState(false);
   const [noProducts, setNoproducts] = useState(false);
   const fetchFabrics = async () => {
-    props.setPage(1);
-    setLoading(true);
+    try {
+      props.setPage(1);
+      setLoading(true);
 
-    let filtercolorstring = "";
+      let filtercolorstring = "";
 
-    props.color.map((color) => {
-      filtercolorstring = filtercolorstring + `&colors=${color}`;
-    });
-    console.log(
-      `/fabrics/?${
-        name || searchterm
-          ? `keyword=${
-              searchterm
-                ? searchterm
-                : name === "Best Selling"
-                ? "best_selling"
-                : name
-            }`
-          : ""
-      }${props.color.length > 0 ? `${filtercolorstring}` : ""}${
-        props.sort ? `&sort_by=${props.sort}` : ""
-      }${props.page ? `&page=${props.page}` : ""}`
-    );
-
-    const response = await api.get(
-      `/fabrics/?${
-        name || searchterm
-          ? `keyword=${
-              searchterm
-                ? searchterm
-                : name === "Best Selling"
-                ? "best_selling"
-                : name
-            }`
-          : ""
-      }${props.color.length > 0 ? `${filtercolorstring}` : ""}${
-        props.sort ? `&sort_by=${props.sort}` : ""
-      }${props.page ? `&page=${props.page}` : ""}`
-    );
-
-    if (response.data.results.length > 0) {
-      setProducts(response.data.results);
-      setNoproducts(false);
-      response.data.results.forEach((item) => {
-        item.related_fabrics.length > 0 &&
-          item.related_fabrics.forEach((inneritem) => {
-            !props.relatedFabrics.includes(inneritem) &&
-              props.setRelatedFabrics((prev) => [...prev, inneritem]);
-          });
+      props.color.map((color) => {
+        filtercolorstring = filtercolorstring + `&colors=${color}`;
       });
-      props.setRelatedLoading(false);
-    } else {
-      props.setNoproducts(true);
-      props.setRelatedLoading(false);
-      setNoproducts(true);
+      console.log(
+        `/fabrics/?${
+          name || searchterm
+            ? `keyword=${
+                searchterm
+                  ? searchterm
+                  : name === "Best Selling"
+                  ? "best_selling"
+                  : name
+              }`
+            : ""
+        }${props.color.length > 0 ? `${filtercolorstring}` : ""}${
+          props.sort ? `&sort_by=${props.sort}` : ""
+        }${props.page ? `&page=${props.page}` : ""}`
+      );
+
+      const response = await api.get(
+        `/fabrics/?${
+          name || searchterm
+            ? `keyword=${
+                searchterm
+                  ? searchterm
+                  : name === "Best Selling"
+                  ? "best_selling"
+                  : name
+              }`
+            : ""
+        }${props.color.length > 0 ? `${filtercolorstring}` : ""}${
+          props.sort ? `&sort_by=${props.sort}` : ""
+        }${props.page ? `&page=${props.page}` : ""}`
+      );
+
+      if (response.data.results.length > 0) {
+        setProducts(response.data.results);
+        setNoproducts(false);
+        let tempfabrics = [];
+        response.data.results.forEach((item) => {
+          item.related_fabrics.length > 0 &&
+            item.related_fabrics.forEach((inneritem) => {
+              tempfabrics.push(inneritem);
+            });
+        });
+
+        props.setRelatedFabrics(tempfabrics);
+        props.setRelatedLoading(false);
+      } else {
+        props.setRelatedLoading(false);
+        setNoproducts(true);
+      }
+      setLoading(false);
+    } catch (e) {
+      toast.error("Something went wrong");
     }
-    setLoading(false);
   };
 
   const fetchNextPage = async () => {
-    if (props.page !== 1) {
-      try {
-        props.setLoading(true);
+    try {
+      if (props.page !== 1) {
+        try {
+          props.setLoading(true);
 
-        let filtercolorstring = "";
+          let filtercolorstring = "";
 
-        props.color.map((color) => {
-          filtercolorstring = filtercolorstring + `&colors=${color}`;
-        });
+          props.color.map((color) => {
+            filtercolorstring = filtercolorstring + `&colors=${color}`;
+          });
 
-        const response = await api.get(
-          `/fabrics/?${name ? `keyword=${name}` : ""}${
-            props.color.length > 0 ? `${filtercolorstring}` : ""
-          }${props.sort ? `&sort_by=${props.sort}` : ""}${
-            props.page ? `&page=${props.page}` : ""
-          }`
-        );
+          const response = await api.get(
+            `/fabrics/?${name ? `keyword=${name}` : ""}${
+              props.color.length > 0 ? `${filtercolorstring}` : ""
+            }${props.sort ? `&sort_by=${props.sort}` : ""}${
+              props.page ? `&page=${props.page}` : ""
+            }`
+          );
 
-        if (response.data.results.length > 0) {
-          setProducts([...products, ...response.data.results]);
+          if (response.data.results.length > 0) {
+            setProducts([...products, ...response.data.results]);
+          }
+          props.setLoading(false);
+        } catch (e) {
+          if (e.response.data.detail === "Invalid page.") {
+            toast.error("No more products");
+          }
+          props.setLoading(false);
         }
-        props.setLoading(false);
-      } catch (e) {
-        if (e.response.data.detail === "Invalid page.") {
-          toast.error("No more products");
-        }
-        props.setLoading(false);
       }
+    } catch (e) {
+      toast.error("Something went wrong.");
     }
   };
 

@@ -3,11 +3,53 @@ import UserAuthenticationForm from "../UserAuthenticationForm";
 import SvgIcon1 from "./icons/SvgIcon1";
 import "./style.css";
 import messages from "./messages.json";
-import useAuthStore from "../../../../stores/useAuthstore"; // Import the auth store
+import { googleLogin } from "../../../../firebaseConfig";
+import { api, setAuthToken } from "../../../../config/api";
+import { toast } from "sonner";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function WelcomePage() {
-  const googleLogin = useAuthStore((state) => state.googleLogin); // Get the googleLogin method from the store
-  const loading = useAuthStore((state) => state.loading); // Get the loading state
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  async function logGoogleLoginInfo() {
+    try {
+      setLoading(true);
+      const { token, error } = await googleLogin();
+      if (error) {
+        toast.error("Google login failed.");
+        setLoading(false);
+        return;
+      }
+      const response = await api.post("/google-login/", {
+        idToken: token,
+      });
+      if (response.status == 200) {
+        localStorage.setItem(
+          "emailnotverified",
+          `${response.data.user.is_verified}`
+        );
+        const token = response.data.token;
+        localStorage.setItem("token", token);
+        localStorage.setItem("NameLetter", response.data.user.name[0]);
+        setAuthToken(token);
+        if (!response.data.user.company_name) {
+          navigate("/addCompanyDetails");
+          toast.success("Please enter your company details");
+          localStorage.setItem("Company", "false");
+        } else {
+          navigate("/");
+          toast.success("Login successful.");
+        }
+      } else {
+        toast.error("Something went wrong");
+      }
+      setLoading(false);
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
+    }
+  }
 
   return (
     <div className="hero-section2">
@@ -18,11 +60,11 @@ function WelcomePage() {
         </p>
         <button
           className="button-with-icon"
-          onClick={googleLogin} // Connect the googleLogin method to the button click event
-          disabled={loading} // Disable the button if loading
+          onClick={logGoogleLoginInfo}
+          disabled={loading}
         >
           <SvgIcon1 className="svg-container" />
-          {loading ? "...loading" : messages["login_google"]}
+          {loading ? "loading..." : messages["login_google"]}
         </button>
         <StylishContentBlock />
         <UserAuthenticationForm />

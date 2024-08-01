@@ -1,19 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 import { useEffect, useState } from "react";
+import { TailSpin } from "react-loader-spinner";
 
 function StylishProductDisplay(props) {
   const navigate = useNavigate();
   const arrow = "->";
 
-  // Initialize states with default values
-  const [noProducts, setNoProducts] = useState(props.noProducts ?? false);
-  const [products, setProducts] = useState(props.products ?? []);
+  const [products, setProducts] = useState(props.products);
 
-  // Function to remove duplicates from the products array
   function removeDuplicates(productsArray) {
     if (productsArray.length === 0) {
-      setNoProducts(true);
     } else {
       const uniqueIds = new Set();
       setProducts(
@@ -25,16 +22,12 @@ function StylishProductDisplay(props) {
           return false;
         })
       );
-      setNoProducts(false);
     }
   }
 
-  // Effect to handle props updates and duplicate removal
   useEffect(() => {
     if (props.products) {
       removeDuplicates(props.products);
-    } else {
-      setNoProducts(true);
     }
   }, [props.products]);
 
@@ -50,16 +43,28 @@ function StylishProductDisplay(props) {
         <p>Related Products</p>
       </div>
       {props.loading ? (
-        <h1
+        <div
+          className="tailspin"
           style={{
-            textAlign: "center",
-            fontWeight: "500",
             width: "100%",
+            height: "70vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          Loading...
-        </h1>
-      ) : noProducts ? (
+          <TailSpin
+            visible={true}
+            height="60"
+            width="60"
+            color="#000"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
+      ) : products?.length === 0 ? (
         <h1
           style={{
             textAlign: "center",
