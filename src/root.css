@@ -813,7 +813,8 @@ body {
   overflow: hidden !important;
 }
 .vision-section .vision-section-style {
-  background: url("/assets/div__mc99fc_795f1d.png") 50% / cover no-repeat !important;
+  background: url("https://d2e8m995jm0i5z.cloudfront.net/websiteimages/div__mc99fc_795f1d.png")
+    50% / cover no-repeat !important;
 }
 .vision-section .vision-container1 {
   background-color: rgba(0, 0, 0, 0.678) !important;

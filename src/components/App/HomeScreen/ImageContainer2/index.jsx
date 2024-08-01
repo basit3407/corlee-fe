@@ -4,7 +4,7 @@ function ImageContainer2() {
   return (
     <div className="image-container2-home">
       <img
-        src="/assets/img_1091_2314_122d61.jpeg"
+        src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2314_122d61.jpeg"
         className="image-container1-home"
       />
     </div>

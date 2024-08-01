@@ -13,12 +13,12 @@ function CreativeDesignView() {
       </div>
       <div className="flex-container-with-images">
         <img
-          src="/assets/img_1091_3859_bdc852.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3859_bdc852.svg"
           alt=""
           className="text-block-container"
         />
         <img
-          src="/assets/img_1091_3864_282360.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3864_282360.svg"
           alt=""
           className="image-container-with-margin"
         />

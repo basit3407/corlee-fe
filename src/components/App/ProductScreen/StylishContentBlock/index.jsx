@@ -13,12 +13,12 @@ function StylishContentBlock() {
       </div>
       <div className="flex-container-with-images">
         <img
-          src="/assets/img_1091_3878_75494f.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3878_75494f.svg"
           alt=""
           className="text-block-container"
         />
         <img
-          src="/assets/img_1091_3883_8be586.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3883_8be586.svg"
           alt=""
           className="image-container-with-margin"
         />

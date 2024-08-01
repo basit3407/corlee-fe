@@ -12,7 +12,7 @@ function NavBarBlack() {
       <div className="main-content-wrapper-events">
         <div className="flex-container-with-icons-events">
           <img
-            src="/assets/logo-white.png"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/logo-white.png"
             className="product-image-style-events"
           />
           <div className="hierarchical-container-events">

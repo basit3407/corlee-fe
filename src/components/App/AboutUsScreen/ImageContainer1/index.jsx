@@ -4,7 +4,7 @@ function ImageContainer1() {
   return (
     <div className="vertical-align-centered-image">
       <img
-        src="/assets/img_1133_4618_926b69.svg"
+        src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1133_4618_926b69.svg"
         alt=""
         className="hero-image-container"
       />

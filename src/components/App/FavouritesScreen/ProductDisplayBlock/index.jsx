@@ -19,7 +19,7 @@ function ProductDisplayBlock() {
         <div className="vertical-text-container-fav">
           <ImageContentBlock2 />
           <img
-            src="/assets/img_1091_3968_ef4585.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3968_ef4585.jpeg"
             className="image-container-fav"
           />
           <p className="art-noova-text-fav">{messages["12s396_1"]}</p>
@@ -30,7 +30,7 @@ function ProductDisplayBlock() {
         <div className="vertical-text-container-fav">
           <ImageContentBlock />
           <img
-            src="/assets/img_1091_3973_5fd7b9.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3973_5fd7b9.jpeg"
             className="image-container-fav"
           />
           <p className="art-noova-text-fav">{messages["12s396_3"]}</p>
@@ -41,7 +41,7 @@ function ProductDisplayBlock() {
         <div className="vertical-text-container-fav">
           <ImageContentBlock1 />
           <img
-            src="/assets/img_1091_3978_f3ce90.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3978_f3ce90.jpeg"
             className="image-container-fav"
           />
           <p className="art-noova-text-fav">{messages["12s396_5"]}</p>
@@ -52,7 +52,7 @@ function ProductDisplayBlock() {
         <div className="vertical-text-container-fav">
           <ImageContentBlock3 />
           <img
-            src="/assets/img_1091_3983_bb41cf.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3983_bb41cf.jpeg"
             className="image-container-fav"
           />
           <p className="art-noova-text-fav">{messages["12s396_7"]}</p>

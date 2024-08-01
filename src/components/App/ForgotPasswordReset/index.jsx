@@ -17,7 +17,7 @@ function FPReset(props) {
       <div className="password-reset-form-container1">
         <div className="password-reset-form">
           <img
-            src="/assets/img_1091_3135_bcced9.png"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3135_bcced9.png"
             className="profile-image-placeholder"
           />
           <SecurityCheckWidget {...props} />

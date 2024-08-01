@@ -29,7 +29,7 @@ function WelcomePage() {
       </div>
       <div className="login-section6">
         <img
-          src="/assets/img_1091_3084_f96278.jpeg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3084_f96278.jpeg"
           className="image-container-full-width"
         />
       </div>

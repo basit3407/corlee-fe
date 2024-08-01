@@ -4,7 +4,10 @@ import messages from "./messages.json";
 function ImageContentBlock3() {
   return (
     <div className="vertical-centered-column">
-      <img src="/assets/img_1091_3963_b83c4e.jpeg" className="image-container" />
+      <img
+        src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3963_b83c4e.jpeg"
+        className="image-container"
+      />
       <p className="art-noova-title">{messages["12s396_6"]}</p>
       <p className="woven-to-plain-style">{messages["woven_gt_plain_6"]}</p>
     </div>

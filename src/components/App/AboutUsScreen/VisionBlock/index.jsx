@@ -5,7 +5,7 @@ function VisionBlock() {
   return (
     <div className="vision-container">
       <img
-        src="/assets/img_1091_3661_d27536.svg"
+        src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3661_d27536.svg"
         alt=""
         className="vision-icon"
       />

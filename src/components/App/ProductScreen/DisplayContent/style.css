@@ -6,7 +6,14 @@
   align-items: stretch;
   justify-content: flex-start;
   padding: 24px 24px 32px 23px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 79.28%, rgba(0, 0, 0, 0.6) 95.65%), url("/assets/div_1ad94io_f8bba4.jpeg") 50%, #d9d9d9;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 79.28%,
+      rgba(0, 0, 0, 0.6) 95.65%
+    ),
+    url("https://d2e8m995jm0i5z.cloudfront.net/websiteimages/div_1ad94io_f8bba4.jpeg")
+      50%,
+    #d9d9d9;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: auto, cover, auto;
   border-radius: 16px;

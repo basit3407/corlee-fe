@@ -3,7 +3,10 @@ import "./style.css";
 function ImageContainer5() {
   return (
     <div className="vertical-margin-top-24px">
-      <img src="/assets/img_1091_2308_3da246.jpeg" className="image-container-styles" />
+      <img
+        src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2308_3da246.jpeg"
+        className="image-container-styles"
+      />
     </div>
   );
 }

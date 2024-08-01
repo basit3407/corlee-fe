@@ -24,7 +24,7 @@ function EventsComponent({ eventDisplayWidgetArgs }) {
             </div>
 
             <img
-              src="/assets/img_1091_8731_66f01e.jpeg"
+              src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8731_66f01e.jpeg"
               className="mainimage"
             />
           </div>

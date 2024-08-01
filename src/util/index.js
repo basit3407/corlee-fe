@@ -26,29 +26,37 @@ const mockData = {
       productCode: "1A7708",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 302_2" data-node-id="1091:4011" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_5" data-node-id="1091:4012" d="M16.138,24.7654l-0.138,0.138l-0.151,-0.138c-6.531,-5.926 -10.849,-9.845 -10.849,-13.819c0,-2.75 2.062,-4.812 4.812,-4.812c2.118,0 4.18,1.375 4.909,3.245h2.558c0.729,-1.87 2.791,-3.245 4.909,-3.245c2.75,0 4.812,2.062 4.812,4.812c0,3.974 -4.317,7.893 -10.862,13.819zM22.188,3.3844c-2.393,0 -4.689,1.114 -6.188,2.86c-1.499,-1.746 -3.795,-2.86 -6.188,-2.86c-4.234,0 -7.562,3.314 -7.562,7.562c0,5.184 4.675,9.433 11.756,15.854l1.994,1.815l1.994,-1.815c7.081,-6.421 11.756,-10.67 11.756,-15.854c0,-4.248 -3.327,-7.562 -7.562,-7.562z" fill="currentColor"/>\n<path id="Vector 1" data-node-id="1091:4013" d="M10.75,4.3844l3.5,2l2,1.5l0.5,-1l3,-2l2,-0.5l3.5,1l2.5,2.5c0.333,1.333 0.9,4.2 0.5,5c-0.4,0.8 -2.167,4 -3,5.5l-9.5,8l-8.5,-8l-3.5,-4.5l-0.5,-3.5l1.5,-2.5l2,-3z" fill="currentColor"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_3989_6f61a8.svg",
-      imgContent1: "/assets/img_1091_3999_8b011a.svg",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3989_6f61a8.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3999_8b011a.svg",
     },
     {
       productCode: "1A7708",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 302_5" data-node-id="1091:4089" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_17" data-node-id="1091:4090" d="M16.138,24.7644l-0.138,0.14l-0.151,-0.14c-6.531,-5.93 -10.849,-9.84 -10.849,-13.82c0,-2.75 2.062,-4.81 4.812,-4.81c2.118,0 4.18,1.38 4.909,3.25h2.558c0.729,-1.87 2.791,-3.25 4.909,-3.25c2.75,0 4.812,2.06 4.812,4.81c0,3.98 -4.317,7.89 -10.862,13.82zM22.188,3.3844c-2.393,0 -4.689,1.11 -6.188,2.86c-1.499,-1.75 -3.795,-2.86 -6.188,-2.86c-4.234,0 -7.562,3.31 -7.562,7.56c0,5.19 4.675,9.44 11.756,15.86l1.994,1.81l1.994,-1.81c7.081,-6.42 11.756,-10.67 11.756,-15.86c0,-4.25 -3.327,-7.56 -7.562,-7.56z" fill="currentColor"/>\n<path id="Vector 1_4" data-node-id="1091:4091" d="M10.75,4.3844l3.5,2l2,1.5l0.5,-1l3,-2l2,-0.5l3.5,1l2.5,2.5c0.333,1.33 0.9,4.2 0.5,5c-0.4,0.8 -2.167,4 -3,5.5l-9.5,8l-8.5,-8l-3.5,-4.5l-0.5,-3.5l1.5,-2.5l2,-3z" fill="currentColor"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4067_8167bb.svg",
-      imgContent1: "/assets/img_1091_4077_4acdaf.svg",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4067_8167bb.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4077_4acdaf.svg",
     },
     {
       productCode: "1A7708",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 302_8" data-node-id="1091:4167" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_29" data-node-id="1091:4168" d="M16.138,24.7644l-0.138,0.14l-0.151,-0.14c-6.531,-5.93 -10.849,-9.84 -10.849,-13.82c0,-2.75 2.062,-4.81 4.812,-4.81c2.118,0 4.18,1.38 4.909,3.25h2.558c0.729,-1.87 2.791,-3.25 4.909,-3.25c2.75,0 4.812,2.06 4.812,4.81c0,3.98 -4.317,7.89 -10.862,13.82zM22.188,3.3844c-2.393,0 -4.689,1.11 -6.188,2.86c-1.499,-1.75 -3.795,-2.86 -6.188,-2.86c-4.234,0 -7.562,3.31 -7.562,7.56c0,5.19 4.675,9.44 11.756,15.86l1.994,1.81l1.994,-1.81c7.081,-6.42 11.756,-10.67 11.756,-15.86c0,-4.25 -3.327,-7.56 -7.562,-7.56z" fill="currentColor"/>\n<path id="Vector 1_7" data-node-id="1091:4169" d="M10.75,4.3844l3.5,2l2,1.5l0.5,-1l3,-2l2,-0.5l3.5,1l2.5,2.5c0.333,1.33 0.9,4.2 0.5,5c-0.4,0.8 -2.167,4 -3,5.5l-9.5,8l-8.5,-8l-3.5,-4.5l-0.5,-3.5l1.5,-2.5l2,-3z" fill="currentColor"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4145_25b329.svg",
-      imgContent1: "/assets/img_1091_4155_c6f888.svg",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4145_25b329.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4155_c6f888.svg",
     },
     {
       productCode: "1A7708",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 302_11" data-node-id="1091:4230" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_41" data-node-id="1091:4231" d="M16.138,24.7644l-0.138,0.14l-0.151,-0.14c-6.531,-5.93 -10.849,-9.84 -10.849,-13.82c0,-2.75 2.062,-4.81 4.812,-4.81c2.118,0 4.18,1.38 4.909,3.25h2.558c0.729,-1.87 2.791,-3.25 4.909,-3.25c2.75,0 4.812,2.06 4.812,4.81c0,3.98 -4.317,7.89 -10.862,13.82zM22.188,3.3844c-2.393,0 -4.689,1.11 -6.188,2.86c-1.499,-1.75 -3.795,-2.86 -6.188,-2.86c-4.234,0 -7.562,3.31 -7.562,7.56c0,5.19 4.675,9.44 11.756,15.86l1.994,1.81l1.994,-1.81c7.081,-6.42 11.756,-10.67 11.756,-15.86c0,-4.25 -3.327,-7.56 -7.562,-7.56z" fill="currentColor"/>\n<path id="Vector 1_10" data-node-id="1091:4232" d="M10.75,4.3844l3.5,2l2,1.5l0.5,-1l3,-2l2,-0.5l3.5,1l2.5,2.5c0.333,1.33 0.9,4.2 0.5,5c-0.4,0.8 -2.167,4 -3,5.5l-9.5,8l-8.5,-8l-3.5,-4.5l-0.5,-3.5l1.5,-2.5l2,-3z" fill="currentColor"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4213_8367a8.svg",
-      imgContent1: "/assets/img_1091_4218_887c2e.svg",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4213_8367a8.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4218_887c2e.svg",
     },
   ],
   productDisplayWidgetOptions1: [
@@ -56,22 +64,28 @@ const mockData = {
       productCode: "1A7708",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 302_3" data-node-id="1091:4037" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_9" data-node-id="1091:4038" d="M16.138,24.7654l-0.138,0.138l-0.151,-0.138c-6.531,-5.926 -10.849,-9.845 -10.849,-13.819c0,-2.75 2.062,-4.812 4.812,-4.812c2.118,0 4.18,1.375 4.909,3.245h2.558c0.729,-1.87 2.791,-3.245 4.909,-3.245c2.75,0 4.812,2.062 4.812,4.812c0,3.974 -4.317,7.893 -10.862,13.819zM22.188,3.3844c-2.393,0 -4.689,1.114 -6.188,2.86c-1.499,-1.746 -3.795,-2.86 -6.188,-2.86c-4.234,0 -7.562,3.314 -7.562,7.562c0,5.184 4.675,9.433 11.756,15.854l1.994,1.815l1.994,-1.815c7.081,-6.421 11.756,-10.67 11.756,-15.854c0,-4.248 -3.327,-7.562 -7.562,-7.562z" fill="currentColor"/>\n<path id="Vector 1_2" data-node-id="1091:4039" d="M10.75,4.3844l3.5,2l2,1.5l0.5,-1l3,-2l2,-0.5l3.5,1l2.5,2.5c0.333,1.333 0.9,4.2 0.5,5c-0.4,0.8 -2.167,4 -3,5.5l-9.5,8l-8.5,-8l-3.5,-4.5l-0.5,-3.5l1.5,-2.5l2,-3z" fill="currentColor"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4015_16bc1e.svg",
-      imgContent1: "/assets/img_1091_4025_26c7ab.svg",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4015_16bc1e.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4025_26c7ab.svg",
     },
     {
       productCode: "1A7708",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 302_6" data-node-id="1091:4115" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_21" data-node-id="1091:4116" d="M16.138,24.7644l-0.138,0.14l-0.151,-0.14c-6.531,-5.93 -10.849,-9.84 -10.849,-13.82c0,-2.75 2.062,-4.81 4.812,-4.81c2.118,0 4.18,1.38 4.909,3.25h2.558c0.729,-1.87 2.791,-3.25 4.909,-3.25c2.75,0 4.812,2.06 4.812,4.81c0,3.98 -4.317,7.89 -10.862,13.82zM22.188,3.3844c-2.393,0 -4.689,1.11 -6.188,2.86c-1.499,-1.75 -3.795,-2.86 -6.188,-2.86c-4.234,0 -7.562,3.31 -7.562,7.56c0,5.19 4.675,9.44 11.756,15.86l1.994,1.81l1.994,-1.81c7.081,-6.42 11.756,-10.67 11.756,-15.86c0,-4.25 -3.327,-7.56 -7.562,-7.56z" fill="currentColor"/>\n<path id="Vector 1_5" data-node-id="1091:4117" d="M10.75,4.3844l3.5,2l2,1.5l0.5,-1l3,-2l2,-0.5l3.5,1l2.5,2.5c0.333,1.33 0.9,4.2 0.5,5c-0.4,0.8 -2.167,4 -3,5.5l-9.5,8l-8.5,-8l-3.5,-4.5l-0.5,-3.5l1.5,-2.5l2,-3z" fill="currentColor"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4093_5e595d.svg",
-      imgContent1: "/assets/img_1091_4103_25fcdf.svg",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4093_5e595d.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4103_25fcdf.svg",
     },
     {
       productCode: "1A7708",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 302_9" data-node-id="1091:4188" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_33" data-node-id="1091:4189" d="M16.138,24.7644l-0.138,0.14l-0.151,-0.14c-6.531,-5.93 -10.849,-9.84 -10.849,-13.82c0,-2.75 2.062,-4.81 4.812,-4.81c2.118,0 4.18,1.38 4.909,3.25h2.558c0.729,-1.87 2.791,-3.25 4.909,-3.25c2.75,0 4.812,2.06 4.812,4.81c0,3.98 -4.317,7.89 -10.862,13.82zM22.188,3.3844c-2.393,0 -4.689,1.11 -6.188,2.86c-1.499,-1.75 -3.795,-2.86 -6.188,-2.86c-4.234,0 -7.562,3.31 -7.562,7.56c0,5.19 4.675,9.44 11.756,15.86l1.994,1.81l1.994,-1.81c7.081,-6.42 11.756,-10.67 11.756,-15.86c0,-4.25 -3.327,-7.56 -7.562,-7.56z" fill="currentColor"/>\n<path id="Vector 1_8" data-node-id="1091:4190" d="M10.75,4.3844l3.5,2l2,1.5l0.5,-1l3,-2l2,-0.5l3.5,1l2.5,2.5c0.333,1.33 0.9,4.2 0.5,5c-0.4,0.8 -2.167,4 -3,5.5l-9.5,8l-8.5,-8l-3.5,-4.5l-0.5,-3.5l1.5,-2.5l2,-3z" fill="currentColor"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4171_748833.svg",
-      imgContent1: "/assets/img_1091_4176_2b8879.svg",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4171_748833.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4176_2b8879.svg",
     },
   ],
   productDisplayWidgetArgs: [
@@ -79,22 +93,28 @@ const mockData = {
       productCode: "1A7708",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 302_4" data-node-id="1091:4063" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_13" data-node-id="1091:4064" d="M16.14,24.7654l-0.14,0.138l-0.15,-0.138c-6.53,-5.926 -10.85,-9.845 -10.85,-13.819c0,-2.75 2.06,-4.812 4.81,-4.812c2.12,0 4.18,1.375 4.91,3.245h2.56c0.73,-1.87 2.79,-3.245 4.91,-3.245c2.75,0 4.81,2.062 4.81,4.812c0,3.974 -4.32,7.893 -10.86,13.819zM22.19,3.3844c-2.39,0 -4.69,1.114 -6.19,2.86c-1.5,-1.746 -3.8,-2.86 -6.19,-2.86c-4.23,0 -7.56,3.314 -7.56,7.562c0,5.184 4.68,9.433 11.76,15.854l1.99,1.815l1.99,-1.815c7.09,-6.421 11.76,-10.67 11.76,-15.854c0,-4.248 -3.33,-7.562 -7.56,-7.562z" fill="currentColor"/>\n<path id="Vector 1_3" data-node-id="1091:4065" d="M10.75,4.3844l3.5,2l2,1.5l0.5,-1l3,-2l2,-0.5l3.5,1l2.5,2.5c0.33,1.333 0.9,4.2 0.5,5c-0.4,0.8 -2.17,4 -3,5.5l-9.5,8l-8.5,-8l-3.5,-4.5l-0.5,-3.5l1.5,-2.5l2,-3z" fill="currentColor"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4041_33ec44.svg",
-      imgContent1: "/assets/img_1091_4051_a6d8e7.svg",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4041_33ec44.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4051_a6d8e7.svg",
     },
     {
       productCode: "1A7708",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 302_7" data-node-id="1091:4141" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_25" data-node-id="1091:4142" d="M16.14,24.7644l-0.14,0.14l-0.15,-0.14c-6.53,-5.93 -10.85,-9.84 -10.85,-13.82c0,-2.75 2.06,-4.81 4.81,-4.81c2.12,0 4.18,1.38 4.91,3.25h2.56c0.73,-1.87 2.79,-3.25 4.91,-3.25c2.75,0 4.81,2.06 4.81,4.81c0,3.98 -4.32,7.89 -10.86,13.82zM22.19,3.3844c-2.39,0 -4.69,1.11 -6.19,2.86c-1.5,-1.75 -3.8,-2.86 -6.19,-2.86c-4.23,0 -7.56,3.31 -7.56,7.56c0,5.19 4.68,9.44 11.76,15.86l1.99,1.81l1.99,-1.81c7.09,-6.42 11.76,-10.67 11.76,-15.86c0,-4.25 -3.33,-7.56 -7.56,-7.56z" fill="currentColor"/>\n<path id="Vector 1_6" data-node-id="1091:4143" d="M10.75,4.3844l3.5,2l2,1.5l0.5,-1l3,-2l2,-0.5l3.5,1l2.5,2.5c0.33,1.33 0.9,4.2 0.5,5c-0.4,0.8 -2.17,4 -3,5.5l-9.5,8l-8.5,-8l-3.5,-4.5l-0.5,-3.5l1.5,-2.5l2,-3z" fill="currentColor"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4119_f7dd66.svg",
-      imgContent1: "/assets/img_1091_4129_882779.svg",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4119_f7dd66.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4129_882779.svg",
     },
     {
       productCode: "1A7708",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 302_10" data-node-id="1091:4209" xmlns="http://www.w3.org/2000/svg">\n<path id="Vector_37" data-node-id="1091:4210" d="M16.14,24.7644l-0.14,0.14l-0.15,-0.14c-6.53,-5.93 -10.85,-9.84 -10.85,-13.82c0,-2.75 2.06,-4.81 4.81,-4.81c2.12,0 4.18,1.38 4.91,3.25h2.56c0.73,-1.87 2.79,-3.25 4.91,-3.25c2.75,0 4.81,2.06 4.81,4.81c0,3.98 -4.32,7.89 -10.86,13.82zM22.19,3.3844c-2.39,0 -4.69,1.11 -6.19,2.86c-1.5,-1.75 -3.8,-2.86 -6.19,-2.86c-4.23,0 -7.56,3.31 -7.56,7.56c0,5.19 4.68,9.44 11.76,15.86l1.99,1.81l1.99,-1.81c7.09,-6.42 11.76,-10.67 11.76,-15.86c0,-4.25 -3.33,-7.56 -7.56,-7.56z" fill="currentColor"/>\n<path id="Vector 1_9" data-node-id="1091:4211" d="M10.75,4.3844l3.5,2l2,1.5l0.5,-1l3,-2l2,-0.5l3.5,1l2.5,2.5c0.33,1.33 0.9,4.2 0.5,5c-0.4,0.8 -2.17,4 -3,5.5l-9.5,8l-8.5,-8l-3.5,-4.5l-0.5,-3.5l1.5,-2.5l2,-3z" fill="currentColor"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4192_a62a03.svg",
-      imgContent1: "/assets/img_1091_4197_2c1494.svg",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4192_a62a03.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4197_2c1494.svg",
     },
   ],
   generateContentDisplayWidgetArgs: [
@@ -117,15 +137,24 @@ const mockData = {
         "Lörem ipsum tis kvasiposade: poment vätirade ding, eftersom galna chips-sjukan tegen, numun, jykalig. Tektiga mobilmissbruk",
       dynamicContentSnippet1:
         "Lörem ipsum tis kvasiposade: poment vätirade ding, eftersom galna chips-sjukan tegen, numun, jykalig. Tektiga mobilmissbruk",
-      imgContent10: "/assets/img_1091_8917_40803b.svg",
-      imgContent12: "/assets/img_1091_8930_3a3766.svg",
-      imgContent14: "/assets/img_1091_8943_b1d92f.svg",
-      imgContent9: "/assets/img_1091_9018_87271a.png",
-      imgContent13: "/assets/img_1091_9005_fdff3a.png",
-      imgContent11: "/assets/img_1091_9018_87271a.png",
-      imgContent6: "/assets/img_1091_8907_303acd.png",
-      imgContent7: "/assets/img_1091_8920_7b77a5.png",
-      imgContent8: "/assets/img_1091_8933_dd24dc.png",
+      imgContent10:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8917_40803b.svg",
+      imgContent12:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8930_3a3766.svg",
+      imgContent14:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8943_b1d92f.svg",
+      imgContent9:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.png",
+      imgContent13:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.png",
+      imgContent11:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.png",
+      imgContent6:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8907_303acd.png",
+      imgContent7:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8920_7b77a5.png",
+      imgContent8:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8933_dd24dc.png",
     },
     {
       techCategory1: "Tech",
@@ -146,15 +175,24 @@ const mockData = {
         "Lörem ipsum tis kvasiposade: poment vätirade ding, eftersom galna chips-sjukan tegen, numun, jykalig. Tektiga mobilmissbruk",
       dynamicContentSnippet1:
         "Lörem ipsum tis kvasiposade: poment vätirade ding, eftersom galna chips-sjukan tegen, numun, jykalig. Tektiga mobilmissbruk",
-      imgContent10: "/assets/img_1091_8956_297af9.svg",
-      imgContent12: "/assets/img_1091_8969_a11cc2.svg",
-      imgContent14: "/assets/img_1091_8982_dca269.svg",
-      imgContent9: "/assets/img_1091_9005_fdff3a.png",
-      imgContent11: "/assets/img_1091_9018_87271a.png",
-      imgContent13: "/assets/img_1091_9005_fdff3a.png",
-      imgContent6: "/assets/img_1091_8946_8c6ab4.png",
-      imgContent7: "/assets/img_1091_8959_240124.png",
-      imgContent8: "/assets/img_1091_8972_3e61f0.png",
+      imgContent10:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8956_297af9.svg",
+      imgContent12:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8969_a11cc2.svg",
+      imgContent14:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8982_dca269.svg",
+      imgContent9:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.png",
+      imgContent11:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.png",
+      imgContent13:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.png",
+      imgContent6:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8946_8c6ab4.png",
+      imgContent7:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8959_240124.png",
+      imgContent8:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8972_3e61f0.png",
     },
     {
       techCategory1: "Tech",
@@ -175,15 +213,24 @@ const mockData = {
         "Lörem ipsum tis kvasiposade: poment vätirade ding, eftersom galna chips-sjukan tegen, numun, jykalig. Tektiga mobilmissbruk",
       dynamicContentSnippet1:
         "Lörem ipsum tis kvasiposade: poment vätirade ding, eftersom galna chips-sjukan tegen, numun, jykalig. Tektiga mobilmissbruk",
-      imgContent10: "/assets/img_1091_8995_544432.svg",
-      imgContent12: "/assets/img_1091_9008_dedc96.svg",
-      imgContent14: "/assets/img_1091_9021_1a623d.svg",
-      imgContent9: "/assets/img_1091_9005_fdff3a.png",
-      imgContent11: "/assets/img_1091_9005_fdff3a.png",
-      imgContent13: "/assets/img_1091_9018_87271a.png",
-      imgContent6: "/assets/img_1091_8985_8d1df5.png",
-      imgContent7: "/assets/img_1091_8998_eea642.png",
-      imgContent8: "/assets/img_1091_9011_252dd4.png",
+      imgContent10:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8995_544432.svg",
+      imgContent12:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9008_dedc96.svg",
+      imgContent14:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9021_1a623d.svg",
+      imgContent9:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.png",
+      imgContent11:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.png",
+      imgContent13:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.png",
+      imgContent6:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8985_8d1df5.png",
+      imgContent7:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8998_eea642.png",
+      imgContent8:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9011_252dd4.png",
     },
   ],
   eventDisplayWidgetArgs: [
@@ -193,7 +240,8 @@ const mockData = {
       eventDescription7: "nulla maxime voluptatem",
       dynamicContentWithShowMoreButton7:
         '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
-      imgContent9: "/assets/img_1091_8740_5e534f.png",
+      imgContent9:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8740_5e534f.png",
     },
     {
       eventYear5: "2024",
@@ -201,7 +249,8 @@ const mockData = {
       eventDescription7: "Tempore reprehenderit.",
       dynamicContentWithShowMoreButton7:
         '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
-      imgContent9: "/assets/img_1091_8766_dd24db.png",
+      imgContent9:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8766_dd24db.png",
     },
     {
       eventYear5: "2024",
@@ -209,7 +258,8 @@ const mockData = {
       eventDescription7: "Tempore reprehenderit.",
       dynamicContentWithShowMoreButton7:
         '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
-      imgContent9: "/assets/img_1091_8792_50fc66.png",
+      imgContent9:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8792_50fc66.png",
     },
     {
       eventYear5: "2024",
@@ -217,7 +267,8 @@ const mockData = {
       eventDescription7: "Tempore reprehenderit.",
       dynamicContentWithShowMoreButton7:
         '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
-      imgContent9: "/assets/img_1091_8818_3fb63a.png",
+      imgContent9:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8818_3fb63a.png",
     },
     {
       eventYear5: "2024",
@@ -225,7 +276,8 @@ const mockData = {
       eventDescription7: "Tempore reprehenderit.",
       dynamicContentWithShowMoreButton7:
         '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
-      imgContent9: "/assets/img_1091_8844_8e01e9.png",
+      imgContent9:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8844_8e01e9.png",
     },
   ],
   contactOptionsArray: [
@@ -274,8 +326,10 @@ const mockData = {
       renderProductDetailsWidget1: "Quantity",
       renderType: "Functional",
       lengthUnitDescription: "(by meter)",
-      imgContent: "/assets/img_1091_2838_9df264.svg",
-      imgContent1: "/assets/img_1091_2826_49a129.png",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2838_9df264.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2826_49a129.png",
     },
     {
       productQuantityWidget: "100",
@@ -284,8 +338,10 @@ const mockData = {
       renderProductDetailsWidget1: "Quantity",
       renderType: "Functional",
       lengthUnitDescription: "(by meter)",
-      imgContent: "/assets/img_1091_2859_d41d8a.svg",
-      imgContent1: "/assets/img_1091_2847_ca24d8.png",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2859_d41d8a.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2847_ca24d8.png",
     },
     {
       productQuantityWidget: "100",
@@ -294,8 +350,10 @@ const mockData = {
       renderProductDetailsWidget1: "Quantity",
       renderType: "Functional",
       lengthUnitDescription: "(by meter)",
-      imgContent: "/assets/img_1091_2880_443c9a.svg",
-      imgContent1: "/assets/img_1091_2868_322998.png",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2880_443c9a.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2868_322998.png",
     },
     {
       productQuantityWidget: "100",
@@ -304,8 +362,10 @@ const mockData = {
       renderProductDetailsWidget1: "Quantity",
       renderType: "Functional",
       lengthUnitDescription: "(by meter)",
-      imgContent: "/assets/img_1091_2901_f03306.svg",
-      imgContent1: "/assets/img_1091_2889_89b193.png",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2901_f03306.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2889_89b193.png",
     },
     {
       productQuantityWidget: "100",
@@ -314,8 +374,10 @@ const mockData = {
       renderProductDetailsWidget1: "Quantity",
       renderType: "Functional",
       lengthUnitDescription: "(by meter)",
-      imgContent: "/assets/img_1091_2922_bdf3d2.svg",
-      imgContent1: "/assets/img_1091_2910_67b0a3.png",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2922_bdf3d2.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2910_67b0a3.png",
     },
     {
       productQuantityWidget: "100",
@@ -324,8 +386,10 @@ const mockData = {
       renderProductDetailsWidget1: "Quantity",
       renderType: "Functional",
       lengthUnitDescription: "(by meter)",
-      imgContent: "/assets/img_1091_2943_bdd036.svg",
-      imgContent1: "/assets/img_1091_2931_97e43b.png",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2943_bdd036.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2931_97e43b.png",
     },
   ],
   productCardViewArguments: [
@@ -373,26 +437,34 @@ const mockData = {
     {
       colorOption1: "Red",
       colorOption3: "Green",
-      imgContent2: "/assets/img_1091_4712_78da9e.svg",
-      imgContent3: "/assets/img_1091_4716_6912be.svg",
+      imgContent2:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4712_78da9e.svg",
+      imgContent3:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4716_6912be.svg",
     },
     {
       colorOption3: "Blue",
       colorOption1: "Black",
-      imgContent2: "/assets/img_1091_4721_6eef5e.svg",
-      imgContent3: "/assets/img_1091_4725_8bd834.svg",
+      imgContent2:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4721_6eef5e.svg",
+      imgContent3:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4725_8bd834.svg",
     },
     {
       colorOption1: "White",
       colorOption3: "Purple",
-      imgContent2: "/assets/img_1091_4730_5de029.svg",
-      imgContent3: "/assets/img_1091_4734_bc1e60.svg",
+      imgContent2:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4730_5de029.svg",
+      imgContent3:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4734_bc1e60.svg",
     },
     {
       colorOption3: "Pink",
       colorOption1: "Orange",
-      imgContent2: "/assets/img_1091_4739_e7087d.svg",
-      imgContent3: "/assets/img_1091_4743_75b8ca.svg",
+      imgContent2:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4739_e7087d.svg",
+      imgContent3:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4743_75b8ca.svg",
     },
   ],
   productTableRowsData: [
@@ -404,8 +476,10 @@ const mockData = {
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 183" data-node-id="1091:4937" xmlns="http://www.w3.org/2000/svg">\n<rect x="0" y="0" width="32" height="32" rx="16" fill="currentColor"/>\n<path id="-" data-node-id="1091:4938" d="M20.414,15.103v1.795h-8.826v-1.795z" fill="white"/>\n</g></svg>',
       htmlContent7:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 182" data-node-id="1091:4941" xmlns="http://www.w3.org/2000/svg">\n<rect x="0" y="0" width="32" height="32" rx="16" fill="currentColor"/>\n<path id="+" data-node-id="1091:4942" d="M15.364,19.75v-7.5h1.272v7.5zM12.25,16.636v-1.272h7.5v1.272z" fill="white"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4971_5ae4a4.svg",
-      imgContent1: "/assets/img_1091_4905_a29442.png",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4971_5ae4a4.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4905_a29442.png",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector_4" data-node-id="1091:4910" d="M29.2,5.818h-5.4v-1.745c0,-1.08 -0.442,-2.116 -1.23,-2.88c-0.788,-0.764 -1.856,-1.193 -2.97,-1.193h-7.2c-1.114,0 -2.182,0.429 -2.97,1.193c-0.788,0.764 -1.23,1.8 -1.23,2.88v1.745h-5.4c-0.477,0 -0.935,0.184 -1.273,0.511c-0.337,0.328 -0.527,0.772 -0.527,1.235c0,0.463 0.19,0.907 0.527,1.234c0.338,0.327 0.796,0.511 1.273,0.511h0.6v19.782c0,0.771 0.316,1.511 0.879,2.057c0.562,0.546 1.325,0.852 2.121,0.852h19.2c0.796,0 1.559,-0.306 2.121,-0.852c0.563,-0.546 0.879,-1.286 0.879,-2.057v-19.782h0.6c0.477,0 0.935,-0.184 1.273,-0.511c0.337,-0.327 0.527,-0.771 0.527,-1.234c0,-0.463 -0.19,-0.907 -0.527,-1.235c-0.338,-0.327 -0.796,-0.511 -1.273,-0.511zM11.8,4.073c0,-0.155 0.063,-0.303 0.176,-0.412c0.112,-0.109 0.265,-0.17 0.424,-0.17h7.2c0.159,0 0.312,0.061 0.424,0.17c0.113,0.109 0.176,0.257 0.176,0.412v1.745h-8.4zM25,28.509h-18v-19.2h18zM14.2,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235zM21.4,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235z" fill="currentColor" xmlns="http://www.w3.org/2000/svg"/></svg>',
     },
@@ -417,8 +491,10 @@ const mockData = {
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 183_2" data-node-id="1091:4945" xmlns="http://www.w3.org/2000/svg">\n<rect x="0" y="0" width="32" height="32" rx="16" fill="currentColor"/>\n<path id="-_2" data-node-id="1091:4946" d="M20.414,15.103v1.795h-8.826v-1.795z" fill="white"/>\n</g></svg>',
       htmlContent7:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 182_2" data-node-id="1091:4949" xmlns="http://www.w3.org/2000/svg">\n<rect x="0" y="0" width="32" height="32" rx="16" fill="currentColor"/>\n<path id="+_2" data-node-id="1091:4950" d="M15.364,19.75v-7.5h1.272v7.5zM12.25,16.636v-1.272h7.5v1.272z" fill="white"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4977_d96d9f.svg",
-      imgContent1: "/assets/img_1091_4912_e597f7.png",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4977_d96d9f.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4912_e597f7.png",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector_5" data-node-id="1091:4917" d="M29.2,5.818h-5.4v-1.745c0,-1.08 -0.442,-2.116 -1.23,-2.88c-0.788,-0.764 -1.856,-1.193 -2.97,-1.193h-7.2c-1.114,0 -2.182,0.429 -2.97,1.193c-0.788,0.764 -1.23,1.8 -1.23,2.88v1.745h-5.4c-0.477,0 -0.935,0.184 -1.273,0.511c-0.337,0.328 -0.527,0.772 -0.527,1.235c0,0.463 0.19,0.907 0.527,1.234c0.338,0.327 0.796,0.511 1.273,0.511h0.6v19.782c0,0.771 0.316,1.511 0.879,2.057c0.562,0.546 1.325,0.852 2.121,0.852h19.2c0.796,0 1.559,-0.306 2.121,-0.852c0.563,-0.546 0.879,-1.286 0.879,-2.057v-19.782h0.6c0.477,0 0.935,-0.184 1.273,-0.511c0.337,-0.327 0.527,-0.771 0.527,-1.234c0,-0.463 -0.19,-0.907 -0.527,-1.235c-0.338,-0.327 -0.796,-0.511 -1.273,-0.511zM11.8,4.073c0,-0.155 0.063,-0.303 0.176,-0.412c0.112,-0.109 0.265,-0.17 0.424,-0.17h7.2c0.159,0 0.312,0.061 0.424,0.17c0.113,0.109 0.176,0.257 0.176,0.412v1.745h-8.4zM25,28.509h-18v-19.2h18zM14.2,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235zM21.4,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235z" fill="currentColor" xmlns="http://www.w3.org/2000/svg"/></svg>',
     },
@@ -430,8 +506,10 @@ const mockData = {
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 183_3" data-node-id="1091:4953" xmlns="http://www.w3.org/2000/svg">\n<rect x="0" y="0" width="32" height="32" rx="16" fill="currentColor"/>\n<path id="-_3" data-node-id="1091:4954" d="M20.414,15.103v1.795h-8.826v-1.795z" fill="white"/>\n</g></svg>',
       htmlContent7:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 182_3" data-node-id="1091:4957" xmlns="http://www.w3.org/2000/svg">\n<rect x="0" y="0" width="32" height="32" rx="16" fill="currentColor"/>\n<path id="+_3" data-node-id="1091:4958" d="M15.364,19.75v-7.5h1.272v7.5zM12.25,16.636v-1.272h7.5v1.272z" fill="white"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4983_20756e.svg",
-      imgContent1: "/assets/img_1091_4919_2fd614.png",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4983_20756e.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4919_2fd614.png",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector_6" data-node-id="1091:4924" d="M29.2,5.818h-5.4v-1.745c0,-1.08 -0.442,-2.116 -1.23,-2.88c-0.788,-0.764 -1.856,-1.193 -2.97,-1.193h-7.2c-1.114,0 -2.182,0.429 -2.97,1.193c-0.788,0.764 -1.23,1.8 -1.23,2.88v1.745h-5.4c-0.477,0 -0.935,0.184 -1.273,0.511c-0.337,0.328 -0.527,0.772 -0.527,1.235c0,0.463 0.19,0.907 0.527,1.234c0.338,0.327 0.796,0.511 1.273,0.511h0.6v19.782c0,0.771 0.316,1.511 0.879,2.057c0.562,0.546 1.325,0.852 2.121,0.852h19.2c0.796,0 1.559,-0.306 2.121,-0.852c0.563,-0.546 0.879,-1.286 0.879,-2.057v-19.782h0.6c0.477,0 0.935,-0.184 1.273,-0.511c0.337,-0.327 0.527,-0.771 0.527,-1.234c0,-0.463 -0.19,-0.907 -0.527,-1.235c-0.338,-0.327 -0.796,-0.511 -1.273,-0.511zM11.8,4.073c0,-0.155 0.063,-0.303 0.176,-0.412c0.112,-0.109 0.265,-0.17 0.424,-0.17h7.2c0.159,0 0.312,0.061 0.424,0.17c0.113,0.109 0.176,0.257 0.176,0.412v1.745h-8.4zM25,28.509h-18v-19.2h18zM14.2,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235zM21.4,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235z" fill="currentColor" xmlns="http://www.w3.org/2000/svg"/></svg>',
     },
@@ -443,8 +521,10 @@ const mockData = {
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 183_4" data-node-id="1091:4961" xmlns="http://www.w3.org/2000/svg">\n<rect x="0" y="0" width="32" height="32" rx="16" fill="currentColor"/>\n<path id="-_4" data-node-id="1091:4962" d="M20.414,15.1v1.8h-8.826v-1.8z" fill="white"/>\n</g></svg>',
       htmlContent7:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Frame 182_4" data-node-id="1091:4965" xmlns="http://www.w3.org/2000/svg">\n<rect x="0" y="0" width="32" height="32" rx="16" fill="currentColor"/>\n<path id="+_4" data-node-id="1091:4966" d="M15.364,19.75v-7.5h1.272v7.5zM12.25,16.64v-1.28h7.5v1.28z" fill="white"/>\n</g></svg>',
-      imgContent: "/assets/img_1091_4989_62f229.svg",
-      imgContent1: "/assets/img_1091_4926_cb0ba6.png",
+      imgContent:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4989_62f229.svg",
+      imgContent1:
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4926_cb0ba6.png",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector_7" data-node-id="1091:4931" d="M29.2,5.82h-5.4v-1.75c0,-1.08 -0.442,-2.11 -1.23,-2.88c-0.788,-0.76 -1.856,-1.19 -2.97,-1.19h-7.2c-1.114,0 -2.182,0.43 -2.97,1.19c-0.788,0.77 -1.23,1.8 -1.23,2.88v1.75h-5.4c-0.477,0 -0.935,0.18 -1.273,0.51c-0.337,0.33 -0.527,0.77 -0.527,1.23c0,0.47 0.19,0.91 0.527,1.24c0.338,0.33 0.796,0.51 1.273,0.51h0.6v19.78c0,0.77 0.316,1.51 0.879,2.06c0.562,0.54 1.325,0.85 2.121,0.85h19.2c0.796,0 1.559,-0.31 2.121,-0.85c0.563,-0.55 0.879,-1.29 0.879,-2.06v-19.78h0.6c0.477,0 0.935,-0.18 1.273,-0.51c0.337,-0.33 0.527,-0.77 0.527,-1.24c0,-0.46 -0.19,-0.9 -0.527,-1.23c-0.338,-0.33 -0.796,-0.51 -1.273,-0.51zM11.8,4.07c0,-0.15 0.063,-0.3 0.176,-0.41c0.112,-0.11 0.265,-0.17 0.424,-0.17h7.2c0.159,0 0.312,0.06 0.424,0.17c0.113,0.11 0.176,0.26 0.176,0.41v1.75h-8.4zM25,28.51h-18v-19.2h18zM14.2,13.96v9.31c0,0.47 -0.19,0.91 -0.527,1.24c-0.338,0.32 -0.796,0.51 -1.273,0.51c-0.477,0 -0.935,-0.19 -1.273,-0.51c-0.337,-0.33 -0.527,-0.77 -0.527,-1.24v-9.31c0,-0.46 0.19,-0.9 0.527,-1.23c0.338,-0.33 0.796,-0.51 1.273,-0.51c0.477,0 0.935,0.18 1.273,0.51c0.337,0.33 0.527,0.77 0.527,1.23zM21.4,13.96v9.31c0,0.47 -0.19,0.91 -0.527,1.24c-0.338,0.32 -0.796,0.51 -1.273,0.51c-0.477,0 -0.935,-0.19 -1.273,-0.51c-0.337,-0.33 -0.527,-0.77 -0.527,-1.24v-9.31c0,-0.46 0.19,-0.9 0.527,-1.23c0.338,-0.33 0.796,-0.51 1.273,-0.51c0.477,0 0.935,0.18 1.273,0.51c0.337,0.33 0.527,0.77 0.527,1.23z" fill="currentColor" xmlns="http://www.w3.org/2000/svg"/></svg>',
     },

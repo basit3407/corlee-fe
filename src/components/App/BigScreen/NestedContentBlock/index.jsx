@@ -8,13 +8,13 @@ function NestedContentBlock() {
       </div>
       <div className="image-container-nested">
         <img
-          src="/assets/img_1091_4868_7848fb.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4868_7848fb.svg"
           alt=""
           className="boxy-image"
         />
         <div className="vertical-spacer">
           <img
-            src="/assets/img_1091_4879_5237e0.svg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4879_5237e0.svg"
             alt=""
             className="image-wrapper"
           />

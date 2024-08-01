@@ -63,7 +63,10 @@ function BottomBar(props) {
             </p>
           </div>
           <div className="sidebar-container-bb">
-            <img src="/assets/logo-white.png" className="image-container-bb" />
+            <img
+              src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/logo-white.png"
+              className="image-container-bb"
+            />
           </div>
           <div className="flex-box-section-bb">
             <SvgIcon1 className="svg-container-bb" />

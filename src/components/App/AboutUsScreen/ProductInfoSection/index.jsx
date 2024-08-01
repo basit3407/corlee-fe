@@ -8,7 +8,7 @@ function ProductInfoSection() {
       <div className="imagesdiv">
         <div className="onediv">
           <img
-            src="/assets/img_1135_8915_714d59.svg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1135_8915_714d59.svg"
             alt=""
             className="image-block"
           />
@@ -19,7 +19,7 @@ function ProductInfoSection() {
         </div>
         <div className="onediv">
           <img
-            src="/assets/img_1091_3692_458f26.svg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3692_458f26.svg"
             alt=""
             className="image-block"
           />
@@ -28,7 +28,7 @@ function ProductInfoSection() {
         </div>
         <div className="onediv">
           <img
-            src="/assets/img_1135_8920_20e63d.svg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1135_8920_20e63d.svg"
             alt=""
             className="image-block"
           />
@@ -37,7 +37,7 @@ function ProductInfoSection() {
         </div>
         <div className="onediv">
           <img
-            src="/assets/img_1091_3700_db0891.svg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3700_db0891.svg"
             alt=""
             className="image-block"
           />
@@ -46,7 +46,7 @@ function ProductInfoSection() {
         </div>
         <div className="onediv">
           <img
-            src="/assets/img_1091_3702_cbd766.svg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3702_cbd766.svg"
             alt=""
             className="image-block"
           />

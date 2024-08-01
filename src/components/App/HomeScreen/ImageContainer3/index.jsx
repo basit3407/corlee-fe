@@ -3,7 +3,10 @@ import "./style.css";
 function ImageContainer3() {
   return (
     <div className="vertical-spacing-container">
-      <img src="/assets/img_1091_2366_1d1ae1.jpeg" className="masked-image-container" />
+      <img
+        src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2366_1d1ae1.jpeg"
+        className="masked-image-container"
+      />
     </div>
   );
 }

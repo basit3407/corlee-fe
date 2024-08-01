@@ -6,12 +6,14 @@ function SecureAccessMessage() {
   return (
     <div className="login-prompt-container">
       <img
-        src="/assets/img_1135_5784_3d0517.svg"
+        src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1135_5784_3d0517.svg"
         alt=""
         className="login-required-container"
       />
       <UserAuthenticationMessage />
-      <p className="login-prompt-text-style">{messages["please_login_continue"]}</p>
+      <p className="login-prompt-text-style">
+        {messages["please_login_continue"]}
+      </p>
     </div>
   );
 }

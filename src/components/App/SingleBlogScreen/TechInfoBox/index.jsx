@@ -41,7 +41,7 @@ function TechInfoBox(data) {
           <div className="fisher-info-container">
             <p className="ice-fisher-paragraph">{data.author_name}</p>
             <img
-              src="/assets/img_1091_9036_2d85b9.svg"
+              src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9036_2d85b9.svg"
               alt=""
               className="ice-fisher-style"
             />

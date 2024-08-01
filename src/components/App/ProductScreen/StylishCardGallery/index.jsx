@@ -7,12 +7,12 @@ function StylishCardGallery() {
       <TrendyCard />
       <div className="product-gallery-row">
         <img
-          src="/assets/img_1091_3814_2006df.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3814_2006df.svg"
           alt=""
           className="text-block-container"
         />
         <img
-          src="/assets/img_1091_3819_effba8.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3819_effba8.svg"
           alt=""
           className="image-container-with-margin"
         />

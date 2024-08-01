@@ -13,12 +13,12 @@ function DisplayContent() {
       </div>
       <div className="product-gallery-row">
         <img
-          src="/assets/img_1091_3833_ab3970.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3833_ab3970.svg"
           alt=""
           className="text-block-container"
         />
         <img
-          src="/assets/img_1091_3843_2056dc.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3843_2056dc.svg"
           alt=""
           className="image-container-with-margin"
         />

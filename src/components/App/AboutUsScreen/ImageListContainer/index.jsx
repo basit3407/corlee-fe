@@ -6,27 +6,27 @@ function ImageListContainer() {
     <div className="vertical-centered-layout">
       <div className="horizontal-flex-container-with-text-aligned-center">
         <img
-          src="/assets/img_1135_8915_714d59.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1135_8915_714d59.svg"
           alt=""
           className="image-container"
         />
         <img
-          src="/assets/img_1091_3692_458f26.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3692_458f26.svg"
           alt=""
           className="image-block"
         />
         <img
-          src="/assets/img_1135_8920_20e63d.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1135_8920_20e63d.svg"
           alt=""
           className="image-box1"
         />
         <img
-          src="/assets/img_1091_3700_db0891.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3700_db0891.svg"
           alt=""
           className="image-box"
         />
         <img
-          src="/assets/img_1091_3702_cbd766.svg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3702_cbd766.svg"
           alt=""
           className="image-block"
         />

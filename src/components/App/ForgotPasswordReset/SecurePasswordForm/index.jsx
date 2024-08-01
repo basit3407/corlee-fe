@@ -55,7 +55,7 @@ function SecurePasswordForm(props) {
         <div className="text-grouping-container">
           <div className="text-content-container">
             <img
-              src="/assets/img_1091_3147_dc1186.svg"
+              src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3147_dc1186.svg"
               alt=""
               className="text-image-block"
             />
@@ -63,7 +63,7 @@ function SecurePasswordForm(props) {
           </div>
           <div className="text-block-container">
             <img
-              src="/assets/img_1091_3150_903815.svg"
+              src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3150_903815.svg"
               alt=""
               className="text-image-block"
             />
@@ -73,7 +73,7 @@ function SecurePasswordForm(props) {
         <div className="vertical-text-block">
           <div className="text-content-container">
             <img
-              src="/assets/img_1091_3154_932af4.svg"
+              src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3154_932af4.svg"
               alt=""
               className="text-image-block"
             />
@@ -81,7 +81,7 @@ function SecurePasswordForm(props) {
           </div>
           <div className="text-block-container">
             <img
-              src="/assets/img_1091_3157_9e00ec.svg"
+              src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3157_9e00ec.svg"
               alt=""
               className="text-image-block"
             />

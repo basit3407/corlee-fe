@@ -8,7 +8,7 @@ function ThankYouMessageWidget() {
       <div className="flex-column-centered">
         <div className="success-message-container2">
           <img
-            src="/assets/img_1091_5138_51e166.svg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_5138_51e166.svg"
             alt=""
             className="image-container"
           />
@@ -18,7 +18,9 @@ function ThankYouMessageWidget() {
               <p className="gratitude-message">{messages["thank_you_1"]}</p>
             </div>
           </div>
-          <p className="success-message">{messages["requet_submitted_successfully"]}</p>
+          <p className="success-message">
+            {messages["requet_submitted_successfully"]}
+          </p>
         </div>
       </div>
       <div className="flex-column-centered">
@@ -27,7 +29,9 @@ function ThankYouMessageWidget() {
           <MessageButtonWidget />
         </div>
       </div>
-      <p className="message-text">{messages["we_received_email_we_looking_into_request__get_bac"]}</p>
+      <p className="message-text">
+        {messages["we_received_email_we_looking_into_request__get_bac"]}
+      </p>
       {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
       <button className="success-button">{messages["great"]}</button>
     </div>

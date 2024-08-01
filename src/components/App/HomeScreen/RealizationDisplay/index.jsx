@@ -13,35 +13,35 @@ function RealizationDisplay() {
       <div className="realization-container1-home">
         <div className="image-container-with-text1-home">
           <img
-            src="/assets/img_1091_2307_617c48.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2307_617c48.jpeg"
             className="hero-image-container1-home"
           />
           <ImageContainer5 />
         </div>
         <div className="nested-content-container-home">
           <img
-            src="/assets/img_1091_2310_cc486c.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2310_cc486c.jpeg"
             className="image-container-fullscreen-home"
           />
           <ImageContainer />
         </div>
         <div className="realization-container-home">
           <img
-            src="/assets/img_1091_2313_9e3b38.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2313_9e3b38.jpeg"
             className="profile-image-container1-home"
           />
           <ImageContainer2 />
         </div>
         <div className="image-container-with-text-home">
           <img
-            src="/assets/img_1091_2316_b5b829.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2316_b5b829.jpeg"
             className="hero-image-container-home"
           />
           <ImageContainer1 />
         </div>
         <div className="vertical-image-container-home">
           <img
-            src="/assets/img_1091_2319_e848c6.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2319_e848c6.jpeg"
             className="profile-image-container-home"
           />
           <ImageContainer4 />

@@ -61,7 +61,7 @@ function Navbar(props) {
     >
       <div className="header-navbar-nav">
         <img
-          src="/assets/logo.png"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/logo.png"
           className="product-image-styles-nav"
           alt="logo"
           style={{ cursor: "pointer", zIndex: 3 }}
