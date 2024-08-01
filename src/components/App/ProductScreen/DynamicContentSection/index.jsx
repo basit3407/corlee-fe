@@ -12,7 +12,7 @@ function DynamicContentSection(props) {
   const [color, setColor] = useState([]);
   const [sort, setSort] = useState("");
   const [relatedFabrics, setRelatedFabrics] = useState([]);
-  const [noProducts, setNoproducts] = useState(false);
+
   const [relatedLoading, setRelatedLoading] = useState(true);
 
   return (
@@ -36,7 +36,6 @@ function DynamicContentSection(props) {
             relatedFabrics={relatedFabrics}
             setRelatedFabrics={setRelatedFabrics}
             setRelatedLoading={setRelatedLoading}
-            setNoproducts={setNoproducts}
             color={color}
             sort={sort}
           />
@@ -50,7 +49,6 @@ function DynamicContentSection(props) {
             color={color}
             relatedFabrics={relatedFabrics}
             setRelatedFabrics={setRelatedFabrics}
-            setNoproducts={setNoproducts}
             sort={sort}
           />
         )}
@@ -81,7 +79,6 @@ function DynamicContentSection(props) {
       <StylishProductDisplay
         loading={relatedLoading}
         products={relatedFabrics}
-        noProducts={noProducts}
       />
     </>
   );

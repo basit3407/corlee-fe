@@ -20,9 +20,8 @@ export const googleLogin = async () => {
   try {
     const result = await signInWithPopup(auth, provider);
     const token = await result.user.getIdToken();
-    return { token };
+    return { token, error: false };
   } catch (error) {
-    console.error("Error during Google sign-in:", error);
-    throw error;
+    return { error: true };
   }
 };

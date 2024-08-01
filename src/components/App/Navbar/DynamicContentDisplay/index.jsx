@@ -30,9 +30,7 @@ function DynamicContentDisplay(props) {
     try {
       const response = await api.get("/cart-items/");
       setCount(response.data.cart_items.length);
-    } catch (e) {
-      console.log(e);
-    }
+    } catch (e) {}
   };
   useEffect(() => {
     getcartcount();

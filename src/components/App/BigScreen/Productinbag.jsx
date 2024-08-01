@@ -60,6 +60,7 @@ const Productinbag = (props) => {
         toast.success("Item removed successfully");
         props.loadDatafc();
         setLoading(false);
+        props.setRefresh(Date.now());
       }
     } catch (e) {
       toast.error(e.message || "Something went wrong");

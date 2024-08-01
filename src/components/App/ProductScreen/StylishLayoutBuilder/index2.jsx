@@ -36,7 +36,6 @@ function StylishLayoutBuilder(props) {
         });
       } else {
         setNoproducts(true);
-        props.setNoproducts(true);
       }
       props.setRelatedLoading(false);
 
@@ -45,7 +44,6 @@ function StylishLayoutBuilder(props) {
       console.log(e);
       setLoading(false);
       props.setRelatedLoading(false);
-      props.setNoproducts(true);
     }
   };
 

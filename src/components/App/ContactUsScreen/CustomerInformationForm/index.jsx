@@ -33,6 +33,11 @@ function CustomerInformationForm(props) {
         navigate("/login");
         return;
       }
+      if (localStorage.getItem("Company") === "false") {
+        toast.error("Please enter your company details continue");
+        navigate("/addCompanyDetails");
+        return;
+      }
       setLoading(true);
       const res = await api.post("/contact/", { ...data });
       console.log(res);

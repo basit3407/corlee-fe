@@ -3,6 +3,8 @@ import ProductNavigation from "./ProductNavigation";
 import "./style.css";
 import { useEffect, useState } from "react";
 import { api } from "../../../config/api";
+import { TailSpin } from "react-loader-spinner";
+
 import { toast } from "sonner";
 
 function Navbar(props) {
@@ -13,6 +15,7 @@ function Navbar(props) {
   const [loading, setLoading] = useState(false);
   const [loading2, setLoading2] = useState(false);
   const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState("");
 
   const getCategories = async () => {
     try {
@@ -30,21 +33,26 @@ function Navbar(props) {
   const getProducts = async () => {
     try {
       setLoading2(true);
-      const response = await api.get("/fabrics/");
+      console.log(category);
+      const response = await api.get(
+        `/fabrics/${category ? "?keyword=" + category : ""}`
+      );
+      console.log(response);
       if (response.status === 200) {
         setProducts(response.data.results.slice(0, 6));
         setLoading2(false);
       }
     } catch (e) {
-      console.log(e);
       setLoading2(false);
     }
   };
 
   useEffect(() => {
     getCategories();
-    getProducts();
   }, []);
+  useEffect(() => {
+    getProducts();
+  }, [category]);
   const changeShowcall = () => {
     setShowcall(!showcall);
   };
@@ -214,9 +222,26 @@ function Navbar(props) {
       >
         <div className="productsoptionsdivinnav">
           {loading ? (
-            <h2 style={{ textAlign: "center", width: "100%" }}>
-              Loading Categories...
-            </h2>
+            <div
+              style={{
+                display: "flex",
+                width: "100%",
+                height: "100%",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <TailSpin
+                visible={true}
+                height="60"
+                width="60"
+                color="#000"
+                ariaLabel="tail-spin-loading"
+                radius="1"
+                wrapperStyle={{}}
+                wrapperClass=""
+              />
+            </div>
           ) : (
             <>
               <div
@@ -232,7 +257,15 @@ function Navbar(props) {
                   <h1>Best Selling</h1>
                   <p>Lorem ipsum dolor sit amet consectetur elit</p>
                 </div>
-                <div className="iconinproductnavdropdown">🔥</div>
+                <div
+                  className="iconinproductnavdropdown"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCategory("best_selling");
+                  }}
+                >
+                  🔥
+                </div>
               </div>
               {categs &&
                 categs.map((categ, index) => (
@@ -248,7 +281,13 @@ function Navbar(props) {
                       <h1>{categ.name}</h1>
                       <p>{categ.description}</p>
                     </div>
-                    <div className="iconinproductnavdropdown">
+                    <div
+                      className="iconinproductnavdropdown"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setCategory(categ.name);
+                      }}
+                    >
                       <svg
                         width="8"
                         height="14"
@@ -272,8 +311,25 @@ function Navbar(props) {
         <div className="verticallineinnavdropdownofproducts"></div>
         <div className="relatedproductsdivinnav">
           {loading2 ? (
-            <h2 style={{ textAlign: "center", width: "100%" }}>
-              Loading Products...
+            <h2
+              style={{
+                textAlign: "center",
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <TailSpin
+                visible={true}
+                height="60"
+                width="60"
+                color="#000"
+                ariaLabel="tail-spin-loading"
+                radius="1"
+                wrapperStyle={{}}
+                wrapperClass=""
+              />
             </h2>
           ) : (
             <>
@@ -295,6 +351,19 @@ function Navbar(props) {
                       }}
                     ></div>
                     <div className="textdropdowninnav">{product.finish}</div>
+                  </div>
+                ))}
+              {products.length < 6 &&
+                [1, 2, 3, 4, 5, 6].slice(products.length).map((index) => (
+                  <div className="relatedproductdivinnav" key={index}>
+                    <div
+                      className="imagedivinproductdropdown"
+                      style={{
+                        backgroundColor: "rgb(0,0,0, 0.1)",
+                        backgroundSize: "cover",
+                      }}
+                    ></div>
+                    <div className="textdropdowninnav">Empty</div>
                   </div>
                 ))}
             </>

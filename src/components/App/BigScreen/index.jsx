@@ -14,7 +14,7 @@ import GetAddress from "./GetAddress";
 import { FullscreenExit } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
-function BagScreenMainComp({ productTableRowsData }) {
+function BagScreenMainComp(props) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState({});
@@ -118,7 +118,8 @@ function BagScreenMainComp({ productTableRowsData }) {
             <div className="headingdiv">
               <h1>Shopping bag</h1>
               <p>
-                {products?.length} {products?.length > 1 ? "items" : "item"}
+                {!noProducts ? products?.length : 0}{" "}
+                {products?.length > 1 || noProducts ? "items" : "item"}
               </p>
             </div>
             <div className="headingsdiv">
@@ -138,6 +139,7 @@ function BagScreenMainComp({ productTableRowsData }) {
                     setProducts={setProducts}
                     allproducts={products}
                     loadDatafc={loadData}
+                    {...props}
                   />
                 ))
               )}

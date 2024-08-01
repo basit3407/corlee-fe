@@ -24,6 +24,9 @@ function UserAuthenticationForm() {
       setLoading(true);
       const response = await api.post("/login/", formData);
       if (response.status == 200) {
+        if (!response.data.user.is_verified) {
+          localStorage.setItem("emailnotverified", "true");
+        }
         const token = response.data.token;
         localStorage.setItem("token", token);
         localStorage.setItem("NameLetter", response.data.user.name[0]);

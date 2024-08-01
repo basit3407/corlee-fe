@@ -114,12 +114,12 @@ function MessageDisplay(props) {
               </p>
               <p
                 onClick={() => {
-                  localsort === "mostrequested"
+                  localsort === "most_requested"
                     ? setLocalsort("")
-                    : setLocalsort("mostrequested");
+                    : setLocalsort("most_requested");
                 }}
                 style={
-                  localsort === "mostrequested"
+                  localsort === "most_requested"
                     ? { fontWeight: "600", fontSize: "17px" }
                     : null
                 }

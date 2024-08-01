@@ -10,7 +10,9 @@ function SecurePasswordForm(props) {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [confirm, setConfirm] = useState("");
+  const [showpassword, setShowpassword] = useState(false);
   const [loading, setloading] = useState(false);
+  const [showcpassword, setShowcpassword] = useState(false);
 
   const resetPass = async () => {
     try {
@@ -25,16 +27,15 @@ function SecurePasswordForm(props) {
       if (res.status === 200) {
         toast.success("Password reset successfully");
         setloading(false);
-        navigate("/login");
+        navigate("/success");
       } else {
         toast.error("An error occured");
         setloading(false);
-        navigate("/");
       }
     } catch (e) {
+      console.log(e);
       toast.error("An error occured");
       setloading(false);
-      navigate("/");
     }
   };
   return (
@@ -43,12 +44,15 @@ function SecurePasswordForm(props) {
         <div className="flex-row-container">
           <input
             placeholder="New Password"
-            type="text"
+            type={showpassword ? "text" : "password"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="input-with-icon input-style-f62::placeholder"
           />
-          <SvgIcon1 className="svg-container" />
+          <SvgIcon1
+            className="svg-container"
+            onClick={() => setShowpassword(!showpassword)}
+          />
         </div>
       </div>
       <div className="text-content-container container2">
@@ -94,19 +98,50 @@ function SecurePasswordForm(props) {
         <div className="flex-row-container">
           <input
             placeholder="Confirm new password"
-            type="text"
+            type={showcpassword ? "text" : "password"}
             className="input-with-icon input-style-f62::placeholder"
             value={confirm}
             onChange={(e) => setConfirm(e.target.value)}
           />
-          <SvgIcon1 className="svg-container" />
+          <SvgIcon1
+            className="svg-container"
+            onClick={() => {
+              setShowcpassword(!showcpassword);
+            }}
+          />
         </div>
       </div>
       {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
       <button
         className="password-reset-button"
-        onClick={resetPass}
+        onClick={() => {
+          if (
+            /[a-z]/.test(password) &&
+            /[0-9]/.test(password) &&
+            /[A-Z]/.test(password) &&
+            password.length >= 8
+          ) {
+            if (confirm === "") {
+              toast.error("Please confirm your password");
+            } else if (confirm === password) {
+              resetPass();
+            } else {
+              toast.error("Passwords do not match");
+            }
+          } else {
+            toast.error("Passwords do not meet requirements");
+          }
+        }}
         disabled={loading}
+        style={
+          /[a-z]/.test(password) &&
+          /[0-9]/.test(password) &&
+          /[A-Z]/.test(password) &&
+          password.length >= 8 &&
+          confirm === password
+            ? {}
+            : { opacity: 0.5, cursor: "not-allowed" }
+        }
       >
         {loading ? "Loading..." : messages["reset_password"]}
       </button>

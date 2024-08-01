@@ -2,7 +2,7 @@ import SvgIcon1 from "./icons/SvgIcon1";
 import "./style.css";
 import messages from "./messages.json";
 
-function EmailNotFoundErrorView() {
+function EmailNotFoundErrorView(props) {
   return (
     <div className="email-not-found-message-container">
       <div className="email-not-found-container2">
@@ -13,9 +13,7 @@ function EmailNotFoundErrorView() {
         <span>
           {messages["we_unable_find_email_you_entered_seems_like_there_"]}
         </span>
-        <span className="email-not-found-message">
-          {messages["youremailemailcom"]}
-        </span>
+        <span className="email-not-found-message">{props.email}</span>
       </p>
     </div>
   );

@@ -15,7 +15,7 @@ function TrendyDisplay(props) {
       setIsFavourite(!isFavourite);
       await api.post("/toggle_favorite/", { fabric_id: props.id });
     } else {
-      navigate("/login");
+      props.setshowLoginPopup(true);
     }
   };
 

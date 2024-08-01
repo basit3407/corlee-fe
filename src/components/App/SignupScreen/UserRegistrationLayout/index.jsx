@@ -24,6 +24,7 @@ function UserRegistrationLayout({ loading, setLoading }) {
       setLoading(true);
       const response = await api.post("/register/", formData);
       if (response.status === 201) {
+        localStorage.setItem("emailnotverified", "true");
         const token = response.data.token;
         localStorage.setItem("token", token);
         localStorage.setItem("NameLetter", response.data.user.name[0]);

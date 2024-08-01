@@ -19,6 +19,7 @@ const singleproduct = () => {
   const { productid } = useParams();
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState({});
+  const [refresh, setRefresh] = useState(0);
   const navigate = useNavigate();
 
   const [images, setimages] = useState({
@@ -80,7 +81,6 @@ const singleproduct = () => {
         color: color,
         quantity: `${weight}`,
       });
-      console.log(response);
       if (response.status === 201 || response.status === 200) {
         if (go) {
           toast.success("Ready to checkout");
@@ -88,15 +88,18 @@ const singleproduct = () => {
         } else {
           toast.success("Item added to bag");
         }
+        setRefresh((prev) => prev + 1);
+      } else {
+        toast.error("Something went wrong");
       }
     } catch (err) {
-      console.log("error:", err);
+      toast.error("Something went wrong");
     }
   };
 
   return (
     <div>
-      <Navbar />
+      <Navbar refresh={refresh} />
       <div className="productdetailsdiv2">
         {loading ? (
           <div
@@ -246,22 +249,30 @@ const singleproduct = () => {
       <div className="horizontaldiv">
         <div className="onedivofproduct">
           <p className="mainkeytext">Item Code</p>
-          <div className="maintextans">{product.item_code}</div>
+          <div className="maintextans">
+            {!loading ? product.item_code : "loading..."}
+          </div>
         </div>
         <div className="lineinproducts"></div>
         <div className="onedivofproduct">
           <p className="mainkeytext">Composition</p>
-          <div className="maintextans">{product.composition}</div>
+          <div className="maintextans">
+            {!loading ? product.composition : "loading..."}
+          </div>
         </div>
         <div className="lineinproducts"></div>
         <div className="onedivofproduct">
           <p className="mainkeytext">Weight</p>
-          <div className="maintextans">{product.weight}g</div>
+          <div className="maintextans">
+            {!loading ? product.weight + "g" : "loading..."}
+          </div>
         </div>
         <div className="lineinproducts"></div>
         <div className="onedivofproduct">
           <p className="mainkeytext">Finish</p>
-          <div className="maintextans">{product.finish}</div>
+          <div className="maintextans">
+            {!loading ? product.finish : "loading..."}
+          </div>
         </div>
         <div className="lineinproducts"></div>
         <div className="onedivofproduct last">
@@ -283,6 +294,7 @@ const singleproduct = () => {
       <StylishProductDisplay
         product={true}
         products={product.related_fabrics}
+        loading={loading}
       />
       <BottomBar />
     </div>
