@@ -3113,7 +3113,11 @@ body {
   }
   .productsdivinnavbar {
     flex-direction: column;
-    height: auto;
+    height: 480px;
+    width: 100%;
+  }
+  .productsoptionsdivinnav {
+    width: 95% !important;
   }
 }
 .noheight {
