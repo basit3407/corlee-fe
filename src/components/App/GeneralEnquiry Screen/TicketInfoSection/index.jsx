@@ -131,7 +131,11 @@ function TicketInfoSection(props) {
                             <div
                               className="imagesoftheproducts"
                               style={{
-                                backgroundImage: `url(${e.fabric.photo_url})`,
+                                backgroundImage: `url(${
+                                  e?.fabric?.color_images?.filter(
+                                    (item) => item.color === e.color
+                                  )[0]?.primary_image_url
+                                })`,
                                 backgroundSize: "cover",
                               }}
                             ></div>
@@ -144,13 +148,12 @@ function TicketInfoSection(props) {
                           <div className="productdetailsdiv">
                             <div className="colordiv">
                               <p className="color">Color </p>
-                              {e.fabric.available_colors.map((e, i) => (
-                                <div
-                                  className="colorcircle"
-                                  key={i}
-                                  style={{ backgroundColor: e }}
-                                ></div>
-                              ))}
+
+                              <div
+                                className="colorcircle"
+                                key={i}
+                                style={{ backgroundColor: e.color }}
+                              ></div>
                             </div>
                             <p className="quantityofproduct">
                               Quantity <span>{text}</span>
@@ -179,7 +182,7 @@ function TicketInfoSection(props) {
                           <div
                             className="imagesoftheproducts"
                             style={{
-                              backgroundImage: `url(${data?.contact_request?.related_fabric?.photo_url})`,
+                              backgroundImage: `url(${data?.contact_request?.related_fabric?.color_images[0].primary_image_url})`,
                               backgroundSize: "cover",
                             }}
                           ></div>
@@ -199,12 +202,12 @@ function TicketInfoSection(props) {
                         <div className="productdetailsdiv">
                           <div className="colordiv">
                             <p className="color">Color </p>
-                            {data?.contact_request?.related_fabric?.available_colors.map(
+                            {data?.contact_request?.related_fabric?.color_images.map(
                               (e, i) => (
                                 <div
                                   className="colorcircle"
                                   key={i}
-                                  style={{ backgroundColor: e }}
+                                  style={{ backgroundColor: e.color }}
                                 ></div>
                               )
                             )}

@@ -63,7 +63,13 @@ function StylishLayoutBuilder(props) {
       {!loading ? (
         <>
           {!noProducts ? (
-            products.map((e, i) => <StylishDisplay key={i} {...e.fabric} />)
+            products.map((e, i) => (
+              <StylishDisplay
+                key={i}
+                {...e.fabric}
+                setRefresh={props.setRefresh}
+              />
+            ))
           ) : (
             <p
               style={{

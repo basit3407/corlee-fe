@@ -1,5 +1,6 @@
 import "./style.css";
 import messages from "./messages.json";
+import { toast } from "sonner";
 
 function MessageActions(props) {
   return (
@@ -7,7 +8,16 @@ function MessageActions(props) {
       <div className="contact-info-container">
         <div className="contact-info-container2 static">
           <p className="contact-info-text">{props.user.phone}</p>
-          <p className="highlighted-text">{messages["copy_1"]}</p>
+          <p
+            className="highlighted-text"
+            onClick={() => {
+              navigator.clipboard.writeText(props.user.phone);
+              toast.success("Copied to clipboard");
+            }}
+            style={{ cursor: "pointer" }}
+          >
+            {messages["copy_1"]}
+          </p>
         </div>
       </div>{" "}
       <div className="contact-buttons-container">

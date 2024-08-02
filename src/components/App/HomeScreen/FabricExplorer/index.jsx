@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 function FabricExplorer() {
   const [categs, setCategs] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [currentCount, setCurrentCount] = useState(0);
+  const [currentcount, setCurrentCount] = useState(0);
   const navigate = useNavigate();
   const getCategories = async () => {
     try {
@@ -22,6 +22,30 @@ function FabricExplorer() {
     } catch (e) {
       setLoading(false);
     }
+  };
+
+  const handleClick = () => {
+    const elements = document.getElementsByClassName("mainwrapperofmaterial");
+    const totalElements = elements.length;
+
+    if (totalElements === 0) return; // No elements to scroll
+
+    const nextIndex = currentcount === totalElements - 1 ? 0 : currentcount + 1;
+    const NextElement = elements[nextIndex];
+    NextElement.scrollIntoView({ behavior: "smooth" });
+    setCurrentCount(nextIndex);
+  };
+
+  const handleClick2 = () => {
+    const elements = document.getElementsByClassName("mainwrapperofmaterial");
+    const totalElements = elements.length;
+
+    if (totalElements === 0) return;
+
+    const prevIndex = currentcount === 0 ? totalElements - 1 : currentcount - 1;
+    const NextElement = elements[prevIndex];
+    NextElement.scrollIntoView({ behavior: "smooth" });
+    setCurrentCount(prevIndex);
   };
 
   useEffect(() => {
@@ -38,59 +62,41 @@ function FabricExplorer() {
           </p>
         </div>
         <div className="fabric-type-range-container">
-          <div
-            className="center-box-with-svg"
-            onClick={() => {
-              if (currentCount === 0) {
-                setCurrentCount(categs.length - 1);
-              } else {
-                setCurrentCount((prev) => prev - 1);
-              }
-            }}
-          >
+          <div className="center-box-with-svg" onClick={handleClick2}>
             <SvgIcon2 className="svg-container4" />
           </div>
-          <div
-            className="black-rounded-box-with-text"
-            onClick={() => {
-              if (currentCount === categs.length - 1) {
-                setCurrentCount(0);
-              } else {
-                setCurrentCount((prev) => prev + 1);
-              }
-            }}
-          >
+          <div className="black-rounded-box-with-text" onClick={handleClick}>
             <SvgIcon3 className="svg-container4" />
           </div>
         </div>
       </div>
       <div className="material-container">
-        <div className="material-button-container">
-          {loading ? (
-            <p className="material-heading">Loading...</p>
-          ) : (
-            <p className="material-heading">{categs[currentCount]?.name}</p>
-          )}
+        {categs?.map((e, i) => (
+          <div className="mainwrapperofmaterial" key={i}>
+            <div className="material-button-container">
+              <p className="material-heading">{e.name}</p>
 
-          {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
-          <button
-            className="material-button2"
-            onClick={() => {
-              navigate(
-                `/products/${categs[currentCount]?.name}/${categs[currentCount].description}`
-              );
+              {/* Button Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
+              <button
+                className="material-button2"
+                onClick={() => {
+                  navigate(
+                    `/products/${categs[currentcount]?.name}/${categs[currentcount].description}`
+                  );
 
-              window.scrollTo(0, 0);
-            }}
-            style={{
-              cursor: "pointer",
-            }}
-            disabled={loading}
-          >
-            Explore more
-            <SvgIcon1 className="svg-container5" />
-          </button>
-        </div>
+                  window.scrollTo(0, 0);
+                }}
+                style={{
+                  cursor: "pointer",
+                }}
+                disabled={loading}
+              >
+                Explore more
+                <SvgIcon1 className="svg-container5" />
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

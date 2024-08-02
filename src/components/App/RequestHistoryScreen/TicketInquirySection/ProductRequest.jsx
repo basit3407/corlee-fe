@@ -30,11 +30,15 @@ const ProductRequest = (props) => {
     return () => window.removeEventListener("resize", updateCounter);
   }, []);
   useEffect(() => {
-    const tempimages = item.related_order.items.map(
-      (item) => item.fabric.photo_url
-    );
-    setImages(tempimages);
-  }, []);
+    const tempimages = item.related_order.items.map((orderItem) => {
+      const image = orderItem.fabric.color_images.find(
+        (colorImage) => colorImage.color === orderItem.color
+      );
+      return image ? image.primary_image_url : null;
+    });
+    setImages(tempimages.filter(Boolean)); // Filter out any null values
+  }, [item]);
+
   return (
     <div
       className="productinquiry"

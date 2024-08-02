@@ -87,7 +87,8 @@ function StylishProductDisplay(props) {
                 className="imagediv"
                 style={{
                   backgroundImage: `url(${
-                    prod.photo_url || "default-image-url"
+                    prod.color_images[0]?.primary_image_url ||
+                    "default-image-url"
                   })`,
                   backgroundSize: "cover",
                 }}
