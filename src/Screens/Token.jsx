@@ -36,18 +36,6 @@ const Token = () => {
     localStorage.getItem("emailnotverified") === "true"
   );
 
-  useEffect(() => {
-    const handleStorageChange = () => {
-      setEmailNotVerified(localStorage.getItem("emailnotverified") === "true");
-    };
-
-    window.addEventListener("storage", handleStorageChange);
-
-    return () => {
-      window.removeEventListener("storage", handleStorageChange);
-    };
-  }, []);
-
   return (
     <>
       <Toaster position="bottom-left" closeButton />

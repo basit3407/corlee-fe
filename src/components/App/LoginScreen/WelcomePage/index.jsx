@@ -25,10 +25,6 @@ function WelcomePage() {
         idToken: token,
       });
       if (response.status == 200) {
-        localStorage.setItem(
-          "emailnotverified",
-          `${response.data.user.is_verified}`
-        );
         const token = response.data.token;
         localStorage.setItem("token", token);
         localStorage.setItem("NameLetter", response.data.user.name[0]);
