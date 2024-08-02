@@ -71,7 +71,7 @@ function FabricExplorer() {
         </div>
       </div>
       <div className="material-container">
-        {categs.map((e, i) => (
+        {categs?.map((e, i) => (
           <div className="mainwrapperofmaterial" key={i}>
             <div className="material-button-container">
               <p className="material-heading">{e.name}</p>
