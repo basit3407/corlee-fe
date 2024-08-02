@@ -4581,3 +4581,25 @@ body {
 .vertical-image-container-home {
   width: 338px;
 }
+.mainwrapperofmaterial {
+  min-height: 100%;
+  min-width: 100%;
+  background: url("https://d2e8m995jm0i5z.cloudfront.net/websiteimages/div__1ku4mui_253c17.png")
+    50% / cover no-repeat;
+  border-radius: 0px !important;
+  scroll-snap-align: start; /* Align to start of snap area */
+  scroll-snap-stop: always;
+}
+.material-container {
+  background: transparent;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
