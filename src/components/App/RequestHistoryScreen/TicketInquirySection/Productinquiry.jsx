@@ -21,7 +21,7 @@ const Productinquiry = (props) => {
           <div
             className="image"
             style={{
-              backgroundImage: `url(${item.related_fabric.photo_url})`,
+              backgroundImage: `url(${item?.related_fabric?.color_images[0]?.primary_image_url})`,
               backgroundSize: "cover",
             }}
           ></div>

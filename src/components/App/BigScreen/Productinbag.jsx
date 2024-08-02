@@ -51,7 +51,7 @@ const Productinbag = (props) => {
     }
   };
 
-  const prevDebouncedData = useRef(debouncedData); // Store previous debouncedData
+  const prevDebouncedData = useRef(debouncedData);
 
   const deleteproduct = async () => {
     try {
@@ -74,9 +74,9 @@ const Productinbag = (props) => {
           className="image"
           style={{
             backgroundImage: `url(${
-              props.product.fabric.color_images.filter(
+              product.color_images.filter(
                 (item) => item.color == selectedColor
-              )[0].primary_image_url
+              )[0]?.primary_image_url
             })`,
             backgroundSize: "cover",
             cursor: "pointer",

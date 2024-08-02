@@ -23,8 +23,8 @@ function BagScreenMainComp(props) {
   const navigate = useNavigate();
   const loadData = async () => {
     try {
+      setLoading(true);
       const response = await api.get("/cart-items/");
-      console.log(response);
       if (response.status === 200) {
         if (response.data.cart_items.length === 0) {
           setNoProducts(true);

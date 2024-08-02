@@ -15,7 +15,6 @@ function Navbar(props) {
   const [loading, setLoading] = useState(false);
   const [loading2, setLoading2] = useState(false);
   const [products, setProducts] = useState([]);
-  const [category, setCategory] = useState("");
 
   const getCategories = async () => {
     try {
@@ -30,11 +29,11 @@ function Navbar(props) {
     }
   };
 
-  const getProducts = async () => {
+  const getProducts = async (categ) => {
     try {
       setLoading2(true);
       const response = await api.get(
-        `/fabrics/${category ? "?keyword=" + category : ""}`
+        `/fabrics/${categ ? "?keyword=" + categ : "?keyword=best_selling"}`
       );
       console.log(response);
       if (response.status === 200) {
@@ -46,16 +45,14 @@ function Navbar(props) {
     }
   };
 
-  useEffect(() => {
-    getCategories();
-  }, []);
-  useEffect(() => {
-    getProducts();
-  }, [category]);
   const changeShowcall = () => {
     setShowcall(!showcall);
   };
   const changeshowprod = () => {
+    if (!categs || !products) {
+      getProducts();
+      getCategories();
+    }
     setShowprod(!showprod);
   };
   return (
@@ -260,7 +257,7 @@ function Navbar(props) {
                   className="iconinproductnavdropdown"
                   onClick={(e) => {
                     e.stopPropagation();
-                    setCategory("best_selling");
+                    getProducts("best_selling");
                   }}
                 >
                   🔥
@@ -284,7 +281,7 @@ function Navbar(props) {
                       className="iconinproductnavdropdown"
                       onClick={(e) => {
                         e.stopPropagation();
-                        setCategory(categ.name);
+                        getProducts(categ.name);
                       }}
                     >
                       <svg
