@@ -57,7 +57,7 @@ function RenderEventDisplayWidgets({ eventDisplayWidgetArgs }) {
   return (
     <div className="event-card-container1">
       {loading ? (
-        <p>Loading...</p>
+        <h1 style={{ textAlign: "center" }}>Loading...</h1>
       ) : (
         events.map((event, index) => {
           return (
@@ -65,9 +65,10 @@ function RenderEventDisplayWidgets({ eventDisplayWidgetArgs }) {
               eventYear5={formatDate(event.date)[1]}
               eventDate5={formatDate(event.date)[0]}
               eventDescription7={`${event.title}`}
-              dynamicContentWithShowMoreButton7={`<span>${event.description}... </span><span className="text-link-style">show more</span>`}
+              dynamicContentWithShowMoreButton7={event.description}
               imgContent9={event.photo_url}
               key={index}
+              event={event}
             />
           );
         })

@@ -93,8 +93,8 @@ function BottomBar(props) {
         </div>
         <p className="footer-copyright-text-bb">
           <span className="brand-text-style-bb">
-            {messages["2023_corlee__co_all_rights_reserved"]}
-          </span>
+            © {new Date().getFullYear()} corlee & co. All Rights Reserved.
+          </span>{" "}
           <a
             href="https://www.allbirds.com/pages/allbirds-terms-of-use"
             className="link-underline-white-bb"

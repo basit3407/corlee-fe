@@ -12,7 +12,7 @@ function ContactUs() {
   return (
     <>
       <Navbar />
-      <ComponentYouSelected value={value} />
+      <ComponentYouSelected contact={true} value={value} />
       <BottomBar contact={true} />
     </>
   );

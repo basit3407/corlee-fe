@@ -21,7 +21,7 @@ const GetContactDetails = (props) => {
         email,
         phone,
       });
-      const response = await api.patch("/edit/", {
+      const response = await api.patch("/user/", {
         email,
         phone,
       });
