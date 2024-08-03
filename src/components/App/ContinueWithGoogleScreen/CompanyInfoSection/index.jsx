@@ -10,9 +10,6 @@ import { useNavigate } from "react-router-dom";
 function CompanyInfoSection() {
   const [data, setData] = useState({
     company_name: "",
-    phone: "",
-    mobile_phone: "",
-    address: "",
   });
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -22,17 +19,12 @@ function CompanyInfoSection() {
         toast.error("Please fill all the fields");
         return;
       }
-      if (
-        !data.company_name ||
-        !data.phone ||
-        !data.mobile_phone ||
-        !data.address
-      ) {
-        toast.error("Please fill all the fields");
+      if (!data.company_name) {
+        toast.error("Company Name is required");
         return;
       } else {
         setLoading(true);
-        const response = await api.patch("/edit/", data);
+        const response = await api.patch("/user/", data);
         console.log(response);
         if (response.status === 200) {
           toast.success("Details updated successfully");
@@ -47,6 +39,7 @@ function CompanyInfoSection() {
           setLoading(false);
         }
       }
+      setLoading(false);
     } catch (e) {
       console.log(e);
       toast.error(e.data[Object.keys(e.data)[0]] || "Something went wrong");

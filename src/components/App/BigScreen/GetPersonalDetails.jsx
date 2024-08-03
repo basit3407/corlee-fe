@@ -16,7 +16,7 @@ const GetPersonalDetails = (props) => {
         return;
       }
       setLoading(true);
-      const response = await api.patch("/edit/", {
+      const response = await api.patch("/user/", {
         name: name,
         company_name: companyname,
       });

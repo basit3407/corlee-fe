@@ -15,7 +15,7 @@ const GetAddress = (props) => {
         setLoading(false);
         return;
       }
-      const response = await api.patch("/edit/", {
+      const response = await api.patch("/user/", {
         address,
       });
       if (response.status === 200) {
