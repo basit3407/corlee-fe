@@ -4782,3 +4782,44 @@ body {
   max-width: 100%;
   word-wrap: break-word;
 }
+@media (max-width: 560px) {
+  .newsletter-section-bb {
+    min-height: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .hero-section-bb {
+    height: max-content;
+    gap: 80px;
+  }
+  .hero-section-bb {
+    padding: 0;
+  }
+  .fabric-design-description-container {
+    min-width: 0px !important;
+  }
+  .fabric-design-description-container * {
+    word-break: break-all;
+  }
+  .newsletter-section-bb {
+    position: static;
+  }
+}
+@media (max-height: 850px) {
+  .products {
+    margin-bottom: 100px;
+  }
+}
+@media (max-height: 630px) {
+  .products {
+    margin-bottom: 200px;
+  }
+}
+@media (max-height: 450px) {
+  .products {
+    margin-bottom: 300px;
+  }
+}
