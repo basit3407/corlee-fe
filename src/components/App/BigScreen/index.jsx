@@ -49,30 +49,35 @@ function BagScreenMainComp(props) {
 
   const checkout = async () => {
     try {
-      if (
-        user.address &&
-        user.phone &&
-        user.email &&
-        user.name &&
-        user.company_name
-      ) {
-        if (products.length === 0) {
-          toast.error("No products in bag.");
-          return;
-        }
-        setCheckoutLoading(true);
-        const response = await api.post("/checkout/");
-        if (response.status === 201) {
-          setCheckoutLoading(false);
-          toast.success("Order placed successfully");
-          setProducts([]);
-          navigate(`/thankyou/${response.data.request_number}`);
-        } else {
-          toast.error(response.data[Object.keys(response.data)[0]]);
-          setCheckoutLoading(false);
-        }
+      if (!user.name) {
+        toast.error("Name cannot be empty");
+        return;
+      } else if (!user.company_name) {
+        toast.error("Company name cannot be empty");
+        return;
+      } else if (!user.phone) {
+        toast.error("Phone cannot be empty");
+        return;
+      } else if (!user.email) {
+        toast.error("Email cannot be empty");
+        return;
+      } else if (!user.address) {
+        toast.error("Address cannot be empty");
+        return;
+      }
+      if (products.length === 0) {
+        toast.error("No products in bag.");
+        return;
+      }
+      setCheckoutLoading(true);
+      const response = await api.post("/checkout/");
+      if (response.status === 201) {
+        setCheckoutLoading(false);
+        toast.success("Order placed successfully");
+        setProducts([]);
+        navigate(`/thankyou/${response.data.request_number}`);
       } else {
-        toast.error("Please fill all the details");
+        toast.error(response.data[Object.keys(response.data)[0]]);
         setCheckoutLoading(false);
       }
     } catch (e) {
