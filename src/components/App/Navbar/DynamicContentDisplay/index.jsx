@@ -14,6 +14,7 @@ import { useDebounce } from "../../BigScreen/useDebounce";
 function DynamicContentDisplay(props) {
   const [open, setOpen] = useState(false);
   const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [inputState, setInputState] = useState("");
@@ -27,14 +28,18 @@ function DynamicContentDisplay(props) {
     }
   }, [debouncedValue]);
 
-  const getcartcount = async () => {
+  const getvalues = async () => {
     try {
       const response = await api.get("/cart-items/");
+      const response2 = await api.get("/favorite_fabrics/");
       setCount(response.data.cart_items.length);
+      setCount2(response2.data.length);
+      localStorage.setItem("count", response.data.cart_items.length);
+      localStorage.setItem("count2", response2.data.length);
     } catch (e) {}
   };
   useEffect(() => {
-    getcartcount();
+    getvalues();
   }, [props.refresh]);
 
   return (
@@ -79,17 +84,25 @@ function DynamicContentDisplay(props) {
           </p>
           <div className="contact-info-section-nav">
             <div
-              className="card-container-nav circlemust"
+              className="vertical-number-container-nav"
               style={{ cursor: "pointer" }}
               onClick={() => {
-                if (localStorage.getItem("token")) {
-                  navigate("/user/favourites");
-                } else {
-                  setshowLoginPopup(true);
-                }
+                localStorage.getItem("token")
+                  ? navigate("/user/favourites")
+                  : setshowLoginPopup(true);
               }}
             >
-              <div className="circular-text-container-nav navsearchbar">
+              {count2 ? (
+                <span className="badge-with-icon-nav">{count2}</span>
+              ) : localStorage.getItem("count2") &&
+                localStorage.getItem("count2") !== "0" ? (
+                <span className="badge-with-icon-nav">
+                  {localStorage.getItem("count2")}
+                </span>
+              ) : (
+                <></>
+              )}
+              <div className="vertical-center-with-icon-nav  navsearchbar">
                 <SvgIcon2 className="svg-container2-nav" />
               </div>
             </div>
@@ -141,6 +154,11 @@ function DynamicContentDisplay(props) {
             >
               {count ? (
                 <span className="badge-with-icon-nav">{count}</span>
+              ) : localStorage.getItem("count") &&
+                localStorage.getItem("count") !== "0" ? (
+                <span className="badge-with-icon-nav">
+                  {localStorage.getItem("count")}
+                </span>
               ) : (
                 <></>
               )}

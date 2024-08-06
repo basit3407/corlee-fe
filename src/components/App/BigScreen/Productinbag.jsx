@@ -11,6 +11,7 @@ const Productinbag = (props) => {
   const [loading, setLoading] = useState(false);
   const [size, setSiz] = useState(props.product.quantity);
   const [selectedColor, setSelectedColor] = useState(props.product.color);
+  const [displaynone, setDisplaynone] = useState(false);
 
   const debouncedData = useDebounce(
     useMemo(
@@ -58,7 +59,8 @@ const Productinbag = (props) => {
       const response = await api.delete(`/cart-items/${props.product.id}/`);
       if (response.status === 204) {
         toast.success("Item removed successfully");
-        props.loadDatafc();
+        props.deleteProduct(product.item_code);
+        setDisplaynone(true);
         setLoading(false);
         props.setRefresh(Date.now());
       }
@@ -68,7 +70,10 @@ const Productinbag = (props) => {
     }
   };
   return (
-    <div className="productinbag">
+    <div
+      className="productinbag"
+      style={{ display: displaynone ? "none" : "" }}
+    >
       <div className="productinbadimagediv">
         <div
           className="image"

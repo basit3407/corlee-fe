@@ -89,6 +89,20 @@ function BagScreenMainComp(props) {
       setCheckoutLoading(false);
     }
   };
+
+  const deleteProduct = async (item_code) => {
+    if (products.length === 1) {
+      setNoProducts(true);
+      return;
+    }
+    setLoading(true);
+    const updatedProducts = await products.filter(
+      (item) => item.fabric.item_code !== item_code
+    );
+    await setProducts(updatedProducts);
+    setLoading(false);
+  };
+
   return (
     <>
       <h1 className="bag">Bag</h1>
@@ -136,11 +150,12 @@ function BagScreenMainComp(props) {
                 products?.map((item, index) => (
                   <Productinbag
                     product={item}
-                    key={index}
+                    key={item.fabric.item_code}
                     index={index}
                     setProducts={setProducts}
                     allproducts={products}
                     loadDatafc={loadData}
+                    deleteProduct={deleteProduct}
                     {...props}
                   />
                 ))

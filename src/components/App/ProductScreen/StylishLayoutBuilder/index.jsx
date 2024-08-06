@@ -1,9 +1,4 @@
 import StylishDisplay from "../StylishDisplay";
-import StylishCardGallery from "../StylishCardGallery";
-import DisplayContent from "../DisplayContent";
-import CreativeDesignView from "../CreativeDesignView";
-import StylishContentBlock from "../StylishContentBlock";
-import DisplayContent1 from "../DisplayContent1";
 import "./style.css";
 import { useEffect, useState } from "react";
 import { TailSpin } from "react-loader-spinner";
@@ -16,6 +11,7 @@ function StylishLayoutBuilder(props) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [noProducts, setNoproducts] = useState(false);
+
   const fetchFabrics = async () => {
     try {
       props.setPage(1);
@@ -102,6 +98,7 @@ function StylishLayoutBuilder(props) {
               props.page ? `&page=${props.page}` : ""
             }`
           );
+          console.log(response);
 
           if (response.data.results.length > 0) {
             setProducts([...products, ...response.data.results]);

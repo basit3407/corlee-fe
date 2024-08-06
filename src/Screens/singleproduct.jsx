@@ -22,12 +22,14 @@ const singleproduct = () => {
   const [refresh, setRefresh] = useState(0);
   const [currentImages, setCurrentImages] = useState([]);
   const [showLoginPopup, setshowLoginPopup] = useState(false);
+  const [buttonloading, setButtonloading] = useState(0);
   const navigate = useNavigate();
 
   const togglefav = async () => {
     if (localStorage.getItem("token")) {
       setProduct({ ...product, is_favorite: !product.is_favorite });
       await api.post("/toggle_favorite/", { fabric_id: product.id });
+      setRefresh((prev) => prev + 1);
     } else {
       setshowLoginPopup(true);
     }
@@ -71,6 +73,7 @@ const singleproduct = () => {
         toast.error("Quantity cannot be zero");
         return;
       }
+      go ? setButtonloading(2) : setButtonloading(1);
 
       const response = await api.post("/cart-items/", {
         fabric_id: product.id,
@@ -84,11 +87,14 @@ const singleproduct = () => {
         } else {
           toast.success("Item added to bag");
         }
+        setButtonloading(0);
         setRefresh((prev) => prev + 1);
       } else {
+        setButtonloading(0);
         toast.error("Something went wrong");
       }
     } catch (err) {
+      setButtonloading(0);
       toast.error("Something went wrong");
     }
   };
@@ -231,19 +237,34 @@ const singleproduct = () => {
                   }}
                   style={{ cursor: "pointer" }}
                 >
-                  <svg
-                    width="25"
-                    height="25"
-                    viewBox="0 0 25 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M22.2778 5.80085H18.2589C18.1416 4.29694 17.484 2.89401 16.417 1.87111C15.3499 0.848205 13.9516 0.280273 12.5 0.280273C11.0484 0.280273 9.65007 0.848205 8.58301 1.87111C7.51595 2.89401 6.85839 4.29694 6.74111 5.80085H2.72222C2.13285 5.80085 1.56762 6.04422 1.15087 6.47741C0.734126 6.91061 0.5 7.49815 0.5 8.11078V21.9703C0.5 22.583 0.734126 23.1705 1.15087 23.6037C1.56762 24.0369 2.13285 24.2803 2.72222 24.2803H22.2778C22.8671 24.2803 23.4324 24.0369 23.8491 23.6037C24.2659 23.1705 24.5 22.583 24.5 21.9703V8.11078C24.5 7.49815 24.2659 6.91061 23.8491 6.47741C23.4324 6.04422 22.8671 5.80085 22.2778 5.80085ZM12.5 3.02894C13.2481 3.02901 13.971 3.30926 14.5365 3.81834C15.102 4.32742 15.472 5.03124 15.5789 5.80085H9.42111C9.52798 5.03124 9.89804 4.32742 10.4635 3.81834C11.029 3.30926 11.7519 3.02901 12.5 3.02894ZM21.8333 21.5084H3.16667V8.57276H6.72222V9.95872C6.72222 10.3263 6.8627 10.6788 7.11275 10.9387C7.36279 11.1987 7.70193 11.3447 8.05556 11.3447C8.40918 11.3447 8.74832 11.1987 8.99836 10.9387C9.24841 10.6788 9.38889 10.3263 9.38889 9.95872V8.57276H15.6111V9.95872C15.6111 10.3263 15.7516 10.6788 16.0016 10.9387C16.2517 11.1987 16.5908 11.3447 16.9444 11.3447C17.2981 11.3447 17.6372 11.1987 17.8873 10.9387C18.1373 10.6788 18.2778 10.3263 18.2778 9.95872V8.57276H21.8333V21.5084Z"
-                      fill="white"
+                  {buttonloading == 1 ? (
+                    <TailSpin
+                      visible={true}
+                      height="30"
+                      width="30"
+                      color="#000"
+                      ariaLabel="tail-spin-loading"
+                      radius="1"
+                      wrapperStyle={{}}
+                      wrapperClass=""
                     />
-                  </svg>
-                  Add to Bag
+                  ) : (
+                    <>
+                      <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22.2778 5.80085H18.2589C18.1416 4.29694 17.484 2.89401 16.417 1.87111C15.3499 0.848205 13.9516 0.280273 12.5 0.280273C11.0484 0.280273 9.65007 0.848205 8.58301 1.87111C7.51595 2.89401 6.85839 4.29694 6.74111 5.80085H2.72222C2.13285 5.80085 1.56762 6.04422 1.15087 6.47741C0.734126 6.91061 0.5 7.49815 0.5 8.11078V21.9703C0.5 22.583 0.734126 23.1705 1.15087 23.6037C1.56762 24.0369 2.13285 24.2803 2.72222 24.2803H22.2778C22.8671 24.2803 23.4324 24.0369 23.8491 23.6037C24.2659 23.1705 24.5 22.583 24.5 21.9703V8.11078C24.5 7.49815 24.2659 6.91061 23.8491 6.47741C23.4324 6.04422 22.8671 5.80085 22.2778 5.80085ZM12.5 3.02894C13.2481 3.02901 13.971 3.30926 14.5365 3.81834C15.102 4.32742 15.472 5.03124 15.5789 5.80085H9.42111C9.52798 5.03124 9.89804 4.32742 10.4635 3.81834C11.029 3.30926 11.7519 3.02901 12.5 3.02894ZM21.8333 21.5084H3.16667V8.57276H6.72222V9.95872C6.72222 10.3263 6.8627 10.6788 7.11275 10.9387C7.36279 11.1987 7.70193 11.3447 8.05556 11.3447C8.40918 11.3447 8.74832 11.1987 8.99836 10.9387C9.24841 10.6788 9.38889 10.3263 9.38889 9.95872V8.57276H15.6111V9.95872C15.6111 10.3263 15.7516 10.6788 16.0016 10.9387C16.2517 11.1987 16.5908 11.3447 16.9444 11.3447C17.2981 11.3447 17.6372 11.1987 17.8873 10.9387C18.1373 10.6788 18.2778 10.3263 18.2778 9.95872V8.57276H21.8333V21.5084Z"
+                          fill="white"
+                        />
+                      </svg>
+                      Add to Bag
+                    </>
+                  )}
                 </button>
                 <button
                   className="secbutton"
@@ -251,7 +272,20 @@ const singleproduct = () => {
                     addToCart(e, true);
                   }}
                 >
-                  Check out
+                  {buttonloading === 2 ? (
+                    <TailSpin
+                      visible={true}
+                      height="30"
+                      width="30"
+                      color="#000"
+                      ariaLabel="tail-spin-loading"
+                      radius="1"
+                      wrapperStyle={{}}
+                      wrapperClass=""
+                    />
+                  ) : (
+                    "Check out"
+                  )}
                 </button>
               </div>
             </div>

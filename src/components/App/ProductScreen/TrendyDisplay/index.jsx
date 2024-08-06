@@ -6,7 +6,6 @@ import { api } from "../../../../config/api";
 import { useNavigate } from "react-router-dom";
 
 function TrendyDisplay(props) {
-  const navigate = useNavigate();
   const [isFavourite, setIsFavourite] = useState(props.is_favorite);
 
   const toggleFav = async (event) => {
@@ -14,6 +13,7 @@ function TrendyDisplay(props) {
     if (localStorage.getItem("token")) {
       setIsFavourite(!isFavourite);
       await api.post("/toggle_favorite/", { fabric_id: props.id });
+      props.setRefresh(Date.now());
     } else {
       props.setshowLoginPopup(true);
     }

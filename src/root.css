@@ -4829,3 +4829,8 @@ body {
     margin-bottom: 300px;
   }
 }
+@media (max-width: 500px) {
+  .blog-post-container-blogs {
+    margin-bottom: 100px;
+  }
+}
