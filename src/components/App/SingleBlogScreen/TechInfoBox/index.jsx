@@ -34,7 +34,7 @@ function TechInfoBox(data) {
           <img
             src={
               data.author_photo_url ||
-              "https://cdn-icons-png.flaticon.com/512/9203/9203764.webp"
+              "https://cdn-icons-png.flaticon.com/512/9203/9203764.png"
             }
             className="profile-image-container"
           />

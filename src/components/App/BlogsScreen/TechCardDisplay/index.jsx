@@ -61,7 +61,7 @@ function TechCardDisplay(blog) {
           className="profile-image-circle"
           src={
             blog.author_photo_url ||
-            "https://cdn-icons-png.flaticon.com/512/9203/9203764.webp"
+            "https://cdn-icons-png.flaticon.com/512/9203/9203764.png"
           }
         />
         <div className="author-info-container">
