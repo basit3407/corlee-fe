@@ -144,17 +144,17 @@ const mockData = {
       imgContent14:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8943_b1d92f.svg",
       imgContent9:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.webp",
       imgContent13:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.webp",
       imgContent11:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.webp",
       imgContent6:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8907_303acd.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8907_303acd.webp",
       imgContent7:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8920_7b77a5.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8920_7b77a5.webp",
       imgContent8:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8933_dd24dc.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8933_dd24dc.webp",
     },
     {
       techCategory1: "Tech",
@@ -182,17 +182,17 @@ const mockData = {
       imgContent14:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8982_dca269.svg",
       imgContent9:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.webp",
       imgContent11:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.webp",
       imgContent13:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.webp",
       imgContent6:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8946_8c6ab4.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8946_8c6ab4.webp",
       imgContent7:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8959_240124.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8959_240124.webp",
       imgContent8:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8972_3e61f0.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8972_3e61f0.webp",
     },
     {
       techCategory1: "Tech",
@@ -220,17 +220,17 @@ const mockData = {
       imgContent14:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9021_1a623d.svg",
       imgContent9:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.webp",
       imgContent11:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9005_fdff3a.webp",
       imgContent13:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9018_87271a.webp",
       imgContent6:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8985_8d1df5.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8985_8d1df5.webp",
       imgContent7:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8998_eea642.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8998_eea642.webp",
       imgContent8:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9011_252dd4.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_9011_252dd4.webp",
     },
   ],
   eventDisplayWidgetArgs: [
@@ -241,7 +241,7 @@ const mockData = {
       dynamicContentWithShowMoreButton7:
         '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
       imgContent9:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8740_5e534f.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8740_5e534f.webp",
     },
     {
       eventYear5: "2024",
@@ -250,7 +250,7 @@ const mockData = {
       dynamicContentWithShowMoreButton7:
         '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
       imgContent9:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8766_dd24db.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8766_dd24db.webp",
     },
     {
       eventYear5: "2024",
@@ -259,7 +259,7 @@ const mockData = {
       dynamicContentWithShowMoreButton7:
         '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
       imgContent9:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8792_50fc66.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8792_50fc66.webp",
     },
     {
       eventYear5: "2024",
@@ -268,7 +268,7 @@ const mockData = {
       dynamicContentWithShowMoreButton7:
         '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
       imgContent9:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8818_3fb63a.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8818_3fb63a.webp",
     },
     {
       eventYear5: "2024",
@@ -277,7 +277,7 @@ const mockData = {
       dynamicContentWithShowMoreButton7:
         '<span    >Vel quo est voluptatum. Veritatis ipsam perferendis aut iure. Debitis ex laudantium maxime. Quas magnam molestiae voluptates ea similique odit... </span><span    class="text-link-style">show more</span>',
       imgContent9:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8844_8e01e9.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_8844_8e01e9.webp",
     },
   ],
   contactOptionsArray: [
@@ -329,7 +329,7 @@ const mockData = {
       imgContent:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2838_9df264.svg",
       imgContent1:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2826_49a129.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2826_49a129.webp",
     },
     {
       productQuantityWidget: "100",
@@ -341,7 +341,7 @@ const mockData = {
       imgContent:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2859_d41d8a.svg",
       imgContent1:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2847_ca24d8.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2847_ca24d8.webp",
     },
     {
       productQuantityWidget: "100",
@@ -353,7 +353,7 @@ const mockData = {
       imgContent:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2880_443c9a.svg",
       imgContent1:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2868_322998.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2868_322998.webp",
     },
     {
       productQuantityWidget: "100",
@@ -365,7 +365,7 @@ const mockData = {
       imgContent:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2901_f03306.svg",
       imgContent1:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2889_89b193.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2889_89b193.webp",
     },
     {
       productQuantityWidget: "100",
@@ -377,7 +377,7 @@ const mockData = {
       imgContent:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2922_bdf3d2.svg",
       imgContent1:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2910_67b0a3.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2910_67b0a3.webp",
     },
     {
       productQuantityWidget: "100",
@@ -389,7 +389,7 @@ const mockData = {
       imgContent:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2943_bdd036.svg",
       imgContent1:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2931_97e43b.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2931_97e43b.webp",
     },
   ],
   productCardViewArguments: [
@@ -479,7 +479,7 @@ const mockData = {
       imgContent:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4971_5ae4a4.svg",
       imgContent1:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4905_a29442.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4905_a29442.webp",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector_4" data-node-id="1091:4910" d="M29.2,5.818h-5.4v-1.745c0,-1.08 -0.442,-2.116 -1.23,-2.88c-0.788,-0.764 -1.856,-1.193 -2.97,-1.193h-7.2c-1.114,0 -2.182,0.429 -2.97,1.193c-0.788,0.764 -1.23,1.8 -1.23,2.88v1.745h-5.4c-0.477,0 -0.935,0.184 -1.273,0.511c-0.337,0.328 -0.527,0.772 -0.527,1.235c0,0.463 0.19,0.907 0.527,1.234c0.338,0.327 0.796,0.511 1.273,0.511h0.6v19.782c0,0.771 0.316,1.511 0.879,2.057c0.562,0.546 1.325,0.852 2.121,0.852h19.2c0.796,0 1.559,-0.306 2.121,-0.852c0.563,-0.546 0.879,-1.286 0.879,-2.057v-19.782h0.6c0.477,0 0.935,-0.184 1.273,-0.511c0.337,-0.327 0.527,-0.771 0.527,-1.234c0,-0.463 -0.19,-0.907 -0.527,-1.235c-0.338,-0.327 -0.796,-0.511 -1.273,-0.511zM11.8,4.073c0,-0.155 0.063,-0.303 0.176,-0.412c0.112,-0.109 0.265,-0.17 0.424,-0.17h7.2c0.159,0 0.312,0.061 0.424,0.17c0.113,0.109 0.176,0.257 0.176,0.412v1.745h-8.4zM25,28.509h-18v-19.2h18zM14.2,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235zM21.4,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235z" fill="currentColor" xmlns="http://www.w3.org/2000/svg"/></svg>',
     },
@@ -494,7 +494,7 @@ const mockData = {
       imgContent:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4977_d96d9f.svg",
       imgContent1:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4912_e597f7.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4912_e597f7.webp",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector_5" data-node-id="1091:4917" d="M29.2,5.818h-5.4v-1.745c0,-1.08 -0.442,-2.116 -1.23,-2.88c-0.788,-0.764 -1.856,-1.193 -2.97,-1.193h-7.2c-1.114,0 -2.182,0.429 -2.97,1.193c-0.788,0.764 -1.23,1.8 -1.23,2.88v1.745h-5.4c-0.477,0 -0.935,0.184 -1.273,0.511c-0.337,0.328 -0.527,0.772 -0.527,1.235c0,0.463 0.19,0.907 0.527,1.234c0.338,0.327 0.796,0.511 1.273,0.511h0.6v19.782c0,0.771 0.316,1.511 0.879,2.057c0.562,0.546 1.325,0.852 2.121,0.852h19.2c0.796,0 1.559,-0.306 2.121,-0.852c0.563,-0.546 0.879,-1.286 0.879,-2.057v-19.782h0.6c0.477,0 0.935,-0.184 1.273,-0.511c0.337,-0.327 0.527,-0.771 0.527,-1.234c0,-0.463 -0.19,-0.907 -0.527,-1.235c-0.338,-0.327 -0.796,-0.511 -1.273,-0.511zM11.8,4.073c0,-0.155 0.063,-0.303 0.176,-0.412c0.112,-0.109 0.265,-0.17 0.424,-0.17h7.2c0.159,0 0.312,0.061 0.424,0.17c0.113,0.109 0.176,0.257 0.176,0.412v1.745h-8.4zM25,28.509h-18v-19.2h18zM14.2,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235zM21.4,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235z" fill="currentColor" xmlns="http://www.w3.org/2000/svg"/></svg>',
     },
@@ -509,7 +509,7 @@ const mockData = {
       imgContent:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4983_20756e.svg",
       imgContent1:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4919_2fd614.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4919_2fd614.webp",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector_6" data-node-id="1091:4924" d="M29.2,5.818h-5.4v-1.745c0,-1.08 -0.442,-2.116 -1.23,-2.88c-0.788,-0.764 -1.856,-1.193 -2.97,-1.193h-7.2c-1.114,0 -2.182,0.429 -2.97,1.193c-0.788,0.764 -1.23,1.8 -1.23,2.88v1.745h-5.4c-0.477,0 -0.935,0.184 -1.273,0.511c-0.337,0.328 -0.527,0.772 -0.527,1.235c0,0.463 0.19,0.907 0.527,1.234c0.338,0.327 0.796,0.511 1.273,0.511h0.6v19.782c0,0.771 0.316,1.511 0.879,2.057c0.562,0.546 1.325,0.852 2.121,0.852h19.2c0.796,0 1.559,-0.306 2.121,-0.852c0.563,-0.546 0.879,-1.286 0.879,-2.057v-19.782h0.6c0.477,0 0.935,-0.184 1.273,-0.511c0.337,-0.327 0.527,-0.771 0.527,-1.234c0,-0.463 -0.19,-0.907 -0.527,-1.235c-0.338,-0.327 -0.796,-0.511 -1.273,-0.511zM11.8,4.073c0,-0.155 0.063,-0.303 0.176,-0.412c0.112,-0.109 0.265,-0.17 0.424,-0.17h7.2c0.159,0 0.312,0.061 0.424,0.17c0.113,0.109 0.176,0.257 0.176,0.412v1.745h-8.4zM25,28.509h-18v-19.2h18zM14.2,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235zM21.4,13.964v9.309c0,0.463 -0.19,0.907 -0.527,1.234c-0.338,0.327 -0.796,0.511 -1.273,0.511c-0.477,0 -0.935,-0.184 -1.273,-0.511c-0.337,-0.327 -0.527,-0.771 -0.527,-1.234v-9.309c0,-0.463 0.19,-0.907 0.527,-1.235c0.338,-0.327 0.796,-0.511 1.273,-0.511c0.477,0 0.935,0.184 1.273,0.511c0.337,0.328 0.527,0.772 0.527,1.235z" fill="currentColor" xmlns="http://www.w3.org/2000/svg"/></svg>',
     },
@@ -524,7 +524,7 @@ const mockData = {
       imgContent:
         "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4989_62f229.svg",
       imgContent1:
-        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4926_cb0ba6.png",
+        "https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_4926_cb0ba6.webp",
       htmlContent1:
         '<svg viewBox="0 0 32 32" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector_7" data-node-id="1091:4931" d="M29.2,5.82h-5.4v-1.75c0,-1.08 -0.442,-2.11 -1.23,-2.88c-0.788,-0.76 -1.856,-1.19 -2.97,-1.19h-7.2c-1.114,0 -2.182,0.43 -2.97,1.19c-0.788,0.77 -1.23,1.8 -1.23,2.88v1.75h-5.4c-0.477,0 -0.935,0.18 -1.273,0.51c-0.337,0.33 -0.527,0.77 -0.527,1.23c0,0.47 0.19,0.91 0.527,1.24c0.338,0.33 0.796,0.51 1.273,0.51h0.6v19.78c0,0.77 0.316,1.51 0.879,2.06c0.562,0.54 1.325,0.85 2.121,0.85h19.2c0.796,0 1.559,-0.31 2.121,-0.85c0.563,-0.55 0.879,-1.29 0.879,-2.06v-19.78h0.6c0.477,0 0.935,-0.18 1.273,-0.51c0.337,-0.33 0.527,-0.77 0.527,-1.24c0,-0.46 -0.19,-0.9 -0.527,-1.23c-0.338,-0.33 -0.796,-0.51 -1.273,-0.51zM11.8,4.07c0,-0.15 0.063,-0.3 0.176,-0.41c0.112,-0.11 0.265,-0.17 0.424,-0.17h7.2c0.159,0 0.312,0.06 0.424,0.17c0.113,0.11 0.176,0.26 0.176,0.41v1.75h-8.4zM25,28.51h-18v-19.2h18zM14.2,13.96v9.31c0,0.47 -0.19,0.91 -0.527,1.24c-0.338,0.32 -0.796,0.51 -1.273,0.51c-0.477,0 -0.935,-0.19 -1.273,-0.51c-0.337,-0.33 -0.527,-0.77 -0.527,-1.24v-9.31c0,-0.46 0.19,-0.9 0.527,-1.23c0.338,-0.33 0.796,-0.51 1.273,-0.51c0.477,0 0.935,0.18 1.273,0.51c0.337,0.33 0.527,0.77 0.527,1.23zM21.4,13.96v9.31c0,0.47 -0.19,0.91 -0.527,1.24c-0.338,0.32 -0.796,0.51 -1.273,0.51c-0.477,0 -0.935,-0.19 -1.273,-0.51c-0.337,-0.33 -0.527,-0.77 -0.527,-1.24v-9.31c0,-0.46 0.19,-0.9 0.527,-1.23c0.338,-0.33 0.796,-0.51 1.273,-0.51c0.477,0 0.935,0.18 1.273,0.51c0.337,0.33 0.527,0.77 0.527,1.23z" fill="currentColor" xmlns="http://www.w3.org/2000/svg"/></svg>',
     },

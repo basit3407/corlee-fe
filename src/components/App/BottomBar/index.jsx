@@ -64,7 +64,7 @@ function BottomBar(props) {
           </div>
           <div className="sidebar-container-bb" onClick={() => navigate("/")}>
             <img
-              src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/logo-white.png"
+              src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/logo-white.webp"
               className="image-container-bb"
             />
           </div>
