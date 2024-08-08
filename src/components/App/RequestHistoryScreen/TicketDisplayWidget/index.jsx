@@ -16,7 +16,7 @@ function TicketDisplayWidget() {
       <div className="product-grid-container">
         <div className="card-container">
           <img
-            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2681_7d2b81.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2681_7d2b81.webp"
             className="image-container-with-text"
           />
           <div className="info-card">
@@ -28,7 +28,7 @@ function TicketDisplayWidget() {
         </div>
         <div className="card-container">
           <img
-            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2693_7a6075.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2693_7a6075.webp"
             className="image-container-with-text"
           />
           <div className="info-card">
@@ -40,7 +40,7 @@ function TicketDisplayWidget() {
         </div>
         <div className="card-container">
           <img
-            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2726_56df37.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2726_56df37.webp"
             className="image-container-with-text"
           />
           <div className="info-card">
@@ -52,7 +52,7 @@ function TicketDisplayWidget() {
         </div>
         <div className="card-container">
           <img
-            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2675_9587d5.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2675_9587d5.webp"
             className="image-container-with-text"
           />
           <div className="info-card">
@@ -64,7 +64,7 @@ function TicketDisplayWidget() {
         </div>
         <div className="card-container">
           <img
-            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2687_d744cc.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2687_d744cc.webp"
             className="image-container-with-text"
           />
           <div className="info-card">

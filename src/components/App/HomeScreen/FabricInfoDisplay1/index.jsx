@@ -15,7 +15,7 @@ function FabricInfoDisplay1({ fabricInfoOptions }) {
       <FabricDescriptionSection />
       <div className="fabric-gallery-container">
         <img
-          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2366_1d1ae1.jpeg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2366_1d1ae1.webp"
           className="image-container-with-clipping-path"
         />
         <div className="fashion-text-container2">
@@ -32,7 +32,7 @@ function FabricInfoDisplay1({ fabricInfoOptions }) {
           <ImageContainer3 />
         </div>
         <img
-          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2366_1d1ae1.jpeg"
+          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2366_1d1ae1.webp"
           className="image-container-with-clipping-path"
         />
       </div>

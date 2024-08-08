@@ -9,7 +9,7 @@ function OutdoorGearDisplay() {
         <ImageContentBlock />
         <div className="thermal-uv-cut-container">
           <img
-            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3577_60c023.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3577_60c023.webp"
             className="image-with-text-overlay"
           />
           <p className="anti-odor-heading">{messages["thermal__uv_cut"]}</p>
@@ -18,7 +18,7 @@ function OutdoorGearDisplay() {
       <div className="feature-box">
         <div className="flex-column-container">
           <img
-            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3577_60c023.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3577_60c023.webp"
             className="waterproof-image-container"
           />
           <p className="feature-description-text-style">
@@ -27,7 +27,7 @@ function OutdoorGearDisplay() {
         </div>
         <div className="center-column-stretch">
           <img
-            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3577_60c023.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_3577_60c023.webp"
             className="image-with-text-cover"
           />
           <p className="feature-description-text-style">

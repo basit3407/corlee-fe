@@ -16,7 +16,7 @@ function TicketInfoDisplay() {
       <div className="product-details-container">
         <div className="card-container">
           <img
-            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2726_56df37.jpeg"
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/img_1091_2726_56df37.webp"
             className="image-container-with-text"
           />
           <div className="info-card">
