@@ -136,6 +136,7 @@ function DynamicContentDisplay(props) {
                     onClick={() => {
                       localStorage.clear();
                       navigate("/");
+                      window.location.reload();
                     }}
                   >
                     Logout
