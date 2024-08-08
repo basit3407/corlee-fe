@@ -56,7 +56,7 @@ function Navbar(props) {
     setShowprod(!showprod);
   };
   return (
-    <div
+    <nav
       className={
         props.events
           ? "main-content-container-nav eventsnavbar"
@@ -380,7 +380,7 @@ function Navbar(props) {
           )}
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
