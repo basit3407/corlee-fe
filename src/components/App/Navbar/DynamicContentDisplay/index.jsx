@@ -134,9 +134,9 @@ function DynamicContentDisplay(props) {
                   <p onClick={() => navigate("/user/favourites")}>Favourites</p>
                   <p
                     onClick={() => {
-                      localStorage.clear();
-                      navigate("/");
                       window.location.reload();
+                      localStorage.clear();
+                      setAuthToken(null);
                     }}
                   >
                     Logout
@@ -188,7 +188,6 @@ function DynamicContentDisplay(props) {
               className="closeicondiv"
               onClick={(e) => {
                 e.stopPropagation();
-                setAuthToken(null);
                 setshowLoginPopup(false);
               }}
             >
