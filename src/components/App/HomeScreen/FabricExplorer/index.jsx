@@ -32,7 +32,15 @@ function FabricExplorer() {
 
     const nextIndex = currentcount === totalElements - 1 ? 0 : currentcount + 1;
     const NextElement = elements[nextIndex];
-    NextElement.scrollIntoView({ behavior: "smooth" });
+    const scrollLeft =
+      NextElement.offsetLeft -
+      window.innerWidth / 2 +
+      NextElement.offsetWidth / 2;
+    document.getElementsByClassName("material-container")[0].scrollTo({
+      left: scrollLeft,
+      behavior: "smooth",
+    });
+    // NextElement.scrollIntoView({ behavior: "smooth" });
     setCurrentCount(nextIndex);
   };
 
@@ -44,7 +52,15 @@ function FabricExplorer() {
 
     const prevIndex = currentcount === 0 ? totalElements - 1 : currentcount - 1;
     const NextElement = elements[prevIndex];
-    NextElement.scrollIntoView({ behavior: "smooth" });
+    const scrollLeft =
+      NextElement.offsetLeft -
+      window.innerWidth / 2 +
+      NextElement.offsetWidth / 2;
+    document.getElementsByClassName("material-container")[0].scrollTo({
+      left: scrollLeft,
+      behavior: "smooth",
+    });
+    // NextElement.scrollIntoView({ behavior: "smooth" });
     setCurrentCount(prevIndex);
   };
 

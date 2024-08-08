@@ -3413,11 +3413,7 @@ body {
   width: 90%;
 }
 .functionaltext2 {
-  height: 118px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  min-height: 118px;
   line-height: 20px;
   font-size: 17px;
   margin: 15px 0 0 0;
@@ -3428,6 +3424,7 @@ body {
 @media (max-width: 1000px) {
   .functionaltext2 {
     height: auto;
+    min-height: 0px !important;
   }
 }
 .textdiv {
@@ -4854,4 +4851,18 @@ body {
 }
 .productsoptionsdivinnav {
   position: relative;
+}
+.event-card,
+.event-card-container {
+  width: 100% !important;
+}
+.onedivofproduct {
+  display: flex;
+  gap: 10px;
+  align-self: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.maintextans {
+  text-align: center;
 }
