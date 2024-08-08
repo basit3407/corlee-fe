@@ -8,7 +8,7 @@ import "./style.css";
 import messages from "./messages.json";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { api } from "../../../../config/api";
+import { api, setAuthToken } from "../../../../config/api";
 import { useDebounce } from "../../BigScreen/useDebounce";
 
 function DynamicContentDisplay(props) {
@@ -188,6 +188,7 @@ function DynamicContentDisplay(props) {
               className="closeicondiv"
               onClick={(e) => {
                 e.stopPropagation();
+                setAuthToken(null);
                 setshowLoginPopup(false);
               }}
             >
