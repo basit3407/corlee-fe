@@ -2,11 +2,15 @@ import SvgIcon1 from "./icons/SvgIcon1";
 import "./style.css";
 import messages from "./messages.json";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
+import { api } from "../../../../config/api";
 
 function MessageDisplay(props) {
   const [showfilter, setShowfilter] = useState(false);
   const [showsort, setShowsort] = useState(false);
   const [showcolors, setShowcolors] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [colors, setColors] = useState([]);
   const [localcolor, setlocalcolor] = useState([]);
 
   const togglename = (colorname) => {
@@ -21,6 +25,22 @@ function MessageDisplay(props) {
     setLocalsort(props.sort);
     setlocalcolor(props.color);
   }, [props.color, props.sort]);
+
+  const loadColors = async () => {
+    try {
+      const res = await api.get("/color-categories/");
+      console.log("colors: ", res);
+      if (res.status === 200) {
+        setColors(res.data);
+        setLoading(false);
+      }
+    } catch (e) {
+      toast.error("Sometning went wong while fetching colors.");
+    }
+  };
+  useEffect(() => {
+    loadColors();
+  }, []);
 
   return (
     <div className="material-section">
@@ -157,114 +177,25 @@ function MessageDisplay(props) {
               </svg>
             </div>
             <div
-              className={
-                showcolors
-                  ? "colordropdownitems height240px"
-                  : "colordropdownitems"
+              className="colordropdownitems"
+              style={
+                showcolors ? { height: `${60 * (colors.length / 2)}px` } : {}
               }
             >
-              <div
-                style={
-                  localcolor.includes("red")
-                    ? { border: "2px solid rgba(0, 0, 0, 0.392)" }
-                    : {}
-                }
-                onClick={() => togglename("red")}
-              >
-                <p>Red</p>
-                <div className="colorcircleofred"></div>
-              </div>
-              <div
-                onClick={() => togglename("blue")}
-                style={
-                  localcolor.includes("blue")
-                    ? {
-                        border: "2px solid rgba(0, 0, 0, 0.392)",
-                      }
-                    : {}
-                }
-              >
-                <p>Blue</p>
-                <div className="colorcircleofblue"></div>
-              </div>
-              <div
-                onClick={() => togglename("green")}
-                style={
-                  localcolor.includes("green")
-                    ? {
-                        border: "2px solid rgba(0, 0, 0, 0.392)",
-                      }
-                    : {}
-                }
-              >
-                <p>Green</p>
-                <div className="colorcircleofgreen"></div>
-              </div>
-              <div
-                onClick={() => togglename("black")}
-                style={
-                  localcolor.includes("black")
-                    ? {
-                        border: "2px solid rgba(0, 0, 0, 0.392)",
-                      }
-                    : {}
-                }
-              >
-                <p>Black</p>
-                <div className="colorcircleofblack"></div>
-              </div>
-              <div
-                onClick={() => togglename("white")}
-                style={
-                  localcolor.includes("white")
-                    ? {
-                        border: "2px solid rgba(0, 0, 0, 0.392)",
-                      }
-                    : {}
-                }
-              >
-                <p>White</p>
-                <div className="colorcircleofwhite"></div>
-              </div>
-              <div
-                onClick={() => togglename("purple")}
-                style={
-                  localcolor.includes("purple")
-                    ? {
-                        border: "2px solid rgba(0, 0, 0, 0.392)",
-                      }
-                    : {}
-                }
-              >
-                <p>Purple</p>
-                <div className="colorcircleofpurple"></div>
-              </div>
-              <div
-                onClick={() => togglename("orange")}
-                style={
-                  localcolor.includes("orange")
-                    ? {
-                        border: "2px solid rgba(0, 0, 0, 0.392)",
-                      }
-                    : {}
-                }
-              >
-                <p>Orange</p>
-                <div className="colorcircleoforange"></div>
-              </div>
-              <div
-                onClick={() => togglename("pink")}
-                style={
-                  localcolor.includes("pink")
-                    ? {
-                        border: "2px solid rgba(0, 0, 0, 0.392)",
-                      }
-                    : {}
-                }
-              >
-                <p>Pink</p>
-                <div className="colorcircleofpink"></div>
-              </div>
+              {colors.map((color, index) => (
+                <div
+                  style={
+                    localcolor.includes(color.id)
+                      ? { border: "2px solid rgba(0, 0, 0, 0.392)" }
+                      : {}
+                  }
+                  key={index}
+                  onClick={() => togglename(color.id)}
+                >
+                  <p>{color.display_name}</p>
+                  <div style={{ backgroundColor: color.color }}></div>
+                </div>
+              ))}
             </div>
           </div>
           <div className="buttonsinfiltersidebar">

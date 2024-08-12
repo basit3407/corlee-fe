@@ -1,8 +1,4 @@
-import ProductTableRenderer from "./ProductTableRenderer";
-import PersonalProfileButtonSection from "./PersonalProfileButtonSection";
 import "./style.css";
-import messages from "./messages.json";
-import Container from "../../UI/Container";
 import { TailSpin } from "react-loader-spinner";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
@@ -76,6 +72,7 @@ function BagScreenMainComp(props) {
         toast.success("Order placed successfully");
         setProducts([]);
         navigate(`/thankyou/${response.data.request_number}`);
+        props.setRefresh(Date.now());
       } else {
         toast.error(response.data[Object.keys(response.data)[0]]);
         setCheckoutLoading(false);

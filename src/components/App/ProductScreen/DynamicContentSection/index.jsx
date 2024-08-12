@@ -56,7 +56,7 @@ function DynamicContentSection(props) {
         {!props.fav && (
           <button
             className="primary-button-style"
-            onClick={() => setPage(page + 1)}
+            onClick={() => !loading && setPage((prev) => prev + 1)}
           >
             {loading ? (
               <TailSpin

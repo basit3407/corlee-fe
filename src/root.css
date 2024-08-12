@@ -3337,30 +3337,7 @@ body {
   padding: 0 10px;
   border-radius: 10px;
 }
-.colorcircleofred {
-  background-color: red;
-}
-.colorcircleofblue {
-  background-color: blue;
-}
-.colorcircleofgreen {
-  background-color: green;
-}
-.colorcircleofblack {
-  background-color: black;
-}
-.colorcircleofwhite {
-  background-color: white;
-}
-.colorcircleofpurple {
-  background-color: purple;
-}
-.colorcircleoforange {
-  background-color: orange;
-}
-.colorcircleofpink {
-  background-color: pink;
-}
+
 .dropdownitems {
   height: 0px;
   overflow: hidden;
@@ -3386,6 +3363,7 @@ body {
   cursor: pointer;
   font-size: 18px;
   background-color: rgb(218, 218, 218);
+  color: cyan;
 }
 .buttonsinfiltersidebar > *:first-child {
   background-color: black;

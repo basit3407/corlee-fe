@@ -15,16 +15,20 @@ function StylishLayoutBuilder(props) {
       setLoading(true);
       let filtercolorstring = "";
 
-      props.color.map((color) => {
-        filtercolorstring = filtercolorstring + `&colors=${color}`;
-      });
+      if (props.color?.length > 0) {
+        filtercolorstring = "&colors=";
+
+        props.color.map((color, index) => {
+          filtercolorstring =
+            filtercolorstring + `${index === 0 ? "" : ","}${color}`;
+        });
+      }
 
       const response = await api.get(
         `/favorite_fabrics/?${props.color ? `${filtercolorstring}` : ""}${
           props.sort ? `&sort_by=${props.sort}` : ""
         }`
       );
-      console.log(response);
       if (response.data.length > 0) {
         setProducts(response.data);
         setNoproducts(false);

@@ -16,12 +16,17 @@ function StylishLayoutBuilder(props) {
     try {
       props.setPage(1);
       setLoading(true);
+      let filtercolorstring;
 
-      let filtercolorstring = "";
+      if (props.color?.length > 0) {
+        filtercolorstring = "&colors=";
 
-      props.color.map((color) => {
-        filtercolorstring = filtercolorstring + `&colors=${color}`;
-      });
+        props.color.map((color, index) => {
+          filtercolorstring =
+            filtercolorstring + `${index === 0 ? "" : ","}${color}`;
+        });
+      }
+
       console.log(
         `/fabrics/?${
           name || searchterm
@@ -33,7 +38,7 @@ function StylishLayoutBuilder(props) {
                   : name
               }`
             : ""
-        }${props.color.length > 0 ? `${filtercolorstring}` : ""}${
+        }${props.color?.length > 0 ? `${filtercolorstring}` : ""}${
           props.sort ? `&sort_by=${props.sort}` : ""
         }${props.page ? `&page=${props.page}` : ""}`
       );
@@ -49,17 +54,16 @@ function StylishLayoutBuilder(props) {
                   : name
               }`
             : ""
-        }${props.color.length > 0 ? `${filtercolorstring}` : ""}${
+        }${props.color?.length > 0 ? `${filtercolorstring}` : ""}${
           props.sort ? `&sort_by=${props.sort}` : ""
         }${props.page ? `&page=${props.page}` : ""}`
       );
-      console.log(response);
 
       if (response.data.results.length > 0) {
         setProducts(response.data.results);
         setNoproducts(false);
         let tempfabrics = [];
-        response.data.results.forEach((item) => {
+        response?.data?.results?.forEach((item) => {
           item.related_fabrics.length > 0 &&
             item.related_fabrics.forEach((inneritem) => {
               tempfabrics.push(inneritem);
@@ -75,6 +79,7 @@ function StylishLayoutBuilder(props) {
       setLoading(false);
     } catch (e) {
       toast.error("Something went wrong");
+      console.log(e);
       setLoading(false);
     }
   };
@@ -84,21 +89,24 @@ function StylishLayoutBuilder(props) {
       if (props.page !== 1) {
         try {
           props.setLoading(true);
+          let filtercolorstring;
 
-          let filtercolorstring = "";
+          if (props.color?.length > 0) {
+            filtercolorstring = "&colors=";
 
-          props.color.map((color) => {
-            filtercolorstring = filtercolorstring + `&colors=${color}`;
-          });
+            props.color.map((color, index) => {
+              filtercolorstring =
+                filtercolorstring + `${index === 0 ? "" : ","}${color}`;
+            });
+          }
 
           const response = await api.get(
             `/fabrics/?${name ? `keyword=${name}` : ""}${
-              props.color.length > 0 ? `${filtercolorstring}` : ""
+              props.color?.length > 0 ? `${filtercolorstring}` : ""
             }${props.sort ? `&sort_by=${props.sort}` : ""}${
               props.page ? `&page=${props.page}` : ""
             }`
           );
-          console.log(response);
 
           if (response.data.results.length > 0) {
             setProducts([...products, ...response.data.results]);
@@ -113,6 +121,7 @@ function StylishLayoutBuilder(props) {
       }
     } catch (e) {
       toast.error("Something went wrong.");
+      console.log(e);
       setLoading(false);
     }
   };
