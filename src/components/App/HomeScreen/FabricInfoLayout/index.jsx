@@ -7,7 +7,7 @@ function FabricInfoLayout({ fabricInfoOptions }) {
   const [refresh, setRefresh] = useState(0);
   useEffect(() => {
     setRefresh((prev) => prev + 1);
-  });
+  }, []);
   return (
     <div className="global-fashion-hub-layout">
       <Navbar refresh={refresh} />
