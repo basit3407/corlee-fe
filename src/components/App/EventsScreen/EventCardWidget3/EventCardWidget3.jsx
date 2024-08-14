@@ -28,7 +28,7 @@ export function EventCardWidget3({
             style={
               showMore
                 ? {
-                    height: "auto",
+                    height: `${textRef.current.scrollHeight}px`,
                     WebkitLineClamp: "none",
                     overflow: "visible",
                   }
@@ -79,7 +79,7 @@ export function EventCardWidget3({
           <button
             className="button-with-icon"
             onClick={() => {
-              window.location.open(`tel:${event.phone}`, "_blank");
+              window.location.href = `tel:${event.phone}`;
             }}
           >
             <SvgIcon2 className="svg-container1" />
