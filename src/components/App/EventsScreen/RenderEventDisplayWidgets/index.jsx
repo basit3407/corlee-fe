@@ -73,16 +73,8 @@ function RenderEventDisplayWidgets({ eventDisplayWidgetArgs }) {
           );
         })
       )}
-      {/* {eventDisplayWidgetArgs.map((data, index) => {
-        return <EventDisplayWidget2 {...data} key={index} />;
-      })} */}
     </div>
   );
 }
-//       eventYear5=formatDate(event.date)[1],
-//       eventDate5=formatDate(event.date)[0],
-//       eventDescription7=`${evemt.title}`,
-//       dynamicContentWithShowMoreButton7=`<span>${event.description}... </span><span className="text-link-style">show more</span>`,
-//       imgContent9={event.photo_url},
 
 export default RenderEventDisplayWidgets;

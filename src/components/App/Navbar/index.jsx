@@ -6,6 +6,7 @@ import { api } from "../../../config/api";
 import { TailSpin } from "react-loader-spinner";
 
 import { toast } from "sonner";
+import { useDebounce } from "../BigScreen/useDebounce";
 
 function Navbar(props) {
   const navigate = useNavigate();
@@ -15,6 +16,9 @@ function Navbar(props) {
   const [loading, setLoading] = useState(false);
   const [loading2, setLoading2] = useState(false);
   const [products, setProducts] = useState([]);
+  const [categ, setCateg] = useState("best_selling");
+
+  let debouncedValue = useDebounce(categ, 300);
 
   const getCategories = async () => {
     try {
@@ -29,11 +33,15 @@ function Navbar(props) {
     }
   };
 
-  const getProducts = async (categ) => {
+  const getProducts = async () => {
     try {
       setLoading2(true);
       const response = await api.get(
-        `/fabrics/${categ ? "?keyword=" + categ : "?keyword=best_selling"}`
+        `/fabrics/${
+          debouncedValue
+            ? "?keyword=" + debouncedValue
+            : "?keyword=best_selling"
+        }`
       );
       console.log(response);
       if (response.status === 200) {
@@ -45,14 +53,17 @@ function Navbar(props) {
     }
   };
 
+  useEffect(() => {
+    getProducts();
+  }, [debouncedValue]);
+  useEffect(() => {
+    getCategories();
+  }, []);
+
   const changeShowcall = () => {
     setShowcall(!showcall);
   };
   const changeshowprod = () => {
-    if (!categs || !products) {
-      getProducts();
-      getCategories();
-    }
     setShowprod(!showprod);
   };
   return (
@@ -89,7 +100,7 @@ function Navbar(props) {
           }}
         >
           <div className="maintoptext">
-            <h1>Call us</h1>
+            <h1>Contact Us</h1>
             <p>We are just one message away !</p>
             <div className="closeicon" onClick={changeShowcall}>
               <svg
@@ -215,6 +226,8 @@ function Navbar(props) {
         className={
           !showprod ? "productsdivinnavbar noheight" : "productsdivinnavbar"
         }
+        onMouseLeave={() => setShowprod(false)}
+        onMouseEnter={() => setShowprod(true)}
       >
         <div className="productsoptionsdivinnav">
           <div className="closeicon2" onClick={() => setShowprod(false)}>
@@ -262,6 +275,9 @@ function Navbar(props) {
                   );
                   setShowprod(false);
                 }}
+                onMouseEnter={() => {
+                  setCateg("best_selling");
+                }}
               >
                 <div className="textdivinnavproductdropdown">
                   <h1>Best Selling</h1>
@@ -271,7 +287,8 @@ function Navbar(props) {
                   className="iconinproductnavdropdown"
                   onClick={(e) => {
                     e.stopPropagation();
-                    getProducts("best_selling");
+
+                    setCateg("best_selling");
                   }}
                 >
                   🔥
@@ -286,6 +303,9 @@ function Navbar(props) {
                       navigate(`/products/${categ.name}/${categ.description}`);
                       setShowprod(false);
                     }}
+                    onMouseEnter={() => {
+                      setCateg(categ.name);
+                    }}
                   >
                     <div className="textdivinnavproductdropdown">
                       <h1>{categ.name}</h1>
@@ -295,7 +315,8 @@ function Navbar(props) {
                       className="iconinproductnavdropdown"
                       onClick={(e) => {
                         e.stopPropagation();
-                        getProducts(categ.name);
+
+                        setCateg(categ.name);
                       }}
                     >
                       <svg

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { api } from "../../../config/api";
 import { useDebounce } from "./useDebounce";
+import arrow from "/pngegg.png";
 
 const Productinbag = (props) => {
   const text = "->";
@@ -93,15 +94,7 @@ const Productinbag = (props) => {
             <p>{product.item_code}</p>
             <p>
               {product.product_category_name}{" "}
-              <span
-                style={{
-                  textWrap: "no-wrap",
-                  whiteSpace: "nowrap",
-                  display: "inline-block",
-                }}
-              >
-                {text}
-              </span>{" "}
+              <img className="arrow" src={arrow} alt="" />
               {product.finish}
             </p>
           </div>
@@ -135,31 +128,31 @@ const Productinbag = (props) => {
       <div className="quantitydiv">
         <button
           onClick={() => {
-            if (size - 10 >= 0) {
+            if (size > 1) {
               const tempproduct = {
                 ...props.product,
-                quantity: size - 10,
+                quantity: size - 1,
               };
               let allProducts = props.allproducts;
               allProducts[props.index] = tempproduct;
               props.setProducts(allProducts);
-              setSiz((prev) => prev - 10);
+              setSiz((prev) => prev - 1);
             }
           }}
         >
           -
         </button>
-        {size}m
+        {size}yd
         <button
           onClick={() => {
             const tempproduct = {
               ...props.product,
-              quantity: size + 10,
+              quantity: size + 1,
             };
             let allProducts = props.allproducts;
             allProducts[props.index] = tempproduct;
             props.setProducts(allProducts);
-            setSiz((prev) => prev + 10);
+            setSiz((prev) => prev + 1);
           }}
         >
           +
@@ -173,9 +166,9 @@ const Productinbag = (props) => {
               selectedColor === c.color
                 ? {
                     backgroundColor: c.color,
-                    border: "2px solid rgba(0, 0, 0, 0.747) ",
+                    border: "3px solid white ",
                   }
-                : { backgroundColor: c.color, border: "2px solid transparent" }
+                : { backgroundColor: c.color, border: "3px solid transparent" }
             }
             onClick={() => {
               const tempproduct = {

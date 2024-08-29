@@ -61,6 +61,18 @@ function BottomBar(props) {
             >
               {messages["about_us"]}
             </p>
+            <p
+              className="unique-text-block-bb"
+              onClick={() => {
+                navigate("/blogs");
+                window.scrollTo(0, 0);
+              }}
+              style={{
+                cursor: "pointer",
+              }}
+            >
+              Blogs
+            </p>
           </div>
           <div className="sidebar-container-bb" onClick={() => navigate("/")}>
             <img

@@ -10,11 +10,11 @@ import Imagesinproduct from "./Imagesinproduct";
 import { toast } from "sonner";
 
 const singleproduct = () => {
-  let text = "(by meter)";
+  let text = "(by yard)";
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [weight, setweight] = useState(100);
+  const [weight, setweight] = useState(2);
   const [color, setcolor] = useState("purple");
   const { productid } = useParams();
   const [loading, setLoading] = useState(true);
@@ -217,17 +217,15 @@ const singleproduct = () => {
               <div className="quantitydiv inproduct">
                 <button
                   onClick={() => {
-                    if (weight > 0) {
-                      setweight((prev) => prev - 10);
+                    if (weight > 1) {
+                      setweight((prev) => prev - 1);
                     }
                   }}
                 >
                   -
                 </button>
                 {weight}
-                <button onClick={() => setweight((prev) => prev + 10)}>
-                  +
-                </button>
+                <button onClick={() => setweight((prev) => prev + 1)}>+</button>
               </div>
               <div className="buttonsinproduct">
                 <button

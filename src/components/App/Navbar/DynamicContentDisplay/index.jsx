@@ -80,7 +80,7 @@ function DynamicContentDisplay(props) {
               props.changeShowcall();
             }}
           >
-            {messages["call_us"]}
+            Contact
           </p>
           <div className="contact-info-section-nav">
             <div

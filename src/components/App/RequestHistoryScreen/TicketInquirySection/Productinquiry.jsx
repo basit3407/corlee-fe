@@ -27,7 +27,7 @@ const Productinquiry = (props) => {
           ></div>
           <div className="textunderimg">
             <p className="number">{item.related_fabric.item_code}</p>
-            <div className="length">100m</div>
+            <div className="length">2yd</div>
           </div>
         </div>
         <div className="productinqtextdiv">

@@ -191,6 +191,7 @@ function StylishLayoutBuilder(props) {
             radius="1"
             wrapperStyle={{}}
             wrapperClass=""
+            className="tailspin"
           />
         </div>
       )}

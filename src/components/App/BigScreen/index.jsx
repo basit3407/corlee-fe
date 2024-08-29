@@ -147,7 +147,7 @@ function BagScreenMainComp(props) {
                 products?.map((item, index) => (
                   <Productinbag
                     product={item}
-                    key={item.fabric.item_code}
+                    key={index}
                     index={index}
                     setProducts={setProducts}
                     allproducts={products}

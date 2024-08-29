@@ -28,7 +28,7 @@ function StylishDisplay(props) {
       const response = await api.post("/cart-items/", {
         fabric_id: props.id,
         color: selectedColor,
-        quantity: "100",
+        quantity: "2",
       });
       if (response.status === 200) {
         toast.success("Item added to bag");

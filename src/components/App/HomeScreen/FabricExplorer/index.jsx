@@ -78,15 +78,21 @@ function FabricExplorer() {
           </p>
         </div>
         <div className="fabric-type-range-container">
-          <div className="center-box-with-svg" onClick={handleClick2}>
+          <div className="center-box-with-svg">
             <SvgIcon2 className="svg-container4" />
           </div>
-          <div className="black-rounded-box-with-text" onClick={handleClick}>
+          <div className="black-rounded-box-with-text">
             <SvgIcon3 className="svg-container4" />
           </div>
         </div>
       </div>
       <div className="material-container">
+        <div className="arrowdiv1" onClick={handleClick2}>
+          <SvgIcon2 className="svg-container4" />
+        </div>
+        <div className="arrowdiv2" onClick={handleClick}>
+          <SvgIcon2 className="svg-container4" />
+        </div>
         {categs?.map((e, i) => (
           <div className="mainwrapperofmaterial" key={i}>
             <div className="material-button-container">

@@ -53,13 +53,21 @@ function ProductNavigation(props) {
         <div className="horizontal-menu-with-icons-nav">
           <div
             className="product-card-container-nav"
+            onMouseEnter={() => {
+              props.changeshowprod();
+              setOpen(false);
+            }}
+            onMouseLeave={() => {
+              props.changeshowprod();
+              setOpen(false);
+            }}
             onClick={() => {
               props.changeshowprod();
               setOpen(false);
             }}
             style={{ cursor: "pointer" }}
           >
-            <p className="contact-info-text-style-nav">
+            <p className="contact-info-text-style-nav notolive">
               {messages["products"]}
             </p>
             <SvgIcon1 className="svg-container-nav" showprod={props.showprod} />

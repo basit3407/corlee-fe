@@ -11,7 +11,7 @@ function TicketInfoSection(props) {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const text = "(By meter)";
+  const text = "(By yards)";
 
   function formatDate(inputDate) {
     const date = new Date(inputDate);
@@ -215,7 +215,7 @@ function TicketInfoSection(props) {
                           <p className="quantityofproduct">
                             Quantity <span>{text}</span>
                           </p>
-                          <p className="priceofproduct">100</p>
+                          <p className="priceofproduct">2</p>
                         </div>
                       </div>
                     </div>

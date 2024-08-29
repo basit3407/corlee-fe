@@ -2,10 +2,10 @@ import { useNavigate } from "react-router-dom";
 import "./style.css";
 import { useEffect, useState } from "react";
 import { TailSpin } from "react-loader-spinner";
+import arrow from "/pngegg.png";
 
 function StylishProductDisplay(props) {
   const navigate = useNavigate();
-  const arrow = "->";
 
   const [products, setProducts] = useState(props.products);
 
@@ -96,7 +96,8 @@ function StylishProductDisplay(props) {
               <div className="textdiv">
                 <h2>{prod.item_code}</h2>
                 <p>
-                  {prod.product_category} {arrow}{" "}
+                  {prod.product_category}{" "}
+                  <img className="arrow" src={arrow} alt="" />{" "}
                   {prod.finish ?? "No Finish Info"}
                 </p>
               </div>

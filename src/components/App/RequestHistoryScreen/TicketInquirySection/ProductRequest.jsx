@@ -77,7 +77,7 @@ const ProductRequest = (props) => {
                   {item.related_order.items[index].fabric.item_code}
                 </p>{" "}
                 <p className="lengthofimagediv">
-                  {item.related_order.items[index].quantity}m
+                  {item.related_order.items[index].quantity}yd
                 </p>{" "}
               </div>
             </div>
