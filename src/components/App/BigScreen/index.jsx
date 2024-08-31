@@ -16,6 +16,7 @@ function BagScreenMainComp(props) {
   const [getUserDetails, setGetUserDetails] = useState("");
   const [checkoutLoading, setCheckoutLoading] = useState(false);
   const [noProducts, setNoProducts] = useState(true);
+  const [productslen, setProductslen] = useState(0);
   const navigate = useNavigate();
   const loadData = async () => {
     try {
@@ -24,10 +25,12 @@ function BagScreenMainComp(props) {
       if (response.status === 200) {
         if (response.data.cart_items.length === 0) {
           setNoProducts(true);
+          setProductslen(0);
           setLoading(false);
           setUser(response.data.user);
         } else {
           setProducts(response.data.cart_items);
+          setProductslen(response.data.cart_items.length);
           setUser(response.data.user);
           setLoading(false);
           setNoProducts(false);
@@ -71,6 +74,7 @@ function BagScreenMainComp(props) {
         setCheckoutLoading(false);
         toast.success("Order placed successfully");
         setProducts([]);
+        setProductslen(0);
         navigate(`/thankyou/${response.data.request_number}`);
         props.setRefresh(Date.now());
       } else {
@@ -88,16 +92,16 @@ function BagScreenMainComp(props) {
   };
 
   const deleteProduct = async (item_code) => {
-    if (products.length === 1) {
+    if (productslen === 1) {
       setNoProducts(true);
+      setProductslen(0);
       return;
     }
-    setLoading(true);
-    const updatedProducts = await products.filter(
-      (item) => item.fabric.item_code !== item_code
-    );
-    await setProducts(updatedProducts);
-    setLoading(false);
+    // setLoading(true);
+    // const updatedProducts = products.filter((item) => item.id !== item_code);
+    // setProducts((prev) => prev.filter((item) => item.id !== item_code));
+    // setLoading(false);
+    setProductslen((prev) => prev - 1);
   };
 
   return (
@@ -131,8 +135,8 @@ function BagScreenMainComp(props) {
             <div className="headingdiv">
               <h1>Shopping bag</h1>
               <p>
-                {!noProducts ? products?.length : 0}{" "}
-                {products?.length > 1 || noProducts ? "items" : "item"}
+                {!noProducts ? productslen : 0}{" "}
+                {productslen > 1 || noProducts ? "items" : "item"}
               </p>
             </div>
             <div className="headingsdiv">

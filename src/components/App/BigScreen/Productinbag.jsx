@@ -5,6 +5,8 @@ import { api } from "../../../config/api";
 import { useDebounce } from "./useDebounce";
 import arrow from "/pngegg.png";
 
+import { TailSpin } from "react-loader-spinner";
+
 const Productinbag = (props) => {
   const text = "->";
   const navigate = useNavigate();
@@ -57,13 +59,17 @@ const Productinbag = (props) => {
 
   const deleteproduct = async () => {
     try {
-      const response = await api.delete(`/cart-items/${props.product.id}/`);
-      if (response.status === 204) {
-        toast.success("Item removed successfully");
-        props.deleteProduct(product.item_code);
-        setDisplaynone(true);
-        setLoading(false);
-        props.setRefresh(Date.now());
+      if (!loading) {
+        setLoading(true);
+        const response = await api.delete(`/cart-items/${props.product.id}/`);
+        if (response.status === 204) {
+          console.log(response);
+          toast.success("Item removed successfully");
+          props.deleteProduct(props.product.id);
+          setDisplaynone(true);
+          setLoading(false);
+          props.setRefresh(Date.now());
+        }
       }
     } catch (e) {
       toast.error(e.message || "Something went wrong");
@@ -105,10 +111,8 @@ const Productinbag = (props) => {
                 : { cursor: "pointer" }
             }
             onClick={() => {
-              setLoading(true);
               deleteproduct();
             }}
-            disabled={loading}
           >
             <svg
               width="30"

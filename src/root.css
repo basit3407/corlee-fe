@@ -7,7 +7,7 @@ body *:not(p h1 h2 h3 h4 h5 h6 span) {
   -webkit-tap-highlight-color: transparent;
 }
 button {
-  transition: all 0.4s ease;
+  /* transition: all 0.4s ease; */
 }
 
 body *:not(.content-container-in-single-blog *) {
@@ -3651,12 +3651,13 @@ body {
 .circlemust .dropdowndiv {
   position: absolute;
   bottom: -10px;
-  left: 50%;
+  left: 0%;
   transform: translate(-50%, 101%);
   border-radius: 10px;
   color: white;
   overflow: hidden;
   text-align: center;
+  z-index: 50;
 }
 .circlemust .dropdowndiv p {
   padding: 10px 20px;
@@ -4335,6 +4336,7 @@ body {
   width: max-content;
   width: max-content !important;
   margin-bottom: 10px;
+  transition: none !important;
 }
 .thankyoucontainer h1::before {
   font-size: 60px;
@@ -4345,39 +4347,33 @@ body {
   left: 2px;
   text-shadow: none;
   text-wrap: nowrap;
-  z-index: 10000000;
   color: transparent;
   -webkit-text-stroke: 1px rgb(44, 44, 44);
+  transition: none !important;
 }
 .thankyoucontainer h1::after {
   height: 300px;
-  width: 100%;
+  width: 120%;
   content: "";
   background-color: rgb(255, 255, 255);
   position: absolute;
-  top: -150px;
-  left: 0;
-  animation: swipe 3s ease 0s 1 forwards;
+  top: -50px;
+  left: -10%;
+  animation: swipe10 3s ease 0s 1 forwards;
   filter: blur(30px);
+  transition: none !important;
+  z-index: 30;
 }
 
-@keyframes swipe {
+@keyframes swipe10 {
   0% {
-    left: 0;
+    left: -10%;
   }
   100% {
     left: 400%;
   }
 }
 
-@keyframes getShadow {
-  0% {
-    text-shadow: 0px 0px 5px rgb(165, 165, 165);
-  }
-  100% {
-    text-shadow: 3px 2px 0px rgb(165, 165, 165);
-  }
-}
 .password-reset-form-container .input-with-icon {
   border: none;
   box-sizing: border-box;
@@ -4547,11 +4543,11 @@ body {
   position: absolute;
   top: -150px;
   left: 0;
-  animation: swipe 3s ease 0s 1 forwards;
+  animation: swipe12 3s ease 0s 1 forwards;
   filter: blur(30px);
   z-index: 10000000000;
 }
-@keyframes swipe {
+@keyframes swipe12 {
   0% {
     left: 0;
   }
@@ -5252,4 +5248,29 @@ button:hover:not(.button-with-icon2) {
 
 .blogsfilter .filterpage h1 {
   margin-top: 70px;
+}
+@media (max-width: 346px) {
+  .circlemust .dropdowndiv {
+    transform: translate(-87%, 101%);
+    left: 100%;
+  }
+}
+.lineofSeperation {
+  height: 50px;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.13);
+}
+.heartbutton svg {
+  position: relative;
+  z-index: -1;
+}
+.iconinproductnavdropdown {
+  transition: all 0.4s ease;
+}
+.productsoptiondivinnav:hover .iconinproductnavdropdown {
+  transform: translateX(5px);
+  scale: 1.2;
+}
+.bagpage {
+  margin-top: 30px;
 }

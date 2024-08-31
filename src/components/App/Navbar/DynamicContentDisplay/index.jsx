@@ -106,6 +106,31 @@ function DynamicContentDisplay(props) {
                 <SvgIcon2 className="svg-container2-nav" />
               </div>
             </div>
+
+            <div
+              className="vertical-number-container-nav"
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                localStorage.getItem("token")
+                  ? navigate("/user/bag")
+                  : setshowLoginPopup(true);
+              }}
+            >
+              {count ? (
+                <span className="badge-with-icon-nav">{count}</span>
+              ) : localStorage.getItem("count") &&
+                localStorage.getItem("count") !== "0" ? (
+                <span className="badge-with-icon-nav">
+                  {localStorage.getItem("count")}
+                </span>
+              ) : (
+                <></>
+              )}
+              <div className="vertical-center-with-icon-nav  navsearchbar">
+                <SvgIcon4 className="svg-container2-nav" />
+              </div>
+            </div>
+            <div className="lineofSeperation"></div>
             <div
               className="card-container-nav circlemust"
               style={{ cursor: "pointer" }}
@@ -115,7 +140,16 @@ function DynamicContentDisplay(props) {
                   : navigate("/login");
               }}
             >
-              <div className="circular-text-container-nav blacknavbar navsearchbar">
+              <div
+                className="circular-text-container-nav blacknavbar navsearchbar"
+                style={
+                  show
+                    ? {
+                        border: "2px solid #909090",
+                      }
+                    : null
+                }
+              >
                 {!localStorage.getItem("token") ? (
                   <SvgIcon3 className="svg-container2-nav" />
                 ) : (
@@ -143,29 +177,6 @@ function DynamicContentDisplay(props) {
                   </p>
                 </div>
               )}
-            </div>
-            <div
-              className="vertical-number-container-nav"
-              style={{ cursor: "pointer" }}
-              onClick={() => {
-                localStorage.getItem("token")
-                  ? navigate("/user/bag")
-                  : setshowLoginPopup(true);
-              }}
-            >
-              {count ? (
-                <span className="badge-with-icon-nav">{count}</span>
-              ) : localStorage.getItem("count") &&
-                localStorage.getItem("count") !== "0" ? (
-                <span className="badge-with-icon-nav">
-                  {localStorage.getItem("count")}
-                </span>
-              ) : (
-                <></>
-              )}
-              <div className="vertical-center-with-icon-nav  navsearchbar">
-                <SvgIcon4 className="svg-container2-nav" />
-              </div>
             </div>
           </div>
         </div>
