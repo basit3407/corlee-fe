@@ -73,6 +73,9 @@ const singleproduct = () => {
         toast.error("Quantity cannot be zero");
         return;
       }
+      if (buttonloading == 1 || buttonloading == 2) {
+        return;
+      }
       go ? setButtonloading(2) : setButtonloading(1);
 
       const response = await api.post("/cart-items/", {

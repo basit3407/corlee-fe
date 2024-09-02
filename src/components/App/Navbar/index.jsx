@@ -226,8 +226,16 @@ function Navbar(props) {
         className={
           !showprod ? "productsdivinnavbar noheight" : "productsdivinnavbar"
         }
-        onMouseLeave={() => setShowprod(false)}
-        onMouseEnter={() => setShowprod(true)}
+        onMouseLeave={() => {
+          if (window.innerWidth > 850) {
+            setShowprod(false);
+          }
+        }}
+        onMouseEnter={() => {
+          if (window.innerWidth > 850) {
+            setShowprod(true);
+          }
+        }}
       >
         <div className="productsoptionsdivinnav">
           <div className="closeicon2" onClick={() => setShowprod(false)}>
@@ -276,7 +284,9 @@ function Navbar(props) {
                   setShowprod(false);
                 }}
                 onMouseEnter={() => {
-                  setCateg("best_selling");
+                  if (window.innerWidth > 750) {
+                    setCateg("best_selling");
+                  }
                 }}
               >
                 <div className="textdivinnavproductdropdown">
@@ -304,7 +314,9 @@ function Navbar(props) {
                       setShowprod(false);
                     }}
                     onMouseEnter={() => {
-                      setCateg(categ.name);
+                      if (window.innerWidth > 750) {
+                        setCateg(categ.name);
+                      }
                     }}
                   >
                     <div className="textdivinnavproductdropdown">

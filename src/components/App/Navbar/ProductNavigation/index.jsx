@@ -54,12 +54,16 @@ function ProductNavigation(props) {
           <div
             className="product-card-container-nav"
             onMouseEnter={() => {
-              props.changeshowprod();
-              setOpen(false);
+              if (window.innerWidth > 850) {
+                props.changeshowprod();
+                setOpen(false);
+              }
             }}
             onMouseLeave={() => {
-              props.changeshowprod();
-              setOpen(false);
+              if (window.innerWidth > 850) {
+                props.changeshowprod();
+                setOpen(false);
+              }
             }}
             onClick={() => {
               props.changeshowprod();

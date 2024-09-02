@@ -26,12 +26,12 @@ function EmailSenderWidget() {
         } else {
           toast.success("Email not found !");
           setLoading(false);
-          navigate(`/emailsent/${inputvalue}`);
+          navigate(`/noemail/${inputvalue}`);
         }
       }
     } catch (e) {
       setLoading(false);
-      navigate(`/emailsent/${inputvalue}`);
+      navigate(`/noemail/${inputvalue}`);
     }
   };
 

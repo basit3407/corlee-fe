@@ -151,7 +151,12 @@ END:VCALENDAR
           </button>
         </div>
       </div>
-      <button className="primary-cta-button" onClick={() => generateICSFile()}>
+      <button
+        className="primary-cta-button"
+        onClick={() => {
+          window.open(event.url, "_blank");
+        }}
+      >
         {messages["book_now_1"]}
       </button>
     </div>

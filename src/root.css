@@ -5274,3 +5274,19 @@ button:hover:not(.button-with-icon2) {
 .bagpage {
   margin-top: 30px;
 }
+.button-with-icon2 {
+  padding-left: 18px;
+}
+@media (max-width: 420px) {
+  .hero-text-block {
+    margin-top: 50px;
+  }
+}
+.card-with-code-snippet,
+.adddiv{
+  transition: all 0.4s ease;
+}
+.card-with-code-snippet:hover,
+.adddiv:hover {
+  scale: 1.1;
+}
