@@ -5283,10 +5283,15 @@ button:hover:not(.button-with-icon2) {
   }
 }
 .card-with-code-snippet,
-.adddiv{
+.adddiv {
   transition: all 0.4s ease;
 }
 .card-with-code-snippet:hover,
 .adddiv:hover {
   scale: 1.1;
+}
+@media (max-width: 383px) {
+  .hero-title {
+    font-size: 40px !important;
+  }
 }
