@@ -141,7 +141,9 @@ function BagScreenMainComp(props) {
             </div>
             <div className="headingsdiv">
               <p className="productdetails">Product Details</p>
-              <p className="quantity">Quantity</p>
+              <p className="quantity">
+                Quantity <span>{"(yd)"}</span>
+              </p>
               <p className="color">Color</p>
             </div>
             <div className="productsinbagdiv">

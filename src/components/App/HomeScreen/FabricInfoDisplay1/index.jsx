@@ -7,6 +7,7 @@ import SvgIcon1 from "./icons/SvgIcon1";
 import "./style.css";
 import messages from "./messages.json";
 import { useNavigate } from "react-router-dom";
+import arrow from "../../../../../public/pngegg.png";
 
 function FabricInfoDisplay1({ fabricInfoOptions }) {
   const navigate = useNavigate();
@@ -53,7 +54,7 @@ function FabricInfoDisplay1({ fabricInfoOptions }) {
             }}
             onClick={() => navigate("/about")}
           >
-            {messages["about_us_gt"]}
+            About us <img className="arrow arrowdiff" src={arrow} alt="arrow" />
           </p>
         </div>
         <FabricDisplayRenderer fabricInfoOptions={fabricInfoOptions} />

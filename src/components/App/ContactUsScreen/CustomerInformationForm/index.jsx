@@ -141,19 +141,21 @@ function CustomerInformationForm(props) {
         </div>
         <CompanyInputWidget {...data} onChange={handleChange} />
         <MessageDisplayBox {...data} onChange={handleChange} />
-        <div className="sample-request-button1">
-          <input
-            type="checkbox"
-            className="sample-request-button"
-            checked={data.request_sample}
-            onChange={() =>
-              setData({ ...data, request_sample: !data.request_sample })
-            }
-          />
-          <p className="sample-request-button-style">
-            {messages["request_sample"]}
-          </p>
-        </div>
+        {data.request_type === "product" && (
+          <div className="sample-request-button1">
+            <input
+              type="checkbox"
+              className="sample-request-button"
+              checked={data.request_sample}
+              onChange={() =>
+                setData({ ...data, request_sample: !data.request_sample })
+              }
+            />
+            <p className="sample-request-button-style">
+              {messages["request_sample"]}
+            </p>
+          </div>
+        )}
       </div>
       <button
         className="submit-button-style"

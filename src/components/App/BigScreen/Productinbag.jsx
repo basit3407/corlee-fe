@@ -146,7 +146,7 @@ const Productinbag = (props) => {
         >
           -
         </button>
-        {size}yd
+        {size}
         <button
           onClick={() => {
             const tempproduct = {

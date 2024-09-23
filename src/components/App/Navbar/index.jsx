@@ -5,8 +5,11 @@ import { useEffect, useState } from "react";
 import { api } from "../../../config/api";
 import { TailSpin } from "react-loader-spinner";
 
+import MenuIcon from "@mui/icons-material/Menu";
+import ClearIcon from "@mui/icons-material/Clear";
 import { toast } from "sonner";
 import { useDebounce } from "../BigScreen/useDebounce";
+import SvgIcon1 from "./DynamicContentDisplay/icons/SvgIcon1";
 
 function Navbar(props) {
   const navigate = useNavigate();
@@ -17,6 +20,17 @@ function Navbar(props) {
   const [loading2, setLoading2] = useState(false);
   const [products, setProducts] = useState([]);
   const [categ, setCateg] = useState("best_selling");
+  const [open, setOpen] = useState(false);
+
+  const [inputState, setInputState] = useState("");
+
+  const debouncedValue2 = useDebounce(inputState, 500);
+
+  useEffect(() => {
+    if (debouncedValue2) {
+      navigate(`/products/${debouncedValue2}`);
+    }
+  }, [debouncedValue2]);
 
   let debouncedValue = useDebounce(categ, 300);
 
@@ -75,18 +89,49 @@ function Navbar(props) {
       }
     >
       <div className="header-navbar-nav">
-        <img
-          src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/logo.webp"
-          className="product-image-styles-nav"
-          alt="logo"
-          style={{ cursor: "pointer", zIndex: 3 }}
-          onClick={() => navigate("/")}
-        />
+        <div className="logodiv">
+          <MenuIcon
+            className="menu-icon-nav2"
+            onClick={() => setOpen(true)}
+            style={
+              open
+                ? {
+                    opacity: 0,
+                  }
+                : {}
+            }
+          />
+
+          <img
+            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/logo.webp"
+            className="product-image-styles-nav"
+            alt="logo"
+            style={{ cursor: "pointer", zIndex: 3 }}
+            onClick={() => navigate("/")}
+          />
+          <div className="callout-container-nav navsearchbar">
+            <SvgIcon1 className="svg-container1-nav searchbarsvg" />
+            <input
+              placeholder="Search"
+              type="text"
+              className="searchbar"
+              onChange={(e) => {
+                if (e.target.value === "") {
+                  navigate(`/products`);
+                }
+                setInputState(e.target.value);
+              }}
+              value={inputState}
+            />
+          </div>
+        </div>
         <ProductNavigation
           changeShowcall={changeShowcall}
           changeshowprod={changeshowprod}
           showprod={showprod}
           refresh={props.refresh}
+          open={open}
+          setOpen={setOpen}
         />
       </div>
       <div
@@ -209,15 +254,18 @@ function Navbar(props) {
                 Line
               </p>
             </div>
-            <p className="needhelp">Need help ?</p>
             <p
+              style={{
+                cursor: "pointer",
+                textDecoration: "underline 2px solid black",
+              }}
               onClick={() => {
                 navigate("/contact/general");
                 setShowcall(false);
               }}
-              style={{ cursor: "pointer" }}
+              className="needhelp"
             >
-              contact us
+              Need help ?
             </p>
           </div>
         </div>
@@ -275,6 +323,33 @@ function Navbar(props) {
             </div>
           ) : (
             <>
+              <div
+                className="productsoptiondivinnav"
+                onClick={() => {
+                  navigate("/products");
+                  setShowprod(false);
+                }}
+              >
+                <div className="textdivinnavproductdropdown">
+                  <h1>All Products</h1>
+                </div>
+                <div className="iconinproductnavdropdown">
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M7.39778 6.86744C7.61746 7.08711 7.61746 7.44321 7.39778 7.66289L1.66291 13.3977C1.44323 13.6174 1.08713 13.6174 0.867456 13.3977L0.602256 13.1326C0.382581 12.9129 0.382581 12.5568 0.602256 12.3371L5.67421 7.26516L0.602256 2.19321C0.382581 1.97354 0.382581 1.61744 0.602256 1.39776L0.867456 1.13256C1.08713 0.912889 1.44323 0.912889 1.66291 1.13256L7.39778 6.86744Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+              </div>
               <div
                 className="productsoptiondivinnav"
                 onClick={() => {

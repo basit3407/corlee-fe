@@ -16,9 +16,9 @@ function DynamicContentDisplay(props) {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
   const navigate = useNavigate();
-  const [show, setShow] = useState(false);
-  const [inputState, setInputState] = useState("");
+  const { show, setShow } = props;
   const [showLoginPopup, setshowLoginPopup] = useState(false);
+  const [inputState, setInputState] = useState("");
 
   const debouncedValue = useDebounce(inputState, 500);
 

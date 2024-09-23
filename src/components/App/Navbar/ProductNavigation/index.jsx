@@ -6,42 +6,80 @@ import ClearIcon from "@mui/icons-material/Clear";
 import messages from "./messages.json";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SvgIcon3 from "../DynamicContentDisplay/icons/SvgIcon3";
 
 function ProductNavigation(props) {
   const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
+  const { open, setOpen } = props;
+
+  const [show, setShow] = useState(false);
   return (
     <>
       {open ? (
-        <ClearIcon
-          className="menu-icon-nav2"
-          onClick={() => setOpen(false)}
-          style={
-            open
-              ? {
-                  position: "fixed",
-                  top: "40px",
-                  right: "30px",
-                  zIndex: 40000,
-                }
-              : {}
-          }
-        />
+        <>
+          <ClearIcon
+            className="menu-icon-nav2"
+            onClick={() => setOpen(false)}
+            style={
+              open
+                ? {
+                    position: "fixed",
+                    top: "40px",
+                    right: "30px",
+                    zIndex: 40000,
+                  }
+                : {}
+            }
+          />
+        </>
       ) : (
-        <MenuIcon
-          className="menu-icon-nav2"
-          onClick={() => setOpen(true)}
-          style={
-            open
-              ? {
-                  position: "fixed",
-                  top: "40px",
-                  right: "30px",
-                  zIndex: 40000,
-                }
-              : {}
-          }
-        />
+        <div
+          className="card-container-nav circlemust menu-icon-nav2 otheraccount"
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            localStorage.getItem("token")
+              ? setShow((prev) => !prev)
+              : navigate("/login");
+          }}
+        >
+          <div
+            className="circular-text-container-nav blacknavbar navsearchbar"
+            style={
+              show
+                ? {
+                    border: "2px solid #909090",
+                  }
+                : null
+            }
+          >
+            {!localStorage.getItem("token") ? (
+              <SvgIcon3 className="svg-container2-nav" />
+            ) : (
+              <h1>
+                {localStorage.getItem("NameLetter") ? (
+                  localStorage.getItem("NameLetter").toUpperCase()
+                ) : (
+                  <SvgIcon3 className="svg-container2-nav" />
+                )}
+              </h1>
+            )}
+          </div>
+          {show && (
+            <div className="dropdowndiv">
+              <p onClick={() => navigate("/user/history")}>History</p>
+              <p onClick={() => navigate("/user/favourites")}>Favourites</p>
+              <p
+                onClick={() => {
+                  window.location.reload();
+                  localStorage.clear();
+                  setAuthToken(null);
+                }}
+              >
+                Logout
+              </p>
+            </div>
+          )}
+        </div>
       )}
       <div
         className={
@@ -98,7 +136,12 @@ function ProductNavigation(props) {
             {messages["about_us"]}
           </p>
         </div>
-        <DynamicContentDisplay refresh={props.refresh} {...props} />
+        <DynamicContentDisplay
+          refresh={props.refresh}
+          {...props}
+          show={show}
+          setShow={setShow}
+        />
       </div>
     </>
   );

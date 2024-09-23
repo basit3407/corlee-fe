@@ -326,14 +326,14 @@ const singleproduct = () => {
           <div
             className="maintextans"
             style={{
-              textDecoration: "underline 2px solid black",
+              textDecoration: "underline 3px solid olive",
               cursor: "pointer",
             }}
             onClick={() => {
               navigate(`/contact/${product.item_code}`);
             }}
           >
-            Need Support
+            Need Support ?
           </div>
         </div>
       </div>
