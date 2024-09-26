@@ -6,9 +6,6 @@ body *:not(p h1 h2 h3 h4 h5 h6 span) {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
-button {
-  /* transition: all 0.4s ease; */
-}
 
 body *:not(.content-container-in-single-blog *) {
   font-family: "Poppins", sans-serif !important;
@@ -119,7 +116,7 @@ body {
   } */
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .menu-icon-nav {
     display: none !important;
   }
@@ -267,10 +264,11 @@ body {
   }
 }
 .majestic-heading1 {
-  font: 600 60px/76px Artnoova;
+  font: 600 70px/76px Artnoova;
+  text-wrap: nowrap;
 }
 .custom-fabric-features-section {
-  width: 95vw;
+  width: 90vw;
   min-width: 0px !important;
   margin: 0 auto;
 }
@@ -283,13 +281,13 @@ body {
     width: 50%;
   }
 }
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .custom-fabric-features-section {
     flex-direction: column;
     width: 90vw;
   }
   .custom-fabric-features-section > * {
-    width: 100%;
+    width: 100% !important;
     max-width: none !important;
     margin: 20px 0;
   }
@@ -299,6 +297,7 @@ body {
     font: 600 50px/66px Artnoova;
   }
 }
+
 .circular-text-container-nav {
   text-align: justify !important;
   width: 100%;
@@ -896,12 +895,14 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 1456px) {
+}
 .onediv {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 160px;
+  width: max-content;
 }
 .onediv > h1 {
   background-color: #6a6a45;
@@ -926,9 +927,9 @@ body {
   top: 43%;
   left: 60%;
   height: 5px;
-  width: 80vw;
+  width: 75vw;
   background-color: #6a6a45;
-  max-width: 1057px;
+  max-width: 1157px;
 }
 .order-process-flow-container {
   min-width: 0px !important;
@@ -938,24 +939,32 @@ body {
     width: 75vw;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 970px) {
   .vertical-flow-container {
     scale: 0.8;
-    width: 120%;
+    width: 114vw;
   }
   .line {
     position: absolute;
-    width: 830px;
+    width: 95vw;
   }
 }
-@media (max-width: 776px) {
+@media (max-width: 800px) {
   .vertical-flow-container {
     scale: 0.6;
-    width: 140%;
+    width: 158vw;
   }
   .line {
     position: absolute;
-    width: 950px;
+    width: 125vw;
+  }
+}
+@media (min-width: 676px) and (max-width: 800px) {
+  .vertical-flow-container {
+    margin-top: 20px;
+  }
+  .client-satisfaction-section {
+    margin-top: 40px !important;
   }
 }
 .order-process-container {
@@ -965,6 +974,9 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+}
+.imagesdiv {
+  gap: 20px;
 }
 @media (max-width: 676px) {
   .vertical-flow-container {
@@ -1165,11 +1177,11 @@ body {
 .article-card-layout-blogs,
 .products {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 500px;
   grid-template-rows: 500px;
   width: 90vw;
-  max-width: 2000px;
+  max-width: 1400px;
   margin: 0 auto;
   gap: 20px;
 }
@@ -1471,6 +1483,7 @@ body {
   text-align: center;
   background-color: #bfbfbf;
   margin-bottom: 50px;
+  max-width: 1400px;
 }
 .relatedproducts > p {
   background-color: white;
@@ -2689,7 +2702,7 @@ body {
   border-radius: 20px;
 }
 .bigimage {
-  width: 70%;
+  width: 80%;
   height: 500px;
   background-color: rgba(0, 0, 0, 0.116);
   border-radius: 20px;
@@ -2797,7 +2810,7 @@ body {
   color: black;
 }
 .productdetailsdiv2 {
-  max-width: 1500px;
+  max-width: 1400px;
 }
 .imagesinproductdiv {
   min-width: 500px;
@@ -2851,7 +2864,7 @@ body {
   }
 }
 .horizontaldiv {
-  width: 95vw;
+  width: 90vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2862,6 +2875,7 @@ body {
   margin-bottom: 50px;
   padding: 10px 20px;
   border: 1px solid rgba(0, 0, 0, 0.075);
+  max-width: 1400px;
 }
 .horizontaldiv > * {
   display: flex;
@@ -4632,20 +4646,7 @@ body {
 .image-container2-home img {
   width: 100%;
 }
-@media (min-width: 1400px) {
-  .custom-fabric-features-section {
-    scale: 1.1;
-    width: calc(79%);
-    margin: 100px 0;
-  }
-}
-@media (min-width: 1600px) {
-  .custom-fabric-features-section {
-    scale: 1.3;
-    width: calc(69%);
-    margin: 100px 0;
-  }
-}
+
 .vertical-image-container-home {
   width: 338px;
 }
@@ -5081,6 +5082,7 @@ button:hover:not(.button-with-icon2) {
   overflow: hidden;
   position: relative;
   margin-left: 0;
+  max-width: 1400px;
 }
 
 .vertical-align-centered-image img {
@@ -5374,6 +5376,13 @@ button:hover:not(.button-with-icon2) {
 .client-satisfaction-section {
   margin-top: 130px;
 }
+.order-process-section {
+  width: 90vw;
+  max-width: 1400px;
+}
+.order-process-flow-container {
+  width: 100%;
+}
 .fabric-design-description-container {
   background-image: url("/public/bg.jpg");
   background-size: cover;
@@ -5419,7 +5428,6 @@ button:hover:not(.button-with-icon2) {
 }
 .otheraccount {
   font-size: 20px !important;
-  margin-right: 10px;
 }
 .header-navbar-nav {
   overflow: visible;
@@ -5442,12 +5450,12 @@ button:hover:not(.button-with-icon2) {
     margin-left: 0px;
   }
   .header-navbar-nav {
-    width: 100vw !important;
+    /* width: 100vw !important; */
     box-sizing: border-box;
-    padding-right: 20px;
+    /* padding-right: 20px; */
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .logodiv {
     width: calc(100% - 60px);
     display: flex;
@@ -5455,16 +5463,16 @@ button:hover:not(.button-with-icon2) {
   }
   .logodiv .navsearchbar {
     display: flex;
-    width: 40vw;
+    width: 30vw;
   }
   .header-navbar-nav {
-    padding-right: 0px;
+    padding: 0px;
   }
 }
 
 @media (max-width: 590px) {
-  .otheraccount {
-    margin-right: 10px;
+  .header-navbar-nav {
+    padding: 0px;
   }
   .logodiv .navsearchbar {
     width: 40vw;
@@ -5568,7 +5576,7 @@ button:hover:not(.button-with-icon2) {
 .card-with-code-snippet {
   flex: none;
 }
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .searchbar {
     width: 50vw !important;
     max-width: 200px;
@@ -5581,4 +5589,54 @@ button:hover:not(.button-with-icon2) {
     gap: 20px;
     margin-top: 20px;
   }
+}
+.material-container {
+  max-width: 1400px;
+}
+.custom-fabric-features-section {
+  max-width: 1400px;
+}
+@media (max-width: 1060px) {
+  .fabric-design-description-list {
+    width: 45%;
+  }
+}
+@media (max-width: 960px) {
+  .fabric-design-description-list {
+    width: 40%;
+  }
+}
+@media (min-width: 1230px) {
+  .fabric-gallery-container {
+    justify-content: center;
+  }
+  .fabric-gallery-container > * {
+    width: 35%;
+    clip-path: none !important;
+    border-radius: 30px;
+  }
+}
+.fabric-range-section {
+  max-width: 1400px;
+}
+.logoinner {
+  display: flex;
+  align-items: center;
+}
+.logodiv {
+  justify-content: space-between;
+}
+.main-content-container {
+  margin-top: 20px;
+}
+
+.product-related-container {
+  max-width: 1400px;
+}
+.material-card-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.material-button {
+  margin-right: 0;
 }

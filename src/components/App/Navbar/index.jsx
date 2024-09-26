@@ -90,25 +90,27 @@ function Navbar(props) {
     >
       <div className="header-navbar-nav">
         <div className="logodiv">
-          <MenuIcon
-            className="menu-icon-nav2"
-            onClick={() => setOpen(true)}
-            style={
-              open
-                ? {
-                    opacity: 0,
-                  }
-                : {}
-            }
-          />
+          <div className="logoinner">
+            <MenuIcon
+              className="menu-icon-nav2"
+              onClick={() => setOpen(true)}
+              style={
+                open
+                  ? {
+                      opacity: 0,
+                    }
+                  : {}
+              }
+            />
 
-          <img
-            src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/logo.webp"
-            className="product-image-styles-nav"
-            alt="logo"
-            style={{ cursor: "pointer", zIndex: 3 }}
-            onClick={() => navigate("/")}
-          />
+            <img
+              src="https://d2e8m995jm0i5z.cloudfront.net/websiteimages/logo.webp"
+              className="product-image-styles-nav"
+              alt="logo"
+              style={{ cursor: "pointer", zIndex: 3 }}
+              onClick={() => navigate("/")}
+            />
+          </div>
           <div className="callout-container-nav navsearchbar">
             <SvgIcon1 className="svg-container1-nav searchbarsvg" />
             <input
