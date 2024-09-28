@@ -104,6 +104,7 @@ const Productinbag = (props) => {
               {product.finish}
             </p>
           </div>
+
           <button
             style={
               loading
@@ -129,6 +130,7 @@ const Productinbag = (props) => {
           </button>
         </div>
       </div>
+
       <div className="quantitydiv">
         <button
           onClick={() => {
@@ -146,7 +148,9 @@ const Productinbag = (props) => {
         >
           -
         </button>
-        {size}
+        <div className="textinbag">
+          {size} <span className="ydinbag">yd</span>
+        </div>
         <button
           onClick={() => {
             const tempproduct = {

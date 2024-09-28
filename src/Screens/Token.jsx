@@ -57,7 +57,6 @@ const Token = () => {
       {emailNotVerified && (
         <div className="noemailband">Verify your email address.</div>
       )}
-
       <Outlet />
     </>
   );
