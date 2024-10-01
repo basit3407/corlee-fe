@@ -54,7 +54,9 @@ function MessageDisplay(props) {
           : "All Products"}
       </p>
       <p className="material-description-text-style">
-        {props.searchterm
+        {props.fav
+          ? "lorem ipsum dolor sit amet"
+          : props.searchterm
           ? "Products matching your search : " + props.searchterm
           : props.desc}
       </p>

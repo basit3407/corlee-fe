@@ -58,7 +58,7 @@ function DynamicContentDisplay(props) {
         }
       >
         <div className="wrapperofelement">
-          <div className="callout-container-nav navsearchbar">
+          <div className="callout-container-nav navsearchbar searchbarhiddeninnav">
             <SvgIcon1 className="svg-container1-nav searchbarsvg" />
             <input
               placeholder="Search"

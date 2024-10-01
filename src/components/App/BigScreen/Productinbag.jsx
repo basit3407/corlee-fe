@@ -132,39 +132,41 @@ const Productinbag = (props) => {
       </div>
 
       <div className="quantitydiv">
-        <button
-          onClick={() => {
-            if (size > 1) {
+        <div className="innerquantitydiv quantitydiv">
+          <button
+            onClick={() => {
+              if (size > 1) {
+                const tempproduct = {
+                  ...props.product,
+                  quantity: size - 1,
+                };
+                let allProducts = props.allproducts;
+                allProducts[props.index] = tempproduct;
+                props.setProducts(allProducts);
+                setSiz((prev) => prev - 1);
+              }
+            }}
+          >
+            -
+          </button>
+          <div className="textinbag">
+            {size} <span className="ydinbag">yd</span>
+          </div>
+          <button
+            onClick={() => {
               const tempproduct = {
                 ...props.product,
-                quantity: size - 1,
+                quantity: size + 1,
               };
               let allProducts = props.allproducts;
               allProducts[props.index] = tempproduct;
               props.setProducts(allProducts);
-              setSiz((prev) => prev - 1);
-            }
-          }}
-        >
-          -
-        </button>
-        <div className="textinbag">
-          {size} <span className="ydinbag">yd</span>
+              setSiz((prev) => prev + 1);
+            }}
+          >
+            +
+          </button>
         </div>
-        <button
-          onClick={() => {
-            const tempproduct = {
-              ...props.product,
-              quantity: size + 1,
-            };
-            let allProducts = props.allproducts;
-            allProducts[props.index] = tempproduct;
-            props.setProducts(allProducts);
-            setSiz((prev) => prev + 1);
-          }}
-        >
-          +
-        </button>
       </div>
       <div className="colordiv">
         {props.product.fabric.color_images?.map((c, i) => (

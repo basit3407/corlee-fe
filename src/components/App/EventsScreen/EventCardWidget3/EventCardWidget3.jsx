@@ -120,7 +120,7 @@ END:VCALENDAR
         </p>
         <div className="event-details-container1">
           <button
-            className="button-with-icon"
+            className="button-with-icon eventbuttonwithicon"
             onClick={() => {
               window.open(
                 `https://www.google.com/maps/search/${event.location}`,
@@ -132,7 +132,7 @@ END:VCALENDAR
             {event.location}
           </button>
           <button
-            className="button-with-icon"
+            className="button-with-icon eventbuttonwithicon"
             onClick={() => {
               window.location.href = `tel:${event.phone}`;
             }}
@@ -141,7 +141,7 @@ END:VCALENDAR
             {event.phone}
           </button>
           <button
-            className="button-with-icon"
+            className="button-with-icon eventbuttonwithicon"
             onClick={() => {
               window.location.href = `mailto:${event.email}`;
             }}
