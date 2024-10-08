@@ -2276,7 +2276,7 @@ body {
   gap: 20px;
 }
 .bagpage > .leftdiv {
-  width: 70%;
+  width: 65%;
 }
 .bagpage > .rightdiv {
   width: 30%;
@@ -2710,7 +2710,7 @@ body {
   height: 500px;
 }
 .verticalimagesinproduct {
-  width: 20%;
+  width: 18%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2724,10 +2724,10 @@ body {
   border-radius: 20px;
 }
 .bigimage {
-  width: calc(80% - 30px);
+  width: calc(75% - 30px);
   height: 500px;
   background-color: rgba(0, 0, 0, 0.116);
-  border-radius: 15px;
+  border-radius: 35px;
 }
 @media (max-width: 1000px) {
   .bigimage {
@@ -2794,7 +2794,7 @@ body {
 .quantitydivinproduct {
   margin: 10px 0;
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 600;
 }
 .quantitydivinproduct > span {
   font-size: 16px;
@@ -2841,6 +2841,7 @@ body {
 }
 .imagesinproductdiv {
   min-width: 500px;
+  gap: 30px !important;
 }
 @media (max-width: 1000px) {
   .productdetailsdiv2 {
@@ -2861,7 +2862,7 @@ body {
     min-width: 0px !important;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .imagesinproductdiv {
     flex-direction: column-reverse;
     height: 600px;
@@ -4669,7 +4670,7 @@ body {
 }
 .mainwrapperofmaterial {
   min-height: 100%;
-  min-width: 100%;
+  min-width: 101%;
   background: url("https://d2e8m995jm0i5z.cloudfront.net/websiteimages/div__1ku4mui_253c17.webp")
     50% / cover no-repeat;
   border-radius: 0px !important;
@@ -5825,4 +5826,17 @@ button:hover:not(.button-with-icon2) {
     height: 35%;
     border-radius: 15px;
   }
+}
+.order-process-description {
+  margin-top: 24px;
+}
+.vertical-centered-container {
+  margin-top: 20px;
+}
+.bag {
+  font: 500 76px/91px Artnoova;
+}
+.relatedproductdivinnav .textdropdowninnav {
+  font-weight: 600 !important;
+  color: rgb(44, 44, 44) !important;
 }
