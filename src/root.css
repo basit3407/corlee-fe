@@ -177,6 +177,9 @@ body {
 .global-fashion-fabric-styles {
   max-width: 100vw;
 }
+.fabric-type-heading{
+  margin-bottom: 20px;
+}
 
 @media (max-width: 750px) {
   .fashion-statement-text-style,
@@ -260,7 +263,7 @@ body {
 @media (max-width: 1116px) {
   .fabric-range-section {
     flex-direction: column;
-    align-items: center;
+    align-items: start !important;
     gap: 30px;
   }
 }
@@ -707,8 +710,11 @@ body {
   width: 100%;
   margin: 0;
 }
-.vertical-spacing-container {
+.vertical-spacing-container,
+.vertical-spacing-container > * {
   margin-top: 0;
+  width: 100%;
+  clip-path: none !important;
 }
 .hero-section {
   align-items: flex-start;
@@ -5485,16 +5491,15 @@ button:hover:not(.button-with-icon2) {
     width: 40%;
   }
 }
-@media (min-width: 1230px) {
-  .fabric-gallery-container {
-    justify-content: center;
-  }
-  .fabric-gallery-container > * {
-    width: 35%;
-    clip-path: none !important;
-    border-radius: 30px;
-  }
+.fabric-gallery-container {
+  justify-content: center;
 }
+.fabric-gallery-container > * {
+  width: 35%;
+  clip-path: none !important;
+  border-radius: 30px;
+}
+
 .fabric-range-section {
   max-width: 1400px;
 }
@@ -5848,4 +5853,12 @@ button:hover:not(.button-with-icon2) {
 .relatedproductdivinnav .textdropdowninnav {
   font-weight: 600 !important;
   color: rgb(44, 44, 44) !important;
+}
+@media (max-width: 800px) {
+  .fabric-gallery-container > img {
+    display: none;
+  }
+  .fabric-gallery-container > div {
+    width: 100%;
+  }
 }
