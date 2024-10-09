@@ -177,7 +177,7 @@ body {
 .global-fashion-fabric-styles {
   max-width: 100vw;
 }
-.fabric-type-heading{
+.fabric-type-heading {
   margin-bottom: 20px;
 }
 
@@ -5861,4 +5861,9 @@ button:hover:not(.button-with-icon2) {
   .fabric-gallery-container > div {
     width: 100%;
   }
+}
+.onediv > h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
