@@ -321,11 +321,7 @@ const singleproduct = () => {
         <div className="lineinproducts"></div>
         <div className="onedivofproduct last">
           <div
-            className="maintextans"
-            style={{
-              textDecoration: "underline 3px solid olive",
-              cursor: "pointer",
-            }}
+            className="maintextans underlinehover"
             onClick={() => {
               navigate(`/contact/${product.item_code}`);
             }}
