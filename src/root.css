@@ -3150,7 +3150,7 @@ body {
   min-width: 700px;
 }
 .relatedproductdivinnav {
-  width: 28%;
+  width: 26%;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -3171,7 +3171,7 @@ body {
   width: max-content;
   margin-top: 5px;
 }
-@media (max-width: 1150px) {
+@media (max-width: 1250px) {
   .productsdivinnavbar {
     flex-direction: column;
     height: 1100px;
@@ -5919,4 +5919,13 @@ button:hover:not(.button-with-icon2) {
   top: -5px;
   right: -5px;
   font-size: 12px;
+}
+.circular-text-container-nav .svg-container2-nav {
+  scale: 0.7;
+}
+.eventsnavbar .textdropdowninnav {
+  color: white !important;
+}
+.productsdivinnavbar {
+  max-width: 1550px;
 }
