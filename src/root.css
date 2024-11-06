@@ -5966,8 +5966,12 @@ button:hover:not(.button-with-icon2) {
   padding: 0 10px;
 }
 .order-process-parent > * > h1 {
-  width: max-content;
-  aspect-ratio: 1/1;
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #6a6a45;
   color: white;
   border-radius: 10000px;
@@ -5976,7 +5980,7 @@ button:hover:not(.button-with-icon2) {
 }
 .order-process-parent > * > p {
   height: 20px;
-
+  margin-top: 5px;
   font: 600 20px Artnoova;
 }
 .containsline::after {
