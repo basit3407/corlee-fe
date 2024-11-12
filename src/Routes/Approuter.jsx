@@ -15,6 +15,9 @@ import ContactUs from "../Screens/ContactUs";
 import RequestHistory from "../Screens/RequestHistory";
 import GeneralEnquiry from "../Screens/GeneralEnquiry";
 import ProductEnquiry from "../Screens/ProductEnquiry";
+import Terms from "../Screens/terms";
+import Privacy from "../Screens/privacy";
+import Accessibility from "../Screens/accessibility";
 import BagScreen from "../Screens/BagScreen";
 import EmailSent from "../Screens/EmailSent";
 import EmailNotExists from "../Screens/EmailNotExists";
@@ -66,6 +69,9 @@ function Approuter() {
           <Route path="/forgot" element={<ForgotPasswordEnterEmail />} />
           <Route path="/emailsent/:email" element={<EmailSent />} />
           <Route path="/noemail/:email" element={<EmailNotExists />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/accessibility" element={<Accessibility />} />
           <Route
             path="/newPass/:uid/:token"
             element={<ForgotPasswordReset />}

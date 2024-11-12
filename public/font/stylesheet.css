@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-ThinItalic.eot');
+    src: local('Artnoova Thin Italic'), local('Artnoova-ThinItalic'),
+        url('Artnoova-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-ThinItalic.woff2') format('woff2'),
+        url('Artnoova-ThinItalic.woff') format('woff'),
+        url('Artnoova-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-Medium.eot');
+    src: local('Artnoova Medium'), local('Artnoova-Medium'),
+        url('Artnoova-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-Medium.woff2') format('woff2'),
+        url('Artnoova-Medium.woff') format('woff'),
+        url('Artnoova-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-Semibold.eot');
+    src: local('Artnoova MS Semibold'), local('ArtnoovaMS-Semibold'),
+        url('ArtnoovaMS-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-Semibold.woff2') format('woff2'),
+        url('ArtnoovaMS-Semibold.woff') format('woff'),
+        url('ArtnoovaMS-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-Light.eot');
+    src: local('Artnoova Light'), local('Artnoova-Light'),
+        url('Artnoova-Light.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-Light.woff2') format('woff2'),
+        url('Artnoova-Light.woff') format('woff'),
+        url('Artnoova-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-Bold.eot');
+    src: local('Artnoova MS Bold'), local('ArtnoovaMS-Bold'),
+        url('ArtnoovaMS-Bold.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-Bold.woff2') format('woff2'),
+        url('ArtnoovaMS-Bold.woff') format('woff'),
+        url('ArtnoovaMS-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-SemiboldItalic.eot');
+    src: local('Artnoova Semibold Italic'), local('Artnoova-SemiboldItalic'),
+        url('Artnoova-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-SemiboldItalic.woff2') format('woff2'),
+        url('Artnoova-SemiboldItalic.woff') format('woff'),
+        url('Artnoova-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-Thin.eot');
+    src: local('Artnoova MS Thin'), local('ArtnoovaMS-Thin'),
+        url('ArtnoovaMS-Thin.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-Thin.woff2') format('woff2'),
+        url('ArtnoovaMS-Thin.woff') format('woff'),
+        url('ArtnoovaMS-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-LightItalic.eot');
+    src: local('Artnoova Light Italic'), local('Artnoova-LightItalic'),
+        url('Artnoova-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-LightItalic.woff2') format('woff2'),
+        url('Artnoova-LightItalic.woff') format('woff'),
+        url('Artnoova-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-SemiboldItalic.eot');
+    src: local('Artnoova MS Semibold Italic'), local('ArtnoovaMS-SemiboldItalic'),
+        url('ArtnoovaMS-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-SemiboldItalic.woff2') format('woff2'),
+        url('ArtnoovaMS-SemiboldItalic.woff') format('woff'),
+        url('ArtnoovaMS-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-Regular.eot');
+    src: local('Artnoova MS Regular'), local('ArtnoovaMS-Regular'),
+        url('ArtnoovaMS-Regular.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-Regular.woff2') format('woff2'),
+        url('ArtnoovaMS-Regular.woff') format('woff'),
+        url('ArtnoovaMS-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-Italic.eot');
+    src: local('Artnoova MS Italic'), local('ArtnoovaMS-Italic'),
+        url('ArtnoovaMS-Italic.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-Italic.woff2') format('woff2'),
+        url('ArtnoovaMS-Italic.woff') format('woff'),
+        url('ArtnoovaMS-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-MediumItalic.eot');
+    src: local('Artnoova MS Medium Italic'), local('ArtnoovaMS-MediumItalic'),
+        url('ArtnoovaMS-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-MediumItalic.woff2') format('woff2'),
+        url('ArtnoovaMS-MediumItalic.woff') format('woff'),
+        url('ArtnoovaMS-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-Light.eot');
+    src: local('Artnoova MS Light'), local('ArtnoovaMS-Light'),
+        url('ArtnoovaMS-Light.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-Light.woff2') format('woff2'),
+        url('ArtnoovaMS-Light.woff') format('woff'),
+        url('ArtnoovaMS-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-Medium.eot');
+    src: local('Artnoova MS Medium'), local('ArtnoovaMS-Medium'),
+        url('ArtnoovaMS-Medium.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-Medium.woff2') format('woff2'),
+        url('ArtnoovaMS-Medium.woff') format('woff'),
+        url('ArtnoovaMS-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-MediumItalic.eot');
+    src: local('Artnoova Medium Italic'), local('Artnoova-MediumItalic'),
+        url('Artnoova-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-MediumItalic.woff2') format('woff2'),
+        url('Artnoova-MediumItalic.woff') format('woff'),
+        url('Artnoova-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-Italic.eot');
+    src: local('Artnoova Italic'), local('Artnoova-Italic'),
+        url('Artnoova-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-Italic.woff2') format('woff2'),
+        url('Artnoova-Italic.woff') format('woff'),
+        url('Artnoova-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-Semibold.eot');
+    src: local('Artnoova Semibold'), local('Artnoova-Semibold'),
+        url('Artnoova-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-Semibold.woff2') format('woff2'),
+        url('Artnoova-Semibold.woff') format('woff'),
+        url('Artnoova-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-ThinItalic.eot');
+    src: local('Artnoova MS Thin Italic'), local('ArtnoovaMS-ThinItalic'),
+        url('ArtnoovaMS-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-ThinItalic.woff2') format('woff2'),
+        url('ArtnoovaMS-ThinItalic.woff') format('woff'),
+        url('ArtnoovaMS-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-LightItalic.eot');
+    src: local('Artnoova MS Light Italic'), local('ArtnoovaMS-LightItalic'),
+        url('ArtnoovaMS-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-LightItalic.woff2') format('woff2'),
+        url('ArtnoovaMS-LightItalic.woff') format('woff'),
+        url('ArtnoovaMS-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova MS';
+    src: url('ArtnoovaMS-BoldItalic.eot');
+    src: local('Artnoova MS Bold Italic'), local('ArtnoovaMS-BoldItalic'),
+        url('ArtnoovaMS-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('ArtnoovaMS-BoldItalic.woff2') format('woff2'),
+        url('ArtnoovaMS-BoldItalic.woff') format('woff'),
+        url('ArtnoovaMS-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-Thin.eot');
+    src: local('Artnoova Thin'), local('Artnoova-Thin'),
+        url('Artnoova-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-Thin.woff2') format('woff2'),
+        url('Artnoova-Thin.woff') format('woff'),
+        url('Artnoova-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-Regular.eot');
+    src: local('Artnoova Regular'), local('Artnoova-Regular'),
+        url('Artnoova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-Regular.woff2') format('woff2'),
+        url('Artnoova-Regular.woff') format('woff'),
+        url('Artnoova-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-Bold.eot');
+    src: local('Artnoova Bold'), local('Artnoova-Bold'),
+        url('Artnoova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-Bold.woff2') format('woff2'),
+        url('Artnoova-Bold.woff') format('woff'),
+        url('Artnoova-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artnoova';
+    src: url('Artnoova-BoldItalic.eot');
+    src: local('Artnoova Bold Italic'), local('Artnoova-BoldItalic'),
+        url('Artnoova-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Artnoova-BoldItalic.woff2') format('woff2'),
+        url('Artnoova-BoldItalic.woff') format('woff'),
+        url('Artnoova-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+

@@ -108,21 +108,33 @@ function BottomBar(props) {
             © {new Date().getFullYear()} corlee & co. All Rights Reserved.
           </span>{" "}
           <a
-            href="https://www.allbirds.com/pages/allbirds-terms-of-use"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/terms");
+              window.scrollTo(0, 0);
+            }}
             className="link-underline-white-bb"
           >
             {messages["terms"]}
           </a>
           <span className="brand-text-style-bb">, </span>
           <a
-            href="https://www.allbirds.com/pages/privacy-policy"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/privacy");
+              window.scrollTo(0, 0);
+            }}
             className="link-underline-white-bb"
           >
             {messages["privacy"]}
           </a>
           <span className="brand-text-style-bb"> &amp; </span>
           <a
-            href="https://www.allbirds.com/pages/accessibility"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/accessibility");
+              window.scrollTo(0, 0);
+            }}
             className="link-underline-white-bb"
           >
             {messages["accessibility"]}
