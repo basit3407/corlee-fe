@@ -72,7 +72,13 @@ const ProductRequest = (props) => {
                 )}
               </div>
 
-              <div className="imagedetailsdiv">
+              <div
+                className={
+                  images.length - 6 + counter > 0
+                    ? "imagedetailsdiv hasoverflown"
+                    : "imagedetailsdiv"
+                }
+              >
                 <p className="ticketnumber">
                   {item.related_order.items[index].fabric.item_code}
                 </p>{" "}
