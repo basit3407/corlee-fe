@@ -8,8 +8,9 @@ body *:not(p h1 h2 h3 h4 h5 h6 span) {
 }
 
 body *:not(.content-container-in-single-blog *) {
-  font-family: "Artnoova", sans-serif !important;
+  font-family: "Poppins", sans-serif;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -6221,4 +6222,47 @@ button:hover:not(.button-with-icon2) {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.hero-text-block,
+.majestic-heading-home,
+.art-noova-heading,
+.majestic-heading1,
+.fabric-type-heading,
+.fashion-statement-text-style,
+.leftsidecontent h1,
+.letsgoanddiscussit,
+.upcoming-events-heading,
+.tech-card-subtitle-text-style,
+.hero-title-text-style-blogs,
+.golden-heading,
+.hero-title,
+.standout-text,
+.visionary-heading,
+.order-process-title,
+.order-process-child,
+.order-process-title,
+.textdivinnavproductdropdown h1,
+.hero-title-text-style,
+.contact-heading-text-style,
+.contact-heading,
+.request-history-title,
+.ticket-number-style,
+.ticket-number-style,
+.color,
+.quantityofproduct,
+.priceofproduct,
+.imagestext p:nth-child(1),
+.main-heading-text-style,
+.material-heading-text-style,
+.headingdiv h1,
+.textinbagproduct p,
+.productdetailsdic h1,
+.colorsinproduct,
+.quantitydivinproduct,
+.textdiv h2,
+.detailsdivmaincontainer > h1 {
+  font-family: "Artnoova", sans-serif !important;
+}
+.contact-message {
+  font-size: 16px;
 }
