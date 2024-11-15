@@ -4600,7 +4600,7 @@ body {
 @media (max-width: 447px) {
   .loginpopuswrapper h1,
   .loginpopuswrapper h1::after {
-    line-height: 55px;
+    line-height: 75px;
   }
   .loginpopuswrapper h1::after {
     text-wrap: wrap;
