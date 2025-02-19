@@ -1,0 +1,11 @@
+Model Information:
+* title:	Men's casual Shirt
+* source:	https://sketchfab.com/3d-models/mens-casual-shirt-996c8d78905f433183ac368086580f82
+* author:	DineshThennarasan (https://sketchfab.com/dineshthennarasan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Men's casual Shirt" (https://sketchfab.com/3d-models/mens-casual-shirt-996c8d78905f433183ac368086580f82) by DineshThennarasan (https://sketchfab.com/dineshthennarasan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -8,8 +8,11 @@ import { TailSpin } from "react-loader-spinner";
 import { api } from "../config/api";
 import Imagesinproduct from "./Imagesinproduct";
 import { toast } from "sonner";
+import Model from "./model.jsx";
+import "../index.css";
 
 const singleproduct = () => {
+  const [model, setModel] = useState("/models/tshirt/scene.gltf");
   let text = "(by yard)";
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,6 +26,7 @@ const singleproduct = () => {
   const [currentImages, setCurrentImages] = useState([]);
   const [showLoginPopup, setshowLoginPopup] = useState(false);
   const [buttonloading, setButtonloading] = useState(0);
+  const [image, setImage] = useState("/textures/one.jpg");
   const navigate = useNavigate();
 
   const togglefav = async () => {
@@ -331,6 +335,90 @@ const singleproduct = () => {
         </div>
       </div>
 
+      <div className="modelDiv">
+        <Model
+          modelUrl={model}
+          imageUrl={image}
+          scale={
+            model === "/models/tshirt/scene.gltf"
+              ? 2
+              : model === "/models/shirt/scene.gltf"
+              ? 0.005
+              : model === "/models/shorts/scene.gltf"
+              ? 0.8
+              : model === "/models/jacket/scene.gltf"
+              ? 0.5
+              : 1.5
+          }
+        />
+        <div className="modelButtons">
+          <button
+            onClick={() => {
+              setModel("/models/shirt/scene.gltf");
+            }}
+          >
+            <img src="/modelImages/shirt.png" alt="" />
+          </button>
+          <button
+            onClick={() => {
+              setModel("/models/shorts/scene.gltf");
+            }}
+          >
+            <img src="/modelImages/shorts.png" alt="" />
+          </button>
+          <button
+            onClick={() => {
+              setModel("/models/pants/scene.gltf");
+            }}
+          >
+            <img src="/modelImages/jeans.png" alt="" />
+          </button>
+          <button
+            onClick={() => {
+              setModel("/models/tshirt/scene.gltf");
+            }}
+          >
+            <img src="/modelImages/tshirt.png" alt="" />
+          </button>
+          <button
+            onClick={() => {
+              setModel("/models/jacket/scene.gltf");
+            }}
+          >
+            <img src="/modelImages/jacket.png" alt="" />
+          </button>
+        </div>
+        <div className="modelColors">
+          <div
+            className="color"
+            style={{ backgroundColor: "red" }}
+            onClick={() => {
+              setImage("/textures/one.jpg");
+            }}
+          ></div>
+          <div
+            className="color"
+            style={{ backgroundColor: "burlywood" }}
+            onClick={() => {
+              setImage("/textures/two.jpg");
+            }}
+          ></div>
+          <div
+            className="color"
+            style={{ backgroundColor: "green" }}
+            onClick={() => {
+              setImage("/textures/three.jpg");
+            }}
+          ></div>
+          <div
+            className="color"
+            onClick={() => {
+              setImage("/textures/four.jpg");
+            }}
+            style={{ backgroundColor: "orange" }}
+          ></div>
+        </div>
+      </div>
       <StylishProductDisplay
         product={true}
         products={product.related_fabrics}

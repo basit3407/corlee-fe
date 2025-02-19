@@ -1,0 +1,11 @@
+Model Information:
+* title:	Tommy Hilfiger Jacket
+* source:	https://sketchfab.com/3d-models/tommy-hilfiger-jacket-8f0bcadb538549c8a2323d532f24d1e1
+* author:	Nick Scott (https://sketchfab.com/Nickjjscott)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Tommy Hilfiger Jacket" (https://sketchfab.com/3d-models/tommy-hilfiger-jacket-8f0bcadb538549c8a2323d532f24d1e1) by Nick Scott (https://sketchfab.com/Nickjjscott) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

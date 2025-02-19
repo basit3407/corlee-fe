@@ -1,0 +1,11 @@
+Model Information:
+* title:	Grey trousers (joggers)
+* source:	https://sketchfab.com/3d-models/grey-trousers-joggers-4740f4cd5be14976bcc5e7bdcf6eae77
+* author:	DanlyVostok (https://sketchfab.com/1799danly)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Grey trousers (joggers)" (https://sketchfab.com/3d-models/grey-trousers-joggers-4740f4cd5be14976bcc5e7bdcf6eae77) by DanlyVostok (https://sketchfab.com/1799danly) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

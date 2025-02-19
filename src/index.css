@@ -1,0 +1,62 @@
+.modelDiv {
+  height: 600px;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  width: 90vw;
+  margin: 0 auto;
+  border-radius: 15px;
+  border: 3px solid rgb(214, 214, 214);
+  /* overflow: hidden; */
+  position: relative;
+  overflow: hidden;
+}
+.modelButtons {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.modelButtons img {
+  width: 30px;
+}
+.modelButtons button {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.229);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.modelButtons button:hover {
+  scale: 1.01;
+}
+.modelColors {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modelColors div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.modelColors div:hover {
+  scale: 1.1;
+}
+.loaderSpinner {
+  scale: 0.5;
+}
